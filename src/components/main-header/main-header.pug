@@ -1,16 +1,26 @@
+//- Разметка основного header'а
 header.main-header
     a.main-header__logo
-        img(src="components/main-header/images/logo.svg" alt="Отель Toxin" width="105.69" height="40")
-    ul.main-header__list
-        li.main-header__current-item
-            a.main-header__link(href="#") Home
-        li.main-header__item
-            a.main-header__link(href="#") Home
-        li.main-header__item
-            a.main-header__link(href="#") Home
-        li.main-header__item
-            a.main-header__link(href="#") Home
-        li.main-header__item
-            a.main-header__link(href="#") Home
-        li.main-header__item
-            a.main-header__link(href="#") Home
+        img.main-header__logo-image(src="../../components/main-header/images/logo.svg" alt="Отель Toxin" width="105.69" height="40")
+    nav.main-navigation
+        ul.site-navigation
+            li.site-navigation__item.site-navigation__item--current
+                a.site-navigation__link(href="#") Home
+            li.site-navigation__item
+                a.site-navigation__link(href="#") About us
+            li.site-navigation__item.site-navigation__item--dropdown
+                a.site-navigation__link(href="#") Services
+                ul.site-navigation__dropdown-list
+                    li.site-navigation__item
+                        a.site-navigation__link(href="#") Test
+            li.site-navigation__item
+                a.site-navigation__link(href="#") Careers
+            li.site-navigation__item
+                a.site-navigation__link(href="#") News
+            li.site-navigation__item
+                a.site-navigation__link(href="#") Documentations
+        ul.user-navigation
+            li.user-navigation__item
+                a.user-navigation__link.button.button--purple-gradient(href="#") Login
+            li.user-navigation__item
+                a.user-navigation__link.button.button--purple-gradient(href="#") Register
