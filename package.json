@@ -1,0 +1,32 @@
+{
+  "name": "Toxin",
+  "version": "1.0.0",
+  "description": "Отель «Toxin»",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d docs --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madnessJs/Toxin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "pug": "^2.0.3",
+    "sass": "^1.20.1"
+  },
+  "dependencies": {
+    "components": "^0.1.0",
+    "modules": "^0.4.0",
+    "utilities": "^1.0.5"
+  },
+  "bugs": {
+    "url": "https://github.com/madnessJs/Toxin/issues"
+  },
+  "homepage": "https://github.com/madnessJs/Toxin#readme"
+}
