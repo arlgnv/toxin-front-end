@@ -1,7 +1,133 @@
 .main-header {
-
+    padding: 15px 0;
 }
 
 .main-header .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__logo {
+    line-height: 0;
+}
+
+/*
+===== Main navigation =====
+*/
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+/*
+===== Site navigation =====
+*/
+
+.site-navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 20px;
+
+    list-style-type: none;
+}
+
+.site-navigation__item + .site-navigation__item {
+    margin-left: 20px;
+}
+
+.site-navigation__item--has-submenu + .site-navigation__item {
+    margin-left: 26px;
+}
+
+.site-navigation__item--has-submenu .site-navigation__link:first-child::after {
+    content: "";
+
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 8px;
+    margin-bottom: -2px;
+
+    border: 2px solid $primary-color-50;
+    border-top: 0;
+    border-left: 0;
+
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.site-navigation__link {
+    line-height: 24px;
+    color: $primary-color-50;
+}
+
+.site-navigation__link--current {
+    font-weight: bold;
+    color: $primary-color-75;
+}
+
+/*
+===== User navigation =====
+*/
+
+.user-navigation {
+    position: relative;
+    z-index: 1;
+
+    padding-left: 20px;
+}
+
+.user-navigation.authorized {
+    border-left: 1px solid $primary-color-10;
+}
+
+.user-navigation.authorized .user-navigation__list {
+    display: none;
+}
+
+.user-navigation.non-authorized .user-navigation__menu {
+    display: none;
+}
+
+.user-navigation__item + .user-navigation__item {
+    margin-left: 20px;
+}
+
+/*
+===== User navigation list =====
+*/
+
+.user-navigation__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    list-style-type: none;
+}
+
+.user-navigation__link.button {
+    padding: 10px 20px;
+}
+
+.user-navigation__link.button--border-gradient {
+    padding: 8px 18px;
+}
+
+/*
+===== User navigation menu =====
+*/
+
+.user-navigation__menu {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.user-navigation__menu .user-navigation__link {
+    line-height: 17px;
+    color: $primary-color-50;
 }

@@ -1,0 +1,25 @@
+header.main-header
+    .container
+        a.main-header__logo
+            img.main-header__logo-image(src="../../components/main-header/images/logo.svg" alt="Отель Toxin" width="105" height="40")
+        nav.main-navigation
+            ul#main-menu.site-navigation.sm
+                li.site-navigation__item
+                    a.site-navigation__link(href="#") О нас
+                li.site-navigation__item.site-navigation__item--has-submenu
+                    a.site-navigation__link(href="#") Услуги
+                li.site-navigation__item
+                    a.site-navigation__link(href="#") Вакансии
+                li.site-navigation__item
+                    a.site-navigation__link(href="#") Новости
+                li.site-navigation__item.site-navigation__item--has-submenu
+                    a.site-navigation__link(href="#") Соглашения
+            div.user-navigation.non-authorized
+                ul.user-navigation__list
+                    li.user-navigation__item
+                        a.user-navigation__link.button.button--border-gradient(href="#") Войти
+                    li.user-navigation__item
+                        a.user-navigation__link.button.button--purple-gradient(href="#") Зарегистрироваться
+                ul.user-navigation__menu
+                    li.user-navigation__item
+                        a.user-navigation__link(href="#") Артём Лагунов
