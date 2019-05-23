@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/pages/index/index.pug --open",
-    "build": "parcel build src/pages/index/index.pug -d docs --public-url ./"
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -16,14 +16,14 @@
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "parcel-plugin-clean-dist": "0.0.6",
     "pug": "^2.0.3",
+    "rimraf": "^2.6.3",
     "sass": "^1.20.1"
   },
   "dependencies": {
-    "components": "^0.1.0",
-    "modules": "^0.4.0",
-    "utilities": "^1.0.5"
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1",
+    "normalize.css": "^8.0.1"
   },
   "bugs": {
     "url": "https://github.com/madnessJs/Toxin/issues"
