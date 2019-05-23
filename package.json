@@ -4,7 +4,7 @@
   "description": "Отель «Toxin»",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/pages/index/index.pug --open",
+    "start": "rimraf dist && parcel src/pages/index/index.pug --open",
     "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --public-url ./"
   },
   "repository": {
