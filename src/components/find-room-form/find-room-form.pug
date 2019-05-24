@@ -1,0 +1,10 @@
+article.find-room
+    h2.find-room__title Найдём номера под ваши пожелания
+    form.find-room__form(action="https://echo.htmlacademy.ru" method="post")
+        div.find-room__group
+            p.find-room__item
+                label(for="find-room__from") Прибытие
+                input#find-room__from.find-room__field.js-find-room__from(type="text" name="from" placeholder="ДД.ММ.ГГГГ")
+            p.find-room__item
+                label(for="find-room__to") Выезд
+                input#find-room__to.find-room__field.js-find-room__to(type="text" name="to" placeholder="ДД.ММ.ГГГГ")

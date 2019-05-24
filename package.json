@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "jquery-ui-dist": "^1.12.1",
+    "air-datepicker": "^2.2.3",
     "normalize.css": "^8.0.1"
   },
   "bugs": {
