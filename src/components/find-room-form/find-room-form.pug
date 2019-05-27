@@ -4,7 +4,14 @@ article.find-room
         div.find-room__group
             p.find-room__item
                 label(for="find-room__from") Прибытие
-                input#find-room__from.find-room__field.js-find-room__from(type="text" name="from" placeholder="ДД.ММ.ГГГГ")
+                input#find-room__from.find-room__field.js-find-room__from.datepicker-here(type="text" placeholder="ДД.ММ.ГГГГ" data-range="true")
             p.find-room__item
                 label(for="find-room__to") Выезд
-                input#find-room__to.find-room__field.js-find-room__to(type="text" name="to" placeholder="ДД.ММ.ГГГГ")
+                input#find-room__to.find-room__field.js-find-room__to(type="text" placeholder="ДД.ММ.ГГГГ")
+        p.find-room__item
+                label(for="find-room__guests") Гости
+                input#find-room__guests.find-room__field.js-find-room__guests(type="text" placeholder="Сколько гостей")
+        p.find-room__item
+                a.button.button--purple-gradient(href="#") Подобрать номер
+                    svg(width="24" height="24" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M8.363.984L16.378 9l-8.015 8.016-1.407-1.407 5.578-5.625H.347V8.016h12.187L6.956 2.39 8.363.984z" fill="white")

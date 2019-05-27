@@ -19,7 +19,7 @@
 }
 
 .main-footer__text {
-    margin: 0 0 10px;
+    margin: 0 0 20px;
 }
 
 /*
@@ -70,10 +70,6 @@
     width: 260px;
 }
 
-.main-footer__form .main-footer__text {
-    margin-bottom: 20px;
-}
-
 .footer-form {
     position: relative;
 }
@@ -88,10 +84,10 @@
 
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-}
 
-.footer-form__field::placeholder {
-    color: $primary-color-25;
+    &::placeholder {
+        color: $primary-color-25;
+    }
 }
 
 .footer-form__submit {
@@ -161,10 +157,6 @@
 /*
 ===== Main footer poor =====
 */
-
-.main-footer--poor {
-
-}
 
 .main-footer--poor .container {
     display: block;

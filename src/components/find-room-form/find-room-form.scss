@@ -20,47 +20,59 @@
 .find-room__group {
     display: flex;
     justify-content: space-between;
+
+    .find-room__item {
+        width: 150px;
+    }
 }
 
 .find-room__item {
-    position: relative;
-
-    width: 100%;
     margin: 0 0 20px;
-}
 
-.find-room__group .find-room__item {
-    width: 150px;
-}
+    label {
+        position: relative;
 
-.find-room__item::after {
-    content: "";
-    position: absolute;
-    top: 37px;
-    right: 15px;
+        display: block;
+        margin: 0 0 5px;
 
-    width: 6px;
-    height: 6px;
-    margin-left: 8px;
-    margin-bottom: -2px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: $primary-color-100;
 
-    border: 2px solid $primary-color-50;
-    border-top: 0;
-    border-left: 0;
+        text-transform: uppercase;
 
-    transform: translateY(-50%) rotate(45deg);
-}
+        &::after {
+            content: "";
+            position: absolute;
+            top: 37px;
+            right: 15px;
 
-.find-room__item label {
-    display: block;
-    margin: 0 0 5px;
+            width: 6px;
+            height: 6px;
+            margin-left: 8px;
+            margin-bottom: -2px;
 
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: $primary-color-100;
+            border: 2px solid $primary-color-50;
+            border-top: 0;
+            border-left: 0;
 
-    text-transform: uppercase;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+
+    .button {
+        position: relative;
+
+        display: block;
+        padding: 15px 20px;
+
+        svg {
+            position: absolute;
+            top: 13px;
+            right: 14px;
+        }
+    }
 }
 
 .find-room__field {
@@ -70,6 +82,7 @@
 
     font: inherit;
     line-height: 18px;
+    color: $primary-color-75;
 
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;

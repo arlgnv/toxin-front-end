@@ -23,15 +23,10 @@
 @import '../../utilities/global';
 
 /*
-===== Modules =====
-*/
-
-@import 'air-datepicker/dist/css/datepicker.css';
-
-/*
 ===== Components =====
 */
 
 @import '../../components/main-header/main-header';
 @import '../../components/main-footer/main-footer';
 @import '../../components/find-room-form/find-room-form';
+@import '../../components/calendar/datepicker';
