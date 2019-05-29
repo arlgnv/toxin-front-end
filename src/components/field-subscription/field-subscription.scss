@@ -1,0 +1,31 @@
+.c-field-subscription__form {
+    position: relative;
+}
+
+.c-field-subscription__field {
+    box-sizing: border-box;
+
+    font: inherit;
+    color: rgba(31, 32, 65, 0.75);
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+
+    &::placeholder {
+        color: $primary-color-25;
+    }
+}
+
+.c-field-subscription__submit {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+
+    padding: 0;
+    width: 18px;
+    height: 18px;
+
+    background: url("../../components/field-subscription/images/arrow-gradient.svg");
+    border: none;
+    transform: translateY(-50%);
+}

@@ -66,41 +66,13 @@
 ===== Main footer form =====
 */
 
-.main-footer__form {
+.main-footer__form-wrapper {
     width: 260px;
 }
 
-.footer-form {
-    position: relative;
-}
-
-.footer-form__field {
+.main-footer__form .c-field-subscription__field {
     width: 100%;
-    box-sizing: border-box;
     padding: 10px 15px;
-
-    font: inherit;
-    color: rgba(31, 32, 65, 0.75);
-
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-
-    &::placeholder {
-        color: $primary-color-25;
-    }
-}
-
-.footer-form__submit {
-    position: absolute;
-    top: 14px;
-    right: 13px;
-
-    padding: 0;
-    width: 18px;
-    height: 18px;
-
-    background-color: transparent;
-    border: none;
 }
 
 /*
@@ -140,18 +112,18 @@
     height: 24px;
 
     cursor: pointer;
-}
 
-.footer-social__link--twitter {
-    background: url("../../components/main-footer/images/twitter.svg") no-repeat center;
-}
+    &--twitter {
+        background: url("../../components/main-footer/images/twitter.svg") no-repeat center;
+    }
 
-.footer-social__link--facebook {
-    background: url("../../components/main-footer/images/facebook.svg") no-repeat center;
-}
+    &--facebook {
+        background: url("../../components/main-footer/images/facebook.svg") no-repeat center;
+    }
 
-.footer-social__link--instagram {
-    background: url("../../components/main-footer/images/instagram.svg") no-repeat center;
+    &--instagram {
+        background: url("../../components/main-footer/images/instagram.svg") no-repeat center;
+    }
 }
 
 /*

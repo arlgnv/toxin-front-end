@@ -26,7 +26,15 @@
 ===== Components =====
 */
 
+// buttons
+@import '../../components/button-purple-gradient/button-purple-gradient';
+@import '../../components/button-border-gradient/button-border-gradient';
+
+// inputs
+@import '../../components/field-subscription/field-subscription';
+
+//blocks
 @import '../../components/main-header/main-header';
 @import '../../components/main-footer/main-footer';
-@import '../../components/find-room-form/find-room-form';
+@import '../../components/form-find-room/form-find-room';
 @import '../../components/calendar/datepicker';

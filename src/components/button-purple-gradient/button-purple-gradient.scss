@@ -1,0 +1,9 @@
+.button--purple-gradient {
+    color: #fff;
+
+    background-image: linear-gradient(180deg, $purple-color-100 0%, rgba(139, 164, 249, 1) 100%);
+
+    &:hover {
+        background-image: linear-gradient(180deg, $purple-color-50 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
+}
