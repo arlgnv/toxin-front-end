@@ -1,4 +1,4 @@
 mixin c-field-subscription(action, classes, placeholder)
-    form(action=action class=classes + " c-field-subscription__form" method="post")
-                input(type="email" class="c-field-subscription__field" name="email" placeholder="Email")
-                button(type="submit" class="c-field-subscription__submit" aria-label="Подписаться на рассылку")
+    form(action=action class=classes + "__form c-field-subscription__form" method="post")
+        input(type="email" class=classes + "__field c-field-subscription__field" name="email" placeholder="Email")
+        button(type="submit" class=classes + "__submit c-field-subscription__submit" aria-label="Подписаться на рассылку")
