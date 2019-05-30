@@ -1,7 +1,7 @@
 //- Кнопка
-mixin button-border-gradient(type, classes, content)
-    button(type=type class="button button--border-gradient " + classes)= content
+mixin button-border-gradient(content)
+    button(class="button button--border-gradient")&attributes(attributes)= content
 
 //- Ссылка
-mixin link-border-gradient(href, classes, content)
-    a(href=href class="button button--border-gradient " + classes)= content
+mixin link-border-gradient(content)
+    a(class="button button--border-gradient")&attributes(attributes)= content

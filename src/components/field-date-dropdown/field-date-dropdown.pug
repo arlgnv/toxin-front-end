@@ -1,2 +1,3 @@
-mixin c-field-date-dropdown(type, classes, name, placeholder)
-    input(type=type class=classes + " c-field-date-dropdown" name=name placeholder=placeholder)
+mixin c-field-date-dropdown(classes, id, content)
+    label(class="c-field-date-dropdown__label" for= id)= content
+    input(class=classes + " c-field-date-dropdown__field" id= id)&attributes(attributes)

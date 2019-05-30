@@ -7,13 +7,12 @@ block styles
     link(rel="stylesheet" href="index.scss")
 
 block content
+    include ../../utilities/mixins-pug
+
     include ../../components/main-header/main-header-non-authorized
     include ../../components/main-header/main-header-authorized
     include ../../components/main-footer/main-footer-rich
     include ../../components/main-footer/main-footer-poor
-
-    include ../../components/field-default/field-default
-
     include ../../components/form-find-room/form-find-room
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")

@@ -1,7 +1,3 @@
-//- Миксины кнопок
-include ../button-border-gradient/button-border-gradient
-include ../button-purple-gradient/button-purple-gradient
-
 header.main-header
     .container
         a.main-header__logo
@@ -21,9 +17,9 @@ header.main-header
             div.user-navigation.non-authorized
                 ul.user-navigation__list
                     li.user-navigation__item
-                        +link-border-gradient("#", "user-navigation__link", "Войти")
+                        +link-border-gradient("Войти")(href="#")
                     li.user-navigation__item
-                        +link-purple-gradient("#", "user-navigation__link", "Зарегистрироваться")
+                        +link-purple-gradient("Зарегистрироваться")(href="#")
                 ul.user-navigation__menu
                     li.user-navigation__item
                         a.user-navigation__link(href="#") Артём Лагунов

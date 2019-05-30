@@ -1,5 +1,3 @@
-include ../field-subscription/field-subscription
-
 footer.main-footer
     .container
         .main-footer__info
@@ -41,17 +39,17 @@ footer.main-footer
         .main-footer__item.main-footer__form-wrapper
             b.main-footer__title Подписка
             p.main-footer__text Получайте специальные предложения и новости сервиса
-            +c-field-subscription("https://echo.htmlacademy.ru", "main-footer", "Email")
+            +c-field-subscription("https://echo.htmlacademy.ru", "main-footer", "field-subscription", "Введите email")(type="email" name="email" placeholder="Email")
     .main-footer__bottom
         .container
             p.main-footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.
             ul.footer-social
                 li.footer-social__item
-                    a.footer-social__link.footer-social__link--twitter
+                    a.footer-social__link.footer-social__link--twitter(href="#")
                         span.visually-hidden Твиттер
                 li.footer-social__item
-                    a.footer-social__link.footer-social__link--facebook
+                    a.footer-social__link.footer-social__link--facebook(href="#")
                         span.visually-hidden Фейсбук
                 li.footer-social__item
-                    a.footer-social__link.footer-social__link--instagram
+                    a.footer-social__link.footer-social__link--instagram(href="#")
                         span.visually-hidden Инстаграм

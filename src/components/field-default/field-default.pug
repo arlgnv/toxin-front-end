@@ -1,4 +1,3 @@
-mixin c-field-default(type, classes, name, placeholder)
-    input(type=type class=classes + " c-field-default" name=name placeholder=placeholder)
-
-+c-field-default("text", "input_class", "name", "Введите имя*")
+mixin c-field-default(classes, id, content)
+    label.visually-hidden(for= id)= content
+    input(class=classes + " c-field-default" id= id)&attributes(attributes)
