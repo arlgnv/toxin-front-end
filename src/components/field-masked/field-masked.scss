@@ -1,0 +1,13 @@
+.c-field-masked {
+    box-sizing: border-box;
+
+    font: inherit;
+    color: $primary-color-75;
+
+    border: 1px solid $primary-color-25;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: $primary-color-25;
+    }
+}
