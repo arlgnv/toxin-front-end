@@ -1,0 +1,40 @@
+.c-field-radio__label {
+    position: relative;
+
+    padding-left: 30px;
+
+    color: $primary-color-50;
+}
+
+.c-field-radio__field--custom {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $purple-color-100;
+    border-radius: 50%;
+}
+
+.c-field-radio__field:checked + .c-field-radio__field--custom::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+
+    background: linear-gradient(180deg, $purple-color-100 0%, #8BA4F9 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-field-radio__field:checked + span + span {
+    color: $primary-color-75;
+}

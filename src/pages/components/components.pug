@@ -75,6 +75,10 @@ block content
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-field-checkbox("", "c-field-checkbox", "Можно курить")(type="checkbox")
 
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +c-field-radio("", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
+        +c-field-radio("", "c-field-radio-2", "Женщина")(type="radio" name="gender")
+
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized
 

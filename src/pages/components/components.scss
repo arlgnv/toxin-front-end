@@ -39,6 +39,7 @@
 @import '../../components/field-date-dropdown/field-date-dropdown';
 @import '../../components/field-dropdown/field-dropdown';
 @import '../../components/field-checkbox/field-checkbox';
+@import '../../components/field-radio/field-radio';
 
 //blocks
 @import '../../components/main-header/main-header';
@@ -69,5 +70,9 @@
         color: $primary-color-100;
 
         text-transform: uppercase;
+    }
+
+    label {
+        display: block;
     }
 }

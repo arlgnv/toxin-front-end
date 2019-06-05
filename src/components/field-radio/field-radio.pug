@@ -1,0 +1,5 @@
+mixin c-field-radio(classes, id, content)
+    label(class= classes + " c-field-radio__label" for= id)
+        input(class= classes + " c-field-radio__field visually-hidden" id= id)&attributes(attributes)
+        span(class=classes + " c-field-radio__field--custom")
+        span= content
