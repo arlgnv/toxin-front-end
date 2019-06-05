@@ -1,0 +1,73 @@
+/*
+===== Normalize =====
+*/
+
+@import 'normalize.css/normalize';
+
+/*
+===== Fonts =====
+*/
+
+@import '../../utilities/fonts';
+
+/*
+===== Variables =====
+*/
+
+@import '../../utilities/variables';
+
+/*
+===== Global =====
+*/
+
+@import '../../utilities/global';
+
+/*
+===== Components =====
+*/
+
+// buttons
+@import '../../components/button-purple-gradient/button-purple-gradient';
+@import '../../components/button-border-gradient/button-border-gradient';
+@import '../../components/button-purple-gradient-arrow/button-purple-gradient-arrow';
+@import '../../components/button-link/button-link';
+
+// inputs
+@import '../../components/field-default/field-default';
+@import '../../components/field-masked/field-masked';
+@import '../../components/field-subscription/field-subscription';
+@import '../../components/field-date-dropdown/field-date-dropdown';
+@import '../../components/field-dropdown/field-dropdown';
+@import '../../components/field-checkbox/field-checkbox';
+
+//blocks
+@import '../../components/main-header/main-header';
+@import '../../components/main-footer/main-footer';
+@import '../../components/form-find-room/form-find-room';
+@import '../../components/calendar/datepicker';
+
+.demonstrate-wrapper {
+    display: block;
+
+    padding: 10px;
+    border: 2px dotted gray;
+
+    margin-bottom: 20px;
+
+    vertical-align: top;
+
+    &--inline {
+        display: inline-block;
+    }
+
+    b {
+        display: block;
+
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: $primary-color-100;
+
+        text-transform: uppercase;
+    }
+}

@@ -6,7 +6,7 @@ article.find-room
                 +c-field-date-dropdown("find-room__field datepicker-here", "find-room__from", "Прибытие")(type="text" name="from" placeholder="ДД.ММ.ГГГГ" data-range="true")
             p.find-room__item
                 +c-field-date-dropdown("find-room__field", "find-room__to", "Выезд")(type="text" name="to" placeholder="ДД.ММ.ГГГГ")
-        .dropdown__wrapper
+        .dropdown-wrapper
             p.find-room__item
                 +c-field-dropdown("find-room__field js-dropdown-guests", "find-room__guests", "Гости")(type="text" name="guests" placeholder="Сколько гостей")
             .dropdown__content
@@ -31,27 +31,5 @@ article.find-room
                 .dropdown__item.dropdown__buttons
                     span.dropdown__clear Очистить
                     span.dropdown__apply Применить
-        .dropdown__wrapper
-            p.find-room__item
-                +c-field-dropdown("find-room__field js-dropdown-comfort", "find-room__comfort", "Гости")(type="text" name="guests" placeholder="Сколько гостей")
-            .dropdown__content
-                .dropdown__item
-                    b.dropdown__title Спальни
-                    .dropdown__count
-                        button.dropdown__del(type="button")
-                        span.dropdown__amount 0
-                        button.dropdown__ins(type="button")
-                .dropdown__item
-                    b.dropdown__title Кровати
-                    .dropdown__count
-                        button.dropdown__del(type="button")
-                        span.dropdown__amount 0
-                        button.dropdown__ins(type="button")
-                .dropdown__item
-                    b.dropdown__title Ванные комнаты
-                    .dropdown__count
-                        button.dropdown__del(type="button")
-                        span.dropdown__amount.dropdown__amount--baby 0
-                        button.dropdown__ins(type="button")
         p.find-room__item
             +link-purple-gradient-arrow("Подобрать номер")(href="#")

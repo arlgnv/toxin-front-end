@@ -4,8 +4,8 @@
   "description": "Отель «Toxin»",
   "main": "index.js",
   "scripts": {
-    "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --public-url ./"
+    "start": "rimraf dist && parcel src/pages/components/components.pug --open",
+    "build": "rimraf dist docs && parcel build src/pages/components/components.pug -d docs --public-url ./"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,26 @@
+.c-field-checkbox__label {
+    position: relative;
+
+    padding-left: 30px;
+
+    line-height: 18px;
+    color: $primary-color-50;
+}
+
+.c-field-checkbox__field--custom {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $primary-color-25;
+    border-radius: 4px
+}
+
+.c-field-checkbox__field:checked + .c-field-checkbox__field--custom {
+    background: url("../../components/field-checkbox/images/checkbox-arrow.svg") no-repeat center;
+}

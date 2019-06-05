@@ -1,0 +1,95 @@
+extends ../../templates/template-base
+
+block title
+    title Отель Toxin | Лучший отель 2019 года по версии ассоциации «Отельные взгляды»
+
+block styles
+    link(rel="stylesheet" href="components.scss")
+
+block content
+    include ../../utilities/mixins-pug
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        b text field
+        +c-field-default("", "c-field-default", "")(placeholder="Введите хоть что-нибудь")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        .dropdown-wrapper
+            +c-field-dropdown("js-dropdown-guests", "c-field-dropdown-1", "dropdown guests")(type="text" placeholder="Сколько гостей")
+            .dropdown__content
+                    .dropdown__item
+                        b.dropdown__title Взрослые
+                        .dropdown__count
+                            button.dropdown__del(type="button")
+                            span.dropdown__amount 0
+                            button.dropdown__ins(type="button")
+                    .dropdown__item
+                        b.dropdown__title Дети
+                        .dropdown__count
+                            button.dropdown__del(type="button")
+                            span.dropdown__amount 0
+                            button.dropdown__ins(type="button")
+                    .dropdown__item
+                        b.dropdown__title Младенцы
+                        .dropdown__count
+                            button.dropdown__del(type="button")
+                            span.dropdown__amount.dropdown__amount--baby 0
+                            button.dropdown__ins(type="button")
+                    .dropdown__item.dropdown__buttons
+                        span.dropdown__clear Очистить
+                        span.dropdown__apply Применить
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        .dropdown-wrapper
+            +c-field-dropdown("js-dropdown-comfort", "c-field-dropdown-2", "dropdown comfort")(type="text" placeholder="Что вы хотите?")
+            .dropdown__content
+                    .dropdown__item
+                        b.dropdown__title Спальни
+                        .dropdown__count
+                            button.dropdown__del(type="button")
+                            span.dropdown__amount 0
+                            button.dropdown__ins(type="button")
+                    .dropdown__item
+                        b.dropdown__title Кровати
+                        .dropdown__count
+                            button.dropdown__del(type="button")
+                            span.dropdown__amount 0
+                            button.dropdown__ins(type="button")
+                    .dropdown__item
+                        b.dropdown__title Ванные комнаты
+                        .dropdown__count
+                            button.dropdown__del(type="button")
+                            span.dropdown__amount.dropdown__amount--baby 0
+                            button.dropdown__ins(type="button")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +c-field-masked("", "c-field-masked", "masked text field")(placeholder="Введите хоть что-нибудь")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        .dropdown-wrapper
+            +c-field-date-dropdown("", "c-field-date-dropdown", "date dropdown")(type="text" placeholder="ДД.ММ.ГГГГ")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        b subscription text field
+        +c-field-subscription("", "", "c-field-subscription", "Введите email")(type="email" placeholder="Email")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +c-field-checkbox("", "c-field-checkbox", "Можно курить")(type="checkbox")
+
+    .demonstrate-wrapper
+        include ../../components/main-header/main-header-non-authorized
+
+    .demonstrate-wrapper
+        include ../../components/main-header/main-header-authorized
+
+    .demonstrate-wrapper
+        include ../../components/main-footer/main-footer-rich
+
+    .demonstrate-wrapper
+        include ../../components/main-footer/main-footer-poor
+
+    .demonstrate-wrapper
+        include ../../components/form-find-room/form-find-room
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="../../components/calendar/datepicker.js")
+    script(src="components.js")

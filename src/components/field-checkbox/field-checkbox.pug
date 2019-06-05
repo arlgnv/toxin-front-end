@@ -1,0 +1,5 @@
+mixin c-field-checkbox(classes, id, content)
+    label(class= classes + " c-field-checkbox__label" for= id)
+        input(class= classes + " c-field-checkbox__field visually-hidden" id= id)&attributes(attributes)
+        span(class=classes + " c-field-checkbox__field--custom")
+        = content

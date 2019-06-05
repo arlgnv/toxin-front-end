@@ -1,3 +1,3 @@
 mixin c-field-masked(classes, id, content)
-    label(for= id)= content
-    input(class=classes + " c-field-masked" id= id)&attributes(attributes)
+    label(class="c-field-masked__label" for= id)= content
+    input(class=classes + " c-field-masked__field" id= id)&attributes(attributes)
