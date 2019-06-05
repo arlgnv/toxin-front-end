@@ -15,12 +15,13 @@ $('#find-room__from').datepicker({
 
 //Dropdown Guests
 var inputDropdownGuests = document.querySelector('.js-dropdown-guests');
-inputDropdownGuests.addEventListener('click', initGuestsDropdown);
+inputDropdownGuests.addEventListener('click', initDropdownGuests);
 
-function initGuestsDropdown() {
+function initDropdownGuests() {
     var parent = this.closest('.dropdown__wrapper');
     var dropdownContent = parent.querySelector('.dropdown__content');
 
+    var dropdownItems = dropdownContent.querySelectorAll('.dropdown__item:not(.dropdown__buttons)');
     var dropdownAmouts = dropdownContent.querySelectorAll('.dropdown__amount');
     var dropdownDelButtons = dropdownContent.querySelectorAll('.dropdown__del');
     var dropdownInsButtons = dropdownContent.querySelectorAll('.dropdown__ins');
@@ -37,6 +38,7 @@ function initGuestsDropdown() {
     dropdownApply.addEventListener('click', applyChanges);
 
     dropdownContent.style.display = 'block';
+
 
     function subtractOne() {
         var dropdownAmount = this.nextElementSibling;
@@ -69,12 +71,53 @@ function initGuestsDropdown() {
 
     function applyChanges() {
         inputDropdownGuests.value = '';
-        var num = 0;
-        for (var i = 0; i < dropdownAmouts.length; i++) num += +dropdownAmouts[i].innerHTML;
+        var amountGuests = 0, amountBabies = 0, amountBabiesText;
+        for (var i = 0; i < dropdownItems.length; i++) {
+            var amount = dropdownItems[i].querySelector('.dropdown__amount').innerHTML;
+            if (dropdownItems[i].querySelector('.dropdown__title').innerHTML == "Младенцы") amountBabies += +amount;
+            amountGuests += +amount;
+        }
 
-            if (num == 1) inputDropdownGuests.value = num + ' гость';
-        else if (num >= 2 && num <= 4) inputDropdownGuests.value = num + ' гостя';
-        else if (num >= 5 || num == 0) inputDropdownGuests.value = num + ' гостей';
+        if (amountBabies == 1) amountBabiesText = ' младенец';
+        else if (amountBabies >= 2 && amountBabies <= 4) amountBabiesText = ' младенца';
+        else if (amountBabies >= 5 || amountBabies == 0) amountBabiesText = ' младенцев';
+
+        if (amountGuests == 1) inputDropdownGuests.value = amountGuests + ' гость, ' + amountBabies + amountBabiesText;
+        else if (amountGuests >= 2 && amountGuests <= 4) inputDropdownGuests.value = amountGuests + ' гостя, ' + amountBabies + amountBabiesText;
+        else if (amountGuests >= 5 || amountGuests == 0) inputDropdownGuests.value = amountGuests + ' гостей, ' + amountBabies + amountBabiesText;
+
+        dropdownContent.style = '';
+
+        for (var i = 0; i < dropdownAmouts.length; i++) {
+            dropdownDelButtons[i].removeEventListener('click', subtractOne);
+            dropdownInsButtons[i].removeEventListener('click', insertOne);
+        }
+    }
+
+    function applyChangesComfort() {
+        inputDropdownComfort.value = '';
+        var str = '';
+        for (var i = 0; i < dropdownItems.length; i++) {
+            var title = dropdownItems[i].querySelector('.dropdown__title').innerHTML;
+            var amount = dropdownItems[i].querySelector('.dropdown__amount').innerHTML;
+
+            if (title == 'Спальни') {
+                if (amount == 1) inputDropdownComfort.value += amount + ' спальня, ';
+                else if (amount >= 2 && amount <= 4) inputDropdownComfort.value += amount + ' спальни, ';
+                else if (amount == 5 || amount == 0) inputDropdownComfort.value += amount + ' спален, ';
+            } else if (title == 'Кровати') {
+                if (amount == 1) inputDropdownComfort.value += amount + ' кровать, ';
+                else if (amount >= 2 && amount <= 4) inputDropdownComfort.value += amount + ' кровати, ';
+                else if (amount == 5 || amount == 0) inputDropdownComfort.value += amount + ' кроватей, ';
+            } else if (title == 'Ванные комнаты') {
+                if (amount == 1) inputDropdownComfort.value += amount + ' ванная комната';
+                else if (amount >= 2 && amount <= 4) inputDropdownComfort.value += amount + ' ванные комнаты';
+                else if (amount == 5 || amount == 0) inputDropdownComfort.value += amount + ' ванных комнат';
+            }
+        }
+
+        inputDropdownComfort.value = str;
+        inputDropdownComfort.addEventListener('click', initDropdown);
 
         dropdownContent.style = '';
 
@@ -91,6 +134,82 @@ function initGuestsDropdown() {
         }
 
         if (flag) clearButton.style = '';
+    }
+}
+
+var inputDropdownComfort = document.querySelector('.js-dropdown-comfort');
+inputDropdownComfort.addEventListener('click', initDropdownComfort);
+
+function initDropdownComfort() {
+    inputDropdownComfort.removeEventListener('click', initDropdownComfort);
+    inputDropdownComfort.addEventListener('click', applyChangesComfort);
+
+    var parent = this.closest('.dropdown__wrapper');
+    var dropdownContent = parent.querySelector('.dropdown__content');
+
+    var dropdownItems = dropdownContent.querySelectorAll('.dropdown__item');
+    var dropdownAmouts = dropdownContent.querySelectorAll('.dropdown__amount');
+    var dropdownDelButtons = dropdownContent.querySelectorAll('.dropdown__del');
+    var dropdownInsButtons = dropdownContent.querySelectorAll('.dropdown__ins');
+
+    for (var i = 0; i < dropdownAmouts.length; i++) {
+        dropdownDelButtons[i].addEventListener('click', subtractOne);
+        dropdownInsButtons[i].addEventListener('click', insertOne);
+    }
+
+    dropdownContent.style.display = 'block';
+
+
+    function subtractOne() {
+        var dropdownAmount = this.nextElementSibling;
+        if (dropdownAmount.innerHTML == 1) {
+            dropdownAmount.innerHTML = dropdownAmount.innerHTML - 1;
+            this.style = '';
+        } else if (dropdownAmount.innerHTML > 1) {
+            dropdownAmount.innerHTML = dropdownAmount.innerHTML - 1;
+        }
+    }
+
+    function insertOne() {
+        var dropdownAmount = this.previousElementSibling;
+        dropdownAmount.innerHTML = +dropdownAmount.innerHTML + 1;
+
+        var dropdownDel = dropdownAmount.previousElementSibling;
+        dropdownDel.style.opacity = '1';
+    }
+
+    function applyChangesComfort() {
+        inputDropdownComfort.removeEventListener('click', applyChangesComfort);
+        inputDropdownComfort.value = '';
+        var str = '';
+        for (var i = 0; i < dropdownItems.length; i++) {
+            var title = dropdownItems[i].querySelector('.dropdown__title').innerHTML;
+            var amount = dropdownItems[i].querySelector('.dropdown__amount').innerHTML;
+
+            if (title == 'Спальни') {
+                if (amount == 1) str += amount + ' спальня, ';
+                else if (amount >= 2 && amount <= 4) str += amount + ' спальни, ';
+                else if (amount == 5 || amount == 0) str += amount + ' спален, ';
+            } else if (title == 'Кровати') {
+                if (amount == 1) str += amount + ' кровать, ';
+                else if (amount >= 2 && amount <= 4) str += amount + ' кровати, ';
+                else if (amount == 5 || amount == 0) str += amount + ' кроватей, ';
+            } else if (title == 'Ванные комнаты') {
+                if (amount == 1) str += amount + ' ванная комната';
+                else if (amount >= 2 && amount <= 4) str += amount + ' ванные комнаты';
+                else if (amount == 5 || amount == 0) str += amount + ' ванных комнат';
+            }
+        }
+
+        inputDropdownComfort.value = str;
+        inputDropdownComfort.addEventListener('click', initDropdownComfort);
+
+        dropdownContent.style = '';
+
+        for (var i = 0; i < dropdownAmouts.length; i++) {
+            dropdownDelButtons[i].removeEventListener('click', subtractOne);
+            dropdownInsButtons[i].removeEventListener('click', insertOne);
+        }
     }
 }
 
