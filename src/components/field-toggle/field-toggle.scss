@@ -1,0 +1,42 @@
+.c-field-toggle__label {
+
+}
+
+.c-field-toggle__field {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 40px;
+    height: 20px;
+
+    border: 1px solid $primary-color-25;
+    border-radius: 10px;
+    background: transparent;
+    -webkit-appearance: none;
+    outline: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2px;
+
+        width: 12px;
+        height: 12px;
+
+        background: $primary-color-25;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.c-field-toggle__field:checked {
+    border: 1px solid $purple-color-100;
+
+    &::before {
+        left: auto;
+        right: 2px;
+
+        background: linear-gradient(180deg, $purple-color-100 0%, #8BA4F9 100%);
+    }
+}
