@@ -1,0 +1,15 @@
+.c-rating__wrapper {
+
+}
+
+.c-rating__star {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background: url("../../components/rating/images/star_border.svg") no-repeat center;
+
+    &--selected {
+        background-image: url("../../components/rating/images/star.svg");
+    }
+}
