@@ -103,6 +103,9 @@ block content
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-pagination("")
 
+    .demonstrate-wrapper.demonstrate-wrapper--inline(style="width: 300px")
+        +c-range("filter-form-range", "range-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")
+
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized
 
@@ -120,4 +123,5 @@ block content
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
     script(src="../../components/calendar/datepicker.js")
+    script(src="../../components/range/range.js")
     script(src="components.js")

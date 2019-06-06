@@ -13,6 +13,32 @@ $('#find-room__from').datepicker({
     //inline: true
 })
 
+
+//Range
+var $rangePrice = $('.c-range__price');
+$(".js-range-slider").ionRangeSlider({
+    skin: "custom",
+    type: "double",
+    min: 0,
+    max: 15000,
+    hide_min_max: true,
+    from: 5000,
+    to: 10000,
+    hide_from_to: true,
+    onStart: function(data) {
+        from = data.from;
+        to = data.to;
+
+        $rangePrice.html(from + "₽ - " + to + "₽");
+    },
+    onChange: function(data) {
+        from = data.from;
+        to = data.to;
+
+        $rangePrice.html(from + "₽ - " + to + "₽");
+    },
+});
+
 //Dropdown Guests
 var inputDropdownGuests = document.querySelectorAll('.js-dropdown-guests');
 for (var i = 0; i < inputDropdownGuests.length; i++) {

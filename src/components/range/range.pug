@@ -1,0 +1,7 @@
+mixin c-range(classes, id, text, description)
+    div(class= classes + "__wrapper c-range__wrapper")
+        div(class= classes + "__group c-range__group")
+            label(class= classes + "__label c-range__label" for= id)= text
+            span(class= classes + "__range-price c-range__price")
+        input(class= classes + "__field js-range-slider" id= id type="text" name="range-price")
+        span(class= classes + "__description c-range__description")= description
