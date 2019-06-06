@@ -1,0 +1,34 @@
+.button--like {
+    padding-left: 20px;
+
+    color: $primary-color-25;
+
+    &:hover {
+        color: $purple-color-100;
+    }
+
+    &::before {
+        background: $primary-color-25;
+    }
+
+    &:hover::before {
+        background-image: linear-gradient(180deg, $purple-color-100 0%, rgba(139, 164, 249, 1) 100%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 4px;
+
+        width: 10px;
+        height: 8px;
+
+        background: url("../../components/button-like/images/heart.svg") no-repeat center;
+        transform: translateY(-50%);
+    }
+
+    &:hover::after {
+        background-image: url("../../components/button-like/images/heart-active.svg");
+    }
+}

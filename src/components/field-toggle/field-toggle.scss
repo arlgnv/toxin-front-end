@@ -1,19 +1,13 @@
-.c-field-toggle__label {
-
-}
-
-.c-field-toggle__field {
+.c-field-toggle__field--custom {
     position: relative;
 
     box-sizing: border-box;
+    display: inline-block;
     width: 40px;
     height: 20px;
 
     border: 1px solid $primary-color-25;
     border-radius: 10px;
-    background: transparent;
-    -webkit-appearance: none;
-    outline: none;
 
     &::before {
         content: "";
@@ -30,7 +24,12 @@
     }
 }
 
-.c-field-toggle__field:checked {
+.c-field-toggle__field:focus + .c-field-toggle__field--custom {
+    outline: 5px auto rgb(77, 144, 254);
+    outline-offset: -2px;
+}
+
+.c-field-toggle__field:checked + .c-field-toggle__field--custom {
     border: 1px solid $purple-color-100;
 
     &::before {
