@@ -1,0 +1,16 @@
+mixin c-pagination(classes)
+    div(class= classes + " c-pagination__wrapper")
+        ul(class="c-pagination__list")
+            li(class="c-pagination__item c-pagination__item--current")
+                a(class="c-pagination__link") 1
+            li(class="c-pagination__item")
+                a(class="c-pagination__link" href="#") 2
+            li(class="c-pagination__item")
+                a(class="c-pagination__link" href="#") 3
+            li(class="c-pagination__item")
+                a(class="c-pagination__link") ...
+            li(class="c-pagination__item")
+                a(class="c-pagination__link" href="#") 15
+            li(class="c-pagination__item c-pagination__item--next-page")
+                a(class="c-pagination__link" href="#")
+        p(class="c-pagination__description") 1 – 12 из 100+ вариантов аренды

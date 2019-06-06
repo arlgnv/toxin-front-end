@@ -88,6 +88,21 @@ block content
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-rating("", 3, 5)
 
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +button-purple-gradient("click me")(type="button")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +button-border-gradient("click me")(type="button")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +button-link("click me")(href="#")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +button-purple-gradient-arrow("click me")(type="button")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +c-pagination("")
+
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized
 
@@ -100,7 +115,7 @@ block content
     .demonstrate-wrapper
         include ../../components/main-footer/main-footer-poor
 
-    .demonstrate-wrapper
+    .demonstrate-wrapper.demonstrate-wrapper--inline
         include ../../components/form-find-room/form-find-room
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
