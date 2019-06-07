@@ -2,6 +2,15 @@
     position: relative;
 }
 
+.c-field-subscription__label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $primary-color-100;
+
+    text-transform: uppercase;
+}
+
 .c-field-subscription__field {
     box-sizing: border-box;
 
@@ -18,14 +27,12 @@
 
 .c-field-subscription__submit {
     position: absolute;
-    top: 50%;
-    right: 13px;
+    top: 0;
+    right: 0;
 
-    padding: 0;
     width: 18px;
     height: 18px;
 
     background: url("../../components/field-subscription/images/arrow-gradient.svg");
     border: none;
-    transform: translateY(-50%);
 }

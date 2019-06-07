@@ -10,12 +10,11 @@ block content
     include ../../utilities/mixins-pug
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        b text field
-        +c-field-default("", "c-field-default", "")(placeholder="Введите хоть что-нибудь")
+        +c-field-default("register-form", "c-field-default", "text field", true)(placeholder="Email")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         .dropdown-wrapper
-            +c-field-dropdown("js-dropdown-guests", "c-field-dropdown-1", "dropdown guests")(type="text" placeholder="Сколько гостей")
+            +c-field-dropdown("js-dropdown-guests register-form", "c-field-dropdown-guests", "dropdown guests", true)(placeholder="Сколько гостей?")
             .dropdown__content
                     .dropdown__item
                         b.dropdown__title Взрослые
@@ -40,7 +39,7 @@ block content
                         span.dropdown__apply Применить
     .demonstrate-wrapper.demonstrate-wrapper--inline
         .dropdown-wrapper
-            +c-field-dropdown("js-dropdown-comfort", "c-field-dropdown-2", "dropdown comfort")(type="text" placeholder="Что вы хотите?")
+            +c-field-dropdown("js-dropdown-comfort register-form", "c-field-dropdown-comfort", "dropdown comfort", true)(placeholder="Настройте кофморт)")
             .dropdown__content
                     .dropdown__item
                         b.dropdown__title Спальни
@@ -62,25 +61,23 @@ block content
                             button.dropdown__ins(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-masked("", "c-field-masked", "masked text field")(placeholder="Введите хоть что-нибудь")
+        +c-field-masked("filter-form", "c-field-masked", "masked text field", true)(placeholder="ДД.ММ.ГГГГ")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        .dropdown-wrapper
-            +c-field-date-dropdown("", "c-field-date-dropdown", "date dropdown")(type="text" placeholder="ДД.ММ.ГГГГ")
+        +c-field-date-dropdown("filter-form", "c-field-date-dropdown", "date dropdown", true)(placeholder="ДД.ММ.ГГГГ")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        b subscription text field
-        +c-field-subscription("", "", "c-field-subscription", "Введите email")(type="email" placeholder="Email")
+        +c-field-subscription("https://echo.htmlacademy.ru", "filter-form", "c-field-subscription", "subscription text field", true)(type="email" placeholder="Email")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-checkbox-poor("", "c-field-checkbox", "Можно курить")(type="checkbox")
+        +c-checkbox-poor("filter-form", "c-field-checkbox", "Можно курить")(type="checkbox")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-radio-button("", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
-        +c-radio-button("", "c-field-radio-2", "Женщина")(type="radio" name="gender")
+        +c-radio-button("filter-form", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
+        +c-radio-button("filter-form", "c-field-radio-2", "Женщина")(type="radio" name="gender")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-toggle-button("", "c-field-toggle", "Получать спецпредложения")(type="checkbox")
+        +c-toggle-button("filter-form", "c-field-toggle", "Получать спецпредложения")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +button-like("17")(type="button")
@@ -111,6 +108,15 @@ block content
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-bullet-list("bullet-list", ['Нельзя с питомцами', 'Без вечеринок и мероприятий'])
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        fieldset(style="border: none")
+            legend(class="title title--arrow js-checkbox-expandable") asdasd
+                span(class="arrow")
+            div(style="display: none")
+                +c-checkbox-poor("", "c-field-checkbox3", "Можно делать все")(type="checkbox")
+                +c-checkbox-poor("", "c-field-checkbox4", "Можно еще немного")(type="checkbox")
+                +c-checkbox-poor("", "c-field-checkbox5", "Можно вообще все")(type="checkbox")
 
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized

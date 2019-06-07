@@ -11,8 +11,8 @@
     &::after {
         content: "";
         position: absolute;
-        top: 37px;
-        right: 15px;
+        top: 0;
+        right: 0;
 
         width: 6px;
         height: 6px;
@@ -25,6 +25,8 @@
 }
 
 .c-field-date-dropdown__field {
+    box-sizing: border-box;
+
     font: inherit;
     line-height: 18px;
     color: $primary-color-75;

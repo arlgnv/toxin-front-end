@@ -11,9 +11,8 @@
     &::after {
         content: "";
         position: absolute;
-        top: 40px;
-        right: 15px;
-        z-index: 1;
+        top: 0;
+        right: 0;
 
         width: 6px;
         height: 6px;
@@ -26,11 +25,13 @@
 }
 
 .c-field-dropdown__field {
+    box-sizing: border-box;
+
     font: inherit;
     color: $primary-color-75;
 
     border: 1px solid $primary-color-25;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .dropdown-wrapper {
@@ -40,7 +41,7 @@
 .dropdown__content {
     position: absolute;
     top: 100%;
-    z-index: 2;
+    z-index: 1;
 
     display: none;
     box-sizing: border-box;
@@ -57,9 +58,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.dropdown__item:not(:last-child) {
     margin-bottom: 7px;
 }
 
@@ -150,7 +148,7 @@
 }
 
 .dropdown__buttons {
-    margin-top: 20px;
+    margin: 20px 0 0;
 }
 
 .dropdown__clear {

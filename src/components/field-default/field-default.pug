@@ -1,3 +1,6 @@
-mixin c-field-default(classes, id, content)
-    label.visually-hidden(for= id)= content
-    input(class=classes + " c-field-default" id= id)&attributes(attributes)
+mixin c-field-default(classes, id, title, showLabel)
+    if (showLabel == true)
+        label(class= classes + "__label c-field-default__label" for= id)= title
+    else
+        label(class= classes + "__label visually-hidden c-field-default__label" for= id)= title
+    input(class=classes + "__field c-field-default__field" id= id)&attributes(attributes)

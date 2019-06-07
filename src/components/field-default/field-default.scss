@@ -1,14 +1,23 @@
-.c-field-default {
+.c-field-default__label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $primary-color-100;
+
+    text-transform: uppercase;
+}
+
+.c-field-default__field {
     box-sizing: border-box;
 
     font: inherit;
+    line-height: 18px;
     color: $primary-color-75;
 
     border: 1px solid $primary-color-25;
     border-radius: 4px;
 
     &::placeholder {
-        line-height: 18px;
         color: $primary-color-25;
     }
 

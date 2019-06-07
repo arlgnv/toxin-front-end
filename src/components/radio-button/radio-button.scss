@@ -1,26 +1,21 @@
 .c-field-radio__label {
-    position: relative;
-
-    padding-left: 30px;
-
     color: $primary-color-50;
 }
 
-.c-field-radio__field--custom {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.c-field-radio__radio--custom {
+    position: relative;
 
     box-sizing: border-box;
+    display: inline-block;
     width: 20px;
     height: 20px;
 
     border: 1px solid $purple-color-100;
     border-radius: 50%;
+    vertical-align: middle;
 }
 
-.c-field-radio__field:checked + .c-field-radio__field--custom::before {
+.c-field-radio__radio:checked + .c-field-radio__radio--custom::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -35,6 +30,11 @@
     transform: translate(-50%, -50%);
 }
 
-.c-field-radio__field:checked + span + span {
+.c-field-radio__radio:focus + .c-field-radio__radio--custom {
+    outline: 5px auto rgb(77, 144, 254);
+    outline-offset: -2px;
+}
+
+.c-field-radio__radio:checked + span + span {
     color: $primary-color-75;
 }

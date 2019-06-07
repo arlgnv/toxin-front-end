@@ -1,5 +1,5 @@
-mixin c-radio-button(classes, id, content)
-    label(class= classes + " c-field-radio__label" for= id)
-        input(class= classes + " c-field-radio__field visually-hidden" id= id)&attributes(attributes)
-        span(class=classes + " c-field-radio__field--custom")
-        span= content
+mixin c-radio-button(classes, id, title)
+    label(class= classes + "__label c-field-radio__label" for= id)
+        input(class= classes + "__radio c-field-radio__radio visually-hidden" id= id)&attributes(attributes)
+        span(class=classes + "__radio--custom c-field-radio__radio--custom")
+        span= title

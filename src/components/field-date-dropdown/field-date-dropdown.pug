@@ -1,3 +1,6 @@
-mixin c-field-date-dropdown(classes, id, content)
-    label(class="c-field-date-dropdown__label" for= id)= content
-    input(class=classes + " c-field-date-dropdown__field" id= id)&attributes(attributes)
+mixin c-field-date-dropdown(classes, id, title, showLabel)
+    if (showLabel == true)
+        label(class= classes + "__label c-field-date-dropdown__label" for= id)= title
+    else
+        label(class= classes + "__label visually-hidden c-field-date-dropdown__label" for= id)= title
+    input(class=classes + "__field c-field-date-dropdown__field" id= id)&attributes(attributes)

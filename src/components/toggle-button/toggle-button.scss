@@ -1,4 +1,4 @@
-.c-field-toggle__field--custom {
+.c-field-toggle__checkbox--custom {
     position: relative;
 
     box-sizing: border-box;
@@ -11,6 +11,7 @@
 
     &::before {
         content: "";
+        display: inline-block;
         position: absolute;
         top: 50%;
         left: 2px;
@@ -24,12 +25,12 @@
     }
 }
 
-.c-field-toggle__field:focus + .c-field-toggle__field--custom {
+.c-field-toggle__checkbox:focus + .c-field-toggle__checkbox--custom {
     outline: 5px auto rgb(77, 144, 254);
     outline-offset: -2px;
 }
 
-.c-field-toggle__field:checked + .c-field-toggle__field--custom {
+.c-field-toggle__checkbox:checked + .c-field-toggle__checkbox--custom {
     border: 1px solid $purple-color-100;
 
     &::before {

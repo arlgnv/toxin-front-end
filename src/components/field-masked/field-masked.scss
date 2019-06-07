@@ -8,6 +8,8 @@
 }
 
 .c-field-masked__field {
+    box-sizing: border-box;
+
     font: inherit;
     color: $primary-color-75;
 

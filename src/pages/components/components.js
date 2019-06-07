@@ -39,6 +39,17 @@ $(".js-range-slider").ionRangeSlider({
     },
 });
 
+
+//Checkbox Expandable
+$('.js-checkbox-expandable').click(function() {
+    var $this = $(this);
+
+    $this.find('.arrow').toggleClass('arrow--expand');
+
+    $this.next().slideToggle(1000);
+});
+
+
 //Dropdown Guests
 var inputDropdownGuests = document.querySelectorAll('.js-dropdown-guests');
 for (var i = 0; i < inputDropdownGuests.length; i++) {

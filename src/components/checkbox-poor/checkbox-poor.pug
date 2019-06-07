@@ -1,5 +1,5 @@
-mixin c-checkbox-poor(classes, id, content)
-    label(class= classes + " c-checkbox-poor__label" for= id)
-        input(class= classes + " c-checkbox-poor__field visually-hidden" id= id)&attributes(attributes)
-        span(class=classes + " c-checkbox-poor__field--custom")
-        = content
+mixin c-checkbox-poor(classes, id, title)
+    label(class= classes + "__label c-checkbox-poor__label" for= id)
+        input(class= classes + "__checkbox c-checkbox-poor__checkbox visually-hidden" id= id)&attributes(attributes)
+        span(class=classes + "__checkbox--custom c-checkbox-poor__checkbox--custom")
+        = title

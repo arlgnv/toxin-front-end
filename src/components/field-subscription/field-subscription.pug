@@ -1,5 +1,8 @@
-mixin c-field-subscription(action, classes, id, content)
+mixin c-field-subscription(action, classes, id, title, showLabel)
     form(action= action class= classes + "__form c-field-subscription__form" method="post")
-        label.visually-hidden(for= id)= content
+        if (showLabel == true)
+            label(class= classes + "__label c-field-subscription__label" for= id)= title
+        else
+            label(class= classes + "__label visually-hidden c-field-subscription__label" for= id)= title
         input(class= classes + "__field c-field-subscription__field" id= id)&attributes(attributes)
         button(type="submit" class= classes + "__submit c-field-subscription__submit" aria-label="Подписаться на рассылку")
