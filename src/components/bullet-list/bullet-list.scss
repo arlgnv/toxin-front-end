@@ -1,0 +1,21 @@
+.c-bullet-list__list {
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+}
+
+.c-bullet-list__item {
+    color: $primary-color-75;
+
+    &::before {
+        content: "";
+
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+
+        background-color: $primary-color-25;
+        border-radius: 50%;
+    }
+}
