@@ -33,14 +33,24 @@
 @import '../../components/button-link/button-link';
 @import '../../components/button-like/button-like';
 
-// Rating
+// rating
 @import '../../components/rating/rating';
 
-// Pagination
+// pagination
 @import '../../components/pagination/pagination';
 
-// Range
+// range
 @import '../../components/range/range';
+
+// checkboxes
+@import '../../components/checkbox-poor/checkbox-poor';
+@import '../../components/checkbox-rich/checkbox-rich';
+
+// radio button
+@import '../../components/radio-button/radio-button';
+
+// toggle button
+@import '../../components/toggle-button/toggle-button';
 
 // inputs
 @import '../../components/field-default/field-default';
@@ -48,9 +58,6 @@
 @import '../../components/field-subscription/field-subscription';
 @import '../../components/field-date-dropdown/field-date-dropdown';
 @import '../../components/field-dropdown/field-dropdown';
-@import '../../components/field-checkbox/field-checkbox';
-@import '../../components/field-radio/field-radio';
-@import '../../components/field-toggle/field-toggle';
 
 //blocks
 @import '../../components/main-header/main-header';

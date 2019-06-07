@@ -73,14 +73,14 @@ block content
         +c-field-subscription("", "", "c-field-subscription", "Введите email")(type="email" placeholder="Email")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-checkbox("", "c-field-checkbox", "Можно курить")(type="checkbox")
+        +c-checkbox-poor("", "c-field-checkbox", "Можно курить")(type="checkbox")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-radio("", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
-        +c-field-radio("", "c-field-radio-2", "Женщина")(type="radio" name="gender")
+        +c-radio-button("", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
+        +c-radio-button("", "c-field-radio-2", "Женщина")(type="radio" name="gender")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-toggle("", "c-field-toggle", "Получать спецпредложения")(type="checkbox")
+        +c-toggle-button("", "c-field-toggle", "Получать спецпредложения")(type="checkbox")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +button-like("17")(type="button")
@@ -105,6 +105,9 @@ block content
 
     .demonstrate-wrapper.demonstrate-wrapper--inline(style="width: 300px")
         +c-range("filter-form-range", "range-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +c-checkbox-rich("", "c-field-checkbox1", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")(type="checkbox")
 
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized

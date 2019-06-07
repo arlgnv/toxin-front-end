@@ -1,4 +1,4 @@
-.c-field-checkbox__label {
+.c-checkbox-poor__label {
     position: relative;
 
     padding-left: 30px;
@@ -7,7 +7,7 @@
     color: $primary-color-50;
 }
 
-.c-field-checkbox__field--custom {
+.c-checkbox-poor__field--custom {
     content: "";
     position: absolute;
     top: 0;
@@ -21,6 +21,6 @@
     border-radius: 4px
 }
 
-.c-field-checkbox__field:checked + .c-field-checkbox__field--custom {
-    background: url("../../components/field-checkbox/images/checkbox-arrow.svg") no-repeat center;
+.c-checkbox-poor__field:checked + .c-checkbox-poor__field--custom {
+    background: url("../../components/checkbox-poor/images/checkbox-arrow.svg") no-repeat center;
 }
