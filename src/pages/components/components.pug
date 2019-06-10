@@ -83,7 +83,7 @@ block content
         +button-like("17")(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-rating("", 3, 5)
+        +c-rating("room-rating", 3, 5)
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +button-purple-gradient("click me")(type="button")
@@ -98,25 +98,24 @@ block content
         +button-purple-gradient-arrow("click me")(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-pagination("")
+        +c-pagination("room-pagination")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline(style="width: 300px")
-        +c-range("filter-form-range", "range-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")
+        +c-range("filter-form-range", "range-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-checkbox-rich("", "c-field-checkbox1", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")(type="checkbox")
+        +c-checkbox-rich("filter-form", "c-field-checkbox1", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-bullet-list("bullet-list", ['Нельзя с питомцами', 'Без вечеринок и мероприятий'])
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        fieldset(style="border: none")
             legend(class="title title--arrow js-checkbox-expandable") asdasd
                 span(class="arrow")
             div(style="display: none")
-                +c-checkbox-poor("", "c-field-checkbox3", "Можно делать все")(type="checkbox")
-                +c-checkbox-poor("", "c-field-checkbox4", "Можно еще немного")(type="checkbox")
-                +c-checkbox-poor("", "c-field-checkbox5", "Можно вообще все")(type="checkbox")
+                +c-checkbox-poor("", "c-field-checkbox3", "Можно делать все")
+                +c-checkbox-poor("", "c-field-checkbox4", "Можно еще немного")
+                +c-checkbox-poor("", "c-field-checkbox5", "Можно вообще все")
 
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized

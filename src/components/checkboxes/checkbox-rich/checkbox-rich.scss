@@ -8,7 +8,7 @@
     color: $primary-color-75;
 }
 
-.c-checkbox-rich__field--custom {
+.c-checkbox-rich__checkbox--custom {
     content: "";
     position: absolute;
     top: 0;
@@ -22,8 +22,13 @@
     border-radius: 4px
 }
 
-.c-checkbox-rich__field:checked + .c-checkbox-rich__field--custom {
-    background: url("../../components/checkbox-poor/images/checkbox-arrow.svg") no-repeat center;
+.c-checkbox-rich__checkbox:checked + .c-checkbox-rich__checkbox--custom {
+    background: url("../../components/checkboxes/images/checkbox-arrow.svg") no-repeat center;
+}
+
+.c-checkbox-rich__checkbox:focus + .c-checkbox-rich__checkbox--custom {
+    outline: 5px auto rgb(77, 144, 254);
+    outline-offset: -2px;
 }
 
 .c-checkbox-rich__description {

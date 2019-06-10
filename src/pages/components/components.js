@@ -46,7 +46,7 @@ $('.js-checkbox-expandable').click(function() {
 
     $this.find('.arrow').toggleClass('arrow--expand');
 
-    $this.next().slideToggle(1000);
+    $this.next().slideToggle(0);
 });
 
 
