@@ -56,8 +56,11 @@
 // bullet list
 @import '../../components/bullet-list/bullet-list';
 
-// advantage
+// advantages
 @import '../../components/advantages/advantages';
+
+// testimonials
+@import '../../components/testimonials/testimonials';
 
 // inputs
 @import '../../components/field-default/field-default';
@@ -84,6 +87,7 @@
 
     &--inline {
         display: inline-block;
+        max-width: 300px;
     }
 
     .title {

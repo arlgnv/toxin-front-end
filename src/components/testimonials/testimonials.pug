@@ -1,0 +1,18 @@
+mixin c-testimonials(classes, arrItems)
+    ul(class= classes + "__list c-testimonials__list")
+        - for (var i = 0; i < arrItems.length; i++)
+            - var img = arrItems[i][0]
+            - var name = arrItems[i][1]
+            - var date = arrItems[i][2]
+            - var text = arrItems[i][3]
+            - var like = arrItems[i][4]
+            li(class= classes + "__item c-testimonials__item")
+                div(class= classes + "__top-part c-testimonials__top-part")
+                    img(class= classes + "__img c-testimonials__img" src= img width="44" height="44" alt= name)
+                    p
+                        b(class= classes + "__name c-testimonials__name")= name
+                        time(class= classes + "__date c-testimonials__date")= date
+                div(class= classes + "__bottom-part c-testimonials__bottom-part")
+                    p
+                        +button-like(like)
+                    p(class= classes + "__text c-testimonials__text")= text
