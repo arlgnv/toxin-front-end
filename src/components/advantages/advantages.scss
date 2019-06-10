@@ -1,0 +1,34 @@
+.c-advantages__list {
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+}
+
+.c-advantages__item {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid $primary-color-10;
+}
+
+.c-advantages__icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.c-advantages__text {
+    margin: 0;
+
+    color: $primary-color-75;
+}
+
+.c-advantages__lead {
+    display: block;
+
+    font-weight: bold;
+}
