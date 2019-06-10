@@ -70,7 +70,7 @@ block content
         +c-field-subscription("https://echo.htmlacademy.ru", "filter-form", "c-field-subscription", "subscription text field", true)(type="email" placeholder="Email")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-checkbox-poor("filter-form", "c-field-checkbox", "Можно курить")(type="checkbox")
+        +c-checkbox-poor("filter-form", "c-field-checkbox", "Можно курить")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-radio-button("filter-form", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
@@ -110,12 +110,7 @@ block content
         +c-bullet-list("bullet-list", ['Нельзя с питомцами', 'Без вечеринок и мероприятий'])
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-            legend(class="title title--arrow js-checkbox-expandable") asdasd
-                span(class="arrow")
-            div(style="display: none")
-                +c-checkbox-poor("", "c-field-checkbox3", "Можно делать все")
-                +c-checkbox-poor("", "c-field-checkbox4", "Можно еще немного")
-                +c-checkbox-poor("", "c-field-checkbox5", "Можно вообще все")
+        +c-checkbox-expandable("filter-form", "Дополнительные удобства", {"Завтрак": "breakfast", "Письменный стол": "desk", "Кроватка": "bed"})
 
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized

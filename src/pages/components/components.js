@@ -44,7 +44,7 @@ $(".js-range-slider").ionRangeSlider({
 $('.js-checkbox-expandable').click(function() {
     var $this = $(this);
 
-    $this.find('.arrow').toggleClass('arrow--expand');
+    $this.toggleClass('c-checkbox-expandable__title--expanded');
 
     $this.next().slideToggle(0);
 });
