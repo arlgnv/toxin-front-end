@@ -3,4 +3,4 @@ mixin c-field-masked(classes, id, title, showLabel)
         label(class= classes + "__label c-field-masked__label" for= id)= title
     else
         label(class= classes + "__label visually-hidden c-field-masked__label" for= id)= title
-    input(class=classes + " c-field-masked__field" id= id)&attributes(attributes)
+    input(class=classes + "__field c-field-masked__field" id= id)&attributes(attributes)

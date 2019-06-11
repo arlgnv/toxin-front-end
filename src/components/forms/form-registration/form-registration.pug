@@ -1,0 +1,28 @@
+article.registration
+    h2.registration__title Регистрация аккаунта
+    form.registration__form(action="https://echo.htmlacademy.ru" method="post")
+        fieldset.registration__group
+            p.registration__item
+                +c-field-default("registration", "field-name", "Введите имя", false)(placeholder="Имя" name="name")
+            p.registration__item
+                +c-field-default("registration", "field-surname", "Введите фамилию", false)(placeholder="Фамилия" name="surname")
+            ul.registration__list
+                li.registration__item
+                    +c-radio-button("registration", "gender-male", "Мужчина")(name="gender" value="male" checked)
+                li.registration__item
+                    +c-radio-button("registration", "gender-female", "Женщина")(name="gender" value="female")
+        p.registration__item.registration__item--lonely
+            +c-field-masked("registration", "field-birthday", "Дата рождения", true)(placeholder="ДД.ММ.ГГГГ" name="birthday")
+        fieldset.registration__group
+            legend.registration__group-title данные для входа в сервис
+            p.registration__item
+                +c-field-default("registration", "field-email", "Введите email", false)(placeholder="Email" name="email" type="email")
+            p.registration__item
+                +c-field-default("registration", "field-password", "Введите пароль", false)(placeholder="Пароль" name="password" type="password")
+            p.registration__item
+                +c-toggle-button("registration", "allow-newsletter", "Получать спецпредложения")(name="newsletter")
+            p.registration__item
+                +button("button--purple-gradient button--arrow", "перейти к оплате")(type="submit")
+    .registration__log-in
+        span Уже есть аккаунт на Toxin
+        +button-link("button--border-gradient", "войти")(href="#")

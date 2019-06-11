@@ -3,7 +3,7 @@ article.find-room
     form.find-room__form(action="https://echo.htmlacademy.ru" method="post")
         div.find-room__group
             p.find-room__item
-                +c-field-dropdown("find-room", "find-room__from", "Прибытие", true)(name="from" placeholder="ДД.ММ.ГГГГ" data-range="true")
+                +c-field-dropdown("find-room", "find-room__from", "Прибытие", true)(name="from" placeholder="ДД.ММ.ГГГГ")
             p.find-room__item
                 +c-field-dropdown("find-room", "find-room__to", "Выезд", true)(name="to" placeholder="ДД.ММ.ГГГГ")
         .dropdown-wrapper
@@ -32,4 +32,4 @@ article.find-room
                     span.dropdown__clear Очистить
                     span.dropdown__apply Применить
         p.find-room__item
-            //- +button-link("button--purple-gradient button--arrow", "Подобрать номер")(href="#")
+            +button("button--purple-gradient button--arrow", "Подобрать номер")(type="submit")

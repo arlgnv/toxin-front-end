@@ -69,11 +69,18 @@
 @import '../../components/field-subscription/field-subscription';
 @import '../../components/field-dropdown/field-dropdown';
 
+// calendar
+@import '../../components/calendar/datepicker';
+
+//forms
+@import '../../components/forms/form-find-room/form-find-room';
+@import '../../components/forms/form-confirm-room/form-confirm-room';
+@import '../../components/forms/form-registration/form-registration';
+
 //blocks
 @import '../../components/main-header/main-header';
 @import '../../components/main-footer/main-footer';
-@import '../../components/form-find-room/form-find-room';
-@import '../../components/calendar/datepicker';
+
 
 .demonstrate-wrapper {
     display: block;
