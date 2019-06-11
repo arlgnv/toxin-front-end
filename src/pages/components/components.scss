@@ -27,11 +27,12 @@
 */
 
 // buttons
-@import '../../components/button-purple-gradient/button-purple-gradient';
-@import '../../components/button-border-gradient/button-border-gradient';
-@import '../../components/button-purple-gradient-arrow/button-purple-gradient-arrow';
-@import '../../components/button-link/button-link';
-@import '../../components/button-like/button-like';
+@import '../../components/buttons/button';
+@import '../../components/buttons/button-purple-gradient';
+@import '../../components/buttons/button-border-gradient';
+@import '../../components/buttons/button-purple-gradient-arrow';
+@import '../../components/buttons/button-link';
+@import '../../components/buttons/button-like';
 
 // rating
 @import '../../components/rating/rating';
@@ -66,7 +67,6 @@
 @import '../../components/field-default/field-default';
 @import '../../components/field-masked/field-masked';
 @import '../../components/field-subscription/field-subscription';
-@import '../../components/field-date-dropdown/field-date-dropdown';
 @import '../../components/field-dropdown/field-dropdown';
 
 //blocks
@@ -87,7 +87,6 @@
 
     &--inline {
         display: inline-block;
-        max-width: 300px;
     }
 
     .title {

@@ -3,4 +3,4 @@ mixin c-field-dropdown(classes, id, title, showLabel)
         label(class= classes + "__label c-field-dropdown__label" for= id)= title
     else
         label(class= classes + "__label visually-hidden c-field-dropdown__label" for= id)= title
-    input(class= classes + "__field c-field-dropdown__field" id= id)&attributes(attributes)
+    input(class= classes + "__field c-field-dropdown__field" id= id type="text")&attributes(attributes)

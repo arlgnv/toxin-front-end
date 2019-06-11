@@ -3,12 +3,12 @@ article.find-room
     form.find-room__form(action="https://echo.htmlacademy.ru" method="post")
         div.find-room__group
             p.find-room__item
-                +c-field-date-dropdown("find-room__field datepicker-here", "find-room__from", "Прибытие")(type="text" name="from" placeholder="ДД.ММ.ГГГГ" data-range="true")
+                +c-field-dropdown("find-room", "find-room__from", "Прибытие", true)(name="from" placeholder="ДД.ММ.ГГГГ" data-range="true")
             p.find-room__item
-                +c-field-date-dropdown("find-room__field", "find-room__to", "Выезд")(type="text" name="to" placeholder="ДД.ММ.ГГГГ")
+                +c-field-dropdown("find-room", "find-room__to", "Выезд", true)(name="to" placeholder="ДД.ММ.ГГГГ")
         .dropdown-wrapper
             p.find-room__item
-                +c-field-dropdown("find-room__field js-dropdown-guests", "find-room__guests", "Гости")(type="text" name="guests" placeholder="Сколько гостей")
+                +c-field-dropdown("js-dropdown-guests find-room", "find-room__guests", "Гости", true)(name="guests" placeholder="Сколько гостей")
             .dropdown__content
                 .dropdown__item
                     b.dropdown__title Взрослые
@@ -32,4 +32,4 @@ article.find-room
                     span.dropdown__clear Очистить
                     span.dropdown__apply Применить
         p.find-room__item
-            +link-purple-gradient-arrow("Подобрать номер")(href="#")
+            //- +button-link("button--purple-gradient button--arrow", "Подобрать номер")(href="#")

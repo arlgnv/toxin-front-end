@@ -64,7 +64,7 @@ block content
         +c-field-masked("filter-form", "c-field-masked", "masked text field", true)(placeholder="ДД.ММ.ГГГГ")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-date-dropdown("filter-form", "c-field-date-dropdown", "date dropdown", true)(placeholder="ДД.ММ.ГГГГ")
+        +c-field-dropdown("filter-form", "c-field-date-dropdown", "date dropdown", true)(placeholder="ДД.ММ.ГГГГ")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-field-subscription("https://echo.htmlacademy.ru", "filter-form", "c-field-subscription", "subscription text field", true)(type="email" placeholder="Email")
@@ -80,22 +80,22 @@ block content
         +c-toggle-button("filter-form", "c-field-toggle", "Получать спецпредложения")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button-like("17")(type="button")
+        +button("button--like button--border-gradient", "17")(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-rating("room-rating", 3, 5)
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button-purple-gradient("click me")(type="button")
+        +button("button--purple-gradient", "click me")(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button-border-gradient("click me")(type="button")
+        +button("button--border-gradient", "click me")(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button-link("click me")(href="#")
+        +button-link("button--link", "click me")(href="#")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button-purple-gradient-arrow("click me")(type="button")
+        +button("button--purple-gradient button--arrow", "click me")(type="button")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-pagination("room-pagination")
@@ -117,8 +117,7 @@ block content
         ["../../components/advantages/images/comfort.svg", "Комфорт", "Шумопоглощающие стены"], ["../../components/advantages/images/convenience.svg", "Удобство", "Окно в каждой из спален"]])
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-testimonials("testimonials", [
-        ["../../components/testimonials/images/1.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12"]])
+        +c-testimonials("testimonials", [["../../components/testimonials/images/1.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12"]])
 
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized

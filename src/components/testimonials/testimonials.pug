@@ -14,5 +14,5 @@ mixin c-testimonials(classes, arrItems)
                         time(class= classes + "__date c-testimonials__date")= date
                 div(class= classes + "__bottom-part c-testimonials__bottom-part")
                     p
-                        +button-like(like)
+                        +button("button--border-gradient button--like", like)
                     p(class= classes + "__text c-testimonials__text")= text

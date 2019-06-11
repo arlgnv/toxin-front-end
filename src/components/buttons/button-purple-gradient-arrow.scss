@@ -1,8 +1,7 @@
 .button--arrow {
     position: relative;
 
-    &::after {
-        content: '';
+    svg {
         position: absolute;
         top: 50%;
         right: 15px;
@@ -10,7 +9,6 @@
         width: 18px;
         height: 18px;
 
-        background: url("../../components/button-purple-gradient-arrow/images/arrow-white.svg");
         transform: translateY(-50%);
     }
 }
