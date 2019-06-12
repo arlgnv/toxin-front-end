@@ -1,5 +1,5 @@
 mixin c-toggle-button(classes, id, title)
     label(class= classes + "__label c-field-toggle__label" for= id)
         input(class= classes + "__checkbox c-field-toggle__checkbox visually-hidden" id= id type="checkbox")&attributes(attributes)
-        span(class="__checkbox--custom c-field-toggle__checkbox--custom")
+        span(class= classes + "__checkbox--custom c-field-toggle__checkbox--custom")
         = title

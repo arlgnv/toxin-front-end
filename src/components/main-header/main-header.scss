@@ -1,5 +1,5 @@
 .main-header {
-    padding: 15px 0;
+    padding: 15.3px 0;
 
     .container {
         display: flex;
@@ -26,10 +26,10 @@
 */
 
 .site-navigation {
-    margin: 0;
-    padding: 0;
     display: flex;
-    margin-right: 20px;
+    margin: 0;
+    margin-right: 31px;
+    padding: 0;
 
     list-style-type: none;
 }
@@ -39,7 +39,7 @@
 }
 
 .site-navigation__item--has-submenu + .site-navigation__item {
-    margin-left: 26px;
+    margin-left: 28px;
 }
 
 .site-navigation__item--has-submenu > .site-navigation__link::after {
@@ -48,7 +48,7 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    margin-left: 8px;
+    margin-left: 9px;
     margin-bottom: -2px;
 
     border: 2px solid $primary-color-50;
@@ -75,12 +75,14 @@
 .user-navigation {
     position: relative;
     z-index: 1;
-
-    padding-left: 20px;
 }
 
-.user-navigation.non-authorized .user-navigation__menu {
-    display: none;
+.user-navigation.non-authorized {
+
+
+    .user-navigation__menu {
+        display: none;
+    }
 }
 
 .user-navigation.authorized {
@@ -105,7 +107,7 @@
 }
 
 .user-navigation__item + .user-navigation__item {
-    margin-left: 20px;
+    margin-left: 22px;
 }
 
 .user-navigation__item .button {

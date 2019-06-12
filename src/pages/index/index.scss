@@ -1,0 +1,49 @@
+// Normalize
+@import 'normalize.css/normalize';
+
+// Fonts
+@import '../../utilities/fonts';
+
+// Variables
+@import '../../utilities/variables';
+
+// Global
+@import '../../utilities/global';
+
+// Components
+@import '../../components/main-header/main-header';
+@import '../../components/buttons/button';
+@import '../../components/buttons/button-border-gradient';
+@import '../../components/buttons/button-purple-gradient';
+
+@import '../../components/forms/form-find-room/form-find-room';
+@import '../../components/field-dropdown/field-dropdown';
+@import '../../components/buttons/button-arrow';
+
+@import '../../components/main-footer/main-footer';
+@import '../../components/field-subscription/field-subscription';
+
+.main-page {
+    background: lightgray url("images/main-background.jpg") no-repeat center / cover;
+
+    .container {
+        position: relative;
+
+        padding: 70px 10px 386px;
+    }
+
+    .main-footer {
+
+    }
+}
+
+.main-page__info {
+    position: absolute;
+    bottom: 18px;
+    right: 0;
+
+    width: 300px;
+    margin: 0;
+
+    text-align: right;
+}

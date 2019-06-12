@@ -1,6 +1,7 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 1920px;
 
     color: $primary-color-75;
     font-family: $basic-font;
@@ -11,7 +12,9 @@ body {
 }
 
 .container {
-    max-width: 1160px;
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 1180px;
     padding: 0 10px;
     margin: 0 auto;
 }

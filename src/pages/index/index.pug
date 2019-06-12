@@ -1,0 +1,17 @@
+extends ../../templates/template-base
+
+block title
+    title Отель Toxin | Лучший отель 2019 года по версии ассоциации «Отельные взгляды»
+
+block styles
+    link(rel="stylesheet" href="index.scss")
+
+block content
+    include ../../utilities/mixins-pug
+
+    include ../../components/main-header/main-header-non-authorized
+    main.main-page
+        .container
+            include ../../components/forms/form-find-room/form-find-room
+            p.main-page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
+    include ../../components/main-footer/main-footer-rich

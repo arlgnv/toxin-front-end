@@ -1,5 +1,12 @@
-.c-field-toggle__checkbox--custom {
+.c-field-toggle__label {
     position: relative;
+    padding-left: 40px;
+}
+
+.c-field-toggle__checkbox--custom {
+    position: absolute;
+    top: 0;
+    left: 0;
 
     box-sizing: border-box;
     display: inline-block;
