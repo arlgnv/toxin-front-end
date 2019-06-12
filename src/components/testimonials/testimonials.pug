@@ -1,18 +1,16 @@
-mixin c-testimonials(classes, arrItems)
-    ul(class= classes + "__list c-testimonials__list")
-        - for (var i = 0; i < arrItems.length; i++)
-            - var img = arrItems[i][0]
-            - var name = arrItems[i][1]
-            - var date = arrItems[i][2]
-            - var text = arrItems[i][3]
-            - var like = arrItems[i][4]
-            li(class= classes + "__item c-testimonials__item")
-                div(class= classes + "__top-part c-testimonials__top-part")
-                    img(class= classes + "__img c-testimonials__img" src= img width="44" height="44" alt= name)
-                    p
-                        b(class= classes + "__name c-testimonials__name")= name
-                        time(class= classes + "__date c-testimonials__date")= date
-                div(class= classes + "__bottom-part c-testimonials__bottom-part")
-                    p
-                        +button("button--border-gradient button--like", like)
-                    p(class= classes + "__text c-testimonials__text")= text
+mixin c-testimonial(classes, parameters)
+    - var image = parameters.image
+    - var author = parameters.author
+    - var date = parameters.date
+    - var text = parameters.text
+    - var likes = parameters.likes
+    div(class= classes + "__wrapper c-testimonial__wrapper")
+        p(class= classes + "__top-part c-testimonial__top-part")
+            img(class= classes + "__img c-testimonial__img" src= image width="44" height="44" alt= author)
+            span
+                b(class= classes + "__name c-testimonial__name")= author
+                time(class= classes + "__date c-testimonial__date")= date
+        p(class= classes + "__bottom-part c-testimonial__bottom-part")
+            span
+                +button("button--border-gradient button--like", likes)
+            span(class= classes + "__text c-testimonial__text")= text

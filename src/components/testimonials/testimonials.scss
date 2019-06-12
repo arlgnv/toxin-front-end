@@ -1,25 +1,10 @@
-.c-testimonials__list {
-    padding: 0;
-    margin: 0;
-
-    list-style-type: none;
-}
-
-.c-testimonials__item {
-
-}
-
-.c-testimonials__top-part {
+.c-testimonial__top-part {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 10px;
-
-    p {
-        margin: 0;
-    }
+    margin: 0 0 10px;
 }
 
-.c-testimonials__img {
+.c-testimonial__img {
     margin-right: 10px;
 
     border: 2px solid #fff;
@@ -27,24 +12,17 @@
     box-shadow: 0px 10px 20px $primary-color-10;
 }
 
-.c-testimonials__name {
+.c-testimonial__name {
     display: block;
 }
 
-.c-testimonials__bottom-part {
+.c-testimonial__bottom-part {
     display: flex;
     align-items: flex-start;
+    margin: 0;
 
-    .button--like {
-        margin-top: 4px;
-    }
-
-    p:first-child {
+    span:first-child {
         min-width: 48px;
         margin: 0 10px 0 0;
     }
-}
-
-.c-testimonials__text {
-    margin: 0;
 }

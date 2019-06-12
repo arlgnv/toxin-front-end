@@ -113,11 +113,18 @@ block content
         +c-checkbox-expandable("filter-form", "Дополнительные удобства", {"Завтрак": "breakfast", "Письменный стол": "desk", "Кроватка": "bed"})
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-advantages("advantages", [
-        ["../../components/advantages/images/comfort.svg", "Комфорт", "Шумопоглощающие стены"], ["../../components/advantages/images/convenience.svg", "Удобство", "Окно в каждой из спален"]])
+        +c-advantage("advantage", {
+         icon: "../../components/advantages/images/comfort.svg",
+         title: "Комфорт",
+         description: "Шумопоглощающие стены"})
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-testimonials("testimonials", [["../../components/testimonials/images/1.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12"]])
+        +c-testimonial("testimonials", {
+         image: "../../components/testimonials/images/1.jpg",
+         author: "Мурад Сарафанов",
+         date: "5 дней назад",
+         text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+         likes: "12"})
 
     .demonstrate-wrapper
         include ../../components/main-header/main-header-non-authorized
@@ -142,6 +149,16 @@ block content
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         include ../../components/forms/form-log-in/form-log-in
+
+    .demonstrate-wrapper.demonstrate-wrapper--inline
+        +c-room("room", {
+         image: "../../components/room/images/room1.jpg",
+         alt: "Роскошный номер с большой кроватью",
+         number: 888,
+         lux: true,
+         price: "9 990₽",
+         rating: 5,
+         testimonials: 145})
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
     script(src="../../components/calendar/datepicker.js")

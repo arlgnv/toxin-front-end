@@ -1,11 +1,9 @@
-mixin c-advantages(classes, arrItems)
-    ul(class= classes + "__list c-advantages__list")
-        - for (var i = 0; i < arrItems.length; i++)
-            - var img = arrItems[i][0]
-            - var title = arrItems[i][1]
-            - var desc = arrItems[i][2]
-            li(class= classes + "__item c-advantages__item")
-                span(class= classes + "__icon c-advantages__icon" style="background-image: url(" + img + ")")
-                p(class= classes + "__text c-advantages__text")
-                    b(class= classes + "__lead c-advantages__lead")= title
-                    = desc
+mixin c-advantage(classes, parameters)
+    - var icon = parameters.icon
+    - var title = parameters.title
+    - var description = parameters.description
+    p(class= classes + "__wrapper c-advantage__wrapper")
+        span(class= classes + "__icon c-advantage__icon" style="background-image: url(" + icon + ")")
+        span(class= classes + "__text c-advantage__text")
+            b(class= classes + "__lead c-advantage__lead")= title
+            = description

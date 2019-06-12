@@ -1,5 +1,5 @@
 mixin c-rating(classes, stars, from)
-    div(class= classes + "__wrapper c-rating__wrapper")
+    span(class= classes + "__wrapper c-rating__wrapper")
         - for (var i = 1; i <= from; i++)
         if (i <= stars)
             span(class= classes + "__star c-rating__star c-rating__star--selected")

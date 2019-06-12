@@ -24,14 +24,9 @@
     }
 
     &--next-page {
+        line-height: 0;
+
         background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-100 100%);
-
-        .c-pagination__link {
-            width: 16px;
-            height: 16px;
-
-            background: url("../../components/pagination/images/arrow-white.svg") no-repeat center;
-        }
     }
 }
 
