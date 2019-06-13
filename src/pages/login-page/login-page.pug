@@ -1,0 +1,18 @@
+extends ../../templates/template-base
+
+block title
+    title Отель Toxin | Регистрация аккаунта
+
+block styles
+    link(rel="stylesheet" href="login-page.scss")
+
+block content
+    include ../../utilities/mixins-pug
+
+    include ../../components/main-header/main-header-non-authorized
+    main.login-page
+        .container
+            include ../../components/forms/form-login/form-login
+    include ../../components/main-footer/main-footer-rich
+
+    script(src="login-page.js")

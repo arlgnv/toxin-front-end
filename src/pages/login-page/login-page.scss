@@ -1,0 +1,26 @@
+// Normalize
+@import 'normalize.css/normalize';
+
+// Fonts
+@import '../../utilities/fonts';
+
+// Variables
+@import '../../utilities/variables';
+
+// Global
+@import '../../utilities/global';
+
+// Components
+@import '../../components/main-header/main-header';
+@import '../../components/forms/form-login/form-login';
+@import '../../components/main-footer/main-footer';
+
+.login-page {
+    padding: 163px 0;
+
+    background: lightgray url("images/background.jpg") no-repeat center / cover;
+
+    .login {
+        margin: 0 auto;
+    }
+}

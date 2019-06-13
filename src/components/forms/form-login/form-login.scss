@@ -1,10 +1,16 @@
-.log-in {
+@import '../../components/buttons/button';
+@import '../../components/buttons/button-border-gradient';
+@import '../../components/buttons/button-purple-gradient';
+@import '../../components/buttons/button-arrow';
+@import '../../components/field-default/field-default';
+
+.login {
     position: relative;
     z-index: 1;
 
     box-sizing: border-box;
     width: 380px;
-    padding: 40px 30px 30px;
+    padding: 40px 30px 32px;
 
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -12,32 +18,33 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-.log-in__title {
+.login__title {
     margin: 0 0 20px;
 
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: $primary-color-100;
+
+    letter-spacing: -0.5px;
 }
 
-.log-in__item {
-
+.login__item {
     margin: 0 0 10px;
 
     .button {
         width: 100%;
         padding: 15px 20px;
-        margin: 20px 0 30px;
+        margin: 10px 0 22px;
     }
 }
 
-.log-in__field {
+.login__field {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
 }
 
-.log-in__registration {
+.login__registration {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +55,6 @@
     }
 
     .button {
-        padding: 15px 20px;
+        padding: 13px 18px;
     }
 }
