@@ -1,7 +1,7 @@
 extends ../../templates/template-base
 
 block title
-    title Отель Toxin | Регистрация аккаунта
+    title Отель Toxin | Вход
 
 block styles
     link(rel="stylesheet" href="login-page.scss")
@@ -11,6 +11,7 @@ block content
 
     include ../../components/main-header/main-header-non-authorized
     main.login-page
+        h1.visually-hidden Вход в систему
         .container
             include ../../components/forms/form-login/form-login
     include ../../components/main-footer/main-footer-rich

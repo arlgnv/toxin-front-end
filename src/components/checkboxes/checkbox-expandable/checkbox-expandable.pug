@@ -5,4 +5,4 @@ mixin c-checkbox-expandable(classes, title, obj)
             ul(class= classes + "__list c-checkbox-expandable__list")
                 each value, key in obj
                     li(class= classes + "__item c-checkbox-expandable__item")
-                        +c-checkbox-poor(classes, classes + "-" + value, key)
+                        +c-checkbox-poor(classes, classes + "-" + value, key)(name= value)

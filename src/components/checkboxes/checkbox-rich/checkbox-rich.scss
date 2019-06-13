@@ -1,6 +1,7 @@
 .c-checkbox-rich__label {
     position: relative;
 
+    display: block;
     padding-left: 30px;
 
     font-weight: bold;
@@ -35,7 +36,7 @@
     display: block;
 
     font-weight: normal;
-    font-style: 12px;
+    font-size: 12px;
     line-height: 14px;
     color: $primary-color-50;
 }

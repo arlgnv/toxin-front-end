@@ -2,9 +2,9 @@ article.login
     h2.login__title Войти
     form.login__form(action="https://echo.htmlacademy.ru" method="post")
         p.login__item
-            +c-field-default("login", "field-email", "Введите email", false)(name="email" placeholder="Email")
+            +c-field-default("login", "field-email", "Введите email", false)(name="email" type="email" placeholder="Email")
         p.login__item
-            +c-field-default("login", "field-password", "Введите пароль", false)(name="password" placeholder="Пароль")
+            +c-field-default("login", "field-password", "Введите пароль", false)(name="password" type="password" placeholder="Пароль")
         p.login__item
             +button("button--purple-gradient button--arrow", "Войти")(type="submit")
     .login__registration

@@ -1,0 +1,89 @@
+// Normalize
+@import 'normalize.css/normalize';
+
+// Fonts
+@import '../../utilities/fonts';
+
+// Variables
+@import '../../utilities/variables';
+
+// Global
+@import '../../utilities/global';
+
+// Components
+@import '../../components/pagination/pagination';
+@import '../../components/range/range';
+@import '../../components/checkboxes/checkbox-poor/checkbox-poor';
+@import '../../components/checkboxes/checkbox-rich/checkbox-rich';
+@import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
+@import '../../components/field-dropdown/field-dropdown';
+@import '../../components/room/room';
+@import '../../components/main-header/main-header';
+@import '../../components/main-footer/main-footer';
+
+.rooms-page {
+    padding: 30px 0 70px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// FILTER
+
+.filter {
+    width: 266px;
+}
+
+.filter__group {
+    padding: 0;
+    margin: 0 0 20px;
+
+    border: none;
+}
+
+.filter__label {
+    display: block;
+    margin: 0 0 5px;
+
+    &::after {
+        top: 40px;
+        right: 15px;
+    }
+}
+
+.filter__field {
+    width: 100%;
+    padding: 10px 20px 10px 15px;
+}
+
+.filter__title {
+    display: block;
+    padding: 0;
+    margin: 0 0 15px;
+
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1f2041;
+
+    text-transform: uppercase;
+}
+
+.filter__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    .filter__item + .filter__item {
+        margin-top: 10px;
+    }
+}
+
+// ROOMS
+
+.rooms {
+    width: 834px;
+}

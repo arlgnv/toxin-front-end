@@ -6,8 +6,7 @@ mixin c-room(classes, parameters)
     - var price = parameters.price
     - var rating = parameters.rating
     - var testimonials = parameters.testimonials
-    article(class= classes + "__wrapper c-room__wrapper")
-        h3(class="visually-hidden")= alt
+    div(class= classes + "__wrapper c-room__wrapper")
         div(class= classes + "__container c-room__container")
             img(class= classes + "__img c-room__img" src= img width="270" height="151" alt= alt)
             p(class= classes + "__slider-buttons c-room__slider-buttons")

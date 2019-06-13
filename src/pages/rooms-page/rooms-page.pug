@@ -1,0 +1,186 @@
+extends ../../templates/template-base
+
+block title
+    title Отель Toxin | Поиск номеров
+
+block styles
+    link(rel="stylesheet" href="rooms-page.scss")
+
+block content
+    include ../../utilities/mixins-pug
+
+    include ../../components/main-header/main-header-non-authorized
+    main.rooms-page
+        h1.visually-hidden Поиск номеров
+        .container
+            section.filter
+                h2.visually-hidden Фильтр номеров
+                form.filter__form(action="https://echo.htmlacademy/ru" method="post")
+                    p.filter__group
+                        +c-field-dropdown("filter", "field-date", "Даты пребывания в отеле", true)(name="date" value="19 авг - 23 авг")
+                    p.filter__group
+                        +c-field-dropdown("filter", "field-guests", "Гости", true)(name="guests" value="3 гостя, 1 младенец")
+                    p.filter__group
+                        +c-range("filter", "field-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
+                    fieldset.filter__group
+                        legend.filter__title Дополнительные возможности
+                        ul.filter__list
+                            li.filter__item
+                                +c-checkbox-poor("filter", "opportunity-smoke", "Можно курить")(name="opportunity-smoke")
+                            li.filter__item
+                                +c-checkbox-poor("filter", "opportunity-pets", "Можно с питомцами")(name="opportunity-pets" checked)
+                            li.filter__item
+                                +c-checkbox-poor("filter", "opportunity-guests", "Можно пригласить гостей (до 10 человек)")(name="opportunity-guests" checked)
+                    fieldset.filter__group
+                        legend.filter__title Доступность
+                        ul.filter__list
+                            li.filter__item
+                                +c-checkbox-rich("filter", "opportunity-wide-aisle", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")(name="opportunity-wide-aisle")
+                            li.filter__item
+                                +c-checkbox-rich("filter", "opportunity-hepler", "Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.")(name="opportunity-helper")
+                    .dropdown-wrapper
+                        p.filter__group
+                            +c-field-dropdown("js-dropdown-comfort filter", "field-comfort", "Удобства номера", true)(name="comfort")
+                            .dropdown__content
+                                .dropdown__item
+                                    b.dropdown__title Спальни
+                                    .dropdown__count
+                                        button.dropdown__del(type="button")
+                                        span.dropdown__amount 0
+                                        button.dropdown__ins(type="button")
+                                .dropdown__item
+                                    b.dropdown__title Кровати
+                                    .dropdown__count
+                                        button.dropdown__del(type="button")
+                                        span.dropdown__amount 0
+                                        button.dropdown__ins(type="button")
+                                .dropdown__item
+                                    b.dropdown__title Ванные комнаты
+                                    .dropdown__count
+                                        button.dropdown__del(type="button")
+                                        span.dropdown__amount.dropdown__amount--baby 0
+                                        button.dropdown__ins(type="button")
+                    +c-checkbox-expandable("filter", "Дополнительные удобства", {
+                     "Завтрак": "breakfast",
+                     "Письменный стол": "desk",
+                     "Стул для кормления": "chair",
+                     "Кроватка": "bed",
+                     "Телевизор": "tv",
+                     "Шампунь": "shampoo"})
+            section.rooms
+                h2.rooms__title Номера, которые мы для вас подобрали
+                ul.rooms__list
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room1.jpg",
+                         alt: "Роскошный номер на одного с большой кроватью",
+                         number: 888,
+                         lux: true,
+                         price: "9 990₽",
+                         rating: 5,
+                         testimonials: 145})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room2.jpg",
+                         alt: "Просторный номер на троих с тремя кроватями",
+                         number: 840,
+                         lux: false,
+                         price: "9 990₽",
+                         rating: 4,
+                         testimonials: 65})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room3.jpg",
+                         alt: "Светлый номер на одного",
+                         number: 980,
+                         lux: true,
+                         price: "8 500₽",
+                         rating: 3,
+                         testimonials: 35})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room4.jpg",
+                         alt: "Светло-голубой номер на одного",
+                         number: 856,
+                         lux: false,
+                         price: "7 300₽",
+                         rating: 5,
+                         testimonials: 19})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room5.jpg",
+                         alt: "Роскошный номер на одного",
+                         number: 740,
+                         lux: false,
+                         price: "6 600₽",
+                         rating: 4,
+                         testimonials: 44})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room6.jpg",
+                         alt: "Роскошный номер на одного",
+                         number: 982,
+                         lux: false,
+                         price: "5 800₽",
+                         rating: 3,
+                         testimonials: 14565})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room7.jpg",
+                         alt: "Большой номер с телевизором",
+                         number: 678,
+                         lux: false,
+                         price: "5 500₽",
+                         rating: 5,
+                         testimonials: 45})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room8.jpg",
+                         alt: "Роскошный номер с большой кроватью",
+                         number: 450,
+                         lux: false,
+                         price: "5 300₽",
+                         rating: 4,
+                         testimonials: 39})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room9.jpg",
+                         alt: "Роскошный номер с большой кроватью",
+                         number: 350,
+                         lux: false,
+                         price: "5 000₽",
+                         rating: 3,
+                         testimonials: 77})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room10.jpg",
+                         alt: "Роскошный номер с двумя кроватями и шкафом",
+                         number: 666,
+                         lux: false,
+                         price: "5 000₽",
+                         rating: 5,
+                         testimonials: 25})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room11.jpg",
+                         alt: "Роскошный номер с двумя кроватями",
+                         number: 444,
+                         lux: false,
+                         price: "5 000₽",
+                         rating: 3,
+                         testimonials: 15})
+                    li.rooms__item
+                        +c-room("room", {
+                         image: "../../components/room/images/room12.jpg",
+                         alt: "Роскошный номер с большой кроватью",
+                         number: 352,
+                         lux: false,
+                         price: "5 000₽",
+                         rating: 3,
+                         testimonials: 55})
+                +c-pagination("filter-pagination")
+    include ../../components/main-footer/main-footer-rich
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="../../components/range/range.js")
+    script(src="rooms-page.js")

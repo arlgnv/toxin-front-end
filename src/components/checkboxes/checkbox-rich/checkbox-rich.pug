@@ -1,6 +1,6 @@
-mixin c-checkbox-rich(classes, id, content, description)
+mixin c-checkbox-rich(classes, id, title, description)
     label(class= classes + "__label c-checkbox-rich__label" for= id)
         input(class= classes + "__checkbox c-checkbox-rich__checkbox visually-hidden" id= id type="checkbox")&attributes(attributes)
         span(class= classes + "__checkbox--custom c-checkbox-rich__checkbox--custom")
-        = content
+        = title
         span(class= classes + "__description c-checkbox-rich__description")= description
