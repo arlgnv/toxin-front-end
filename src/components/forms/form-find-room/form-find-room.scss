@@ -10,17 +10,20 @@
 }
 
 .find-room__title {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
 
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: $primary-color-100;
+
+    letter-spacing: -0.5px;
 }
 
 .find-room__group {
     display: flex;
     justify-content: space-between;
+    margin: 0 0 24px;
 
     .find-room__item {
         width: 150px;
@@ -28,11 +31,16 @@
 }
 
 .find-room__item {
-    margin: 0 0 20px;
+    margin: 0;
 
     .button {
         width: 100%;
-        padding: 15px 20px;
+
+        padding: 15px 30px;
+    }
+
+    &--lonely {
+        margin: 0 0 32px;
     }
 }
 
@@ -41,13 +49,13 @@
     margin: 0 0 5px;
 
     &::after {
-        top: 40px;
-        right: 15px;
+        top: 41px;
+        right: 18px;
     }
 }
 
 .find-room__field {
     box-sizing: border-box;
-    padding: 10px 25px 10px 15px;
+    padding: 8px 25px 8px 13px;
     width: 100%;
 }

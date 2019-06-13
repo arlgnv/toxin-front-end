@@ -7,7 +7,7 @@ article.find-room
             p.find-room__item
                 +c-field-dropdown("find-room", "find-room__to", "Выезд", true)(name="to" placeholder="ДД.ММ.ГГГГ")
         .dropdown-wrapper
-            p.find-room__item
+            p.find-room__item.find-room__item--lonely
                 +c-field-dropdown("js-dropdown-guests find-room", "find-room__guests", "Гости", true)(name="guests" placeholder="Сколько гостей")
             .dropdown__content
                 .dropdown__item

@@ -577,14 +577,14 @@
         },
 
         today: function () {
-            // this.silent = true;
-            // this.view = this.opts.minView;
-            // this.silent = false;
-            // this.date = new Date();
+            this.silent = true;
+            this.view = this.opts.minView;
+            this.silent = false;
+            this.date = new Date();
 
-            // if (this.opts.todayButton instanceof Date) {
-            //     this.selectDate(this.opts.todayButton)
-            // }
+            if (this.opts.todayButton instanceof Date) {
+                this.selectDate(this.opts.todayButton)
+            }
         },
 
         clear: function () {
