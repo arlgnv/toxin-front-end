@@ -1,3 +1,11 @@
+@import '../../components/buttons/button';
+@import '../../components/buttons/button-border-gradient';
+@import '../../components/buttons/button-purple-gradient';
+@import '../../components/buttons/button-arrow';
+@import '../../components/field-default/field-default';
+@import '../../components/radio-button/radio-button';
+@import '../../components/toggle-button/toggle-button';
+
 .registration {
     position: relative;
     z-index: 1;
@@ -13,22 +21,34 @@
 }
 
 .registration__title {
-    margin: 0 0 20px;
+    margin: 0 0 20px -2px;
 
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: $primary-color-100;
+
+    letter-spacing: -0.5px;
+}
+
+.registration__form {
+    margin-bottom: 31px;
 }
 
 .registration__group {
-    margin: 0 0 20px;
+    margin: 0 0 19px;
     padding: 0;
 
     border: none;
+
+    & .registration__item:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .registration__group-title {
+    margin: 0 0 5px;
+
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
@@ -40,17 +60,13 @@
 .registration__item {
     margin: 0 0 10px;
 
-    &--lonely {
-        margin-bottom: 20px;
-    }
-
     .button {
         width: 100%;
-        padding: 15px 30px 15px 20px;
+        padding: 15px 30px;
     }
 
-    .c-field-toggle__checkbox--custom {
-        top: 2px;
+    &.registration__submit {
+        margin-top: 24px;
     }
 }
 
@@ -61,13 +77,25 @@
 
 .registration__list {
     display: flex;
-    margin: 0;
+    margin-top: -6px;
     padding: 0;
 
     list-style-type: none;
 
-    .registration__item {
-        margin: 0;
+    li + li {
+        margin-left: 21px;
+    }
+}
+
+.registration__toggle {
+    margin-top: -6px;
+
+    .toggle__label {
+        padding-left: 48px;
+    }
+
+    .toggle__checkbox--custom {
+        top: -1px;
     }
 }
 

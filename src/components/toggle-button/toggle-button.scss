@@ -20,7 +20,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 50%;
+        top: 3.5px;
         left: 2px;
 
         width: 12px;
@@ -28,7 +28,6 @@
 
         background: $primary-color-25;
         border-radius: 50%;
-        transform: translateY(-50%);
     }
 }
 

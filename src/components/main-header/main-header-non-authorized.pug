@@ -1,6 +1,6 @@
 header.main-header
     .container
-        a.main-header__logo
+        a.main-header__logo(href="/")
             img.main-header__logo-image(src="../../components/main-header/images/logo.svg" alt="Отель Toxin" width="105" height="40")
         nav.main-header__navigation
             ul.site-navigation
@@ -19,7 +19,7 @@ header.main-header
                     li.user-navigation__item
                         +button-link("button--border-gradient", "Войти")(href="#")
                     li.user-navigation__item
-                        +button-link("button--purple-gradient", "Зарегистрироваться")(href="#")
+                        +button-link("button--purple-gradient", "Зарегистрироваться")(href="../../pages/registration-page/registration-page.pug")
                 ul.user-navigation__menu
                     li.user-navigation__item
                         a.user-navigation__link(href="#") Артём Лагунов

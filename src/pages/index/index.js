@@ -9,7 +9,7 @@ $start.datepicker({
         days: 'MM yyyy'
     },
     minDate: new Date(),
-    offset: 0,
+    offset: 9,
     range: true,
     multipleDatesSeparator: "-",
     onSelect: function (fd, date, picker) {
