@@ -12,7 +12,16 @@ block content
     include ../../components/main-header/main-header-non-authorized
     main.room-page
         h1.visually-hidden Люксовый номер №888
+        section.photos
+            h2.visually-hidden Фотографии номера
+            .photos__group
+                img.photos__item(src="../../pages/room-page/images/1.jpg" width="981" height="485" alt="Главная спальня")
+                .photos__group
+                    img.photos__item(src="../../pages/room-page/images/2.jpg" width="461" height="243" alt="Главная спальня")
+                    img.photos__item(src="../../pages/room-page/images/3.jpg" width="461" height="243" alt="Главная спальня")
+        section
         .container
+            include ../../components/donut/donut
     include ../../components/main-footer/main-footer-rich
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
