@@ -1,0 +1,19 @@
+extends ../../templates/template-base
+
+block title
+    title Отель Toxin | Роскошный большой номер с огромной кроватью и прекрасным видом из окна
+
+block styles
+    link(rel="stylesheet" href="room-page.scss")
+
+block content
+    include ../../utilities/mixins-pug
+
+    include ../../components/main-header/main-header-non-authorized
+    main.room-page
+        h1.visually-hidden Люксовый номер №888
+        .container
+    include ../../components/main-footer/main-footer-rich
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="room-page.js")
