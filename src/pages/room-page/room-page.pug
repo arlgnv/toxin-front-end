@@ -19,9 +19,61 @@ block content
                 .photos__group
                     img.photos__item(src="../../pages/room-page/images/2.jpg" width="461" height="243" alt="Главная спальня")
                     img.photos__item(src="../../pages/room-page/images/3.jpg" width="461" height="243" alt="Главная спальня")
-        section
         .container
-            include ../../components/donut/donut
+            section.info
+                h2.visually-hidden Информация о номере
+                .info__top
+                    section.advantages
+                        h3.info__title Сведения о номере
+                        ul.advantages__list
+                            li.advantages__item
+                                +c-advantage("advantage", {
+                                 icon: "../../components/advantages/images/comfort.svg",
+                                 title: "Комфорт",
+                                 description: "Шумопоглощающие стены"})
+                            li.advantages__item
+                                +c-advantage("advantage", {
+                                 icon: "../../components/advantages/images/convenience.svg",
+                                 title: "Удобство",
+                                 description: "Окно в каждой из спален"})
+                            li.advantages__item
+                                +c-advantage("advantage", {
+                                 icon: "../../components/advantages/images/cozy.svg",
+                                 title: "Уют",
+                                 description: "Номер оснащен камином"})
+                    section.impression
+                        h3.info__title Впечатления от номера
+                        include ../../components/donut/donut
+                .info__middle
+                    section.testimonials
+                        h3.info__title Отзывы посетителей номера
+                        span.testimonials__amount 2 отзыва
+                        ul.testimonials__list
+                            li.testimonials__item
+                                +c-testimonial("testimonial", {
+                                 image: "../../components/testimonials/images/1.jpg",
+                                 author: "Мурад Сарафанов",
+                                 date: "5 дней назад",
+                                 text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей",
+                                 likes: "12"})
+                            li.testimonials__item
+                                +c-testimonial("testimonial", {
+                                 image: "../../components/testimonials/images/2.jpg",
+                                 author: "Патрисия Стёклышкова",
+                                 date: "Неделю назад",
+                                 text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент",
+                                 likes: "2"})
+                .info__bottom
+                    section.rules
+                        h3.info__title Правила
+                        +c-bullet-list("rules", ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                    section.cancel
+                        h3.info__title Отмена
+                        p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            section.form
+                h2.visually-hidden Форма бронирования номера
+                include ../../components/forms/form-confirm-room/form-confirm-room
+
     include ../../components/main-footer/main-footer-rich
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
