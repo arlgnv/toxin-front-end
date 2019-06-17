@@ -6,7 +6,7 @@
 .confirm-room {
     box-sizing: border-box;
     width: 380px;
-    padding: 39px 29px 29px;
+    padding: 47px 29px 29px;
 
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -19,7 +19,7 @@
     justify-content: space-between;
 
     &:not(:last-child) {
-        margin: 0 0 20px;
+        margin: 0 0 21px;
     }
 }
 
@@ -27,13 +27,13 @@
     margin: 0;
 
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 17px;
     color: $primary-color-100;
 }
 
 .confirm-room__number {
-    font-size: 18px;
+    font-size: 21px;
 }
 
 .confirm-room__type {
@@ -47,7 +47,8 @@
 .confirm-room__day-price {
     margin: 0;
 
-    line-height: 18px;
+    font-size: 13px;
+    line-height: 22px;
     color: $primary-color-50;
 
     .confirm-room__price {
@@ -71,25 +72,32 @@
 
 .confirm-room__label {
     display: block;
+    margin-bottom: 6px;
 
     &::after {
-        top: 35px;
-        right: 15px;
+        top: 41px;
+        right: 19px;
     }
 }
 
 .confirm-room__field {
     width: 100%;
-    padding: 10px 30px 10px 15px;
+    padding: 8px 30px 8px 13px;
 }
 
 // INFO
+.confirm-room__info {
+    margin-bottom: 31px;
+}
+
 .confirm-room__info .confirm-room__group {
     margin-bottom: 10px;
 }
 
 .confirm-room__left-col {
     width: 215px;
+
+    line-height: 19px;
 
     &--tip {
         position: relative;
@@ -98,7 +106,7 @@
             content: "i";
             position: absolute;
             top: 0;
-            right: -30px;
+            right: -25px;
 
             width: 20px;
             height: 20px;
@@ -131,7 +139,8 @@
 
 .confirm-room__total-price {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 18px;
+    letter-spacing: -0.4px;
     color: $primary-color-100;
 }
 
@@ -139,5 +148,5 @@
 
 .confirm-room__group .button {
     width: 100%;
-    padding: 15px 44px 15px 20px;
+    padding: 14px 35px 14px 28px;
 }

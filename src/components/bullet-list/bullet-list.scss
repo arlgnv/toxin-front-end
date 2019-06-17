@@ -6,12 +6,16 @@
 }
 
 .c-bullet-list__item {
+    position: relative;
+
     color: $primary-color-75;
 
     &::before {
         content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
 
-        display: inline-block;
         width: 10px;
         height: 10px;
 

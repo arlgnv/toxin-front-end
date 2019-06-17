@@ -22,11 +22,16 @@
 
 
 .room-page {
-
+    border-bottom: 1px solid $primary-color-25;
 
     .container {
         display: flex;
         justify-content: space-between;
+        padding: 71px 10px;
+    }
+
+    & + .main-footer {
+        padding-top: 91px;
     }
 }
 
@@ -68,8 +73,7 @@
 }
 
 .info {
-    width: 670px;
-    padding: 71px 0;
+    width: 711px;
 }
 
 /*
@@ -89,6 +93,8 @@
 .info__top {
     display: flex;
     justify-content: space-between;
+    width: 670px;
+    margin-bottom: 13px;
 }
 
 .advantages {
@@ -131,6 +137,7 @@
 
 .info__middle {
     position: relative;
+    margin-bottom: 34px;
 }
 
 .testimonials {
@@ -150,6 +157,10 @@
     list-style-type: none;
 }
 
+.testimonials__item {
+    margin-bottom: 24px;
+}
+
 /*
 ===== INFO BOTTOM =====
 */
@@ -157,12 +168,31 @@
 .info__bottom {
     display: flex;
     justify-content: space-between;
+    width: 702px;
 }
 
 .rules {
-    width: 292px;
+    width: 240px;
+    padding-left: 18px;
+
+    .info__title {
+        margin-bottom: 16px;
+    }
+}
+
+.rules__item {
+    margin-bottom: 10px;
+
+    &::before {
+        top: 7px;
+        left: -19px;
+    }
 }
 
 .cancel {
     width: 341px;
+
+    .info__title {
+        margin-bottom: 16px;
+    }
 }
