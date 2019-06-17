@@ -11,9 +11,20 @@
     height: 120px;
 }
 
-.c-donut__hole {
-    width: 100%;
-    height: 100%;
+.c-donut__segment {
+    transform-origin: center;
+
+    &--great {
+        transform: rotate(91deg);
+    }
+
+    &--satisfactory {
+        transform: rotate(-89deg);
+    }
+
+    &--good {
+
+    }
 }
 
 .c-donut__text {

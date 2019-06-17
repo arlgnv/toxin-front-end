@@ -75,7 +75,8 @@
 
 .filter__field {
     width: 100%;
-    padding: 10px 20px 10px 15px;
+    height: 46px; //for ie
+    padding: 10px 30px 10px 15px;
 }
 
 .filter__title {
