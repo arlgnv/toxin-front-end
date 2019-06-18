@@ -1,45 +1,46 @@
 footer.main-footer
-    .container
-        .main-footer__info
-            a.main-footer__logo
-                img.main-footer__logo-image(src="../../logo.svg" alt="Отель Toxin" width="105" height="40")
-            p.main-footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-        nav.main-footer__navigation
-            .main-footer__item
-                b.main-footer__title Навигация
-                ul.footer-navigation__list
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") О нас
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Новости
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Служба поддержки
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Услуги
-            .main-footer__item
-                b.main-footer__title О нас
-                ul.footer-navigation__list
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") О сервисе
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Наша команда
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Вакансии
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Инвесторы
-            .main-footer__item
-                b.main-footer__title Служба поддержки
-                ul.footer-navigation__list
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Соглашения
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Сообщества
-                    li.footer-navigation__item
-                        a.footer-navigation__link(href="#") Связь с нами
-        .main-footer__form-wrapper
-            b.main-footer__title Подписка
-            p.main-footer__text Получайте специальные предложения и новости сервиса
-            +c-field-subscription("https://echo.htmlacademy.ru", "main-footer", "field-subscription", "Введите email", false)(type="email" name="email" placeholder="Email")
+    .main-footer__top
+        .container
+            .main-footer__info
+                a.main-footer__logo
+                    img.main-footer__logo-image(src="../../logo.svg" alt="Отель Toxin" width="105" height="40")
+                p.main-footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            nav.main-footer__navigation
+                .main-footer__item
+                    b.main-footer__title Навигация
+                    ul.footer-navigation__list
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") О нас
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Новости
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Служба поддержки
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Услуги
+                .main-footer__item
+                    b.main-footer__title О нас
+                    ul.footer-navigation__list
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") О сервисе
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Наша команда
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Вакансии
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Инвесторы
+                .main-footer__item
+                    b.main-footer__title Служба поддержки
+                    ul.footer-navigation__list
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Соглашения
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Сообщества
+                        li.footer-navigation__item
+                            a.footer-navigation__link(href="#") Связь с нами
+            .main-footer__form-wrapper
+                b.main-footer__title Подписка
+                p.main-footer__text Получайте специальные предложения и новости сервиса
+                +c-field-subscription("https://echo.htmlacademy.ru", "main-footer", "field-subscription", "Введите email", false)(type="email" name="email" placeholder="Email")
     .main-footer__bottom
         .container
             p.main-footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.
