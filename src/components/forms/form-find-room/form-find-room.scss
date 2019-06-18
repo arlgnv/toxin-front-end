@@ -6,7 +6,7 @@
 
 .find-room {
     box-sizing: border-box;
-    width: 380px;
+    max-width: 380px;
     padding: 39px 29px 29px;
 
     background: #fff;
@@ -65,4 +65,18 @@
     width: 100%;
     height: 42px; //for ie
     padding: 8px 25px 8px 13px;
+}
+
+@media screen and (max-width: 390px) {
+    .find-room__group {
+        flex-direction: column;
+
+        .find-room__item {
+            width: 100%;
+        }
+
+        .find-room__item + .find-room__item {
+            margin-top: 10px;
+        }
+    }
 }

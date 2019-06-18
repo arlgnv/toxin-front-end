@@ -36,3 +36,13 @@
 
     text-align: right;
 }
+
+@media screen and (max-width: 515px) {
+    .main-page .container {
+        padding: 30px 10px;
+    }
+
+    .main-page__info {
+        display: none;
+    }
+}
