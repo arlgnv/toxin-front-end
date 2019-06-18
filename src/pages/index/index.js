@@ -1,3 +1,5 @@
+import "../../components/main-header/main-header.js";
+
 // Datepicker
 var $start = $('#find-room__from'), $end = $('#find-room__to');
 $start.datepicker({
