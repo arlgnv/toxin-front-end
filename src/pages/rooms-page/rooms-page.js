@@ -1,3 +1,27 @@
+// Filter
+$filterShow = $('.filter__btn-mobile--show'),
+$filterClose = $('.filter__btn-mobile--close'),
+
+$filterShow.click(function(event) {
+    event.preventDefault();
+    $elem = $(this);
+    $elem.next().css("left", "0%");
+
+    $filterClose.css("display", "block");
+
+    document.body.style.overflow = 'hidden';
+})
+
+$filterClose.click(function(event) {
+    event.preventDefault();
+    $elem = $(this);
+    $elem.parent(".filter__form").css('left', "110%");
+
+    $filterClose.css("display", "none");
+
+    document.body.style.overflow = 'visible';
+})
+
 //Range
 var $rangePrice = $('.c-range__price');
 $(".js-range-slider").ionRangeSlider({

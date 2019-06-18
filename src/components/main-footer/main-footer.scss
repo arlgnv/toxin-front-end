@@ -197,10 +197,6 @@
 ===== Media queries =====
 */
 
-@media screen and (max-width: 1138px) {
-
-}
-
 @media screen and (max-width: 858px) {
     .main-footer {
         padding-top: 50px;
@@ -226,7 +222,7 @@
 
     .main-footer__info {
         width: 560px;
-        margin: 0 auto 25px;
+        margin: 0 auto 28px;
 
         text-align: center;
     }

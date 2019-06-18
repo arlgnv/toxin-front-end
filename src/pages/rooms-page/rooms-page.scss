@@ -29,6 +29,7 @@
     .container {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 
@@ -36,6 +37,57 @@
 
 .filter {
     width: 266px;
+    margin-right: 20px;
+}
+
+.filter__btn-mobile--show {
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+
+    text-align: center;
+    background: linear-gradient(180deg, $purple-color-100 0%, #8ba4f9 100%);
+}
+
+.filter__btn-mobile--close {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    background: $primary-color-75;
+    border-radius: 0 0 0 5px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 20px;
+        height: 3px;
+
+        background-color: #fff;
+    }
+
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
 }
 
 .filter__group {
@@ -169,4 +221,40 @@
 .rooms-pagination__description {
     width: 240px;
     margin: 0 auto;
+}
+
+// Media queries
+
+@media screen and (max-width: 1159px) {
+    .filter {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .filter__btn-mobile--show {
+        display: inline-block;
+    }
+
+    .filter__form {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 110%;
+
+        padding: 10px;
+
+        background: #fff;
+        overflow: scroll;
+        transition: left ease 1s;
+    }
+
+    .c-checkbox-expandable__group {
+        margin-bottom: 0;
+    }
+
+    .rooms {
+        width: 100%;
+    }
 }
