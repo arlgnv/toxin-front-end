@@ -2,10 +2,10 @@
   "name": "Toxin",
   "version": "1.0.0",
   "description": "Отель «Toxin»",
-  "main": "index.js",
+  "main": "src/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /Toxin/"
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache"
   },
   "repository": {
     "type": "git",
