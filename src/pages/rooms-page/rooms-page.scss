@@ -25,6 +25,10 @@
 .filter {
     width: 266px;
     margin-right: 20px;
+
+    .dropdown-wrapper {
+        margin-top: 22px;
+    }
 }
 
 .filter__btn-mobile--show {
