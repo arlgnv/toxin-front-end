@@ -4,16 +4,17 @@ block title
     title Отель Toxin | Вход
 
 block styles
-    link(rel="stylesheet" href="./login-page.scss")
+    link(rel="stylesheet" href="login-page.scss")
 
 block content
-    include /../../utilities/mixins-pug
+    include ../../utilities/mixins-pug
 
-    include /../../components/main-header/main-header-non-authorized
+    include ../../components/main-header/main-header-non-authorized
     main.login-page
         h1.visually-hidden Вход в систему
         .container
             include ../../components/forms/form-login/form-login
-    include /../../components/main-footer/main-footer-rich
+    include ../../components/main-footer/main-footer-rich
 
-    script(src="./login-page.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="login-page.js")

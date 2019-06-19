@@ -5,7 +5,7 @@
 
 .confirm-room {
     box-sizing: border-box;
-    width: 380px;
+    max-width: 380px;
     padding: 47px 29px 29px;
 
     background-color: #fff;
@@ -17,6 +17,7 @@
 .confirm-room__group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     &:not(:last-child) {
         margin: 0 0 21px;
@@ -56,7 +57,6 @@
     }
 }
 
-
 // FORM
 .confirm-room__item {
     margin: 0;
@@ -67,6 +67,10 @@
 
     &--half {
         width: 150px;
+
+        & + .confirm-room__item--half {
+            margin-left: 20px;
+        }
     }
 }
 
@@ -146,7 +150,6 @@
 }
 
 // SUBMIT
-
 .confirm-room__group .button {
     width: 100%;
     padding: 14px 35px 14px 28px;

@@ -1,10 +1,13 @@
+// Burger menu
+import "../../components/main-header/main-header.js";
+
 // Filter
-$filterShow = $('.filter__btn-mobile--show'),
-$filterClose = $('.filter__btn-mobile--close'),
+var $filterShow = $('.filter__btn-mobile--show'),
+    $filterClose = $('.filter__btn-mobile--close');
 
 $filterShow.click(function(event) {
     event.preventDefault();
-    $elem = $(this);
+    var $elem = $(this);
     $elem.next().css("left", "0%");
 
     $filterClose.css("display", "block");
@@ -14,7 +17,7 @@ $filterShow.click(function(event) {
 
 $filterClose.click(function(event) {
     event.preventDefault();
-    $elem = $(this);
+    var $elem = $(this);
     $elem.parent(".filter__form").css('left', "110%");
 
     $filterClose.css("display", "none");
@@ -34,14 +37,14 @@ $(".js-range-slider").ionRangeSlider({
     to: 10000,
     hide_from_to: true,
     onStart: function(data) {
-        from = data.from;
-        to = data.to;
+        var from = data.from;
+        var to = data.to;
 
         $rangePrice.html(from + "₽ - " + to + "₽");
     },
     onChange: function(data) {
-        from = data.from;
-        to = data.to;
+        var from = data.from;
+        var to = data.to;
 
         $rangePrice.html(from + "₽ - " + to + "₽");
     },

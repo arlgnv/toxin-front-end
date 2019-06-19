@@ -4,7 +4,6 @@
     padding-top: 100px;
 
     background: #fff;
-    // box-shadow: 0px 10px 20px $primary-color-5;
 }
 
 .main-footer .container {
@@ -13,13 +12,8 @@
     justify-content: space-between;
 }
 
-/*
-===== Main footer info =====
-*/
-
 .main-footer__info {
     width: 260px;
-    margin-right: 20px;
 }
 
 .main-footer__logo {
@@ -32,10 +26,6 @@
 .main-footer__text {
     margin: 0 0 20px;
 }
-
-/*
-===== Main footer navigation =====
-*/
 
 .main-footer__navigation {
     display: flex;
@@ -77,10 +67,6 @@
     color: $primary-color-50;
 }
 
-/*
-===== Main footer form =====
-*/
-
 .main-footer__form-wrapper {
     width: 260px;
 
@@ -106,12 +92,8 @@
     transform: translateY(-50%);
 }
 
-/*
-===== Main footer bottom =====
-*/
-
 .main-footer__bottom {
-    margin-top: 80px;
+    margin-top: 76px;
     padding: 26px 0;
     border-top: 1px solid #E5E5E5;
 
@@ -121,14 +103,15 @@
 }
 
 .main-footer__copyright {
-    line-height: 17px;
     margin: 0;
+
+    line-height: 17px;
 }
 
 .footer-social {
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
 
     list-style-type: none;
 }
@@ -149,16 +132,18 @@
 
     cursor: pointer;
 
+    background: no-repeat center;
+
     &--twitter {
-        background: url("../../components/main-footer/images/twitter.svg") no-repeat center;
+        background-image: url("../../components/main-footer/images/twitter.svg");
     }
 
     &--facebook {
-        background: url("../../components/main-footer/images/facebook.svg") no-repeat center;
+        background-image: url("../../components/main-footer/images/facebook.svg");
     }
 
     &--instagram {
-        background: url("../../components/main-footer/images/instagram.svg") no-repeat center;
+        background-image: url("../../components/main-footer/images/instagram.svg");
     }
 }
 
@@ -194,12 +179,16 @@
 }
 
 /*
-===== Media queries =====
+===== Media =====
 */
 
 @media screen and (max-width: 858px) {
     .main-footer {
         padding-top: 50px;
+    }
+
+    .main-footer__navigation {
+        margin: 20px 0;
     }
 }
 

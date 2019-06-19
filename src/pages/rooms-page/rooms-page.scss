@@ -1,16 +1,4 @@
-// Normalize
-@import 'normalize.css/normalize';
-
-// Fonts
-@import '../../utilities/fonts';
-
-// Variables
-@import '../../utilities/variables';
-
-// Global
-@import '../../utilities/global';
-
-// Components
+@import '../../utilities/init';
 @import '../../components/pagination/pagination';
 @import '../../components/range/range';
 @import '../../components/checkboxes/checkbox-poor/checkbox-poor';
@@ -34,7 +22,6 @@
 }
 
 // FILTER
-
 .filter {
     width: 266px;
     margin-right: 20px;
@@ -163,7 +150,6 @@
     }
 
     .c-checkbox-rich__description {
-        display: inline-block;
         margin-top: 7px;
     }
 }
@@ -183,7 +169,6 @@
 }
 
 // ROOMS
-
 .rooms {
     width: 834px;
 }
@@ -203,14 +188,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 0 19px;
+    margin: 0 -10px 19px 0;
     padding: 0;
 
     list-style-type: none;
 }
 
 .rooms__item {
-    margin-bottom: 19px;
+    margin: 0 10px 19px 0;
 }
 
 .rooms-pagination__list {
@@ -223,8 +208,7 @@
     margin: 0 auto;
 }
 
-// Media queries
-
+// Media
 @media screen and (max-width: 1159px) {
     .filter {
         width: 100%;
@@ -256,5 +240,44 @@
 
     .rooms {
         width: 100%;
+    }
+
+    .rooms__item {
+        width: 32%;
+    }
+
+    .c-room__wrapper,
+    .c-room__container,
+    .c-room__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .rooms-pagination__list {
+        margin: 0 auto 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .rooms__item {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 591px) {
+    .rooms__list {
+        margin-right: 0;
+    }
+
+    .rooms__item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .c-room__wrapper,
+    .c-room__container,
+    .c-room__img {
+        width: 100%;
+        height: auto;
     }
 }

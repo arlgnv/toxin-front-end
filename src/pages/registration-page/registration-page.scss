@@ -1,16 +1,4 @@
-// Normalize
-@import 'normalize.css/normalize';
-
-// Fonts
-@import '../../utilities/fonts';
-
-// Variables
-@import '../../utilities/variables';
-
-// Global
-@import '../../utilities/global';
-
-// Components
+@import '../../utilities/init';
 @import '../../components/main-header/main-header';
 @import '../../components/forms/form-registration/form-registration';
 @import '../../components/main-footer/main-footer';
