@@ -9,7 +9,7 @@ mixin c-testimonial(classes, parameters)
             img(class= classes + "__img c-testimonial__img" src= image width="44" height="44" alt= author)
             span
                 b(class= classes + "__name c-testimonial__name")= author
-                time(class= classes + "__date c-testimonial__date")= date
+                span(class= classes + "__date c-testimonial__date")= date
         span(class= classes + "__bottom-part c-testimonial__bottom-part")
             span
                 +button("button--border-gradient button--like", likes)

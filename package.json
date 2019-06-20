@@ -5,7 +5,7 @@
   "main": "src/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache"
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /Toxin/"
   },
   "repository": {
     "type": "git",

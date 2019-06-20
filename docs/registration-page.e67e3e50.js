@@ -3,4 +3,4 @@ $(".main-header__burger").click(function(e){e.preventDefault();var r=$(this);r.t
 },{}],"mK7E":[function(require,module,exports) {
 "use strict";require("../../components/main-header/main-header.js");
 },{"../../components/main-header/main-header.js":"srQF"}]},{},["mK7E"], null)
-//# sourceMappingURL=/registration-page.e67e3e50.js.map
+//# sourceMappingURL=/Toxin/registration-page.e67e3e50.js.map

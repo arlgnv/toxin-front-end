@@ -43,25 +43,25 @@ block content
                     .dropdown-wrapper
                         p.filter__group
                             +c-field-dropdown("js-dropdown-comfort filter", "field-comfort", "Удобства номера", true)(name="comfort")
-                            .dropdown__content
-                                .dropdown__item
-                                    b.dropdown__title Спальни
-                                    .dropdown__count
-                                        button.dropdown__del(type="button")
-                                        span.dropdown__amount 0
-                                        button.dropdown__ins(type="button")
-                                .dropdown__item
-                                    b.dropdown__title Кровати
-                                    .dropdown__count
-                                        button.dropdown__del(type="button")
-                                        span.dropdown__amount 0
-                                        button.dropdown__ins(type="button")
-                                .dropdown__item
-                                    b.dropdown__title Ванные комнаты
-                                    .dropdown__count
-                                        button.dropdown__del(type="button")
-                                        span.dropdown__amount.dropdown__amount--baby 0
-                                        button.dropdown__ins(type="button")
+                        .dropdown__content
+                            .dropdown__item
+                                b.dropdown__title Спальни
+                                .dropdown__count
+                                    button.dropdown__del(type="button")
+                                    span.dropdown__amount 0
+                                    button.dropdown__ins(type="button")
+                            .dropdown__item
+                                b.dropdown__title Кровати
+                                .dropdown__count
+                                    button.dropdown__del(type="button")
+                                    span.dropdown__amount 0
+                                    button.dropdown__ins(type="button")
+                            .dropdown__item
+                                b.dropdown__title Ванные комнаты
+                                .dropdown__count
+                                    button.dropdown__del(type="button")
+                                    span.dropdown__amount.dropdown__amount--baby 0
+                                    button.dropdown__ins(type="button")
                     +c-checkbox-expandable("filter", "Дополнительные удобства", {
                      "Завтрак": "breakfast",
                      "Письменный стол": "desk",
