@@ -30,7 +30,7 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 4 versions"
   ],
   "bugs": {
     "url": "https://github.com/madnessJs/Toxin/issues"
