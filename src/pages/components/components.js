@@ -1,3 +1,11 @@
+const jQuery = require("jquery");
+window.$ = window.jQuery = jQuery;
+
+require("ion-rangeslider");
+require("air-datepicker");
+
+require("../../components/main-header/main-header");
+
 // Datepicker
 var $start = $('#find-room__from');
 

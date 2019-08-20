@@ -1,28 +1,29 @@
 {
-  "name": "Toxin",
+  "name": "toxin",
   "version": "1.0.0",
-  "description": "Отель «Toxin»",
+  "description": "«Toxin» - сервис поиска отелей",
   "main": "src/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /Toxin/"
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madnessJs/Toxin.git"
+    "url": "git+https://github.com/madnessJs/toxin.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Artem Lagunov",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "postcss-modules": "^1.4.1",
+    "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
-    "normalize": "^0.3.1",
-    "sass": "^1.21.0",
+    "ion-rangeslider": "^2.3.0",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
     "pug": "^2.0.3",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "sass": "^1.21.0"
   },
   "dependencies": {
     "jquery": "^3.4.1",
@@ -33,7 +34,7 @@
     "last 4 versions"
   ],
   "bugs": {
-    "url": "https://github.com/madnessJs/Toxin/issues"
+    "url": "https://github.com/madnessJs/toxin/issues"
   },
-  "homepage": "https://github.com/madnessJs/Toxin#readme"
+  "homepage": "https://github.com/madnessJs/toxin#readme"
 }

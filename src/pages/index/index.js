@@ -1,5 +1,8 @@
-// Burger menu
-import "../../components/main-header/main-header.js";
+const jQuery = require("jquery");
+window.$ = window.jQuery = jQuery;
+
+require("air-datepicker");
+require("../../components/main-header/main-header");
 
 // Datepicker
 var $start = $("#find-room__from"),

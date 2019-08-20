@@ -4,7 +4,7 @@ block title
     title Отель Toxin | Поиск номеров
 
 block styles
-    link(rel="stylesheet" href="rooms-page.scss")
+    link(rel="stylesheet" href="./rooms-page.scss")
 
 block content
     include ../../utilities/mixins-pug
@@ -184,6 +184,4 @@ block content
                 +c-pagination("rooms-pagination")
     include ../../components/main-footer/main-footer-rich
 
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-    script(src="../../components/range/range.js")
-    script(src="rooms-page.js")
+    script(src="./rooms-page.js")

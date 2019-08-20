@@ -1,5 +1,8 @@
-// Burger menu
-import "../../components/main-header/main-header.js";
+const jQuery = require("jquery");
+window.$ = window.jQuery = jQuery;
+
+require("ion-rangeslider");
+require("../../components/main-header/main-header");
 
 // Filter
 var $filterShow = $('.filter__btn-mobile--show'),
