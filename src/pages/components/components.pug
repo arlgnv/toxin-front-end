@@ -13,52 +13,9 @@ block content
         +c-field-default("register-form", "c-field-default", "text field", true)(placeholder="Email")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        .dropdown-wrapper
-            +c-field-dropdown("js-dropdown-guests register-form", "c-field-dropdown-guests", "dropdown guests", true)(placeholder="Сколько гостей?")
-            .dropdown__content
-                    .dropdown__item
-                        b.dropdown__title Взрослые
-                        .dropdown__count
-                            button.dropdown__del(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__ins(type="button")
-                    .dropdown__item
-                        b.dropdown__title Дети
-                        .dropdown__count
-                            button.dropdown__del(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__ins(type="button")
-                    .dropdown__item
-                        b.dropdown__title Младенцы
-                        .dropdown__count
-                            button.dropdown__del(type="button")
-                            span.dropdown__amount.dropdown__amount--baby 0
-                            button.dropdown__ins(type="button")
-                    .dropdown__item.dropdown__buttons
-                        span.dropdown__clear Очистить
-                        span.dropdown__apply Применить
+        +c-field-dropdown("register-form", "c-field-dropdown-guests", "dropdown guests", true)(placeholder="Сколько гостей?")
     .demonstrate-wrapper.demonstrate-wrapper--inline
-        .dropdown-wrapper
-            +c-field-dropdown("js-dropdown-comfort register-form", "c-field-dropdown-comfort", "dropdown comfort", true)(placeholder="Настройте кофморт)")
-            .dropdown__content
-                    .dropdown__item
-                        b.dropdown__title Спальни
-                        .dropdown__count
-                            button.dropdown__del(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__ins(type="button")
-                    .dropdown__item
-                        b.dropdown__title Кровати
-                        .dropdown__count
-                            button.dropdown__del(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__ins(type="button")
-                    .dropdown__item
-                        b.dropdown__title Ванные комнаты
-                        .dropdown__count
-                            button.dropdown__del(type="button")
-                            span.dropdown__amount.dropdown__amount--baby 0
-                            button.dropdown__ins(type="button")
+        +c-field-dropdown("register-form", "c-field-dropdown-comfort", "dropdown comfort", true)(placeholder="Настройте кофморт)")
 
     .demonstrate-wrapper.demonstrate-wrapper--inline
         +c-field-masked("filter-form", "c-field-masked", "masked text field", true)(placeholder="ДД.ММ.ГГГГ")
