@@ -1,3 +1,3 @@
-# «Toxin» - сервис поиска отелей
+# Toxin
 ***
 Демо проекта - [посмотреть](https://madnessjs.github.io/toxin)
