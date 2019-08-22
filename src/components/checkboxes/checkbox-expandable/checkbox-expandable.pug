@@ -1,6 +1,6 @@
 mixin c-checkbox-expandable(classes, title, obj)
     fieldset(class= classes + "__group c-checkbox-expandable__group")
-        legend(class= classes + "__title js-checkbox-expandable c-checkbox-expandable__title")= title
+        legend(class= classes + "__title c-checkbox-expandable__title")= title
         div(style="display:none")
             ul(class= classes + "__list c-checkbox-expandable__list")
                 each value, key in obj

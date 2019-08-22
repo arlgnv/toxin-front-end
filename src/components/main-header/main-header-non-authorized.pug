@@ -1,20 +1,20 @@
 header.main-header
     .container
-        a.main-header__logo(href="../index/index.pug")
+        a.main-header__logo(href="/")
             img.main-header__logo-image(src="../../logo.svg" alt="Отель Toxin" width="106" height="40")
-        a.main-header__burger(href="#" aria-label="Показать меню")
+        button.main-header__burger(aria-label="Показать меню")
         nav.main-header__navigation
             ul.site-navigation
                 li.site-navigation__item
-                    a.site-navigation__link(href="#") О нас
+                    a.site-navigation__link(href="/mock-address/change-me") О нас
                 li.site-navigation__item.site-navigation__item--has-submenu
-                    a.site-navigation__link(href="#") Услуги
+                    a.site-navigation__link(href="/mock-address/change-me") Услуги
                 li.site-navigation__item
-                    a.site-navigation__link(href="#") Вакансии
+                    a.site-navigation__link(href="/mock-address/change-me") Вакансии
                 li.site-navigation__item
-                    a.site-navigation__link(href="#") Новости
+                    a.site-navigation__link(href="/mock-address/change-me") Новости
                 li.site-navigation__item.site-navigation__item--has-submenu
-                    a.site-navigation__link(href="#") Соглашения
+                    a.site-navigation__link(href="/mock-address/change-me") Соглашения
             div.user-navigation.non-authorized
                 ul.user-navigation__list
                     li.user-navigation__item
@@ -23,4 +23,4 @@ header.main-header
                         +button-link("button--purple-gradient", "Зарегистрироваться")(href="../registration-page/registration-page.pug")
                 ul.user-navigation__menu
                     li.user-navigation__item
-                        a.user-navigation__link(href="#") Артём Лагунов
+                        a.user-navigation__link(href="/mock-address/change-me") Артём Лагунов

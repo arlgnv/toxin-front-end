@@ -1,5 +1,5 @@
 const $rangePrice = $('.c-range__price');
-$(".js-range-slider").ionRangeSlider({
+$(".c-range__field").ionRangeSlider({
     skin: "custom",
     type: "double",
     min: 0,

@@ -1,13 +1,9 @@
 // Import
 window.$ = window.jQuery = require("jquery");
-
 require("ion-rangeslider");
 require("../../components/range/range");
-
 require("../../components/main-header/main-header");
-
 require("../../components/checkboxes/checkbox-expandable/checkbox-expandable");
-
 import { initComfortDropdown } from "../../components/field-dropdown/field-dropdown";
 
 // Filter
