@@ -11,4 +11,4 @@ $(".main-header__burger").click(function(e){e.preventDefault(),$(this).toggleCla
 },{}],"mK7E":[function(require,module,exports) {
 window.$=window.jQuery=require("jquery"),require("../../components/main-header/main-header");
 },{"jquery":"lwLq","../../components/main-header/main-header":"srQF"}]},{},["mK7E"], null)
-//# sourceMappingURL=/toxin/registration-page.1fe9d83d.js.map
+//# sourceMappingURL=registration-page.1fe9d83d.js.map

@@ -2,10 +2,10 @@
   "name": "toxin",
   "version": "1.0.0",
   "description": "«Toxin» - сервис поиска отелей",
-  "main": "",
+  "main": "src/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/"
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url ./"
   },
   "repository": {
     "type": "git",

@@ -25,4 +25,4 @@ var t=$("#date-from"),a=$("#date-to");t.datepicker({clearButton:!0,todayButton:!
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var e=require("./../../components/field-dropdown/field-dropdown");window.$=window.jQuery=require("jquery"),require("air-datepicker"),require("../../components/main-header/main-header"),require("../../components/calendar/calendar");var r=document.querySelector("#amount-guests");r.addEventListener("click",e.initGuestsDropdown);
 },{"jquery":"lwLq","air-datepicker":"hTB8","../../components/main-header/main-header":"srQF","../../components/calendar/calendar":"FYhM","./../../components/field-dropdown/field-dropdown":"zqnU"}]},{},["Focm"], null)
-//# sourceMappingURL=/toxin/index.34e2306d.js.map
+//# sourceMappingURL=index.34e2306d.js.map

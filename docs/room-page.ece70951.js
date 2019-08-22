@@ -11,4 +11,4 @@ $(".main-header__burger").click(function(e){e.preventDefault(),$(this).toggleCla
 },{}],"HDI3":[function(require,module,exports) {
 window.$=window.jQuery=require("jquery"),require("../../components/main-header/main-header");
 },{"jquery":"lwLq","../../components/main-header/main-header":"srQF"}]},{},["HDI3"], null)
-//# sourceMappingURL=/toxin/room-page.ece70951.js.map
+//# sourceMappingURL=room-page.ece70951.js.map
