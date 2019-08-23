@@ -1,7 +1,7 @@
-// Import
 window.$ = window.jQuery = require("jquery");
 require("ion-rangeslider");
 require("air-datepicker");
+
 require("../../components/main-header/main-header");
 require("../../components/checkboxes/checkbox-expandable/checkbox-expandable");
 require("../../components/range/range");

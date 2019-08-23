@@ -21,9 +21,9 @@ block content
     .container
       section.filter
         h2.visually-hidden Фильтр номеров
-        button.filter__btn-mobile_show(type="button") Показать фильтр
+        button.filter__show-filter-button.js-filter__show-filter-button(type="button") Показать фильтр
         form.filter__form(action="https://echo.htmlacademy/ru" method="post")
-          button.filter__btn-mobile_close(type="button" aria-label="Закрыть фильтр")
+          button.filter__close-filter-button.js-filter__close-filter-button(type="button" aria-label="Закрыть фильтр")
           p.filter__group
             +c-field-dropdown("filter", "field-date", "Даты пребывания в отеле", true)(name="date" value="19 авг - 23 авг")
           p.filter__group

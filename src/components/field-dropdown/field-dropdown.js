@@ -1,56 +1,57 @@
 function initGuestsDropdown(evt) {
+    evt.preventDefault();
+
     const input = evt.target;
-    const inputCoords = input.getBoundingClientRect();
     input.removeEventListener("click", initGuestsDropdown);
     input.addEventListener("click", showDropdown);
 
-    const template = `
-        <span class="dropdown">
-            <span class="dropdown__item">
-                <b class="dropdown__title">Взрослые</b>
-                <span class="dropdown__count">
-                    <button class="dropdown__del" type="button"></button>
-                    <span class="dropdown__amount">0</span>
-                    <button class="dropdown__add" type="button"></button>
-                </span>
+    document.body.insertAdjacentHTML("beforeend", `
+    <span class="dropdown">
+        <span class="dropdown__item">
+            <b class="dropdown__title">Взрослые</b>
+            <span class="dropdown__count">
+                <button class="dropdown__del" type="button"></button>
+                <span class="dropdown__amount">0</span>
+                <button class="dropdown__add" type="button"></button>
             </span>
-            <span class="dropdown__item">
-                <b class="dropdown__title">Дети</b>
-                <span class="dropdown__count">
-                    <button class="dropdown__del" type="button"></button>
-                    <span class="dropdown__amount">0</span>
-                    <button class="dropdown__add" type="button"></button>
-                </span>
+        </span>
+        <span class="dropdown__item">
+            <b class="dropdown__title">Дети</b>
+            <span class="dropdown__count">
+                <button class="dropdown__del" type="button"></button>
+                <span class="dropdown__amount">0</span>
+                <button class="dropdown__add" type="button"></button>
             </span>
-            <span class="dropdown__item">
-                <b class="dropdown__title">Младенцы</b>
-                <span class="dropdown__count">
-                    <button class="dropdown__del" type="button"></button>
-                    <span class="dropdown__amount dropdown__amount--baby">0</span>
-                    <button class="dropdown__add" type="button"></button>
-                </span>
+        </span>
+        <span class="dropdown__item">
+            <b class="dropdown__title">Младенцы</b>
+            <span class="dropdown__count">
+                <button class="dropdown__del" type="button"></button>
+                <span class="dropdown__amount dropdown__amount_baby">0</span>
+                <button class="dropdown__add" type="button"></button>
             </span>
-            <span class="dropdown__item dropdown__buttons">
-                <span class="dropdown__clear">Очистить</span>
-                <span class="dropdown__apply">Применить</span>
-            </span>
-        </span>`;
-    document.body.insertAdjacentHTML("beforeend", template);
+        </span>
+        <span class="dropdown__item dropdown__buttons">
+            <span class="dropdown__clear">Очистить</span>
+            <span class="dropdown__apply">Применить</span>
+        </span>
+    </span>`);
 
     const dropdown = document.body.querySelector(".dropdown");
+    const inputCoords = input.getBoundingClientRect();
     dropdown.style.left = inputCoords.left + "px";
     dropdown.style.top = inputCoords.bottom + pageYOffset + "px";
     dropdown.style.width = input.offsetWidth + "px";
 
     const dropdownItems = dropdown.querySelectorAll(".dropdown__item:not(.dropdown__buttons)");
 
-    for (let i = 0; i < dropdownItems.length; i++) {
-        const delButton = dropdownItems[i].querySelector(".dropdown__del");
+    dropdownItems.forEach(item => {
+        const delButton = item.querySelector(".dropdown__del");
         delButton.addEventListener("click", subtractOne);
 
-        const addButton = dropdownItems[i].querySelector(".dropdown__add");
+        const addButton = item.querySelector(".dropdown__add");
         addButton.addEventListener("click", addOne);
-    }
+    });
 
     const dropdownClear = dropdown.querySelector(".dropdown__clear");
     dropdownClear.addEventListener("click", clearInput);
@@ -63,11 +64,16 @@ function initGuestsDropdown(evt) {
     });
 
     function hideDropdown() {
-        dropdown.classList.add("dropdown--hidden");
+        dropdown.classList.add("dropdown_hidden");
     }
 
     function showDropdown() {
-        dropdown.classList.remove("dropdown--hidden");
+        const inputCoords = input.getBoundingClientRect();
+
+        dropdown.classList.remove("dropdown_hidden");
+        dropdown.style.left = inputCoords.left + "px";
+        dropdown.style.top = inputCoords.bottom + pageYOffset + "px";
+        dropdown.style.width = input.offsetWidth + "px";
     }
 
     function subtractOne({ target }) {
@@ -143,10 +149,14 @@ function initGuestsDropdown(evt) {
 }
 
 function initComfortDropdown(evt) {
+    evt.preventDefault();
+
     const input = evt.target;
-    const inputCoords = input.getBoundingClientRect();
     input.removeEventListener("click", initComfortDropdown);
-    input.addEventListener("click", () => dropdown.classList.toggle("dropdown--hidden"));
+    input.addEventListener("click", () => {
+        if (dropdown.classList.contains("dropdown_hidden")) showDropdown();
+        else hideDropdown();
+    });
 
     document.body.insertAdjacentHTML(
         "beforeend",
@@ -180,23 +190,36 @@ function initComfortDropdown(evt) {
     );
 
     const dropdown = document.body.querySelector(".dropdown");
+    const inputCoords = input.getBoundingClientRect();
     dropdown.style.left = inputCoords.left + "px";
     dropdown.style.top = inputCoords.bottom + pageYOffset + "px";
     dropdown.style.width = input.offsetWidth + "px";
 
     const dropdownItems = dropdown.querySelectorAll(".dropdown__item");
-
-    for (let i = 0; i < dropdownItems.length; i++) {
-        const delButton = dropdownItems[i].querySelector(".dropdown__del");
+    
+    dropdownItems.forEach(item => {
+        const delButton = item.querySelector(".dropdown__del");
         delButton.addEventListener("click", subtractOne);
 
-        const addButton = dropdownItems[i].querySelector(".dropdown__add");
+        const addButton = item.querySelector(".dropdown__add");
         addButton.addEventListener("click", addOne);
-    }
+    });
 
     document.addEventListener("click", ({ target }) => {
         if (target != input && !target.closest(".dropdown")) applyChanges();
     });
+
+    function hideDropdown() {
+        dropdown.classList.add("dropdown_hidden");
+    }
+
+    function showDropdown() {
+        dropdown.classList.remove("dropdown_hidden");
+        const inputCoords = input.getBoundingClientRect();
+        dropdown.style.left = inputCoords.left + "px";
+        dropdown.style.top = inputCoords.bottom + pageYOffset + "px";
+        dropdown.style.width = input.offsetWidth + "px";
+    }
 
     function subtractOne({ target }) {
         const amount = target.nextElementSibling;
@@ -242,7 +265,7 @@ function initComfortDropdown(evt) {
         if (amountBathrooms >= 2 && amountBathrooms <= 4) input.value += `${amountBathrooms} ванные комнаты`;
         if (amountBathrooms >= 5 || amountBathrooms == 0) input.value += `${amountBathrooms} ванных комнат`;
 
-        dropdown.classList.add("dropdown--hidden");
+        dropdown.classList.add("dropdown_hidden");
     }
 }
 

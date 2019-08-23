@@ -1,6 +1,8 @@
 const $from = $("#date-from");
 const $to = $("#date-to");
 
+$from.on("click", evt => evt.preventDefault());
+
 $from.datepicker({
     clearButton: true,
     todayButton: true,
@@ -27,7 +29,7 @@ $from.datepicker({
             $from.val(arrDates[0]);
             $to.val(arrDates[1]);
         }
-    }
+    },
 });
 
 const myDatepicker = $from.data('datepicker');
