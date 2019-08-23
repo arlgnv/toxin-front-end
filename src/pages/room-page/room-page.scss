@@ -5,276 +5,304 @@
 @import '../../components/advantages/advantages';
 @import '../../components/bullet-list/bullet-list';
 @import '../../components/donut/donut';
-@import '../../components/buttons/button-like';
+@import '../../components/buttons/button-with-like';
 @import '../../components/main-footer/main-footer';
 
-
 .room-page {
-    border-bottom: 1px solid $primary-color-25;
+  flex-grow: 1;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 71px 10px 62px;
-    }
+  border-bottom: 1px solid $primary-color-25;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 71px 10px 62px;
+  }
 }
 
+@media screen and (max-width: 1138px) {
+  .room-page + .main-footer {
+    padding: 30px 0;
+  }
 
+  .room-page > .container {
+    padding-top: 40px;
+  }
+}
 
-// Photos
 .photos {
-    max-width: 1442px;
-    margin: 0 auto;
-    padding: 0 10px;
+  max-width: 1442px;
+  margin: 0 auto;
+  padding: 0 10px;
 
-    line-height: 0;
+  line-height: 0;
 }
 
 .photos__container {
-    display: flex;
+  display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  .photos__container {
+    flex-direction: column;
+  }
 }
 
 .photos__group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  .photos__item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .photos__group {
+    flex-direction: row;
 
     .photos__item {
-        width: 100%;
+      width: 50%;
     }
+  }
 }
 
 // for IE
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 750px) {
-    .photos__item--big {
-        width: 68%;
-    }
+  .photos__item_big {
+    width: 68%;
+  }
 
-    .photos__group {
-        width: 32%;
+  .photos__group {
+    width: 32%;
 
-        .photos__item {
-            width: 100%;
-            height: 49.7%;
-        }
+    .photos__item {
+      width: 100%;
+      height: 49.7%;
     }
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 750px) {
-    .photos__item--big,
-    .photos__group {
-        height: 100%;
-    }
+  .photos__item_big,
+  .photos__group {
+    height: 100%;
+  }
 }
 
-// Info
 .info {
-    width: 711px;
-    margin-right: 10px;
+  width: 711px;
+  margin-right: 10px;
 }
 
-// Info top
+@media screen and (max-width: 1138px) {
+  .info {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 .info__title {
-    margin: 0 0 20px;
+  margin: 0 0 20px;
 
-    font-weight: bold;
-    font-size: 19px;
-    color: $primary-color-100;
+  font-weight: bold;
+  font-size: 19px;
+  color: $primary-color-100;
 
-    letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
 }
+
+/* Info top */
 
 .info__top {
-    display: flex;
-    justify-content: space-between;
-    width: 670px;
-    margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  width: 670px;
+  margin-bottom: 13px;
 }
 
-.advantages {
-    width: 280px;
-}
-
-.advantages__item {
-    padding-bottom: 20px;
-
-    border-bottom: 1px solid $primary-color-10;
-
-    & + .advantages__item {
-        margin-top: 20px;
-    }
-
-    .advantage__icon {
-        margin-right: 10px;
-    }
-}
-
-.advantages__list {
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-}
-
-.impression {
-
-    .info__title {
-        margin-bottom: 22px;
-
-        letter-spacing: -0.3px;
-    }
-}
-
-// Info middle
-.info__middle {
-    position: relative;
-    margin-bottom: 34px;
-}
-
-.testimonials__amount {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.testimonials__list {
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-}
-
-.testimonials__item {
-    margin-bottom: 24px;
-}
-
-// Info bottom
-.info__bottom {
-    display: flex;
-    justify-content: space-between;
-    width: 702px;
-}
-
-.rules {
-    width: 240px;
-    padding-left: 18px;
-
-    .info__title {
-        margin-bottom: 16px;
-    }
-}
-
-.rules__item {
-    margin-bottom: 10px;
-
-    &::before {
-        top: 7px;
-        left: -19px;
-    }
-}
-
-.cancel {
-    width: 341px;
-
-    .info__title {
-        margin-bottom: 16px;
-    }
-}
-
-// Media
 @media screen and (max-width: 1138px) {
-    .room-page + .main-footer {
-        padding: 30px 0;
-    }
-
-    .room-page .container {
-        padding-top: 40px;
-    }
-
-    .info {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .info__top,
-    .info__bottom {
-        width: 100%;
-    }
-
-    .rules,
-    .cancel {
-        width: 45%;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .photos__container {
-        flex-direction: column;
-    }
-
-    .photos__group {
-        flex-direction: row;
-
-        .photos__item {
-            width: 50%;
-        }
-    }
+  .info__top {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 660px) {
-    .info__top {
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
+  .info__top {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
 
-    .info__middle {
-        margin-bottom: 30px;
-    }
+.advantages {
+  width: 280px;
+}
 
-    .info__bottom {
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
+@media screen and (max-width: 660px) {
+  .advantages {
+    margin-bottom: 20px;
+  }
+}
 
-    .advantages {
-        margin-bottom: 20px;
-    }
+.advantages__item {
+  padding-bottom: 20px;
 
-    .rules {
-        width: 90%;
-    }
+  border-bottom: 1px solid $primary-color-10;
 
-    .cancel {
-        width: 100%;
-    }
+  & + .advantages__item {
+    margin-top: 20px;
+  }
+
+  .advantage__icon {
+    margin-right: 10px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.impression {
+  .info__title {
+    margin-bottom: 22px;
+
+    letter-spacing: -0.3px;
+  }
+}
+
+/* Info middle */
+
+.info__middle {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 660px) {
+  .info__middle {
+    margin-bottom: 30px;
+  }
+}
+
+.testimonials__amount {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media screen and (max-width: 430px) {
-    .testimonials__amount {
-        position: static;
-    }
+  .testimonials__amount {
+    position: static;
+  }
 }
 
+.testimonials__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.testimonials__item {
+  margin-bottom: 24px;
+}
+
+/* Info bottom */
+
+.info__bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 702px;
+}
+
+@media screen and (max-width: 1138px) {
+  .info__bottom {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .info__bottom {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
+.rules {
+  width: 240px;
+  padding-left: 18px;
+
+  .info__title {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1138px) {
+  .rules {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .rules {
+    width: 90%;
+  }
+}
+
+.rules__item {
+  margin-bottom: 10px;
+
+  &::before {
+    top: 7px;
+    left: -19px;
+  }
+}
+
+.cancel {
+  width: 341px;
+
+  .info__title {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1138px) {
+  .cancel {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .cancel {
+    width: 100%;
+  }
+}
+
+/* Confirm room form */
+
 @media screen and (max-width: 418px) {
-    .confirm-room__left-col {
-        width: 70%;
-    }
+  .confirm-room__left-col {
+    width: 70%;
+  }
 
-    .confirm-room__right-col {
-        width: 30%;
-        text-align: right;
-    }
+  .confirm-room__right-col {
+    width: 30%;
+    text-align: right;
+  }
 
-    .confirm-room__item {
-        width: 100%;
+  .confirm-room__item {
+    width: 100%;
 
-        & + .confirm-room__item {
-            margin-left: 0;
-            margin-top: 10px;
-        }
+    & + .confirm-room__item {
+      margin-left: 0;
+      margin-top: 10px;
     }
+  }
 
-    .confirm-room__left-col--tip::after {
-        display: none;
-    }
+  .confirm-room__left-col_tip::after {
+    display: none;
+  }
 }

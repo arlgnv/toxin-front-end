@@ -1,83 +1,82 @@
 @import '../../buttons/button';
-@import '../../buttons/button-purple-gradient';
-@import '../../buttons/button-arrow';
+@import '../../buttons/button-with-purple-gradient';
+@import '../../buttons/button-with-arrow';
 @import '../../field-dropdown/field-dropdown';
 @import '../../calendar/calendar';
 
 .find-room {
-    box-sizing: border-box;
-    max-width: 380px;
-    padding: 39px 29px 29px;
+  box-sizing: border-box;
+  max-width: 380px;
+  padding: 39px 29px 29px;
 
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
 .find-room__title {
-    margin: 0 0 22px;
+  margin: 0 0 22px;
 
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    color: $primary-color-100;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $primary-color-100;
 
-    letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
 }
 
 .find-room__group {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 24px;
+
+  .find-room__item {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .find-room__group {
+    flex-direction: column;
 
     .find-room__item {
-        width: 150px;
+      width: 100%;
     }
+
+    .find-room__item + .find-room__item {
+      margin-top: 10px;
+    }
+  }
 }
 
 .find-room__item {
-    margin: 0;
+  margin: 0;
 
-    .button {
-        width: 100%;
+  .button {
+    width: 100%;
 
-        padding: 15px 30px;
-    }
+    padding: 15px 30px;
+  }
 
-    &--lonely {
-        margin: 0 0 32px;
-    }
+  &_lonely {
+    margin: 0 0 32px;
+  }
 }
 
 .find-room__label {
-    display: block;
-    margin: 0 0 5px;
+  display: block;
+  margin: 0 0 5px;
 
-    &::after {
-        top: 41px;
-        right: 18px;
-    }
+  &::after {
+    top: 41px;
+    right: 18px;
+  }
 }
 
 .find-room__field {
-    box-sizing: border-box;
-    width: 100%;
-    height: 42px; //for ie
-    padding: 8px 25px 8px 13px;
-}
-
-// Media
-@media screen and (max-width: 390px) {
-    .find-room__group {
-        flex-direction: column;
-
-        .find-room__item {
-            width: 100%;
-        }
-
-        .find-room__item + .find-room__item {
-            margin-top: 10px;
-        }
-    }
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px; //for ie
+  padding: 8px 25px 8px 13px;
 }

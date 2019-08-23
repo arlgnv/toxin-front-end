@@ -1,0 +1,14 @@
+.button_with-arrow {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    width: 18px;
+    height: 18px;
+
+    transform: translateY(-50%);
+  }
+}

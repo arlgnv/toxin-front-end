@@ -21,7 +21,7 @@ $from.datepicker({
     onSelect: function(fd) {
         const arrDates = fd.split("-");
 
-        if (arrDates.length == 1) {
+        if(arrDates.length == 1) {
             $from.val(arrDates[0]);
         } else {
             $from.val(arrDates[0]);

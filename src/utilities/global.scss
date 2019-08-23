@@ -1,41 +1,48 @@
-body {
-    margin: 0 auto;
-    padding: 0;
-    min-width: 320px;
-    max-width: 1920px;
+html {
+  color: $primary-color-75;
+  font-family: $basic-font;
+  font-size: $basic-font-fize;
+  line-height: $basic-line-height;
+  font-style: normal;
+  font-weight: normal;
 
-    color: $primary-color-75;
-    font-family: $basic-font;
-    font-size: $basic-font-fize;
-    line-height: $basic-line-height;
-    font-style: normal;
-    font-weight: normal;
+  background-color: #fff;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 320px;
+  max-width: 1920px;
 }
 
 .container {
-    box-sizing: border-box;
-    max-width: 1180px;
-    padding: 0 10px;
-    margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -1,41 +1,41 @@
 .c-pagination__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .c-pagination__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    &--current {
-        background: linear-gradient(180deg, $purple-color-100 0%, #8BA4F9 100%);
+  &_current {
+    background: linear-gradient(180deg, $purple-color-100 0%, #8ba4f9 100%);
 
-        .c-pagination__link {
-            font-weight: bold;
-            color: #fff;
-        }
+    .c-pagination__link {
+      font-weight: bold;
+      color: #fff;
     }
+  }
 
-    &--next-page {
-        background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-100 100%);
+  &_next-page {
+    background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-100 100%);
 
-        .c-pagination__link {
-            line-height: 0;
-        }
+    .c-pagination__link {
+      line-height: 0;
     }
+  }
 }
 
 .c-pagination__link {
-    font-size: 12px;
-    line-height: 15px;
-    color: $primary-color-50;
+  font-size: 12px;
+  line-height: 15px;
+  color: $primary-color-50;
 }

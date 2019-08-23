@@ -7,8 +7,8 @@ require("../../components/checkboxes/checkbox-expandable/checkbox-expandable");
 import { initComfortDropdown } from "../../components/field-dropdown/field-dropdown";
 
 // Filter
-const $filterShow = $('.filter__btn-mobile--show');
-const $filterClose = $('.filter__btn-mobile--close');
+const $filterShow = $('.filter__btn-mobile_show');
+const $filterClose = $('.filter__btn-mobile_close');
 
 $filterShow.click(function(event) {
     event.preventDefault();

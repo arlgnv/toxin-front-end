@@ -1,16 +1,16 @@
 mixin c-testimonial(classes, parameters)
-    - var image = parameters.image
-    - var author = parameters.author
-    - var date = parameters.date
-    - var text = parameters.text
-    - var likes = parameters.likes
-    p(class= classes + "__wrapper c-testimonial__wrapper")
-        span(class= classes + "__top-part c-testimonial__top-part")
-            img(class= classes + "__img c-testimonial__img" src= image width="44" height="44" alt= author)
-            span
-                b(class= classes + "__name c-testimonial__name")= author
-                span(class= classes + "__date c-testimonial__date")= date
-        span(class= classes + "__bottom-part c-testimonial__bottom-part")
-            span
-                +button("button--border-gradient button--like", likes)
-            span(class= classes + "__text c-testimonial__text")= text
+  - var image = parameters.image
+  - var author = parameters.author
+  - var date = parameters.date
+  - var text = parameters.text
+  - var likes = parameters.likes
+  p(class= classes + "__wrapper c-testimonial__wrapper")
+    span(class= classes + "__top-part c-testimonial__top-part")
+      img(class= classes + "__img c-testimonial__img" src= image width="44" height="44" alt= author)
+      span
+        b(class= classes + "__name c-testimonial__name")= author
+        span(class= classes + "__date c-testimonial__date")= date
+    span(class= classes + "__bottom-part c-testimonial__bottom-part")
+      span
+        +button("button_with-border-gradient button_with-like", likes, "button")
+      span(class= classes + "__text c-testimonial__text")= text

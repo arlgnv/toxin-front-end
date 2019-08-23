@@ -1,26 +1,26 @@
 .c-advantage__wrapper {
-    display: flex;
-    align-items: center;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
 .c-advantage__icon {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
 
-    background-repeat: no-repeat;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .c-advantage__text {
-    margin: 0;
+  margin: 0;
 
-    color: $primary-color-75;
+  color: $primary-color-75;
 }
 
 .c-advantage__lead {
-    display: block;
+  display: block;
 
-    font-weight: bold;
+  font-weight: bold;
 }

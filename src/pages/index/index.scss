@@ -3,34 +3,37 @@
 @import './../../components/forms/form-find-room/form-find-room';
 @import './../../components/main-footer/main-footer';
 
-
 .main-page {
-    background: lightgray url("./images/background.jpg") no-repeat center / cover;
+  flex-grow: 1;
 
-    .container {
-        position: relative;
+  background: lightgray url('./images/background.jpg') no-repeat center/cover;
 
-        padding: 70px 10px 386px;
-    }
-}
+  .container {
+    position: relative;
 
-.main-page__info {
-    position: absolute;
-    bottom: 20px;
-    right: 5px;
-
-    width: 300px;
-    margin: 0;
-
-    text-align: right;
+    padding: 70px 10px 386px;
+  }
 }
 
 @media screen and (max-width: 515px) {
-    .main-page .container {
-        padding: 30px 10px;
-    }
+  .main-page .container {
+    padding: 30px 10px;
+  }
+}
 
-    .main-page__info {
-        display: none;
-    }
+.main-page__info {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+
+  width: 300px;
+  margin: 0;
+
+  text-align: right;
+}
+
+@media screen and (max-width: 515px) {
+  .main-page__info {
+    display: none;
+  }
 }

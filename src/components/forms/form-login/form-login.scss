@@ -1,62 +1,62 @@
 @import '../../buttons/button';
-@import '../../buttons/button-border-gradient';
-@import '../../buttons/button-purple-gradient';
-@import '../../buttons/button-arrow';
+@import '../../buttons/button-with-border-gradient';
+@import '../../buttons/button-with-purple-gradient';
+@import '../../buttons/button-with-arrow';
 @import '../../field-default/field-default';
 
 .login {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    box-sizing: border-box;
-    max-width: 380px;
-    padding: 40px 30px 32px;
+  box-sizing: border-box;
+  max-width: 380px;
+  padding: 40px 30px 32px;
 
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
 .login__title {
-    margin: 0 0 20px;
+  margin: 0 0 20px;
 
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    color: $primary-color-100;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $primary-color-100;
 
-    letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
 }
 
 .login__item {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 
-    .button {
-        width: 100%;
-        padding: 15px 20px;
-        margin: 10px 0 22px;
-    }
+  .button {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0 22px;
+  }
 }
 
 .login__field {
-    width: 100%;
-    padding: 12px 15px;
+  width: 100%;
+  padding: 12px 15px;
 }
 
 .login__registration {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    span {
-        margin-right: 10px;
+  span {
+    margin-right: 10px;
 
-        line-height: 18px;
-        color: #000;
-    }
+    line-height: 18px;
+    color: #000;
+  }
 
-    .button {
-        padding: 13px 18px;
-    }
+  .button {
+    padding: 13px 18px;
+  }
 }

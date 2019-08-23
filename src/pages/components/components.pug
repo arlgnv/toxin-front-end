@@ -1,120 +1,120 @@
 extends ../../templates/template-base
 
 block title
-    title Отель Toxin | Компоненты проекта
+  title Отель Toxin | Компоненты проекта
 
 block styles
-    link(rel="stylesheet" href="./components.scss")
+  link(rel="stylesheet" href="./components.scss")
 
 block content
-    include ../../utilities/mixins-pug
+  include ../../utilities/mixins-pug
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-default("register-form", "c-field-default", "text field", true)(placeholder="Email")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-field-default("register-form", "c-field-default", "text field", true)(placeholder="Email")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-dropdown("register-form", "c-field-dropdown-guests", "dropdown guests", true)(placeholder="Сколько гостей?")
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-dropdown("register-form", "c-field-dropdown-comfort", "dropdown comfort", true)(placeholder="Настройте кофморт)")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-field-dropdown("register-form", "c-field-dropdown-guests", "dropdown guests", true)(placeholder="Сколько гостей?")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-field-dropdown("register-form", "c-field-dropdown-comfort", "dropdown comfort", true)(placeholder="Настройте кофморт)")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-masked("filter-form", "c-field-masked", "masked text field", true)(placeholder="ДД.ММ.ГГГГ")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-field-masked("filter-form", "c-field-masked", "masked text field", true)(placeholder="ДД.ММ.ГГГГ")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-dropdown("filter-form", "c-field-date-dropdown", "date dropdown", true)(placeholder="ДД.ММ.ГГГГ")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-field-dropdown("filter-form", "c-field-date-dropdown", "date dropdown", true)(placeholder="ДД.ММ.ГГГГ")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-field-subscription("https://echo.htmlacademy.ru", "filter-form", "c-field-subscription", "subscription text field", true)(type="email" placeholder="Email")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-field-subscription("https://echo.htmlacademy.ru", "filter-form", "c-field-subscription", "subscription text field", true)(type="email" placeholder="Email")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-checkbox-poor("filter-form", "c-field-checkbox", "Можно курить")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-checkbox-poor("filter-form", "c-field-checkbox", "Можно курить")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-radio-button("filter-form", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
-        +c-radio-button("filter-form", "c-field-radio-2", "Женщина")(type="radio" name="gender")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-radio-button("filter-form", "c-field-radio-1", "Мужчина")(type="radio" name="gender")
+    +c-radio-button("filter-form", "c-field-radio-2", "Женщина")(type="radio" name="gender")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-toggle-button("filter-form", "c-field-toggle", "Получать спецпредложения")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-toggle-button("filter-form", "c-field-toggle", "Получать спецпредложения")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button("button--like button--border-gradient", "17")(type="button")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +button("button_like button_border-gradient", "17")(type="button")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-rating("room-rating", 3, 5)
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-rating("room-rating", 3, 5)
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button("button--purple-gradient", "click me")(type="button")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +button("button_purple-gradient", "click me")(type="button")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button("button--border-gradient", "click me")(type="button")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +button("button_border-gradient", "click me")(type="button")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button-link("button--link", "click me")(href="#")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +button-link("button_link", "click me")(href="#")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +button("button--purple-gradient button--arrow", "click me")(type="button")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +button("button_purple-gradient button_arrow", "click me")(type="button")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-pagination("room-pagination")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-pagination("room-pagination")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline(style="width: 300px")
-        +c-range("filter-form-range", "range-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
+  .demonstrate-wrapper.demonstrate-wrapper_inline(style="width: 300px")
+    +c-range("filter-form-range", "range-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-checkbox-rich("filter-form", "c-field-checkbox1", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-checkbox-rich("filter-form", "c-field-checkbox1", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-bullet-list("bullet-list", ['Нельзя с питомцами', 'Без вечеринок и мероприятий'])
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-bullet-list("bullet-list", ["Нельзя с питомцами", "Без вечеринок и мероприятий"])
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-checkbox-expandable("filter-form", "Дополнительные удобства", {"Завтрак": "breakfast", "Письменный стол": "desk", "Кроватка": "bed"})
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-checkbox-expandable("filter-form", "Дополнительные удобства", {"Завтрак": "breakfast", "Письменный стол": "desk", "Кроватка": "bed"})
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-advantage("advantage", {
-         icon: "../../components/advantages/images/comfort.svg",
-         title: "Комфорт",
-         description: "Шумопоглощающие стены"})
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-advantage("advantage", {
+      icon: "../../components/advantages/images/comfort.svg",
+      title: "Комфорт",
+      description: "Шумопоглощающие стены"})
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-testimonial("testimonials", {
-         image: "../../components/testimonials/images/1.jpg",
-         author: "Мурад Сарафанов",
-         date: "5 дней назад",
-         text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-         likes: "12"})
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-testimonial("testimonials", {
+      image: "../../components/testimonials/images/1.jpg",
+      author: "Мурад Сарафанов",
+      date: "5 дней назад",
+      text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+      likes: "12"})
 
-    .demonstrate-wrapper
-        include ../../components/main-header/main-header-non-authorized
+  .demonstrate-wrapper
+    include ../../components/main-header/main-header-non-authorized
 
-    .demonstrate-wrapper
-        include ../../components/main-header/main-header-authorized
+  .demonstrate-wrapper
+    include ../../components/main-header/main-header-authorized
 
-    .demonstrate-wrapper
-        include ../../components/main-footer/main-footer-rich
+  .demonstrate-wrapper
+    include ../../components/main-footer/main-footer-rich
 
-    .demonstrate-wrapper
-        include ../../components/main-footer/main-footer-poor
+  .demonstrate-wrapper
+    include ../../components/main-footer/main-footer-poor
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        include ../../components/forms/form-find-room/form-find-room
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    include ../../components/forms/form-find-room/form-find-room
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        include ../../components/forms/form-confirm-room/form-confirm-room
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    include ../../components/forms/form-confirm-room/form-confirm-room
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        include ../../components/forms/form-registration/form-registration
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    include ../../components/forms/form-registration/form-registration
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        include ../../components/forms/form-login/form-login
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    include ../../components/forms/form-login/form-login
 
-    .demonstrate-wrapper.demonstrate-wrapper--inline
-        +c-room("room", {
-         image: "../../components/room/images/room1.jpg",
-         alt: "Роскошный номер с большой кроватью",
-         number: 888,
-         lux: true,
-         price: "9 990₽",
-         rating: 5,
-         testimonials: 145})
+  .demonstrate-wrapper.demonstrate-wrapper_inline
+    +c-room("room", {
+      image: "../../components/room/images/room1.jpg",
+      alt: "Роскошный номер с большой кроватью",
+      number: 888,
+      lux: true,
+      price: "9 990₽",
+      rating: 5,
+      testimonials: 145})
 
-    script(src="./components.js")
+  script(src="./components.js")

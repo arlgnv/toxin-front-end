@@ -1,26 +1,26 @@
 extends ../../templates/template-base
 
 block description
-    meta(name="description" content="Наш отель является лучшим отелем 2019 года по версии независимой организации. Вы можете найти у нас номера от бюджетных до люксовых. Вам определенно понравится у нас")
+  meta(name="description" content="Наш отель является лучшим отелем 2019 года по версии независимой организации. Вы можете найти у нас номера от бюджетных до люксовых. Вам определенно понравится у нас")
 
 block keywords
-    meta(name="keywords" content="лучший отель 2019, бюджетный отель, отель toxin, забронировать номер в отеле")
+  meta(name="keywords" content="лучший отель 2019, бюджетный отель, отель toxin, забронировать номер в отеле")
 
 block title
-    title Отель Toxin | Лучший отель 2019 года по версии ассоциации «Отельные взгляды»
+  title Отель Toxin | Лучший отель 2019 года по версии ассоциации «Отельные взгляды»
 
 block styles
-    link(rel="stylesheet" href="./index.scss")
+  link(rel="stylesheet" href="./index.scss")
 
 block content
-    include ../../utilities/mixins-pug
+  include ../../utilities/mixins-pug
 
-    include ../../components/main-header/main-header-non-authorized
-    main.main-page
-        h1.visually-hidden Отель Toxin
-        .container
-            include ../../components/forms/form-find-room/form-find-room
-            p.main-page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
-    include ../../components/main-footer/main-footer-rich
+  include ../../components/main-header/main-header-non-authorized
+  main.main-page
+    h1.visually-hidden Отель Toxin
+    .container
+      include ../../components/forms/form-find-room/form-find-room
+      p.main-page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
+  include ../../components/main-footer/main-footer-rich
 
-    script(src="./index.js")
+  script(src="./index.js")

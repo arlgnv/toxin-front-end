@@ -1,34 +1,34 @@
 mixin c-room(classes, parameters)
-    - var img = parameters.image
-    - var alt = parameters.alt
-    - var number = parameters.number
-    - var lux = parameters.lux
-    - var price = parameters.price
-    - var rating = parameters.rating
-    - var testimonials = parameters.testimonials
-    div(class= classes + "__wrapper c-room__wrapper")
-        div(class= classes + "__container c-room__container")
-            img(class= classes + "__img c-room__img" src= img width="270" height="151" alt= alt)
-            p(class= classes + "__slider-buttons c-room__slider-buttons")
-                button(class= classes + "__slider-button " + classes + "__slider-button--active c-room__slider-button c-room__slider-button--active" type="button")
-                button(class= classes + "__slider-button c-room__slider-button" type="button")
-                button(class= classes + "__slider-button c-room__slider-button" type="button")
-                button(class= classes + "__slider-button c-room__slider-button" type="button")
-            p(class= classes + "__slider-arrows c-room__slider-arrows")
-                button(class= classes + "__slider-arrow " + classes + "__slider-arrow--prev c-room__slider-arrow c-room__slider-arrow--prev" type="button")
-                button(class= classes + "__slider-arrow " + classes + "__slider-arrow--next c-room__slider-arrow c-room__slider-arrow--next" type="button")
-        div(class= classes + "__info c-room__info")
-            p(class= classes + "__info-top c-room__info-top")
-                span(class= classes + "__info c-room__number")
-                    span №
-                    span= " " + number + " "
-                    if lux
-                        span Люкс
-                    else
-                        span
-                span(class= classes + "__price c-room__price")= price + " "
-                    span в сутки
-            p(class= classes + "__info-bottom c-room__info-bottom")
-                +c-rating("rating", rating, 5)
-                span(class= classes + "__testimonials c-room__testimonials")= testimonials + " "
-                    span Отзывов
+  - var img = parameters.image
+  - var alt = parameters.alt
+  - var number = parameters.number
+  - var lux = parameters.lux
+  - var price = parameters.price
+  - var rating = parameters.rating
+  - var testimonials = parameters.testimonials
+  div(class= classes + "__wrapper c-room__wrapper")
+    div(class= classes + "__container c-room__container")
+      img(class= classes + "__img c-room__img" src= img width="270" height="151" alt= alt)
+      p(class= classes + "__slider-buttons c-room__slider-buttons")
+        button(class= classes + "__slider-button " + classes + "__slider-button_active c-room__slider-button c-room__slider-button_active" type="button")
+        button(class= classes + "__slider-button c-room__slider-button" type="button")
+        button(class= classes + "__slider-button c-room__slider-button" type="button")
+        button(class= classes + "__slider-button c-room__slider-button" type="button")
+      p(class= classes + "__slider-arrows c-room__slider-arrows")
+        button(class= classes + "__slider-arrow " + classes + "__slider-arrow_prev c-room__slider-arrow c-room__slider-arrow_prev" type="button")
+        button(class= classes + "__slider-arrow " + classes + "__slider-arrow_next c-room__slider-arrow c-room__slider-arrow_next" type="button")
+    div(class= classes + "__info c-room__info")
+      p(class= classes + "__info-top c-room__info-top")
+        span(class= classes + "__info c-room__number")
+          span №
+          span= " " + number + " "
+          if lux
+            span Люкс
+          else
+            span
+        span(class= classes + "__price c-room__price")= price + " " 
+          span в сутки
+      p(class= classes + "__info-bottom c-room__info-bottom")
+        +c-rating("rating", rating, 5)
+        span(class= classes + "__testimonials c-room__testimonials")= testimonials + " " 
+          span Отзывов
