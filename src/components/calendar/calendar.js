@@ -1,8 +1,6 @@
 const $from = $("#date-from");
 const $to = $("#date-to");
 
-$from.on("click", evt => evt.preventDefault());
-
 $from.datepicker({
     clearButton: true,
     todayButton: true,

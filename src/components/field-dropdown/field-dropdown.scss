@@ -34,11 +34,18 @@
   border-radius: 4px;
 }
 
-.dropdown {
-  position: absolute;
+.dropdown-wrapper {
+  position: relative;
   z-index: 1;
 
+  display: block;
+}
+
+.dropdown {
+  position: absolute;
+
   box-sizing: border-box;
+  width: 100%;
   padding: 8px 5px 13px 14px;
 
   border: 1px solid $primary-color-50;

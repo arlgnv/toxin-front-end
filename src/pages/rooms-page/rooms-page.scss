@@ -25,10 +25,6 @@
 .filter {
   width: 266px;
   margin-right: 20px;
-
-  .dropdown-wrapper {
-    margin-top: 22px;
-  }
 }
 
 @media screen and (max-width: 1159px) {
@@ -43,7 +39,7 @@
 @media screen and (max-width: 1159px) {
   .filter__form {
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     top: 0;
     bottom: 0;
     right: 0;
@@ -82,11 +78,10 @@
 }
 
 .filter__close-filter-button {
-  display: none;
+  display: inline-block;
   position: fixed;
   z-index: 9;
   top: 0;
-  right: 15px;
 
   width: 40px;
   height: 40px;
@@ -96,6 +91,10 @@
   border-radius: 0 0 0 5px;
   cursor: pointer;
   -webkit-appearance: none;
+
+  &_hidden {
+    display: none;
+  }
 
   &::before,
   &::after {
