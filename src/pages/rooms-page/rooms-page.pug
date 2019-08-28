@@ -47,7 +47,7 @@ block content
               li.filter__item
                 +c-checkbox-rich("filter", "opportunity-hepler", "Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.")(name="opportunity-helper")
           p.filter__group
-            +c-field-dropdown("filter", "field-comfort", "Удобства номера", true)(name="comfort" placeholder="Выберите удобства")
+            +c-field-dropdown("filter", "field-comfort", "Удобства номера", true)(name="comfort" placeholder="Выберите удобства" readonly)
           +c-checkbox-expandable("filter", "Дополнительные удобства", {
             "Завтрак": "breakfast",
             "Письменный стол": "desk",

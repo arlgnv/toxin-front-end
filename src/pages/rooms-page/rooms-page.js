@@ -9,13 +9,13 @@ import { initComfortDropdown } from "../../components/field-dropdown/field-dropd
 // Filter
 const $filterShow = $(".js-filter__show-filter-button");
 const $filterClose = $(".js-filter__close-filter-button");
-$filterClose.css("left", `${document.documentElement.clientWidth - $filterClose.outerWidth()}px`);
 
 $filterShow.click(function(event) {
     event.preventDefault();
 
     $(this).next().css("left", "0%");
     $filterClose.removeClass("filter__close-filter-button_hidden");
+    $filterClose.css("left", `${$(window).width() - $filterClose.outerWidth()}px`);
     document.body.style.overflow = "hidden";
 })
 

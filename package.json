@@ -29,10 +29,7 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   },
-  "browserslist": [
-    "> 1%",
-    "last 4 versions"
-  ],
+  "browserslist": "> 0.25%, last 4 versions",
   "bugs": {
     "url": "https://github.com/madnessJs/toxin/issues"
   },

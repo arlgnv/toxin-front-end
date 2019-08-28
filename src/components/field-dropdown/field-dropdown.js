@@ -41,13 +41,15 @@ function initGuestsDropdown(evt) {
 
     const dropdownItems = dropdown.querySelectorAll(".dropdown__item:not(.dropdown__buttons)");
 
-    dropdownItems.forEach(item => {
+    for (let i = 0; i < dropdownItems.length; i++) {
+        const item = dropdownItems[i];
+
         const delButton = item.querySelector(".dropdown__del");
         delButton.addEventListener("click", subtractOne);
 
         const addButton = item.querySelector(".dropdown__add");
         addButton.addEventListener("click", addOne);
-    });
+    }
 
     const dropdownClear = dropdown.querySelector(".dropdown__clear");
     dropdownClear.addEventListener("click", clearInput);
@@ -85,11 +87,11 @@ function initGuestsDropdown(evt) {
 
         for (let i = 0; i < amounts.length; i++) {
             amounts[i].textContent = 0;
-            delButtons[i].style = "";
+            delButtons[i].cssText = "";
         }
 
         input.value = "";
-        target.style = "";
+        target.cssText = "";
     }
 
     function applyChanges() {
@@ -164,13 +166,15 @@ function initComfortDropdown(evt) {
     const dropdown = document.body.querySelector(".dropdown");
 
     const dropdownItems = dropdown.querySelectorAll(".dropdown__item");
-    dropdownItems.forEach(item => {
+    for (let i = 0; i < dropdownItems.length; i++) {
+        const item = dropdownItems[i];
+
         const delButton = item.querySelector(".dropdown__del");
         delButton.addEventListener("click", subtractOne);
 
         const addButton = item.querySelector(".dropdown__add");
         addButton.addEventListener("click", addOne);
-    });
+    }
 
     function subtractOne({ target }) {
         const amount = target.nextElementSibling;
