@@ -1,10 +1,10 @@
 {
   "name": "toxin",
   "version": "1.0.0",
-  "description": "«Toxin» - сервис поиска отелей",
+  "description": "Уютный отель «Toxin»",
   "main": "src/pages/index/index.pug",
   "scripts": {
-    "start": "rimraf dist && parcel src/pages/index/index.pug --open",
+    "start": "rimraf dist && parcel src/pages/index/index.pug",
     "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/"
   },
   "repository": {
@@ -15,18 +15,18 @@
   "author": "Artem Lagunov",
   "license": "ISC",
   "devDependencies": {
-    "air-datepicker": "^2.2.3",
-    "autoprefixer": "^9.6.0",
-    "cssnano": "^4.1.10",
-    "ion-rangeslider": "^2.3.0",
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1",
+    "autoprefixer": "^9.6.0",
+    "cssnano": "^4.1.10",
     "pug": "^2.0.3",
     "rimraf": "^2.6.3",
     "sass": "^1.21.0"
   },
   "dependencies": {
     "jquery": "^3.4.1",
+    "air-datepicker": "^2.2.3",
+    "ion-rangeslider": "^2.3.0",
     "normalize.css": "^8.0.1"
   },
   "browserslist": "> 0.25%, last 4 versions",
