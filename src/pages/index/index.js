@@ -1,10 +1,11 @@
-window.$ = window.jQuery = require("jquery");
-require("air-datepicker");
+/* global document */
+import '../../utilities/jquery-global';
 
-require("../../components/main-header/main-header");
-require("../../components/calendar/calendar");
-import { initGuestsDropdown } from "./../../components/field-dropdown/field-dropdown";
+import 'air-datepicker';
+import '../../components/main-header/main-header';
+import '../../components/calendar/calendar';
+import { initGuestsDropdown } from '../../components/field-dropdown/field-dropdown';
 
 // Dropdown
-const inputDropdownGuests = document.querySelector("#amount-guests");
-inputDropdownGuests.addEventListener("click", initGuestsDropdown);
+const inputDropdownGuests = document.querySelector('#amount-guests');
+inputDropdownGuests.addEventListener('click', initGuestsDropdown);

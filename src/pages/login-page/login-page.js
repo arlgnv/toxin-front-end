@@ -1,3 +1,2 @@
-window.$ = window.jQuery = require("jquery");
-
-require("../../components/main-header/main-header");
+import '../../utilities/jquery-global';
+import '../../components/main-header/main-header';

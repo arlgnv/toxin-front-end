@@ -4,7 +4,7 @@
   "description": "Уютный отель «Toxin»",
   "main": "src/pages/index/index.pug",
   "scripts": {
-    "start": "rimraf dist && parcel src/pages/index/index.pug",
+    "start": "rimraf dist && parcel src/pages/index/index.pug --open",
     "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/"
   },
   "repository": {
@@ -15,15 +15,18 @@
   "author": "Artem Lagunov",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "rimraf": "^2.6.3",
+    "cssnano": "^4.1.10"
+  },
+  "dependencies": {
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1",
     "autoprefixer": "^9.6.0",
-    "cssnano": "^4.1.10",
     "pug": "^2.0.3",
-    "rimraf": "^2.6.3",
-    "sass": "^1.21.0"
-  },
-  "dependencies": {
+    "sass": "^1.21.0",
     "jquery": "^3.4.1",
     "air-datepicker": "^2.2.3",
     "ion-rangeslider": "^2.3.0",

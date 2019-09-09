@@ -1,5 +1,6 @@
-$(".c-checkbox-expandable__title").click(function() {
-    $(this).toggleClass("c-checkbox-expandable__title_expanded");
+/* global $ */
+$('.c-checkbox-expandable__title').click(function toggleCheckbox() {
+  $(this).toggleClass('c-checkbox-expandable__title_expanded');
 
-    $(this).next().slideToggle(0);
+  $(this).next().slideToggle(0);
 });

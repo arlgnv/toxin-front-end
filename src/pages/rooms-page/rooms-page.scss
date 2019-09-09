@@ -53,7 +53,7 @@
   }
 }
 
-.filter__show-filter-button {
+.filter__show-button {
   box-sizing: border-box;
   display: none;
   width: 100%;
@@ -72,12 +72,12 @@
 }
 
 @media screen and (max-width: 1159px) {
-  .filter__show-filter-button {
+  .filter__show-button {
     display: inline-block;
   }
 }
 
-.filter__close-filter-button {
+.filter__close-button {
   display: inline-block;
   position: fixed;
   z-index: 9;
