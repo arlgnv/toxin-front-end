@@ -2,8 +2,12 @@
 ***
 Демо проекта - [посмотреть](https://madnessjs.github.io/toxin)
 
-Для запуска проекта у себя на компьютере нужно:
-* установленный node.js
-* скачать исходный код из данного репозитория
-* выполнить *npm install* из папки проекта
-* выполнить *npm run start* из папки проекта
+### Клонирование репозитория
+* ssh ```git@github.com:madnessJs/toxin.git```
+* https ```https://github.com/madnessJs/toxin.git```
+
+### Сборка dev
+```npm run start```
+
+### Сборка prod
+``` npm run build```
