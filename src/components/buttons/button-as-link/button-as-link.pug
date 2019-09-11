@@ -1,0 +1,5 @@
+mixin button-as-link(text, type)
+  if (type == "button")
+    button.button.button_link&attributes(attributes)= text
+  if (type == "link")
+    a.button.button_link&attributes(attributes)= text

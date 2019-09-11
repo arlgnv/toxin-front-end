@@ -1,18 +1,16 @@
-.c-field-subscription__form {
+.field-subscription {
   position: relative;
-}
 
-.c-field-subscription__label {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: $primary-color-100;
-
-  text-transform: uppercase;
-}
-
-.c-field-subscription__field {
   box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+}
+
+.field-subscription__field {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px; //for ie
+  padding: 10px 15px;
 
   font: inherit;
   color: $primary-color-75;
@@ -25,20 +23,18 @@
   }
 }
 
-.c-field-subscription__submit {
+.field-subscription__submit {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  right: 13px;
 
   width: 18px;
   height: 18px;
   padding: 0;
   margin: 0;
 
+  transform: translateY(-50%);
   border: none;
-  background-color: transparent;
-
-  &:hover {
-    cursor: pointer;
-  }
+  background: transparent url('../../images/arrow-gradient.svg') no-repeat center;
+  cursor: pointer;
 }

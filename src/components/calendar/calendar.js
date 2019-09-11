@@ -1,6 +1,6 @@
 /* global $ */
-const $from = $('#date-from');
-const $to = $('#date-to');
+const $from = $('[data-calendar=from]');
+const $to = $('[data-calendar=to]');
 
 $from.datepicker({
   clearButton: true,

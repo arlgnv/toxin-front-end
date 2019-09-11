@@ -1,14 +1,8 @@
-.c-field-default__label {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: $primary-color-100;
-
-  text-transform: uppercase;
-}
-
-.c-field-default__field {
+.field-default {
   box-sizing: border-box;
+  display: inline-block;
+  padding: 12px 15px;
+  width: 100%;
 
   font: inherit;
   line-height: 18px;

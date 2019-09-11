@@ -34,17 +34,17 @@ block content
                         h3.info__title Сведения о номере
                         ul.advantages__list
                             li.advantages__item
-                                +c-advantage("advantage", {
+                                +advantage({
                                  icon: "/../../components/advantages/images/comfort.svg",
                                  title: "Комфорт",
                                  description: "Шумопоглощающие стены"})
                             li.advantages__item
-                                +c-advantage("advantage", {
+                                +advantage({
                                  icon: "/../../components/advantages/images/convenience.svg",
                                  title: "Удобство",
                                  description: "Окно в каждой из спален"})
                             li.advantages__item
-                                +c-advantage("advantage", {
+                                +advantage({
                                  icon: "/../../components/advantages/images/cozy.svg",
                                  title: "Уют",
                                  description: "Номер оснащен камином"})
@@ -57,14 +57,14 @@ block content
                         span.testimonials__amount 2 отзыва
                         ul.testimonials__list
                             li.testimonials__item
-                                +c-testimonial("testimonial", {
+                                +testimonial({
                                  image: "/../../components/testimonials/images/1.jpg",
                                  author: "Мурад Сарафанов",
                                  date: "5 дней назад",
                                  text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей",
                                  likes: "12"})
                             li.testimonials__item
-                                +c-testimonial("testimonial", {
+                                +testimonial({
                                  image: "/../../components/testimonials/images/2.jpg",
                                  author: "Патрисия Стёклышкова",
                                  date: "Неделю назад",
@@ -73,7 +73,7 @@ block content
                 .info__bottom
                     section.rules
                         h3.info__title Правила
-                        +c-bullet-list("rules", ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                        +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
                     section.cancel
                         h3.info__title Отмена
                         p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
@@ -81,6 +81,6 @@ block content
                 h2.visually-hidden Форма бронирования номера
                 include /../../components/forms/form-confirm-room/form-confirm-room
 
-    include /../../components/main-footer/main-footer-rich
+    include /../../components/main-footer/main-footer-rich/main-footer-rich
 
     script(src="./room-page.js")

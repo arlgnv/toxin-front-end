@@ -7,7 +7,7 @@
 @import '../../components/field-dropdown/field-dropdown';
 @import '../../components/room/room';
 @import '../../components/main-header/main-header';
-@import '../../components/main-footer/main-footer';
+@import '../../components/main-footer/main-footer-rich/main-footer-rich';
 
 .rooms-page {
   flex-grow: 1;
@@ -19,8 +19,6 @@
     flex-wrap: wrap;
   }
 }
-
-/* Filter */
 
 .filter {
   width: 266px;
@@ -34,7 +32,9 @@
   }
 }
 
-/* Filter form */
+.filter__form {
+  margin-top: -5px;
+}
 
 @media screen and (max-width: 1159px) {
   .filter__form {
@@ -119,47 +119,53 @@
 }
 
 .filter__group {
+  margin: 0;
   padding: 0;
-  margin: 0 0 20px;
 
   border: none;
 
-  .c-range__group {
-    display: inline-block;
-    margin: 10px 0 7px;
+  &:first-child {
+    margin-bottom: 15px;
   }
 
-  .c-range__label {
-    margin: 0;
+  &:nth-child(2) {
+    margin-bottom: 29px;
   }
 
-  .c-range__item {
-    margin-bottom: 20px;
+  &:nth-child(3) {
+    margin-bottom: 26px;
   }
 
-  .c-range__description {
-    display: inline-block;
-    margin-top: 10px;
+  &:nth-child(4) {
+    margin-bottom: 28px;
+
+    .filter__list {
+      width: 240px;
+    }
+  }
+
+  &:nth-child(5) {
+    margin-bottom: 26px;
+
+    .filter__list {
+      width: 255px;
+
+      .filter__item:first-child {
+        width: 235px;
+      }
+
+      .filter__item + .filter__item {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  &:nth-child(6) {
+    margin-bottom: 29px;
   }
 }
 
-.filter__label {
-  display: block;
-  margin: 0 0 4px;
-
-  &::after {
-    top: 40px;
-    right: 18px;
-  }
-}
-
-.filter__field {
-  width: 100%;
-  height: 46px; //for ie
-  padding: 10px 30px 10px 15px;
-}
-
-.filter__title {
+.filter__group-title {
   display: block;
   padding: 0;
   margin: 0 0 16px;
@@ -172,50 +178,31 @@
   text-transform: uppercase;
 }
 
+.range {
+  &__group {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    display: inline-block;
+    margin-top: 11px;
+  }
+}
+
 .filter__list {
-  margin: 0 0 13px;
+  margin: 0;
   padding: 0;
 
   list-style-type: none;
 
   .filter__item + .filter__item {
-    margin-top: 13px;
-  }
-
-  .c-checkbox-poor__label {
-    padding-left: 29px;
-  }
-
-  .c-checkbox-rich__label {
-    margin-bottom: -4px;
-  }
-
-  .c-checkbox-rich__description {
-    margin-top: 7px;
+    margin-top: 8px;
   }
 }
 
-.c-checkbox-expandable__group {
-  margin-top: 29px;
-
-  .c-checkbox-expandable__title {
-    width: 100%;
-    margin-bottom: 19px;
-
-    &::after {
-      top: 5px;
-      right: 18px;
-    }
-  }
+.checkbox-expandable__title::after {
+  right: 18px;
 }
-
-@media screen and (max-width: 1159px) {
-  .c-checkbox-expandable__group {
-    margin-bottom: 0;
-  }
-}
-
-/* Rooms */
 
 .rooms {
   width: 834px;
@@ -277,28 +264,27 @@
   }
 }
 
-.rooms-pagination__list {
+@media screen and (max-width: 1159px) {
+  .room,
+  .room__container,
+  .room__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.pagination {
   width: 240px;
   margin: 0 0 10px 290px;
 }
 
 @media screen and (max-width: 1159px) {
-  .rooms-pagination__list {
+  .pagination {
     margin: 0 auto 10px;
   }
 }
 
-.rooms-pagination__description {
+.pagination__description {
   width: 240px;
   margin: 0 auto;
-}
-
-/* Media for components */
-@media screen and (max-width: 1159px) {
-  .c-room__wrapper,
-  .c-room__container,
-  .c-room__img {
-    width: 100%;
-    height: auto;
-  }
 }

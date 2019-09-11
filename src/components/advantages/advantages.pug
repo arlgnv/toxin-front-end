@@ -1,9 +1,9 @@
-mixin c-advantage(classes, parameters)
-  - var icon = parameters.icon
-  - var title = parameters.title
-  - var description = parameters.description
-  p(class= classes + "__wrapper c-advantage__wrapper")
-    span(class= classes + "__icon c-advantage__icon" style="background-image: url(" + icon + ")")
-    span(class= classes + "__text c-advantage__text")
-      b(class= classes + "__lead c-advantage__lead")= title
+mixin advantage(parameters)
+  - const icon = parameters.icon
+  - const title = parameters.title
+  - const description = parameters.description
+  p.advantage
+    span.advantage__icon(style=`background-image: url("${icon}")`)
+    span.advantage__text
+      b.advantage__lead= title
       = description

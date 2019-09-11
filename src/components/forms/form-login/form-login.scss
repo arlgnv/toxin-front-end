@@ -1,7 +1,5 @@
-@import '../../buttons/button';
-@import '../../buttons/button-with-border-gradient';
-@import '../../buttons/button-with-purple-gradient';
-@import '../../buttons/button-with-arrow';
+@import '../../buttons/button-with-border-gradient/button-with-border-gradient';
+@import '../../buttons/button-with-purple-gradient-and-arrow/button-with-purple-gradient-and-arrow';
 @import '../../field-default/field-default';
 
 .login {
@@ -37,11 +35,6 @@
     padding: 15px 20px;
     margin: 10px 0 22px;
   }
-}
-
-.login__field {
-  width: 100%;
-  padding: 12px 15px;
 }
 
 .login__registration {

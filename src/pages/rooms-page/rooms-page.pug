@@ -19,49 +19,53 @@ block content
   main.rooms-page
     h1.visually-hidden Поиск номеров
     .container
-      section.filter
+      section.filter.js-filter
         h2.visually-hidden Фильтр номеров
-        button.filter__show-button.js-filter__show-button(type="button") Показать фильтр
+        button.filter__show-button(type="button") Показать фильтр
+        button.filter__close-button.filter__close-button_hidden(type="button" aria-label="Закрыть фильтр")
         form.filter__form(action="https://echo.htmlacademy/ru" method="post")
-          button.filter__close-button.filter__close-button_hidden.js-filter__close-button(type="button" aria-label="Закрыть фильтр")
           p.filter__group
-            +c-field-dropdown("filter", "field-date", "Даты пребывания в отеле", true)(name="date" value="19 авг - 23 авг")
+            label(for="field-date") Даты пребывания в отеле
+            +field-dropdown(id="field-date" name="date" value="19 авг - 23 авг")
           p.filter__group
-            +c-field-dropdown("filter", "field-guests", "Гости", true)(name="guests" value="3 гостя, 1 младенец")
+            label(for="field-guests") Гости
+            +field-dropdown(id="field-guests" name="guests" value="3 гостя, 1 младенец")
           p.filter__group
-            +c-range("filter", "field-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
+            +range("field-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
           fieldset.filter__group
-            legend.filter__title Дополнительные возможности
+            legend.filter__group-title Дополнительные возможности
             ul.filter__list
               li.filter__item
-                +c-checkbox-poor("filter", "opportunity-smoke", "Можно курить")(name="opportunity-smoke")
+                +checkbox-poor("field-smoke", "Можно курить")(name="smoke")
               li.filter__item
-                +c-checkbox-poor("filter", "opportunity-pets", "Можно с питомцами")(name="opportunity-pets" checked)
+                +checkbox-poor("field-pets", "Можно с питомцами")(name="pets" checked)
               li.filter__item
-                +c-checkbox-poor("filter", "opportunity-guests", "Можно пригласить гостей (до 10 человек)")(name="opportunity-guests" checked)
+                +checkbox-poor("field-allow-guests", "Можно пригласить гостей (до 10 человек)")(name="allow-guests" checked)
           fieldset.filter__group
-            legend.filter__title Доступность
+            legend.filter__group-title Доступность
             ul.filter__list
               li.filter__item
-                +c-checkbox-rich("filter", "opportunity-wide-aisle", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")(name="opportunity-wide-aisle")
+                +checkbox-rich("field-wide-aisle", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")(name="wide-aisle")
               li.filter__item
-                +c-checkbox-rich("filter", "opportunity-hepler", "Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.")(name="opportunity-helper")
+                +checkbox-rich("field-hepler", "Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.")(name="helper")
           p.filter__group
-            +c-field-dropdown("filter", "field-comfort", "Удобства номера", true)(name="comfort" placeholder="Выберите удобства" readonly)
-          +c-checkbox-expandable("filter", "Дополнительные удобства", {
-            "Завтрак": "breakfast",
-            "Письменный стол": "desk",
-            "Стул для кормления": "chair",
-            "Кроватка": "bed",
-            "Телевизор": "tv",
-            "Шампунь": "shampoo"})
+            label(for="field-comfort") Удобства номера
+            +field-dropdown(id="field-comfort" data-dropdown="comfort" name="comfort" placeholder="Выберите удобства" readonly)
+          fieldset.filter__group
+            +checkbox-expandable("Дополнительные удобства", {
+              "Завтрак": "breakfast",
+              "Письменный стол": "desk",
+              "Стул для кормления": "chair",
+              "Кроватка": "bed",
+              "Телевизор": "tv",
+              "Шампунь": "shampoo"})
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list
           li.rooms__item
-            a(href="/../room-page/room-page.pug")
-              +c-room("room", {
-                image: "../../components/room/images/room1.jpg",
+            a(href="../room-page/room-page.pug")
+              +room({
+                image: "../../images/rooms/room1.jpg",
                 alt: "Роскошный номер на одного с большой кроватью",
                 number: 888,
                 lux: true,
@@ -69,8 +73,8 @@ block content
                 rating: 5,
                 testimonials: 145})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room2.jpg",
+            +room({
+              image: "../../images/rooms/room2.jpg",
               alt: "Просторный номер на троих с тремя кроватями",
               number: 840,
               lux: false,
@@ -78,8 +82,8 @@ block content
               rating: 4,
               testimonials: 65})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room3.jpg",
+            +room({
+              image: "../../images/rooms/room3.jpg",
               alt: "Светлый номер на одного",
               number: 980,
               lux: true,
@@ -87,8 +91,8 @@ block content
               rating: 3,
               testimonials: 35})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room4.jpg",
+            +room({
+              image: "../../images/rooms/room4.jpg",
               alt: "Светло-голубой номер на одного",
               number: 856,
               lux: false,
@@ -96,8 +100,8 @@ block content
               rating: 5,
               testimonials: 19})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room5.jpg",
+            +room({
+              image: "../../images/rooms/room5.jpg",
               alt: "Роскошный номер на одного",
               number: 740,
               lux: false,
@@ -105,8 +109,8 @@ block content
               rating: 4,
               testimonials: 44})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room6.jpg",
+            +room({
+              image: "../../images/rooms/room6.jpg",
               alt: "Роскошный номер на одного",
               number: 982,
               lux: false,
@@ -114,8 +118,8 @@ block content
               rating: 3,
               testimonials: 56})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room7.jpg",
+            +room({
+              image: "../../images/rooms/room7.jpg",
               alt: "Большой номер с телевизором",
               number: 678,
               lux: false,
@@ -123,8 +127,8 @@ block content
               rating: 5,
               testimonials: 45})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room8.jpg",
+            +room({
+              image: "../../images/rooms/room8.jpg",
               alt: "Роскошный номер с большой кроватью",
               number: 450,
               lux: false,
@@ -132,8 +136,8 @@ block content
               rating: 4,
               testimonials: 39})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room9.jpg",
+            +room({
+              image: "../../images/rooms/room9.jpg",
               alt: "Роскошный номер с большой кроватью",
               number: 350,
               lux: false,
@@ -141,8 +145,8 @@ block content
               rating: 3,
               testimonials: 77})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room10.jpg",
+            +room({
+              image: "../../images/rooms/room10.jpg",
               alt: "Роскошный номер с двумя кроватями и шкафом",
               number: 666,
               lux: false,
@@ -150,8 +154,8 @@ block content
               rating: 5,
               testimonials: 25})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room11.jpg",
+            +room({
+              image: "../../images/rooms/room11.jpg",
               alt: "Роскошный номер с двумя кроватями",
               number: 444,
               lux: false,
@@ -159,15 +163,15 @@ block content
               rating: 3,
               testimonials: 15})
           li.rooms__item
-            +c-room("room", {
-              image: "../../components/room/images/room12.jpg",
+            +room({
+              image: "../../images/rooms/room12.jpg",
               alt: "Роскошный номер с большой кроватью",
               number: 352,
               lux: false,
               price: "5 000₽",
               rating: 3,
               testimonials: 55})
-        +c-pagination("rooms-pagination")
-  include ../../components/main-footer/main-footer-rich
+        +pagination
+  include ../../components/main-footer/main-footer-rich/main-footer-rich
 
   script(src="./rooms-page.js")

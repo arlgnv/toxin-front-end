@@ -1,13 +1,4 @@
-.c-field-masked__label {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: $primary-color-100;
-
-  text-transform: uppercase;
-}
-
-.c-field-masked__field {
+.field-masked {
   box-sizing: border-box;
 
   font: inherit;

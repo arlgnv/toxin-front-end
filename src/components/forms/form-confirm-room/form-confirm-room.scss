@@ -1,6 +1,4 @@
-@import '../../buttons/button';
-@import '../../buttons/button-with-purple-gradient';
-@import '../../buttons/button-with-arrow';
+@import '../../buttons/button-with-purple-gradient-and-arrow/button-with-purple-gradient-and-arrow';
 @import '../../field-dropdown/field-dropdown';
 
 .confirm-room {
@@ -14,14 +12,19 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
+.confirm-room__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
 .confirm-room__group {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  &:not(:last-child) {
-    margin: 0 0 21px;
-  }
+  padding: 0;
+  margin: 0;
 }
 
 .confirm-room__room {
@@ -57,46 +60,43 @@
   }
 }
 
-// FORM
-.confirm-room__item {
-  margin: 0;
+.confirm-room__form {
+  margin-bottom: 19px;
 
-  &_lonely {
-    margin: 0 0 20px;
-  }
+  .confirm-room__group {
+    margin-bottom: 14px;
 
-  &_half {
-    width: 150px;
+    .confirm-room__item {
+      width: 150px;
+    }
 
-    & + .confirm-room__item_half {
+    .confirm-room__item + .confirm-room__item {
       margin-left: 20px;
     }
   }
-}
 
-.confirm-room__label {
-  display: block;
-  margin-bottom: 6px;
-
-  &::after {
-    top: 41px;
-    right: 19px;
+  .confirm-room__item {
+    margin: 0;
+    padding: 0;
   }
 }
 
-.confirm-room__field {
-  width: 100%;
-  height: 42px; //for ie
-  padding: 8px 30px 8px 13px;
+@media screen and (max-width: 420px) {
+  .confirm-room__form .confirm-room__group .confirm-room__item {
+    width: 100%;
+  }
+
+  .confirm-room__form .confirm-room__group .confirm-room__item + .confirm-room__item {
+    margin-left: 0;
+  }
 }
 
-// INFO
 .confirm-room__info {
   margin-bottom: 31px;
-}
 
-.confirm-room__info .confirm-room__group {
-  margin-bottom: 10px;
+  .confirm-room__group {
+    margin-bottom: 10px;
+  }
 }
 
 .confirm-room__left-col {
@@ -128,7 +128,10 @@
   }
 }
 
-// TOTAL
+.confirm-room__bottom .confirm-room__group:first-child {
+  margin-bottom: 18px;
+}
+
 .confirm-room__total {
   font-weight: bold;
   font-size: 19px;
@@ -149,7 +152,6 @@
   color: $primary-color-100;
 }
 
-// SUBMIT
 .confirm-room__group .button {
   width: 100%;
   padding: 14px 35px 14px 28px;

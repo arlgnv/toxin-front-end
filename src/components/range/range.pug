@@ -1,7 +1,7 @@
-mixin c-range(classes, id, title, description)
-  span(class= classes + "__group c-range__group")
-    span(class= classes + "__item c-range__item")
-      label(class= classes + "__label c-range__label" for= id)= title
-      span(class= classes + "__price c-range__price")
-    input(class= classes + "__field c-range__field" id= id type="text")&attributes(attributes)
-    span(class= classes + "__description c-range__description")= description
+mixin range(id, title, description)
+  span.range
+    span.range__group
+      label.range__label(for=id)= title
+      span.range__price
+    input.range__field(id=id type="text")&attributes(attributes)
+    span.range__description= description

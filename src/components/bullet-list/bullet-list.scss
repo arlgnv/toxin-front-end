@@ -1,11 +1,11 @@
-.c-bullet-list__list {
+.bullet-list {
   padding: 0;
   margin: 0;
 
   list-style-type: none;
 }
 
-.c-bullet-list__item {
+.bullet-list__item {
   position: relative;
 
   color: $primary-color-75;

@@ -1,10 +1,12 @@
-.c-testimonial__top-part {
+@import '../buttons/button-with-like/button-with-like';
+
+.testimonial__top-part {
   display: flex;
   align-items: flex-start;
   margin: 0 0 9px;
 }
 
-.c-testimonial__img {
+.testimonial__img {
   margin-right: 10px;
 
   border: 2px solid #fff;
@@ -12,11 +14,11 @@
   box-shadow: 0px 10px 20px $primary-color-10;
 }
 
-.c-testimonial__name {
+.testimonial__name {
   display: block;
 }
 
-.c-testimonial__bottom-part {
+.testimonial__bottom-part {
   display: flex;
   align-items: flex-start;
   margin: 0;

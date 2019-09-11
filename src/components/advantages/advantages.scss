@@ -1,11 +1,12 @@
-.c-advantage__wrapper {
+.advantage {
   display: flex;
   align-items: center;
   margin: 0;
 }
 
-.c-advantage__icon {
+.advantage__icon {
   display: inline-block;
+  margin-right: 10px;
   width: 48px;
   height: 48px;
 
@@ -13,13 +14,13 @@
   background-position: center;
 }
 
-.c-advantage__text {
+.advantage__text {
   margin: 0;
 
   color: $primary-color-75;
 }
 
-.c-advantage__lead {
+.advantage__lead {
   display: block;
 
   font-weight: bold;

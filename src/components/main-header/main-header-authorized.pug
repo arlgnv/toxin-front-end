@@ -18,9 +18,9 @@ header.main-header
       div.user-navigation.authorized
         ul.user-navigation__list
           li.user-navigation__item
-            +button("user-navigation__link button_with-border-gradient", "Войти", "link")(href="/mock-address/change-me")
+            +button-with-border-gradient("Войти", "link")(href="../login-page/login-page.pug")
           li.user-navigation__item
-            +button("user-navigation__link button_with-purple-gradient", "Зарегистрироваться", "link")(href="/mock-address/change-me")
+            +button-with-purple-gradient("Зарегистрироваться", "link")(href="../registration-page/registration-page.pug")
         ul.user-navigation__menu
           li.user-navigation__item
             a.user-navigation__link(href="/mock-address/change-me") Артём Лагунов

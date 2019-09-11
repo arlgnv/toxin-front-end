@@ -1,6 +1,6 @@
 @import '../../components/rating/rating';
 
-.c-room__wrapper {
+.room {
   box-sizing: border-box;
   width: 270px;
 
@@ -9,22 +9,22 @@
   border-radius: 4px;
 }
 
-.c-room__container {
+.room__container {
   position: relative;
 
   width: 270px;
   height: 151px;
 
-  &:hover .c-room__slider-arrows {
+  &:hover .room__slider-arrows {
     display: flex;
   }
 }
 
-.c-room__img {
+.room__img {
   border-radius: 4px 4px 0 0;
 }
 
-.c-room__slider-buttons {
+.room__slider-buttons {
   position: absolute;
   bottom: 9px;
   right: 15px;
@@ -32,7 +32,7 @@
   margin: 0;
 }
 
-.c-room__slider-button {
+.room__slider-button {
   box-sizing: border-box;
   width: 7px;
   height: 7px;
@@ -51,12 +51,12 @@
     background-color: #fff;
   }
 
-  & + .c-room__slider-button {
+  & + .room__slider-button {
     margin-left: 4px;
   }
 }
 
-.c-room__slider-arrows {
+.room__slider-arrows {
   position: absolute;
   top: 50%;
   left: 20px;
@@ -70,7 +70,7 @@
   transform: translateY(-50%);
 }
 
-.c-room__slider-arrow {
+.room__slider-arrow {
   position: relative;
 
   box-sizing: border-box;
@@ -105,11 +105,11 @@
   }
 }
 
-.c-room__info {
+.room__info {
   padding: 23px 19px 19px 20px;
 }
 
-.c-room__info-top {
+.room__info-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,7 +119,7 @@
   border-bottom: 1px solid $primary-color-10;
 }
 
-.c-room__number {
+.room__number {
   span:first-child {
     font-weight: bold;
     font-size: 13px;
@@ -146,7 +146,7 @@
   }
 }
 
-.c-room__price {
+.room__price {
   font-weight: bold;
   line-height: 18px;
   color: $primary-color-50;
@@ -157,7 +157,7 @@
   }
 }
 
-.c-room__info-bottom {
+.room__info-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,7 +165,7 @@
   padding-top: 7px;
 }
 
-.c-room__testimonials {
+.room__testimonials {
   font-weight: bold;
   line-height: 18px;
   color: $primary-color-50;

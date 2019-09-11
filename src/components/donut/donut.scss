@@ -1,4 +1,4 @@
-.c-donut__wrapper {
+.donut {
   width: 310px;
 
   display: flex;
@@ -6,17 +6,12 @@
   margin: 0;
 }
 
-.c-donut__chart {
+.donut__chart {
   width: 120px;
   height: 120px;
 }
 
-.c-donut__donut {
-  width: 100%;
-  height: 100%;
-}
-
-.c-donut__segment {
+.donut__segment {
   transform-origin: center;
 
   &_great {
@@ -28,7 +23,7 @@
   }
 }
 
-.c-donut__text {
+.donut__text {
   fill: $purple-color-100;
   font-weight: bold;
 
@@ -49,18 +44,18 @@
   }
 }
 
-.c-donut__description {
+.donut__description {
   align-self: flex-end;
 }
 
-.c-donut__list {
+.donut__list {
   margin: 0;
   padding: 0;
 
   list-style-type: none;
 }
 
-.c-donut__item {
+.donut__item {
   position: relative;
 
   padding-left: 15px;

@@ -3,27 +3,31 @@ article.registration
   form.registration__form(action="https://echo.htmlacademy.ru" method="post")
     fieldset.registration__group
       p.registration__item
-        +c-field-default("registration", "field-name", "Введите имя", false)(placeholder="Имя" name="name")
+        label.visually-hidden(for="field-name") Введите имя
+        +field-default(id="field-name" name="name" placeholder="Имя")
       p.registration__item
-        +c-field-default("registration", "field-surname", "Введите фамилию", false)(placeholder="Фамилия" name="surname")
+        label.visually-hidden(for="field-surname") Введите фамилию
+        +field-default(id="field-surname" name="surname" placeholder="Фамилия")
       ul.registration__item.registration__list
         li
-          +c-radio-button("registration", "gender-male", "Мужчина")(name="gender" value="male" checked)
+          +radio("field-gender-male", "Мужчина")(name="gender" value="male" checked)
         li
-          +c-radio-button("registration", "gender-female", "Женщина")(name="gender" value="female")
-    fieldset.registration__group
-      p.registration__item.registration__item_lonely
-        +c-field-default("registration", "field-birthday", "Дата рождения", true)(placeholder="ДД.ММ.ГГГГ" name="birthday")
+          +radio("field-gender-female", "Женщина")(name="gender" value="female")
+    p.registration__group
+      label(for="field-birthday") Дата рождения
+      +field-default(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
     fieldset.registration__group
       legend.registration__group-title данные для входа в сервис
       p.registration__item
-        +c-field-default("registration", "field-email", "Введите email", false)(placeholder="Email" name="email" type="email")
+        label.visually-hidden(for="field-email") Введите email
+        +field-default(id="field-emai" type="email" name="email" placeholder="Email")
       p.registration__item
-        +c-field-default("registration", "field-password", "Введите пароль", false)(placeholder="Пароль" name="password" type="password")
-      p.registration__toggle.registration__item
-        +c-toggle-button("toggle", "allow-newsletter", "Получать спецпредложения")(name="newsletter")
-    p.registration__item.registration__submit
-      +button("button_with-purple-gradient button_with-arrow", "перейти к оплате", "button")(type="submit")
+        label.visually-hidden(for="field-password") Введите пароль
+        +field-default(id="field-password" type="password" name="password" placeholder="Пароль")
+    p.registration__group
+      +toggle("field-newsletter", "Получать спецпредложения")(name="newsletter")
+    p.registration__group
+      +button-with-purple-gradient-and-arrow("перейти к оплате", "button")(type="submit")
   .registration__log-in
     span Уже есть аккаунт на Toxin
-    +button("button_with-border-gradient", "Войти", "link")(href="../../pages/login-page/login-page.pug")
+    +button-with-border-gradient("Войти", "link")(href="../../pages/login-page/login-page.pug")

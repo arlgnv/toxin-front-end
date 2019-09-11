@@ -1,6 +1,5 @@
-@import '../buttons/button';
-@import '../buttons/button-with-border-gradient';
-@import '../buttons/button-with-purple-gradient';
+@import '../buttons/button-with-border-gradient/button-with-border-gradient';
+@import '../buttons/button-with-purple-gradient/button-with-purple-gradient';
 
 .main-header {
   padding: 15px 0;
@@ -71,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .main-header__burger {
     display: inline-block;
   }
@@ -83,7 +82,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .main-header__navigation {
     display: none;
     flex-direction: column;
@@ -96,8 +95,6 @@
   }
 }
 
-/* Site navigation */
-
 .site-navigation {
   display: flex;
   margin: 0;
@@ -107,7 +104,7 @@
   list-style-type: none;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .site-navigation {
     flex-direction: column;
     width: 100%;
@@ -119,7 +116,7 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .site-navigation__item {
     padding: 5px 0;
 
@@ -140,7 +137,7 @@
   margin-left: 28px;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .site-navigation__item_has-submenu + .site-navigation__item {
     margin-left: 0;
   }
@@ -172,14 +169,12 @@
   }
 }
 
-/* User navigation */
-
 .user-navigation {
   position: relative;
   z-index: 1;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .user-navigation {
     width: 100%;
     padding-top: 15px;
@@ -204,7 +199,7 @@
   }
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .user-navigation.authorized {
     padding-left: 0;
     border-left: none;
@@ -220,7 +215,7 @@
   list-style-type: none;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 946px) {
   .user-navigation__list {
     justify-content: space-between;
   }
@@ -241,14 +236,6 @@
   .user-navigation__item + .user-navigation__item {
     margin: 15px 0 0;
   }
-}
-
-.user-navigation__item .button {
-  padding: 10px 20px;
-}
-
-.user-navigation__item .button_border-gradient {
-  padding: 8px 18px;
 }
 
 .user-navigation__menu {

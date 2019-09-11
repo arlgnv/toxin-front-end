@@ -5,8 +5,7 @@
 @import '../../components/advantages/advantages';
 @import '../../components/bullet-list/bullet-list';
 @import '../../components/donut/donut';
-@import '../../components/buttons/button-with-like';
-@import '../../components/main-footer/main-footer';
+@import '../../components/main-footer/main-footer-rich/main-footer-rich';
 
 .room-page {
   flex-grow: 1;
@@ -153,10 +152,6 @@
   & + .advantages__item {
     margin-top: 20px;
   }
-
-  .advantage__icon {
-    margin-right: 10px;
-  }
 }
 
 .advantages__list {
@@ -252,7 +247,7 @@
   }
 }
 
-.rules__item {
+.bullet-list__item {
   margin-bottom: 10px;
 
   &::before {

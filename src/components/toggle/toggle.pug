@@ -1,0 +1,4 @@
+mixin toggle(id, title)
+  span.toggle
+    input.toggle__button.visually-hidden(id=id type="checkbox")&attributes(attributes)
+    label.toggle__label(for=id)= title

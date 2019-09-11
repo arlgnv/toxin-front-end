@@ -1,18 +1,15 @@
-.c-field-dropdown__label {
+.field-dropdown {
   position: relative;
 
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: $primary-color-100;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
 
-  text-transform: uppercase;
-
-  &::after {
+  &::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 18px;
 
     width: 6px;
     height: 6px;
@@ -24,8 +21,12 @@
   }
 }
 
-.c-field-dropdown__field {
+.field-dropdown__field {
   box-sizing: border-box;
+  width: 100%;
+
+  height: 46px; //for ie
+  padding: 10px 30px 10px 15px;
 
   font: inherit;
   color: $primary-color-75;
@@ -81,6 +82,8 @@
 }
 
 .dropdown__del {
+  position: relative;
+
   display: flex;
   box-sizing: border-box;
   width: 30px;
@@ -94,11 +97,15 @@
 
   &::before {
     content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
     width: 5px;
     height: 1px;
-    margin: auto;
 
     background-color: $primary-color-50;
+    transform: translate(-50%);
   }
 }
 

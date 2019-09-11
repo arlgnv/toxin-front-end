@@ -3,10 +3,14 @@ article.find-room
   form.find-room__form(action="https://echo.htmlacademy.ru" method="post")
     div.find-room__group
       p.find-room__item
-        +c-field-dropdown("find-room", "date-from", "Прибытие", true)(name="from" placeholder="ДД.ММ.ГГГГ" readonly)
+        label.find-room__label(for="field-date-from") Прибытие
+        +field-dropdown(id="field-date-from" data-calendar="from" name="from" placeholder="ДД.ММ.ГГГГ" readonly)
       p.find-room__item
-        +c-field-dropdown("find-room", "date-to", "Выезд", true)(name="to" placeholder="ДД.ММ.ГГГГ" readonly)
+        label.find-room__label(for="field-date-to") Выезд
+        +field-dropdown(id="field-date-to" data-calendar="to" name="to" placeholder="ДД.ММ.ГГГГ" readonly)
     p.find-room__item.find-room__item_lonely
-      +c-field-dropdown("find-room", "amount-guests", "Гости", true)(name="guests" placeholder="Сколько гостей" readonly)
+      label.find-room__label(for="field-amount-guests") Гости
+      +field-dropdown(id="field-amount-guests" data-dropdown="guests" name="guests" placeholder="Сколько гостей" readonly)
     p.find-room__item
-      +button("button_with-purple-gradient button_with-arrow", "Подобрать номер", "link")(href="/../rooms-page/rooms-page.pug")
+      +button-with-purple-gradient-and-arrow("Подобрать номер", "link")(href="../../pages/rooms-page/rooms-page.pug")
+      

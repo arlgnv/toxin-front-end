@@ -133,19 +133,19 @@
 
 // Custom
 
-.c-range__item {
+.range__group {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.c-range__price {
+.range__price {
   font-size: 12px;
   line-height: 15px;
   color: $primary-color-50;
 }
 
-.c-range__label {
+.range__label {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -154,7 +154,7 @@
   text-transform: uppercase;
 }
 
-.c-range__description {
+.range__description {
   font-size: 12px;
   line-height: 14px;
   color: $primary-color-50;

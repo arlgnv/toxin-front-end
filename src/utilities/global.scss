@@ -38,6 +38,35 @@ body {
   overflow: hidden;
 }
 
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font: inherit;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  border: none;
+  border-radius: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $primary-color-100;
+
+  text-transform: uppercase;
+}
+
 img {
   max-width: 100%;
   height: auto;

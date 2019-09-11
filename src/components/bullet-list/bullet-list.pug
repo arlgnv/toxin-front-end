@@ -1,4 +1,4 @@
-mixin c-bullet-list(classes, arrItems)
-  ul(class= classes + "__list c-bullet-list__list")
+mixin bullet-list(arrItems)
+  ul.bullet-list
     each item in arrItems
-      li(class= classes + "__item c-bullet-list__item")= item
+      li.bullet-list__item= item

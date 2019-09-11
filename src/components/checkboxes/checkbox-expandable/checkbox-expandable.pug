@@ -1,8 +1,7 @@
-mixin c-checkbox-expandable(classes, title, obj)
-  fieldset(class= classes + "__group c-checkbox-expandable__group")
-    legend(class= classes + "__title c-checkbox-expandable__title")= title
-    div(style="display:none")
-      ul(class= classes + "__list c-checkbox-expandable__list")
-        each value, key in obj
-          li(class= classes + "__item c-checkbox-expandable__item")
-            +c-checkbox-poor(classes, classes + "-" + value, key)(name= value)
+mixin checkbox-expandable(title, obj)
+  div.checkbox-expandable(data-checkbox="expandable")
+    b.checkbox-expandable__title= title
+    ul.checkbox-expandable__list
+      each value, key in obj
+        li.checkbox-expandable__item
+          +checkbox-poor(value, key)(name= value)

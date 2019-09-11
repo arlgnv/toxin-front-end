@@ -2,11 +2,13 @@ article.login
   h2.login__title Войти
   form.login__form(action="https://echo.htmlacademy.ru" method="post")
     p.login__item
-      +c-field-default("login", "field-email", "Введите email", false)(name="email" type="email" placeholder="Email")
+      label.visually-hidden(for="field-email") Введите email
+      +field-default(id="field-email" name="email" type="email" placeholder="Email")
     p.login__item
-      +c-field-default("login", "field-password", "Введите пароль", false)(name="password" type="password" placeholder="Пароль")
+      label.visually-hidden(for="field-password") Введите пароль
+      +field-default(id="field-password" name="password" type="password" placeholder="Пароль")
     p.login__item
-      +button("button_with-purple-gradient button_with-arrow", "Войти", "button")(type="submit")
+      +button-with-purple-gradient-and-arrow("Войти", "button")(type="submit")
   .login__registration
     span Нет аккаунта на Toxin?
-    +button("button_with-border-gradient", "Создать", "link")(href="../../pages/registration-page/registration-page.pug")
+    +button-with-border-gradient("Создать", "link")(href="../../pages/registration-page/registration-page.pug")

@@ -6,8 +6,9 @@ import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
 import { initComfortDropdown } from '../../components/field-dropdown/field-dropdown';
 
 // Range
-const $rangePrice = $('.c-range__price');
-$('.c-range__field').ionRangeSlider({
+const $rangeField = $('.range__field');
+const $rangePrice = $('.range__price');
+$rangeField.ionRangeSlider({
   skin: 'custom',
   type: 'double',
   min: 0,
@@ -21,13 +22,15 @@ $('.c-range__field').ionRangeSlider({
 });
 
 // Filter
-const $filterShow = $('.js-filter__show-button');
-const $filterClose = $('.js-filter__close-button');
+const $filter = $('.js-filter');
+const $filterForm = $('.filter__form');
+const $filterShow = $filter.find('.filter__show-button');
+const $filterClose = $filter.find('.filter__close-button');
 
-$filterShow.click(function showFilter(evt) {
+$filterShow.click((evt) => {
   evt.preventDefault();
 
-  $(this).next().css('left', '0%');
+  $filterForm.css('left', '0%');
 
   $filterClose.removeClass('filter__close-button_hidden');
   $filterClose.css('left', `${$(window).width() - $filterClose.outerWidth()}px`);
@@ -35,15 +38,16 @@ $filterShow.click(function showFilter(evt) {
   document.body.style.overflow = 'hidden';
 });
 
-$filterClose.click(function closeFilter(evt) {
+$filterClose.click((evt) => {
   evt.preventDefault();
 
-  $(this).parent('.filter__form').css('left', '110%');
+  $filterForm.css('left', '110%');
+
   $filterClose.addClass('filter__close-button_hidden');
 
   document.body.style.overflow = 'visible';
 });
 
 // Dropdown comfort
-const inputDropdownComfort = document.querySelector('#field-comfort');
+const inputDropdownComfort = document.querySelector('[data-dropdown=comfort]');
 inputDropdownComfort.addEventListener('click', initComfortDropdown);
