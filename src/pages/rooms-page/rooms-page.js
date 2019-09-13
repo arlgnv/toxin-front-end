@@ -23,7 +23,7 @@ $rangeField.ionRangeSlider({
 
 // Filter
 const $filter = $('.js-filter');
-const $filterForm = $('.filter__form');
+const $filterForm = $filter.find('.filter__form');
 const $filterShow = $filter.find('.filter__show-button');
 const $filterClose = $filter.find('.filter__close-button');
 

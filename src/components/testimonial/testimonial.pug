@@ -1,9 +1,4 @@
-mixin testimonial(parameters)
-  - const image = parameters.image
-  - const author = parameters.author
-  - const date = parameters.date
-  - const text = parameters.text
-  - const likes = parameters.likes
+mixin testimonial({image, author, date, text, likes})
   p.testimonial
     span.testimonial__top-part
       img.testimonial__img(src=image width="44" height="44" alt=author)

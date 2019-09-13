@@ -1,7 +1,4 @@
-mixin advantage(parameters)
-  - const icon = parameters.icon
-  - const title = parameters.title
-  - const description = parameters.description
+mixin advantage({icon, title, description})
   p.advantage
     span.advantage__icon(style=`background-image: url("${icon}")`)
     span.advantage__text

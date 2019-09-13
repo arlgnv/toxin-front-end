@@ -1,4 +1,4 @@
-@import './../../field-subscription/field-subscription';
+@import '../../field-subscription/field-subscription';
 
 .main-footer {
   padding-top: 100px;
@@ -181,14 +181,14 @@
   background: no-repeat center;
 
   &_twitter {
-    background-image: url('../../components/main-footer/images/twitter.svg');
+    background-image: url('../../images/main-footer/twitter.svg');
   }
 
   &_facebook {
-    background-image: url('../../components/main-footer/images/facebook.svg');
+    background-image: url('../../images/main-footer/facebook.svg');
   }
 
   &_instagram {
-    background-image: url('../../components/main-footer/images/instagram.svg');
+    background-image: url('../../images/main-footer/instagram.svg');
   }
 }
