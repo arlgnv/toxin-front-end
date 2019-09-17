@@ -50,7 +50,7 @@ block content
                 +checkbox-rich("field-hepler", "Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.")(name="helper")
           p.filter__group
             label(for="field-comfort") Удобства номера
-            +field-dropdown(id="field-comfort" data-dropdown="comfort" name="comfort" placeholder="Выберите удобства" readonly)
+            +field-dropdown(id="field-comfort" class="js-dropdown-comfort" name="comfort" placeholder="Выберите удобства" readonly)
           fieldset.filter__group
             +checkbox-expandable("Дополнительные удобства", {
               "Завтрак": "breakfast",

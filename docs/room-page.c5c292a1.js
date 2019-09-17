@@ -9,8 +9,8 @@ var e,t=arguments[3],n=require("process");!function(e,t){"use strict";"object"==
 },{"process":"FT5O"}],"hUZf":[function(require,module,exports) {
 "use strict";var e=u(require("jquery"));function u(e){return e&&e.__esModule?e:{default:e}}window.jQuery=e.default,window.$=e.default;
 },{"jquery":"lwLq"}],"srQF":[function(require,module,exports) {
-$(".main-header__burger").click(function(e){e.preventDefault(),$(this).toggleClass("main-header__burger_opened"),$(this).next().slideToggle(1e3)});
-},{}],"mK7E":[function(require,module,exports) {
+var e=$(".js-main-header__burger");e.click(function(r){r.preventDefault(),e.toggleClass("main-header__burger_opened"),e.next().slideToggle(1e3)});
+},{}],"HDI3":[function(require,module,exports) {
 "use strict";require("../../utilities/jquery-global"),require("../../components/main-header/main-header");
-},{"../../utilities/jquery-global":"hUZf","../../components/main-header/main-header":"srQF"}]},{},["mK7E"], null)
-//# sourceMappingURL=/toxin/registration-page.d61f51a3.js.map
+},{"../../utilities/jquery-global":"hUZf","../../components/main-header/main-header":"srQF"}]},{},["HDI3"], null)
+//# sourceMappingURL=/toxin/room-page.c5c292a1.js.map

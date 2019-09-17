@@ -1,7 +1,9 @@
 /* global $ */
-$('.main-header__burger').click(function toggleHeader(event) {
-  event.preventDefault();
+const $mainHeaderBurger = $('.js-main-header__burger');
 
-  $(this).toggleClass('main-header__burger_opened');
-  $(this).next().slideToggle(1000);
+$mainHeaderBurger.click((evt) => {
+  evt.preventDefault();
+
+  $mainHeaderBurger.toggleClass('main-header__burger_opened');
+  $mainHeaderBurger.next().slideToggle(1000);
 });

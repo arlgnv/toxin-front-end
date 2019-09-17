@@ -1,7 +1,9 @@
 /* global $ */
-$('[data-checkbox=expandable]').click(function toggleCheckbox() {
-  $(this).toggleClass('checkbox-expandable_expanded');
+const $checkbox = $('.js-checkbox-expandable');
+const $checkboxList = $checkbox.find('.checkbox-expandable__list');
 
-  const $list = $(this).find('.checkbox-expandable__list');
-  $list.slideToggle(0);
+$checkbox.click(() => {
+  $checkbox.toggleClass('checkbox-expandable_expanded');
+
+  $checkboxList.slideToggle(0);
 });

@@ -3,23 +3,8 @@ import '../../utilities/jquery-global';
 import 'ion-rangeslider';
 import '../../components/main-header/main-header';
 import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
+import '../../components/range/range';
 import { initComfortDropdown } from '../../components/field-dropdown/field-dropdown';
-
-// Range
-const $rangeField = $('.range__field');
-const $rangePrice = $('.range__price');
-$rangeField.ionRangeSlider({
-  skin: 'custom',
-  type: 'double',
-  min: 0,
-  max: 15000,
-  hide_min_max: true,
-  from: 5000,
-  to: 10000,
-  hide_from_to: true,
-  onStart: (data) => $rangePrice.html(`${data.from}₽ - ${data.to}₽`),
-  onChange: (data) => $rangePrice.html(`${data.from}₽ - ${data.to}₽`),
-});
 
 // Filter
 const $filter = $('.js-filter');
@@ -49,5 +34,5 @@ $filterClose.click((evt) => {
 });
 
 // Dropdown comfort
-const inputDropdownComfort = document.querySelector('[data-dropdown=comfort]');
+const inputDropdownComfort = document.querySelector('.js-dropdown-comfort');
 inputDropdownComfort.addEventListener('click', initComfortDropdown);
