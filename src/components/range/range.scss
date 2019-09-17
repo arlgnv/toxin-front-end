@@ -150,7 +150,6 @@
   font-size: 12px;
   line-height: 15px;
   color: $primary-color-100;
-
   text-transform: uppercase;
 }
 
@@ -163,33 +162,28 @@
 // Theme
 .irs--custom {
   height: 12px;
-}
 
-.irs--custom .irs-line {
-  top: 3px;
-  height: 6px;
+  .irs-line {
+    top: 3px;
+    height: 6px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid $primary-color-25;
+    border-radius: 3px;
+  }
 
-  box-sizing: border-box;
+  .irs-bar {
+    top: 3px;
+    height: 6px;
+    background: linear-gradient(180deg, $green-color-100 0%, #66d2ea 100%);
+  }
 
-  background-color: #fff;
-  border: 1px solid $primary-color-25;
-  border-radius: 3px;
-}
-
-.irs--custom .irs-bar {
-  top: 3px;
-  height: 6px;
-
-  background: linear-gradient(180deg, $green-color-100 0%, #66d2ea 100%);
-}
-
-.irs--custom .irs-handle {
-  top: -3px;
-
-  width: 17px;
-  height: 17px;
-
-  background: linear-gradient(180deg, $green-color-100 0%, #66d2ea 100%);
-  border: 2px solid #fff;
-  border-radius: 50%;
+  .irs-handle {
+    top: -3px;
+    width: 17px;
+    height: 17px;
+    background: linear-gradient(180deg, $green-color-100 0%, #66d2ea 100%);
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
 }

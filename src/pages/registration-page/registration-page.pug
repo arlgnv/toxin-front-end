@@ -15,11 +15,11 @@ block styles
 block content
     include ../../utilities/mixins-pug
 
-    include ../../components/main-header/main-header-non-authorized
+    include ../../components/main-header/main-header
     main.registration-page
         h1.visually-hidden Регистрация аккаунта
         .container
             include ../../components/forms/form-registration/form-registration
-    include ../../components/main-footer/main-footer-rich/main-footer-rich
+    include ../../components/main-footer/main-footer
 
     script(src="./registration-page.js")

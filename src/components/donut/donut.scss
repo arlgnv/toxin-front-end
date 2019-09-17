@@ -1,90 +1,84 @@
 .donut {
   width: 310px;
-
   display: flex;
   justify-content: space-between;
   margin: 0;
-}
 
-.donut__chart {
-  width: 120px;
-  height: 120px;
-}
-
-.donut__segment {
-  transform-origin: center;
-
-  &_great {
-    transform: rotate(91deg);
+  &__chart {
+    width: 120px;
+    height: 120px;
   }
 
-  &_satisfactory {
-    transform: rotate(-89deg);
-  }
-}
+  &__segment {
+    transform-origin: center;
 
-.donut__text {
-  fill: $purple-color-100;
-  font-weight: bold;
+    &_great {
+      transform: rotate(91deg);
+    }
 
-  transform: translateY(-2px);
-
-  text:first-child {
-    font-size: 24px;
-    line-height: 30px;
-    text-anchor: middle;
-  }
-  text:last-child {
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    text-anchor: middle;
-
-    transform: translateY(19px);
-  }
-}
-
-.donut__description {
-  align-self: flex-end;
-}
-
-.donut__list {
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-}
-
-.donut__item {
-  position: relative;
-
-  padding-left: 15px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 0;
-
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
+    &_satisfactory {
+      transform: rotate(-89deg);
+    }
   }
 
-  &_great::before {
-    background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+  &__text {
+    fill: $purple-color-100;
+    font-weight: bold;
+    transform: translateY(-2px);
+
+    text:first-child {
+      font-size: 24px;
+      line-height: 30px;
+      text-anchor: middle;
+    }
+
+    text:last-child {
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      text-anchor: middle;
+      transform: translateY(19px);
+    }
   }
 
-  &_good::before {
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  &__description {
+    align-self: flex-end;
   }
 
-  &_satisfactory::before {
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
-  &_disappointed::before {
-    background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+  &__item {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    &_great::before {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+
+    &_good::before {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+
+    &_satisfactory::before {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+
+    &_disappointed::before {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
   }
 }

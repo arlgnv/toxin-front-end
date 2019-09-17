@@ -5,154 +5,171 @@
   box-sizing: border-box;
   max-width: 380px;
   padding: 47px 29px 29px;
-
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-}
 
-.confirm-room__top {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-}
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
 
-.confirm-room__group {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 
-.confirm-room__room {
-  margin: 0;
+    .button {
+      width: 100%;
+      padding: 14px 35px 14px 28px;
+    }
+  }
 
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 17px;
-  color: $primary-color-100;
-}
+  &__item {
+    @media screen and (max-width: 418px) {
+      width: 100%;
+    }
 
-.confirm-room__number {
-  font-size: 21px;
-}
+    + .confirm-room__item {
+      @media screen and (max-width: 418px) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
 
-.confirm-room__type {
-  font-size: 12px;
-  line-height: 15px;
-  color: $purple-color-100;
+  &__room {
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    color: $primary-color-100;
+  }
 
-  text-transform: uppercase;
-}
+  &__number {
+    font-size: 21px;
+  }
 
-.confirm-room__day-price {
-  margin: 0;
-
-  font-size: 13px;
-  line-height: 22px;
-  color: $primary-color-50;
-
-  .confirm-room__price {
+  &__price {
     font-weight: bold;
   }
-}
 
-.confirm-room__form {
-  margin-bottom: 19px;
+  &__type {
+    font-size: 12px;
+    line-height: 15px;
+    color: $purple-color-100;
+    text-transform: uppercase;
+  }
 
-  .confirm-room__group {
-    margin-bottom: 14px;
+  &__day-price {
+    margin: 0;
+    font-size: 13px;
+    line-height: 22px;
+    color: $primary-color-50;
+  }
+
+  &__form {
+    margin-bottom: 19px;
+
+    .confirm-room__group {
+      margin-bottom: 14px;
+
+      .confirm-room__item {
+        width: 150px;
+
+        @media screen and (max-width: 420px) {
+          width: 100%;
+        }
+      }
+
+      .confirm-room__item + .confirm-room__item {
+        margin-left: 20px;
+
+        @media screen and (max-width: 420px) {
+          margin-left: 0;
+        }
+      }
+    }
 
     .confirm-room__item {
-      width: 150px;
-    }
-
-    .confirm-room__item + .confirm-room__item {
-      margin-left: 20px;
+      margin: 0;
+      padding: 0;
     }
   }
 
-  .confirm-room__item {
-    margin: 0;
-    padding: 0;
-  }
-}
+  &__info {
+    margin-bottom: 31px;
 
-@media screen and (max-width: 420px) {
-  .confirm-room__form .confirm-room__group .confirm-room__item {
-    width: 100%;
-  }
-
-  .confirm-room__form .confirm-room__group .confirm-room__item + .confirm-room__item {
-    margin-left: 0;
-  }
-}
-
-.confirm-room__info {
-  margin-bottom: 31px;
-
-  .confirm-room__group {
-    margin-bottom: 10px;
-  }
-}
-
-.confirm-room__left-col {
-  width: 215px;
-
-  line-height: 19px;
-
-  &_tip {
-    position: relative;
-
-    &::after {
-      content: 'i';
-      position: absolute;
-      top: 0;
-      right: -25px;
-
-      width: 20px;
-      height: 20px;
-
-      font-weight: bold;
-      line-height: 20px;
-      color: $primary-color-25;
-
-      border: 1px solid $primary-color-25;
-      border-radius: 50%;
-      text-align: center;
-      cursor: help;
+    .confirm-room__group {
+      margin-bottom: 10px;
     }
   }
-}
 
-.confirm-room__bottom .confirm-room__group:first-child {
-  margin-bottom: 18px;
-}
+  &__left-col {
+    width: 215px;
+    line-height: 19px;
 
-.confirm-room__total {
-  font-weight: bold;
-  font-size: 19px;
-  color: $primary-color-100;
-}
+    @media screen and (max-width: 418px) {
+      width: 70%;
+    }
 
-.confirm-room__spacer {
-  flex-grow: 1;
-  margin: 0 5px 5px;
+    &_tip {
+      position: relative;
 
-  border-bottom: 1px dashed $primary-color-25;
-}
+      &::after {
+        content: 'i';
+        position: absolute;
+        top: 0;
+        right: -25px;
+        width: 20px;
+        height: 20px;
+        font-weight: bold;
+        line-height: 20px;
+        color: $primary-color-25;
+        border: 1px solid $primary-color-25;
+        border-radius: 50%;
+        text-align: center;
+        cursor: help;
 
-.confirm-room__total-price {
-  font-weight: bold;
-  font-size: 18px;
-  letter-spacing: -0.4px;
-  color: $primary-color-100;
-}
+        @media screen and (max-width: 418px) {
+          display: none;
+        }
+      }
+    }
+  }
 
-.confirm-room__group .button {
-  width: 100%;
-  padding: 14px 35px 14px 28px;
+  &__right-col {
+    @media screen and (max-width: 418px) {
+      width: 30%;
+      text-align: right;
+    }
+  }
+
+  &__bottom &__group:first-child {
+    margin-bottom: 18px;
+  }
+
+  &__total {
+    font-weight: bold;
+    font-size: 19px;
+    color: $primary-color-100;
+  }
+
+  &__total-price {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    color: $primary-color-100;
+  }
+
+  &__spacer {
+    flex-grow: 1;
+    margin: 0 5px 5px;
+    border-bottom: 1px dashed $primary-color-25;
+  }
 }

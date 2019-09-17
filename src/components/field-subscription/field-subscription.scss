@@ -1,40 +1,35 @@
 .field-subscription {
   position: relative;
-
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
-}
 
-.field-subscription__field {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 46px; //for ie
-  padding: 10px 15px;
+  &__field {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px; //for ie
+    padding: 10px 15px;
+    font: inherit;
+    color: $primary-color-75;
+    border: 1px solid $primary-color-25;
+    border-radius: 4px;
 
-  font: inherit;
-  color: $primary-color-75;
-
-  border: 1px solid $primary-color-25;
-  border-radius: 4px;
-
-  &::placeholder {
-    color: $primary-color-25;
+    &::placeholder {
+      color: $primary-color-25;
+    }
   }
-}
 
-.field-subscription__submit {
-  position: absolute;
-  top: 50%;
-  right: 13px;
-
-  width: 18px;
-  height: 18px;
-  padding: 0;
-  margin: 0;
-
-  transform: translateY(-50%);
-  border: none;
-  background: transparent url('../../images/arrow-gradient.svg') no-repeat center;
-  cursor: pointer;
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent url('../../images/arrow-gradient.svg') no-repeat center;
+    cursor: pointer;
+  }
 }

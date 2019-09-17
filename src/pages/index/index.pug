@@ -15,12 +15,12 @@ block styles
 block content
   include ../../utilities/mixins-pug
 
-  include ../../components/main-header/main-header-non-authorized
+  include ../../components/main-header/main-header
   main.main-page
     h1.visually-hidden Отель Toxin
     .container
       include ../../components/forms/form-find-room/form-find-room
       p.main-page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
-  include ../../components/main-footer/main-footer-rich/main-footer-rich
+  include ../../components/main-footer/main-footer
 
   script(src="./index.js")

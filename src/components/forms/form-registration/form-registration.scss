@@ -7,115 +7,100 @@
 .registration {
   position: relative;
   z-index: 1;
-
   box-sizing: border-box;
   max-width: 380px;
   padding: 40px 30px 30px;
-
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-}
 
-.registration__title {
-  margin: 0 0 20px -2px;
-
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  color: $primary-color-100;
-
-  letter-spacing: -0.5px;
-}
-
-.registration__form {
-  margin-bottom: 31px;
-}
-
-.registration__group {
-  margin: 0 0 17px;
-  padding: 0;
-
-  border: none;
-
-  &:nth-child(2) {
-    margin-bottom: 22px;
+  &__title {
+    margin: 0 0 20px -2px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: $primary-color-100;
+    letter-spacing: -0.5px;
   }
 
-  &:nth-child(3) {
-    margin-bottom: 6px;
+  &__form {
+    margin-bottom: 31px;
   }
 
-  &:nth-child(4) {
-    margin-bottom: 22px;
+  &__group {
+    margin: 0 0 17px;
+    padding: 0;
+    border: none;
+
+    &:nth-child(1) .registration__item:nth-child(2) {
+      margin-bottom: 7px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 22px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 6px;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 22px;
+    }
   }
-}
 
-.registration__group-title {
-  margin: 0 0 5px;
+  &__group-title {
+    margin: 0 0 5px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $primary-color-100;
+    text-transform: uppercase;
+  }
 
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: $primary-color-100;
+  &__item {
+    margin: 0 0 12px;
 
-  text-transform: uppercase;
-}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-.registration__item {
-  margin: 0 0 12px;
-
-  .button {
+  &__field {
     width: 100%;
-    padding: 15px 30px;
+    padding: 13px 15px;
   }
 
-  &.registration__submit {
-    margin-top: 24px;
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li + li {
+      margin-left: 21px;
+    }
   }
-}
 
-.registration__item:last-child {
-  margin-bottom: 0;
-}
+  &__log-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.registration__field {
-  width: 100%;
-  padding: 13px 15px;
-}
-
-.registration__list {
-  display: flex;
-  margin-top: -6px;
-  padding: 0;
-
-  list-style-type: none;
-
-  li + li {
-    margin-left: 21px;
+    > span {
+      margin-right: 10px;
+      line-height: 18px;
+      color: #000;
+    }
   }
-}
 
-.registration__log-in {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  span {
-    margin-right: 10px;
-
-    line-height: 18px;
-    color: #000;
+  .button_with-purple-gradient-and-arrow {
+    width: 100%;
   }
-}
 
-// COMPONENTS
-
-.registration .button_with-purple-gradient-and-arrow {
-  width: 100%;
-}
-
-.registration .button_with-border-gradient {
-  padding: 13px 24px;
+  .button_with-border-gradient {
+    width: 96px;
+    height: 41px;
+  }
 }

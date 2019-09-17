@@ -6,79 +6,53 @@
   box-sizing: border-box;
   max-width: 380px;
   padding: 39px 29px 29px;
-
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-}
 
-.find-room__title {
-  margin: 0 0 16px;
-
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  color: $primary-color-100;
-
-  letter-spacing: -0.5px;
-}
-
-.find-room__group {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 19px;
-
-  .find-room__item {
-    width: 150px;
+  &__title {
+    margin: 0 0 16px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: $primary-color-100;
+    letter-spacing: -0.5px;
   }
-}
 
-@media screen and (max-width: 390px) {
-  .find-room__group {
-    flex-direction: column;
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 15px;
+
+    @media screen and (max-width: 390px) {
+      flex-direction: column;
+    }
 
     .find-room__item {
-      width: 100%;
+      width: 150px;
+
+      @media screen and (max-width: 390px) {
+        width: 100%;
+      }
     }
 
     .find-room__item + .find-room__item {
-      margin-top: 10px;
+      @media screen and (max-width: 390px) {
+        margin-top: 10px;
+      }
     }
   }
-}
 
-.find-room__item {
-  margin: 0;
+  &__item {
+    margin: 0;
+  }
+
+  &__form > .find-room__item:nth-child(2) {
+    margin-bottom: 29px;
+  }
 
   .button {
     width: 100%;
-
-    padding: 15px 30px;
   }
-
-  &_lonely {
-    margin: 0 0 32px;
-  }
-}
-
-.field-dropdown {
-  width: 100%;
-}
-
-.field-dropdown__label {
-  display: block;
-  margin: 0 0 5px;
-
-  &::after {
-    top: 41px;
-    right: 18px;
-  }
-}
-
-.field-dropdown__field {
-  box-sizing: border-box;
-  width: 100%;
-  height: 42px; //for ie
-  padding: 8px 25px 8px 13px;
 }

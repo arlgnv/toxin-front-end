@@ -1,21 +1,18 @@
 @import '../../utilities/init';
 @import '../../components/main-header/main-header';
 @import '../../components/forms/form-login/form-login';
-@import '../../components/main-footer/main-footer-rich/main-footer-rich';
+@import '../../components/main-footer/main-footer';
 
 .login-page {
   flex-grow: 1;
   padding: 163px 0;
-
   background: lightgray url('../../images/login-page/background.jpg') no-repeat center / cover;
+
+  @media screen and (max-width: 946px) {
+    padding: 30px 0;
+  }
 
   .login {
     margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 946px) {
-  .login-page {
-    padding: 30px 0;
   }
 }

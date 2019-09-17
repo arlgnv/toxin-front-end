@@ -1,48 +1,41 @@
 .checkbox-poor {
   margin: 0;
   padding: 0;
-}
 
-.checkbox-poor__label {
-  position: relative;
+  &__label {
+    position: relative;
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $primary-color-50;
+    text-transform: none;
 
-  padding-left: 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $primary-color-25;
+      border-radius: 4px;
+    }
+  }
 
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  color: $primary-color-50;
-
-  text-transform: none;
-
-  &::before {
+  &__checkbox:checked + &__label::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-
-    border: 1px solid $primary-color-25;
-    border-radius: 4px;
+    top: 4px;
+    left: 6px;
+    width: 10px;
+    height: 11px;
+    background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
   }
-}
 
-.checkbox-poor__checkbox:checked + .checkbox-poor__label::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 6px;
-
-  width: 10px;
-  height: 11px;
-
-  background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
-}
-
-.checkbox-poor__checkbox:focus + .checkbox-poor__label::before {
-  outline: 5px auto rgb(77, 144, 254);
-  outline-offset: -2px;
+  &__checkbox:focus + &__label::before {
+    outline: 5px auto rgb(77, 144, 254);
+    outline-offset: -2px;
+  }
 }

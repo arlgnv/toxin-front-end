@@ -1,61 +1,52 @@
 .checkbox-rich {
   margin: 0;
   padding: 0;
-}
 
-.checkbox-rich__label {
-  position: relative;
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: $primary-color-75;
+    text-transform: none;
 
-  display: block;
-  padding-left: 30px;
-  margin-bottom: 5px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $primary-color-25;
+      border-radius: 4px;
+    }
+  }
 
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-  color: $primary-color-75;
-
-  text-transform: none;
-
-  &::before {
+  &__checkbox:checked + &__label::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-
-    border: 1px solid $primary-color-25;
-    border-radius: 4px;
+    top: 4px;
+    left: 6px;
+    width: 10px;
+    height: 11px;
+    background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
   }
-}
 
-.checkbox-rich__checkbox:checked + .checkbox-rich__label::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 6px;
+  &__checkbox:focus + &__label::before {
+    outline: 5px auto rgb(77, 144, 254);
+    outline-offset: -2px;
+  }
 
-  width: 10px;
-  height: 11px;
-
-  background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
-}
-
-.checkbox-rich__checkbox:focus + .checkbox-rich__label::before {
-  outline: 5px auto rgb(77, 144, 254);
-  outline-offset: -2px;
-}
-
-.checkbox-rich__description {
-  display: block;
-
-  padding-left: 30px;
-
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: $primary-color-50;
+  &__description {
+    display: block;
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: $primary-color-50;
+  }
 }

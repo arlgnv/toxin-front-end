@@ -1,12 +1,11 @@
 @import '../../utilities/init';
 @import '../../components/main-header/main-header';
 @import '../../components/forms/form-registration/form-registration';
-@import '../../components/main-footer/main-footer-rich/main-footer-rich';
+@import '../../components/main-footer/main-footer';
 
 .registration-page {
   flex-grow: 1;
   padding: 30px 0 26px;
-
   background: lightgray url('../../images/login-page/background.jpg') no-repeat center / cover;
 
   .registration {

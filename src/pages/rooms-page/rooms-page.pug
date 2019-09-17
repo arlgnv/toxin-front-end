@@ -15,7 +15,7 @@ block styles
 block content
   include ../../utilities/mixins-pug
 
-  include ../../components/main-header/main-header-non-authorized
+  include ../../components/main-header/main-header
   main.rooms-page
     h1.visually-hidden Поиск номеров
     .container
@@ -172,6 +172,6 @@ block content
               rating: 3,
               testimonials: 55})
         +pagination
-  include ../../components/main-footer/main-footer-rich/main-footer-rich
+  include ../../components/main-footer/main-footer
 
   script(src="./rooms-page.js")

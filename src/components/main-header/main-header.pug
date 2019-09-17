@@ -1,0 +1,22 @@
+header.main-header
+  .container
+    a.main-header__logo(href="../index/index.pug")
+      img.main-header__logo-image(src="../../logo.svg" alt="Отель Toxin" width="106" height="40")
+    button.main-header__burger(aria-label="Показать меню")
+    nav.main-header__navigation
+      ul.main-header__site-navigation
+        li.main-header__item
+          a.main-header__link(href="/mock-address/change-me") О нас
+        li.main-header__item.main-header__item_has-submenu
+          a.main-header__link(href="/mock-address/change-me") Услуги
+        li.main-header__item
+          a.main-header__link(href="/mock-address/change-me") Вакансии
+        li.main-header__item
+          a.main-header__link(href="/mock-address/change-me") Новости
+        li.main-header__item.main-header__item_has-submenu
+          a.main-header__link(href="/mock-address/change-me") Соглашения
+      ul.main-header__user-navigation
+        li.main-header__item
+          +button-with-border-gradient("Войти", "link")(href="../login-page/login-page.pug")
+        li.main-header__item
+          +button-with-purple-gradient("Зарегистрироваться", "link")(href="../registration-page/registration-page.pug")

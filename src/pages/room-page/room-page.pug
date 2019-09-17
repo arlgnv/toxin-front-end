@@ -15,7 +15,7 @@ block styles
 block content
     include ../../utilities/mixins-pug
 
-    include ../../components/main-header/main-header-non-authorized
+    include ../../components/main-header/main-header
     main.room-page
         h1.visually-hidden Люксовый номер №888
         section.photos
@@ -81,6 +81,6 @@ block content
                 h2.visually-hidden Форма бронирования номера
                 include ../../components/forms/form-confirm-room/form-confirm-room
 
-    include ../../components/main-footer/main-footer-rich/main-footer-rich
+    include ../../components/main-footer/main-footer
 
     script(src="./room-page.js")

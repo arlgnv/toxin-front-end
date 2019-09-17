@@ -1,31 +1,36 @@
 @import '../buttons/button-with-like/button-with-like';
 
-.testimonial__top-part {
-  display: flex;
-  align-items: flex-start;
-  margin: 0 0 9px;
-}
-
-.testimonial__img {
-  margin-right: 10px;
-
-  border: 2px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0px 10px 20px $primary-color-10;
-}
-
-.testimonial__name {
-  display: block;
-}
-
-.testimonial__bottom-part {
-  display: flex;
-  align-items: flex-start;
+.testimonial {
   margin: 0;
+  padding: 0;
 
-  span:first-child {
-    min-width: 48px;
-    margin: 0 10px 0 0;
-    text-align: center;
+  &__top-part {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 9px;
+  }
+
+  &__img {
+    margin-right: 10px;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px $primary-color-10;
+  }
+
+  &__name {
+    display: block;
+  }
+
+  &__bottom-part {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+
+    span:first-child {
+      min-width: 48px;
+      margin: 0 10px 0 0;
+      text-align: center;
+    }
   }
 }

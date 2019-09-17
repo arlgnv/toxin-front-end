@@ -7,36 +7,34 @@ function initGuestsDropdown(evt) {
   input.addEventListener('click', () => dropdown.classList.toggle('dropdown_hidden'));
 
   input.insertAdjacentHTML('afterend', `
-    <span class="dropdown-wrapper">
-        <span class="dropdown">
-            <span class="dropdown__item">
-                <b class="dropdown__title">Взрослые</b>
-                <span class="dropdown__count">
-                    <button class="dropdown__del" type="button"></button>
-                    <span class="dropdown__amount">0</span>
-                    <button class="dropdown__add" type="button"></button>
-                </span>
+    <span class="dropdown">
+        <span class="dropdown__item">
+            <b class="dropdown__title">Взрослые</b>
+            <span class="dropdown__count">
+                <button class="dropdown__del" type="button"></button>
+                <span class="dropdown__amount">0</span>
+                <button class="dropdown__add" type="button"></button>
             </span>
-            <span class="dropdown__item">
-                <b class="dropdown__title">Дети</b>
-                <span class="dropdown__count">
-                    <button class="dropdown__del" type="button"></button>
-                    <span class="dropdown__amount">0</span>
-                    <button class="dropdown__add" type="button"></button>
-                </span>
+        </span>
+        <span class="dropdown__item">
+            <b class="dropdown__title">Дети</b>
+            <span class="dropdown__count">
+                <button class="dropdown__del" type="button"></button>
+                <span class="dropdown__amount">0</span>
+                <button class="dropdown__add" type="button"></button>
             </span>
-            <span class="dropdown__item">
-                <b class="dropdown__title">Младенцы</b>
-                <span class="dropdown__count">
-                    <button class="dropdown__del" type="button"></button>
-                    <span class="dropdown__amount dropdown__amount_baby">0</span>
-                    <button class="dropdown__add" type="button"></button>
-                </span>
+        </span>
+        <span class="dropdown__item">
+            <b class="dropdown__title">Младенцы</b>
+            <span class="dropdown__count">
+                <button class="dropdown__del" type="button"></button>
+                <span class="dropdown__amount dropdown__amount_baby">0</span>
+                <button class="dropdown__add" type="button"></button>
             </span>
-            <span class="dropdown__item dropdown__buttons">
-                <span class="dropdown__clear">Очистить</span>
-                <span class="dropdown__apply">Применить</span>
-            </span>
+        </span>
+        <span class="dropdown__item dropdown__buttons">
+            <span class="dropdown__clear">Очистить</span>
+            <span class="dropdown__apply">Применить</span>
         </span>
     </span>`);
 
@@ -137,7 +135,7 @@ function initComfortDropdown(evt) {
   input.removeEventListener('click', initComfortDropdown);
   input.addEventListener('click', () => dropdown.classList.toggle('dropdown_hidden'));
 
-  input.insertAdjacentHTML('afterend', `<span class="dropdown-wrapper">
+  input.insertAdjacentHTML('afterend', `
     <span class="dropdown">
         <span class="dropdown__item">
             <b class="dropdown__title">Спальни</b>
@@ -163,7 +161,6 @@ function initComfortDropdown(evt) {
                 <button class="dropdown__add" type="button"></button>
             </span>
         </span>
-    </span>
     </span>`);
 
   const dropdown = document.body.querySelector('.dropdown');
