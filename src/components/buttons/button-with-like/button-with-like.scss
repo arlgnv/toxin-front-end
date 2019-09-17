@@ -30,7 +30,7 @@
     transform: translateY(-50%);
   }
 
-  &:hover {
+  &_liked {
     color: $purple-color-100;
 
     &::before {

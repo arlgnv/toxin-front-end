@@ -61,12 +61,12 @@ function initGuestsDropdown(evt) {
   function subtractOne({ target }) {
     const amount = target.nextElementSibling;
 
-    if (amount.textContent === 0) return;
+    if (+amount.textContent === 0) return;
 
     amount.textContent -= 1;
 
-    if (amount.textContent === 0) {
-      target.style = '';
+    if (+amount.textContent === 0) {
+      target.style.opacity = '';
 
       if (checkIsFieldsEmpty()) dropdownClear.style = '';
     }
@@ -88,7 +88,7 @@ function initGuestsDropdown(evt) {
 
     for (let i = 0; i < amounts.length; i += 1) {
       amounts[i].textContent = 0;
-      delButtons[i].cssText = '';
+      delButtons[i].style.opacity = '';
     }
 
     input.value = '';
@@ -179,11 +179,11 @@ function initComfortDropdown(evt) {
   function subtractOne({ target }) {
     const amount = target.nextElementSibling;
 
-    if (amount.textContent === 0) return;
+    if (+amount.textContent === 0) return;
 
     amount.textContent -= 1;
 
-    if (amount.textContent === 0) target.style = '';
+    if (+amount.textContent === 0) target.style = '';
 
     applyChanges();
   }
