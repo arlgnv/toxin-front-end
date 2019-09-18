@@ -13,13 +13,13 @@ block styles
     link(rel="stylesheet" href="./registration-page.scss")
 
 block content
-    include ../../utilities/mixins-pug
+    include ../../utilities/mixins-components
 
-    include ../../components/main-header/main-header
+    +main-header
     main.registration-page
         h1.visually-hidden Регистрация аккаунта
         .container
-            include ../../components/forms/form-registration/form-registration
-    include ../../components/main-footer/main-footer
+            +form-registration
+    +main-footer
 
     script(src="./registration-page.js")

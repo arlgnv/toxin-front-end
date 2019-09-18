@@ -13,9 +13,9 @@ block styles
     link(rel="stylesheet" href="./room-page.scss")
 
 block content
-    include ../../utilities/mixins-pug
+    include ../../utilities/mixins-components
 
-    include ../../components/main-header/main-header
+    +main-header
     main.room-page
         h1.visually-hidden Люксовый номер №888
         section.photos
@@ -50,7 +50,7 @@ block content
                                  description: "Номер оснащен камином"})
                     section.impression
                         h3.info__title Впечатления от номера
-                        include ../../components/donut/donut
+                        +donut
                 .info__middle
                     section.testimonials
                         h3.info__title Отзывы посетителей номера
@@ -79,8 +79,8 @@ block content
                         p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
             section.form
                 h2.visually-hidden Форма бронирования номера
-                include ../../components/forms/form-confirm-room/form-confirm-room
+                +form-confirm-room
 
-    include ../../components/main-footer/main-footer
+    +main-footer
 
     script(src="./room-page.js")

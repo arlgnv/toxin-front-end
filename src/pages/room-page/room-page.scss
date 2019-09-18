@@ -88,7 +88,7 @@
 
     @media screen and (max-width: 1138px) {
       width: 100%;
-      margin-right: 0;
+      margin: 0 0 20px;
     }
 
     &__title {
@@ -210,6 +210,7 @@
 
     @media screen and (max-width: 660px) {
       width: 90%;
+      margin-bottom: 15px;
     }
 
     .info__title {

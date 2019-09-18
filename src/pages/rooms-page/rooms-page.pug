@@ -13,9 +13,9 @@ block styles
   link(rel="stylesheet" href="./rooms-page.scss")
 
 block content
-  include ../../utilities/mixins-pug
+  include ../../utilities/mixins-components
 
-  include ../../components/main-header/main-header
+  +main-header
   main.rooms-page
     h1.visually-hidden Поиск номеров
     .container
@@ -188,6 +188,6 @@ block content
               rating: 3,
               testimonials: 55})
         +pagination
-  include ../../components/main-footer/main-footer
+  +main-footer
 
   script(src="./rooms-page.js")
