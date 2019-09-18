@@ -1,4 +1,4 @@
-/* global $ */
+/* global $ window */
 const $from = $('.js-date-from');
 const $to = $('.js-date-to');
 
@@ -29,6 +29,7 @@ $from.datepicker({
       $to.val(arrDates[1]);
     }
   },
+  inline: false,
 });
 
 const myDatepicker = $from.data('datepicker');
