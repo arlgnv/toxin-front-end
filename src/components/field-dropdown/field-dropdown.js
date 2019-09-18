@@ -1,6 +1,12 @@
+/* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */
-/* global document */
+/* global document window NodeList */
+
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 function initGuestsDropdown(evt) {
   const input = evt.target;
   input.removeEventListener('click', initGuestsDropdown);
@@ -42,15 +48,13 @@ function initGuestsDropdown(evt) {
 
   const dropdownItems = dropdown.querySelectorAll('.dropdown__item:not(.dropdown__buttons)');
 
-  for (let i = 0; i < dropdownItems.length; i += 1) {
-    const item = dropdownItems[i];
-
+  dropdownItems.forEach((item) => {
     const delButton = item.querySelector('.dropdown__del');
     delButton.addEventListener('click', subtractOne);
 
     const addButton = item.querySelector('.dropdown__add');
     addButton.addEventListener('click', addOne);
-  }
+  });
 
   const dropdownClear = dropdown.querySelector('.dropdown__clear');
   dropdownClear.addEventListener('click', clearInput);
@@ -86,10 +90,8 @@ function initGuestsDropdown(evt) {
     const amounts = dropdown.querySelectorAll('.dropdown__amount');
     const delButtons = dropdown.querySelectorAll('.dropdown__del');
 
-    for (let i = 0; i < amounts.length; i += 1) {
-      amounts[i].textContent = 0;
-      delButtons[i].style.opacity = '';
-    }
+    amounts.forEach((item) => item.textContent = 0);
+    delButtons.forEach((item) => item.style.opacity = '');
 
     input.value = '';
     target.cssText = '';
@@ -99,21 +101,43 @@ function initGuestsDropdown(evt) {
     let amountGuests = 0;
     let amountBabies = 0;
 
-    for (let i = 0; i < dropdownItems.length; i += 1) {
-      const title = dropdownItems[i].querySelector('.dropdown__title').textContent;
-      const amount = +dropdownItems[i].querySelector('.dropdown__amount').textContent;
+    dropdownItems.forEach((item) => {
+      const title = item.querySelector('.dropdown__title').textContent;
+      const amount = +item.querySelector('.dropdown__amount').textContent;
 
       if (title === 'Младенцы') amountBabies += amount;
       amountGuests += amount;
+    });
+
+    switch (amountGuests) {
+      case 1:
+        input.value = `${amountGuests} гость, `;
+        break;
+
+      case 2:
+      case 3:
+      case 4:
+        input.value = `${amountGuests} гостя, `;
+        break;
+
+      default:
+        input.value = `${amountGuests} гостей, `;
     }
 
-    if (amountGuests === 1) input.value = `${amountGuests} гость, `;
-    if (amountGuests >= 2 && amountGuests <= 4) input.value = `${amountGuests} гостя, `;
-    if (amountGuests >= 5 || amountGuests === 0) input.value = `${amountGuests} гостей, `;
+    switch (amountBabies) {
+      case 1:
+        input.value += `${amountBabies} младенец`;
+        break;
 
-    if (amountBabies === 1) input.value += `${amountBabies} младенец`;
-    if (amountBabies >= 2 && amountBabies <= 4) input.value += `${amountBabies} младенца`;
-    if (amountBabies >= 5 || amountBabies === 0) input.value += `${amountBabies} младенцев`;
+      case 2:
+      case 3:
+      case 4:
+        input.value += `${amountBabies} младенца`;
+        break;
+
+      default:
+        input.value += `${amountBabies} младенцев`;
+    }
 
     dropdown.classList.add('dropdown_hidden');
   }
@@ -122,9 +146,9 @@ function initGuestsDropdown(evt) {
     const amounts = dropdown.querySelectorAll('.dropdown__amount');
     let flag = true;
 
-    for (let i = 0; i < amounts.length; i += 1) {
-      if (amounts[i].textContent > 0) flag = false;
-    }
+    amounts.forEach((item) => {
+      if (item.textContent > 0) flag = false;
+    });
 
     return flag;
   }
@@ -166,15 +190,14 @@ function initComfortDropdown(evt) {
   const dropdown = document.body.querySelector('.dropdown');
 
   const dropdownItems = dropdown.querySelectorAll('.dropdown__item');
-  for (let i = 0; i < dropdownItems.length; i += 1) {
-    const item = dropdownItems[i];
 
+  dropdownItems.forEach((item) => {
     const delButton = item.querySelector('.dropdown__del');
     delButton.addEventListener('click', subtractOne);
 
     const addButton = item.querySelector('.dropdown__add');
     addButton.addEventListener('click', addOne);
-  }
+  });
 
   function subtractOne({ target }) {
     const amount = target.nextElementSibling;
@@ -203,26 +226,71 @@ function initComfortDropdown(evt) {
     let amountBeds = 0;
     let amountBathrooms = 0;
 
-    for (let i = 0; i < dropdownItems.length; i += 1) {
-      const title = dropdownItems[i].querySelector('.dropdown__title').textContent;
-      const amount = +dropdownItems[i].querySelector('.dropdown__amount').textContent;
+    dropdownItems.forEach((item) => {
+      const title = item.querySelector('.dropdown__title').textContent;
+      const amount = +item.querySelector('.dropdown__amount').textContent;
 
-      if (title === 'Спальни') amountBedrooms += amount;
-      if (title === 'Кровати') amountBeds += amount;
-      if (title === 'Ванные комнаты') amountBathrooms += amount;
+      switch (title) {
+        case 'Спальни':
+          amountBedrooms += amount;
+          break;
+
+        case 'Кровати':
+          amountBeds += amount;
+          break;
+
+        case 'Ванные комнаты':
+          amountBathrooms += amount;
+          break;
+
+        default:
+      }
+    });
+
+    switch (amountBedrooms) {
+      case 1:
+        input.value = `${amountBedrooms} спальня, `;
+        break;
+
+      case 2:
+      case 3:
+      case 4:
+        input.value = `${amountBedrooms} спальни, `;
+        break;
+
+      default:
+        input.value = `${amountBedrooms} спален, `;
     }
 
-    if (amountBedrooms === 1) input.value = `${amountBedrooms} спальня, `;
-    if (amountBedrooms >= 2 && amountBedrooms <= 4) input.value = `${amountBedrooms} спальни, `;
-    if (amountBedrooms >= 5 || amountBedrooms === 0) input.value = `${amountBedrooms} спален, `;
+    switch (amountBeds) {
+      case 1:
+        input.value += `${amountBeds} кровать, `;
+        break;
 
-    if (amountBeds === 1) input.value += `${amountBeds} кровать, `;
-    if (amountBeds >= 2 && amountBeds <= 4) input.value += `${amountBeds} кровати, `;
-    if (amountBeds >= 5 || amountBeds === 0) input.value += `${amountBeds} кроватей, `;
+      case 2:
+      case 3:
+      case 4:
+        input.value += `${amountBeds} кровати, `;
+        break;
 
-    if (amountBathrooms === 1) input.value += `${amountBathrooms} ванная комната`;
-    if (amountBathrooms >= 2 && amountBathrooms <= 4) input.value += `${amountBathrooms} ванные комнаты`;
-    if (amountBathrooms >= 5 || amountBathrooms === 0) input.value += `${amountBathrooms} ванных комнат`;
+      default:
+        input.value += `${amountBeds} кроватей, `;
+    }
+
+    switch (amountBathrooms) {
+      case 1:
+        input.value += `${amountBathrooms} ванная комната`;
+        break;
+
+      case 2:
+      case 3:
+      case 4:
+        input.value += `${amountBathrooms} ванные комнаты`;
+        break;
+
+      default:
+        input.value += `${amountBathrooms} ванных комнат`;
+    }
   }
 }
 
