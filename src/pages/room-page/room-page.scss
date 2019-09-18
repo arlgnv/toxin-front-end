@@ -142,6 +142,7 @@
 
   .advantages {
     width: 280px;
+    margin-right: 20px;
 
     @media screen and (max-width: 660px) {
       margin-bottom: 20px;
@@ -163,16 +164,25 @@
     }
   }
 
-  .impression .info__title {
-    margin-bottom: 22px;
-    letter-spacing: -0.3px;
+  .impression {
+    width: 310px;
+
+    .info__title {
+      margin-bottom: 22px;
+      letter-spacing: -0.3px;
+    }
   }
 
   .testimonials {
+    .info__title {
+      margin-right: 100px;
+    }
+
     &__amount {
       position: absolute;
       top: 0;
       right: 0;
+      max-width: 90px;
 
       @media screen and (max-width: 430px) {
         position: static;

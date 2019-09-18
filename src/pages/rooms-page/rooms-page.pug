@@ -31,34 +31,50 @@ block content
             label(for="field-guests") Гости
             +field-dropdown(id="field-guests" name="guests" value="3 гостя, 1 младенец")
           p.filter__group
-            +range("field-price", "Диапазон цены", "Стоимость за сутки пребывания в номере")(name="price")
+            +range({
+              "id": "field-price", 
+              "title": "Диапазон цены", 
+              "description": "Стоимость за сутки пребывания в номере"})(name="price")
           fieldset.filter__group
             legend.filter__group-title Дополнительные возможности
             ul.filter__list
               li.filter__item
-                +checkbox-poor("field-smoke", "Можно курить")(name="smoke")
+                +checkbox-poor({
+                  "id": "field-smoke", 
+                  "title": "Можно курить"})(name="smoke")
               li.filter__item
-                +checkbox-poor("field-pets", "Можно с питомцами")(name="pets" checked)
+                +checkbox-poor({
+                  "id": "field-pets", 
+                  "title": "Можно с питомцами"})(name="pets" checked)
               li.filter__item
-                +checkbox-poor("field-allow-guests", "Можно пригласить гостей (до 10 человек)")(name="allow-guests" checked)
+                +checkbox-poor({
+                  "id": "field-allow-guests", 
+                  "title": "Можно пригласить гостей (до 10 человек)"})(name="allow-guests" checked)
           fieldset.filter__group
             legend.filter__group-title Доступность
             ul.filter__list
               li.filter__item
-                +checkbox-rich("field-wide-aisle", "Широкий коридор", "Ширина коридоров в номере не менее 91 см.")(name="wide-aisle")
+                +checkbox-rich({
+                  "id": "field-wide-aisle", 
+                  "title": "Широкий коридор", 
+                  "description": "Ширина коридоров в номере не менее 91 см."})(name="wide-aisle")
               li.filter__item
-                +checkbox-rich("field-hepler", "Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера.")(name="helper")
+                +checkbox-rich({
+                  "id": "field-hepler", 
+                  "title": "Помощник для инвалидов", 
+                  "description": "На 1 этаже вас встретит специалист  и проводит до номера."})(name="helper")
           p.filter__group
             label(for="field-comfort") Удобства номера
             +field-dropdown(id="field-comfort" class="js-dropdown-comfort" name="comfort" placeholder="Выберите удобства" readonly)
           fieldset.filter__group
-            +checkbox-expandable("Дополнительные удобства", {
-              "Завтрак": "breakfast",
-              "Письменный стол": "desk",
-              "Стул для кормления": "chair",
-              "Кроватка": "bed",
-              "Телевизор": "tv",
-              "Шампунь": "shampoo"})
+            +checkbox-expandable({"title": "Дополнительные удобства", 
+            "items": [ 
+              {"title": "Завтрак", "name": "breakfast"},
+              {"title": "Письменный стол", "name": "desk"},
+              {"title": "Стул для кормления", "name": "chair"},
+              {"title": "Кроватка", "name": "bed"},
+              {"title": "Телевизор", "name": "tv"},
+              {"title": "Шампунь", "name": "shampoo"}]})
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list

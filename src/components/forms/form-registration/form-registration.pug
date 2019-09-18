@@ -10,9 +10,9 @@ article.registration
         +field-default(id="field-surname" name="surname" placeholder="Фамилия")
       ul.registration__item.registration__list
         li
-          +radio("field-gender-male", "Мужчина")(name="gender" value="male" checked)
+          +radio({"id": "field-gender-male", "title": "Мужчина"})(name="gender" value="male" checked)
         li
-          +radio("field-gender-female", "Женщина")(name="gender" value="female")
+          +radio({"id": "field-gender-female", "title": "Женщина"})(name="gender" value="female")
     p.registration__group
       label(for="field-birthday") Дата рождения
       +field-default(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
@@ -25,7 +25,7 @@ article.registration
         label.visually-hidden(for="field-password") Введите пароль
         +field-default(id="field-password" type="password" name="password" placeholder="Пароль")
     p.registration__group
-      +toggle("field-newsletter", "Получать спецпредложения")(name="newsletter")
+      +toggle({"id": "field-newsletter", "title": "Получать спецпредложения"})(name="newsletter")
     p.registration__group
       +button-with-purple-gradient-and-arrow("перейти к оплате", "button")(type="submit")
   .registration__log-in

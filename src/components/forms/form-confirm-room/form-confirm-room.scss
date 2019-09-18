@@ -144,6 +144,8 @@
   }
 
   &__right-col {
+    max-width: 75px;
+
     @media screen and (max-width: 418px) {
       width: 30%;
       text-align: right;

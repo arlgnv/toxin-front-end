@@ -91,15 +91,14 @@
   }
 
   &__amount {
-    margin: 0 12px;
-    width: 10px;
-
+    margin: 0 6px;
+    width: 22px;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     color: $primary-color-100;
-
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__add {
