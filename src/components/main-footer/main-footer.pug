@@ -47,13 +47,10 @@ mixin main-footer
     .main-footer__bottom
       .container
         p.main-footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.
-        ul.footer-social
-          li.footer-social__item
-            a.footer-social__link.footer-social__link_twitter(href="/mock-address/change-me")
-              span.visually-hidden Твиттер
-          li.footer-social__item
-            a.footer-social__link.footer-social__link_facebook(href="/mock-address/change-me")
-              span.visually-hidden Фейсбук
-          li.footer-social__item
-            a.footer-social__link.footer-social__link_instagram(href="/mock-address/change-me")
-              span.visually-hidden Инстаграм
+        ul.main-footer__list
+          li.main-footer__item
+            a.main-footer__link.main-footer__link_type_twitter(href="/mock-address/change-me" arail-label="Твиттер")
+          li.main-footer__item
+            a.main-footer__link.main-footer__link_type_facebook(href="/mock-address/change-me" arail-label="Фейсбук")
+          li.main-footer__item
+            a.main-footer__link.main-footer__link_type_instagram(href="/mock-address/change-me" arail-label="Инстаграм")

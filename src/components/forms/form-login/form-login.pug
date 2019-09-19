@@ -2,14 +2,14 @@ mixin form-login
   article.login
     h2.login__title Войти
     form.login__form(action="https://echo.htmlacademy.ru" method="post")
-      p.login__item
+      p.login__group
         label.visually-hidden(for="field-email") Введите email
         +field-default(id="field-email" name="email" type="email" placeholder="Email")
-      p.login__item
+      p.login__group
         label.visually-hidden(for="field-password") Введите пароль
         +field-default(id="field-password" name="password" type="password" placeholder="Пароль")
-      p.login__item
-        +button-with-purple-gradient-and-arrow("Войти", "button")(type="submit")
+      p.login__group
+        +button-with-purple-gradient-and-arrow("войти")(type="submit")
     .login__registration
-      span Нет аккаунта на Toxin?
-      +button-with-border-gradient("Создать", "link")(href="../../pages/registration-page/registration-page.pug")
+      span.login__text Нет аккаунта на Toxin?
+      +link-with-border-gradient("создать", "link")(href="../../pages/registration-page/registration-page.pug")

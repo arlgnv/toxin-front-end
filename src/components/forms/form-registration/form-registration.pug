@@ -28,7 +28,7 @@ mixin form-registration
       p.registration__group
         +toggle({"id": "field-newsletter", "title": "Получать спецпредложения"})(name="newsletter")
       p.registration__group
-        +button-with-purple-gradient-and-arrow("перейти к оплате", "button")(type="submit")
+        +button-with-purple-gradient-and-arrow("перейти к оплате")(type="submit")
     .registration__log-in
       span Уже есть аккаунт на Toxin
-      +button-with-border-gradient("Войти", "link")(href="../../pages/login-page/login-page.pug")
+      +link-with-border-gradient("войти")(href="../../pages/login-page/login-page.pug")

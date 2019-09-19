@@ -21,23 +21,32 @@
   }
 
   &__group {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 15px;
+    margin: 0;
 
-    @media screen and (max-width: 390px) {
-      flex-direction: column;
-    }
-
-    .find-room__item {
-      width: 150px;
+    &:first-child {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
 
       @media screen and (max-width: 390px) {
-        width: 100%;
+        flex-direction: column;
       }
     }
 
-    .find-room__item + .find-room__item {
+    &:nth-child(2) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__item {
+    width: 150px;
+    margin: 0;
+
+    @media screen and (max-width: 390px) {
+      width: 100%;
+    }
+
+    + .find-room__item {
       margin-left: 10px;
 
       @media screen and (max-width: 390px) {
@@ -45,14 +54,6 @@
         margin-top: 10px;
       }
     }
-  }
-
-  &__item {
-    margin: 0;
-  }
-
-  &__form > .find-room__item:nth-child(2) {
-    margin-bottom: 29px;
   }
 
   .button {
