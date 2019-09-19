@@ -28,7 +28,6 @@
     "jquery": "^3.4.1",
     "air-datepicker": "^2.2.3",
     "ion-rangeslider": "^2.3.0",
-    "normalize.css": "^8.0.1",
     "rimraf": "^2.6.3",
     "cssnano": "^4.1.10"
   },

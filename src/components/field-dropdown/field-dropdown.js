@@ -17,84 +17,82 @@ function initGuestsDropdown(evt) {
         <span class="dropdown__item">
             <b class="dropdown__title">Взрослые</b>
             <span class="dropdown__count">
-                <button class="dropdown__del" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
                 <span class="dropdown__amount">0</span>
-                <button class="dropdown__add" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
             </span>
         </span>
         <span class="dropdown__item">
             <b class="dropdown__title">Дети</b>
             <span class="dropdown__count">
-                <button class="dropdown__del" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
                 <span class="dropdown__amount">0</span>
-                <button class="dropdown__add" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
             </span>
         </span>
         <span class="dropdown__item">
             <b class="dropdown__title">Младенцы</b>
             <span class="dropdown__count">
-                <button class="dropdown__del" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
                 <span class="dropdown__amount dropdown__amount_baby">0</span>
-                <button class="dropdown__add" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
             </span>
         </span>
-        <span class="dropdown__item dropdown__buttons">
-            <span class="dropdown__clear">Очистить</span>
-            <span class="dropdown__apply">Применить</span>
+        <span class="dropdown__item dropdown__item_shift-from-top_20">
+            <button class="dropdown__control-button dropdown__control-button_type_clear dropdown__control-button_disabled" type="button">Очистить</button>
+            <button class="dropdown__control-button dropdown__control-button_type_apply" type="button">Применить</button>
         </span>
     </span>`);
 
   const dropdown = document.body.querySelector('.dropdown');
-
-  const dropdownItems = dropdown.querySelectorAll('.dropdown__item:not(.dropdown__buttons)');
+  const dropdownItems = dropdown.querySelectorAll('.dropdown__item:not(:last-child)');
+  const dropdownAmounts = dropdown.querySelectorAll('.dropdown__amount');
 
   dropdownItems.forEach((item) => {
-    const delButton = item.querySelector('.dropdown__del');
-    delButton.addEventListener('click', subtractOne);
+    const buttonDel = item.querySelector('.dropdown__button_type_delete');
+    buttonDel.addEventListener('click', subtractOne);
 
-    const addButton = item.querySelector('.dropdown__add');
-    addButton.addEventListener('click', addOne);
+    const buttonAdd = item.querySelector('.dropdown__button_type_add');
+    buttonAdd.addEventListener('click', addOne);
   });
 
-  const dropdownClear = dropdown.querySelector('.dropdown__clear');
-  dropdownClear.addEventListener('click', clearInput);
+  const buttonClear = dropdown.querySelector('.dropdown__control-button_type_clear');
+  buttonClear.addEventListener('click', clearChanges);
 
-  const dropdownApply = dropdown.querySelector('.dropdown__apply');
-  dropdownApply.addEventListener('click', applyChanges);
+  const buttonApply = dropdown.querySelector('.dropdown__control-button_type_apply');
+  buttonApply.addEventListener('click', applyChanges);
 
   function subtractOne({ target }) {
-    const amount = target.nextElementSibling;
+    const amountField = target.nextElementSibling;
 
-    if (+amount.textContent === 0) return;
+    if (+amountField.textContent > 0) {
+      amountField.textContent = +amountField.textContent - 1;
 
-    amount.textContent -= 1;
-
-    if (+amount.textContent === 0) {
-      target.style.opacity = '';
-
-      if (checkIsFieldsEmpty()) dropdownClear.style = '';
+      if (+amountField.textContent === 0) {
+        target.classList.add('dropdown__button_disabled');
+        if (checkIsFieldsEmpty() === true) buttonClear.classList.add('dropdown__control-button_disabled');
+      }
     }
   }
 
   function addOne({ target }) {
-    const amount = target.previousElementSibling;
-    amount.textContent = +amount.textContent + 1;
+    const amountField = target.previousElementSibling;
+    amountField.textContent = +amountField.textContent + 1;
 
-    const delButton = amount.previousElementSibling;
-    delButton.style.opacity = '1';
+    const buttonDel = amountField.previousElementSibling;
+    buttonDel.classList.remove('dropdown__button_disabled');
 
-    dropdownClear.style.display = 'block';
+    buttonClear.classList.remove('dropdown__control-button_disabled');
   }
 
-  function clearInput({ target }) {
-    const amounts = dropdown.querySelectorAll('.dropdown__amount');
-    const delButtons = dropdown.querySelectorAll('.dropdown__del');
+  function clearChanges({ target }) {
+    const buttonsDel = dropdown.querySelectorAll('.dropdown__button_type_delete');
+    buttonsDel.forEach((button) => button.classList.add('dropdown__button_disabled'));
 
-    amounts.forEach((item) => item.textContent = 0);
-    delButtons.forEach((item) => item.style.opacity = '');
+    dropdownAmounts.forEach((amountField) => amountField.textContent = 0);
 
     input.value = '';
-    target.cssText = '';
+    target.classList.add('dropdown__control-button_disabled');
   }
 
   function applyChanges() {
@@ -103,10 +101,10 @@ function initGuestsDropdown(evt) {
 
     dropdownItems.forEach((item) => {
       const title = item.querySelector('.dropdown__title').textContent;
-      const amount = +item.querySelector('.dropdown__amount').textContent;
+      const amountText = +item.querySelector('.dropdown__amount').textContent;
 
-      if (title === 'Младенцы') amountBabies += amount;
-      amountGuests += amount;
+      if (title === 'Младенцы') amountBabies += amountText;
+      amountGuests += amountText;
     });
 
     switch (amountGuests) {
@@ -164,49 +162,50 @@ function initComfortDropdown(evt) {
         <span class="dropdown__item">
             <b class="dropdown__title">Спальни</b>
             <span class="dropdown__count">
-                <button class="dropdown__del" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
                 <span class="dropdown__amount">0</span>
-                <button class="dropdown__add" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
             </span>
         </span>
         <span class="dropdown__item">
             <b class="dropdown__title">Кровати</b>
             <span class="dropdown__count">
-                <button class="dropdown__del" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
                 <span class="dropdown__amount">0</span>
-                <button class="dropdown__add" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
             </span>
         </span>
         <span class="dropdown__item">
             <b class="dropdown__title">Ванные комнаты</b>
             <span class="dropdown__count">
-                <button class="dropdown__del" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
                 <span class="dropdown__amount">0</span>
-                <button class="dropdown__add" type="button"></button>
+                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
             </span>
         </span>
     </span>`);
 
   const dropdown = document.body.querySelector('.dropdown');
-
   const dropdownItems = dropdown.querySelectorAll('.dropdown__item');
 
   dropdownItems.forEach((item) => {
-    const delButton = item.querySelector('.dropdown__del');
-    delButton.addEventListener('click', subtractOne);
+    const buttonDel = item.querySelector('.dropdown__button_type_delete');
+    buttonDel.addEventListener('click', subtractOne);
 
-    const addButton = item.querySelector('.dropdown__add');
-    addButton.addEventListener('click', addOne);
+    const buttonAdd = item.querySelector('.dropdown__button_type_add');
+    buttonAdd.addEventListener('click', addOne);
   });
 
   function subtractOne({ target }) {
-    const amount = target.nextElementSibling;
+    const amountField = target.nextElementSibling;
 
-    if (+amount.textContent === 0) return;
+    if (+amountField.textContent > 0) {
+      amountField.textContent = +amountField.textContent - 1;
 
-    amount.textContent -= 1;
-
-    if (+amount.textContent === 0) target.style = '';
+      if (+amountField.textContent === 0) {
+        target.classList.add('dropdown__button_disabled');
+      }
+    }
 
     applyChanges();
   }
@@ -215,8 +214,8 @@ function initComfortDropdown(evt) {
     const amount = target.previousElementSibling;
     amount.textContent = +amount.textContent + 1;
 
-    const delButton = amount.previousElementSibling;
-    delButton.style.opacity = '1';
+    const buttonDel = amount.previousElementSibling;
+    buttonDel.classList.remove('dropdown__button_disabled');
 
     applyChanges();
   }
@@ -243,7 +242,7 @@ function initComfortDropdown(evt) {
           amountBathrooms += amount;
           break;
 
-        default:
+        default: break;
       }
     });
 

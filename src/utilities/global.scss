@@ -1,29 +1,28 @@
 html {
-  color: $primary-color-75;
-  font-family: $basic-font;
-  font-size: $basic-font-fize;
-  line-height: $basic-line-height;
   font-style: normal;
   font-weight: normal;
-
+  font-size: $basic-font-fize;
+  line-height: $basic-line-height;
+  font-family: $basic-font;
+  color: $primary-color-75;
   background-color: #fff;
 }
 
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 0;
   min-width: 320px;
   max-width: 1920px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .container {
   box-sizing: border-box;
   max-width: 1180px;
-  padding: 0 10px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .visually-hidden {
@@ -43,12 +42,10 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
   font: inherit;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-
   border: none;
   border-radius: 22px;
   text-transform: uppercase;
@@ -58,12 +55,10 @@ body {
 
 label {
   display: inline-block;
-
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   color: $primary-color-100;
-
   text-transform: uppercase;
 }
 

@@ -173,6 +173,11 @@
 
     .main-header__item + .main-header__item {
       margin-left: 22px;
+
+      @media screen and (max-width: 360px) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
   }
 }

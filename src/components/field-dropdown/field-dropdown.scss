@@ -50,6 +50,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7px;
+
+    &_shift-from-top_20 {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
   }
 
   &__title {
@@ -66,17 +71,18 @@
     align-items: center;
   }
 
-  &__del {
+  &__button {
     position: relative;
-    display: flex;
     box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    padding: 0;
     width: 30px;
     height: 30px;
     border: 1px solid $primary-color-50;
     border-radius: 50%;
     background: transparent;
     cursor: pointer;
-    opacity: 0.4;
 
     &::before {
       content: '';
@@ -87,6 +93,26 @@
       height: 1px;
       background-color: $primary-color-50;
       transform: translate(-50%);
+    }
+
+    &_disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    &_type_add::before {
+      width: 8px;
+    }
+
+    &_type_add::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      width: 8px;
+      height: 1px;
+      background-color: $primary-color-50;
+      transform: rotate(90deg) translateY(-400%);
     }
   }
 
@@ -101,60 +127,27 @@
     text-align: center;
   }
 
-  &__add {
-    position: relative;
+  &__control-button {
     box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $primary-color-50;
-    border-radius: 50%;
-    background: transparent;
-    cursor: pointer;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      width: 8px;
-      height: 1px;
-      background-color: $primary-color-50;
-      transform: translate(50%);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      width: 8px;
-      height: 1px;
-      background-color: $primary-color-50;
-      transform: rotate(90deg) translateY(-400%);
-    }
-  }
-
-  &__buttons {
-    margin: 20px 0 0;
-  }
-
-  &__clear {
-    display: none;
+    margin: 0;
+    padding: 0;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
+    font-family: inherit;
     color: $primary-color-50;
+    background: transparent;
+    border: none;
     text-transform: uppercase;
     cursor: pointer;
-  }
 
-  &__apply {
-    margin-left: auto;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: $purple-color-100;
-    text-transform: uppercase;
-    cursor: pointer;
+    &_disabled {
+      display: none;
+    }
+
+    &_type_apply {
+      margin-left: auto;
+      color: $purple-color-100;
+    }
   }
 }
