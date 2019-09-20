@@ -9,12 +9,33 @@ $primary-color-5: rgba(31, 32, 65, 0.05);
 
 $purple-color-100: rgba(188, 156, 255, 1);
 $purple-color-50: rgba(188, 156, 255, 0.5);
-
-$green-color-100: rgba(111, 207, 151, 1);
+$purple-color-25: rgba(188, 156, 255, 0.25);
 
 $aqua-color-100: rgba(102, 210, 234, 1);
 
+$aqua-color-light-100: rgba(139, 164, 249, 1);
+$aqua-color-light-50: rgba(139, 164, 249, 0.5);
+$aqua-color-light-25: rgba(139, 164, 249, 0.25);
+
+$black-color-100: rgba(0, 0, 0, 1);
+$black-color-20: rgba(0, 0, 0, 0.2);
+$black-color-12: rgba(0, 0, 0, 0.12);
+
+$desert-color-100: rgba(255, 186, 156, 1);
+$desert-color-light-100: rgba(255, 227, 156, 1);
+
+$dark-color-100: rgba(61, 73, 117, 1);
+$dark-color-light-100: rgba(145, 145, 145, 1);
+
+$green-color-100: rgba(111, 207, 151, 1);
+
+$white-color-100: rgba(255, 255, 255, 1);
+
+$gray-color-100: rgba(229, 229, 229, 1);
+
+$red-color-100: rgba(255, 0, 0, 1);
+
+$outline-color-100: rgba(77, 144, 254, 1);
+
 // FONT
-$basic-font: Montserrat, Arial, sans-serif;
-$basic-font-fize: 14px;
-$basic-line-height: 24px;
+$basic-font: 14px/24px Montserrat, Arial, sans-serif;

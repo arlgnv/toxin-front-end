@@ -9,11 +9,11 @@
   &__title {
     position: relative;
     display: block;
-    padding: 0 10px 0 0;
-    margin: 0 0 16px 0;
+    padding: 0 0.7143rem 0 0;
+    margin: 0 0 1.1429rem 0;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $primary-color-100;
     text-transform: uppercase;
 
@@ -21,10 +21,10 @@
       content: '';
       position: absolute;
       top: 50%;
-      right: 18px;
-      width: 6px;
-      height: 6px;
-      border: 2px solid $primary-color-50;
+      right: 1.2857rem;
+      width: 0.4286rem;
+      height: 0.4286rem;
+      border: 0.1429rem solid $primary-color-50;
       border-top: 0;
       border-left: 0;
       transform: translateY(-50%) rotate(45deg);
@@ -39,6 +39,6 @@
   }
 
   &__item + &__item {
-    margin-top: 6px;
+    margin-top: 0.4286rem;
   }
 }

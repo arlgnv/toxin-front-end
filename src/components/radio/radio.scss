@@ -4,10 +4,10 @@
 
   &__label {
     position: relative;
-    padding-left: 28px;
+    padding-left: 2rem;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.7143rem;
     color: $primary-color-50;
     text-transform: none;
 
@@ -18,9 +18,9 @@
       left: 0;
       box-sizing: border-box;
       display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 1px solid $purple-color-100;
+      width: 1.4286rem;
+      height: 1.4286rem;
+      border: 0.0714rem solid $purple-color-100;
       border-radius: 50%;
     }
   }
@@ -32,18 +32,18 @@
   &__button:checked + .radio__label::after {
     content: '';
     position: absolute;
-    top: 9.8px;
-    left: 10.1px;
+    top: 0.7rem;
+    left: 0.7214rem;
     box-sizing: border-box;
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(180deg, $purple-color-100 0%, #8ba4f9 100%);
+    width: 0.8571rem;
+    height: 0.8571rem;
+    background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }
 
   &__button:focus + .radio__label::before {
-    outline: 5px auto rgb(77, 144, 254);
-    outline-offset: -2px;
+    outline: 0.3571rem auto $outline-color-100;
+    outline-offset: -0.1429rem;
   }
 }

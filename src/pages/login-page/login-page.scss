@@ -5,11 +5,11 @@
 
 .login-page {
   flex-grow: 1;
-  padding: 163px 0;
-  background: lightgray url('../../images/login-page/background.jpg') no-repeat center / cover;
+  padding: 11.6429rem 0;
+  background: url('../../images/login-page/background.jpg') no-repeat center / cover;
 
   @media screen and (max-width: 946px) {
-    padding: 30px 0;
+    padding: 2.1429rem 0;
   }
 
   .login {

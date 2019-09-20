@@ -1,11 +1,11 @@
 .rating {
-  height: 26px;
+  height: 1.8571rem;
 
   &__star {
     position: relative;
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 1.7143rem;
+    height: 1.7143rem;
 
     &::before {
       content: '';
@@ -20,8 +20,8 @@
     &_selected {
       position: relative;
       display: inline-block;
-      width: 24px;
-      height: 24px;
+      width: 1.7143rem;
+      height: 1.7143rem;
 
       &::before {
         content: '';

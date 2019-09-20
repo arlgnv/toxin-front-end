@@ -9,101 +9,121 @@
 
 .room-page {
   flex-grow: 1;
-  border-bottom: 1px solid $primary-color-25;
+  border-bottom: 0.0714rem solid $primary-color-25;
 
   .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 71px 10px 62px;
+    padding: 5.0714rem 0.7143rem 4.4286rem;
   }
 
   > .container {
     @media screen and (max-width: 1138px) {
-      padding-top: 40px;
+      padding-top: 2.8571rem;
     }
   }
 
   .main-footer {
     @media screen and (max-width: 1138px) {
-      padding: 30px 0;
+      padding: 2.1429rem 0;
     }
   }
 
   .photos {
-    max-width: 1442px;
+    display: flex;
+    max-width: 103rem;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 0.7143rem;
     line-height: 0;
 
-    &__container {
-      display: flex;
-
-      @media screen and (max-width: 750px) {
-        flex-direction: column;
-      }
+    @media screen and (max-width: 750px) {
+      flex-direction: column;
     }
 
     &__group {
-      display: flex;
-      flex-direction: column;
+      &:nth-of-type(1) {
+        @media screen and (-ms-high-contrast: active),
+          (-ms-high-contrast: none) and (min-width: 750px) {
+          width: 68%;
+          height: 100%;
+        }
 
-      @media screen and (max-width: 750px) {
-        flex-direction: row;
+        @media screen and (-ms-high-contrast: active),
+          (-ms-high-contrast: none) and (max-width: 750px) {
+          width: 100%;
+          height: 50%;
+        }
       }
 
-      @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) and (min-width: 750px) {
-        width: 32%;
-        height: 100%;
-      }
-
-      .photos__item {
-        width: 100%;
+      &:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
 
         @media screen and (max-width: 750px) {
-          width: 50%;
+          flex-direction: row;
         }
 
         @media screen and (-ms-high-contrast: active),
           (-ms-high-contrast: none) and (min-width: 750px) {
+          width: 32%;
+          height: 100%;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+          (-ms-high-contrast: none) and (max-width: 750px) {
           width: 100%;
-          height: 49.7%;
+          height: 100%;
+        }
+
+        .photos__img {
+          @media screen and (max-width: 750px) {
+            width: 50%;
+          }
+
+          @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) and (min-width: 750px) {
+            width: 100%;
+            height: 49.7%;
+          }
+
+          @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) and (max-width: 750px) {
+            width: 50%;
+            height: 100%;
+          }
         }
       }
     }
 
-    &__item_big {
-      @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) and (min-width: 750px) {
-        width: 68%;
-        height: 100%;
-      }
+    &__img {
+      max-width: 100%;
+      height: auto;
     }
   }
 
   .info {
-    width: 711px;
-    margin-right: 10px;
+    width: 50.7857rem;
+    margin-right: 0.7143rem;
 
     @media screen and (max-width: 1138px) {
       width: 100%;
-      margin: 0 0 20px;
+      margin: 0 0 1.4286rem;
     }
 
     &__title {
-      margin: 0 0 20px;
+      margin: 0 0 1.4286rem;
       font-weight: bold;
-      font-size: 19px;
+      font-size: 1.3571rem;
       color: $primary-color-100;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.0357rem;
     }
 
     &__top {
       display: flex;
       justify-content: space-between;
-      width: 670px;
-      margin-bottom: 13px;
+      width: 47.8571rem;
+      margin-bottom: 0.9286rem;
 
       @media screen and (max-width: 1138px) {
         width: 100%;
@@ -111,23 +131,23 @@
 
       @media screen and (max-width: 660px) {
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 2.1429rem;
       }
     }
 
     &__middle {
       position: relative;
-      margin-bottom: 34px;
+      margin-bottom: 2.4286rem;
 
       @media screen and (max-width: 660px) {
-        margin-bottom: 30px;
+        margin-bottom: 2.1429rem;
       }
     }
 
     &__bottom {
       display: flex;
       justify-content: space-between;
-      width: 702px;
+      width: 50.1429rem;
 
       @media screen and (max-width: 1138px) {
         width: 100%;
@@ -135,25 +155,25 @@
 
       @media screen and (max-width: 660px) {
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 2.1429rem;
       }
     }
   }
 
   .advantages {
-    width: 280px;
-    margin-right: 20px;
+    width: 20rem;
+    margin-right: 1.4286rem;
 
     @media screen and (max-width: 660px) {
-      margin-bottom: 20px;
+      margin-bottom: 1.4286rem;
     }
 
     &__item {
-      padding-bottom: 20px;
-      border-bottom: 1px solid $primary-color-10;
+      padding-bottom: 1.4286rem;
+      border-bottom: 0.0714rem solid $primary-color-10;
 
       + .advantages__item {
-        margin-top: 20px;
+        margin-top: 1.4286rem;
       }
     }
 
@@ -165,24 +185,24 @@
   }
 
   .impression {
-    width: 310px;
+    width: 22.1429rem;
 
     .info__title {
-      margin-bottom: 22px;
-      letter-spacing: -0.3px;
+      margin-bottom: 1.5714rem;
+      letter-spacing: -0.0214rem;
     }
   }
 
   .testimonials {
     .info__title {
-      margin-right: 100px;
+      margin-right: 7.1429rem;
     }
 
     &__amount {
       position: absolute;
       top: 0;
       right: 0;
-      max-width: 90px;
+      max-width: 6.4286rem;
 
       @media screen and (max-width: 430px) {
         position: static;
@@ -196,13 +216,13 @@
     }
 
     &__item {
-      margin-bottom: 24px;
+      margin-bottom: 1.7143rem;
     }
   }
 
   .rules {
-    width: 240px;
-    padding-left: 18px;
+    width: 17.1429rem;
+    padding-left: 1.2857rem;
 
     @media screen and (max-width: 1138px) {
       width: 45%;
@@ -210,27 +230,27 @@
 
     @media screen and (max-width: 660px) {
       width: 90%;
-      margin-bottom: 15px;
+      margin-bottom: 1.0714rem;
     }
 
     .info__title {
-      margin-bottom: 16px;
+      margin-bottom: 1.1429rem;
     }
   }
 
   .bullet-list {
     &__item {
-      margin-bottom: 10px;
+      margin-bottom: 0.7143rem;
 
       &::before {
-        top: 7px;
-        left: -19px;
+        top: 0.5rem;
+        left: -1.3571rem;
       }
     }
   }
 
   .cancel {
-    width: 341px;
+    width: 24.3571rem;
 
     @media screen and (max-width: 1138px) {
       width: 45%;
@@ -241,7 +261,7 @@
     }
 
     .info__title {
-      margin-bottom: 16px;
+      margin-bottom: 1.1429rem;
     }
   }
 }

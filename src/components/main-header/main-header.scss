@@ -2,9 +2,9 @@
 @import '../buttons/button-with-purple-gradient/button-with-purple-gradient';
 
 .main-header {
-  padding: 15px 0;
-  background: #fff;
-  box-shadow: 0px 10px 20px $primary-color-5;
+  padding: 1.0714rem 0;
+  background: $white-color-100;
+  box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
 
   .container {
     display: flex;
@@ -14,19 +14,19 @@
   }
 
   &__logo {
-    width: 106px;
-    height: 40px;
-    margin-right: 31px;
+    width: 7.5714rem;
+    height: 2.8571rem;
+    margin-right: 2.2143rem;
     line-height: 0;
   }
 
   &__burger {
     position: relative;
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 2.8571rem;
+    height: 2.8571rem;
     padding: 0;
-    background: linear-gradient(180deg, $purple-color-100 0%, #8ba4f9 100%);
+    background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -41,11 +41,11 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 20px;
-      height: 3px;
-      background-color: #fff;
+      width: 1.4286rem;
+      height: 0.2143rem;
+      background-color: $white-color-100;
       transform: translate(-50%, -50%);
-      box-shadow: 0 -6px 0 0 #fff, 0 6px 0 0 #fff;
+      box-shadow: 0 -0.4286rem 0 0 $white-color-100, 0 0.4286rem 0 0 $white-color-100;
     }
 
     &_opened::before {
@@ -58,9 +58,9 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 20px;
-      height: 3px;
-      background-color: #fff;
+      width: 1.4286rem;
+      height: 0.2143rem;
+      background-color: $white-color-100;
       transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
@@ -74,17 +74,17 @@
       display: none;
       flex-direction: column;
       width: 100%;
-      margin: 10px auto 0;
-      padding: 5px 10px 10px;
-      border: 3px solid $primary-color-50;
-      border-radius: 10px;
+      margin: 0.7143rem auto 0;
+      padding: 0.3571rem 0.7143rem 0.7143rem;
+      border: 0.2143rem solid $primary-color-50;
+      border-radius: 0.7143rem;
     }
   }
 
   &__site-navigation {
     display: flex;
     margin: 0;
-    margin-right: 31px;
+    margin-right: 2.2143rem;
     padding: 0;
     list-style-type: none;
 
@@ -96,19 +96,19 @@
 
     .main-header__item {
       @media screen and (max-width: 946px) {
-        padding: 5px 0;
-        border-bottom: 1px dotted $primary-color-25;
+        padding: 0.3571rem 0;
+        border-bottom: 0.0714rem dotted $primary-color-25;
       }
 
       &:last-child {
         @media screen and (max-width: 946px) {
           border-bottom: none;
-          padding-bottom: 15px;
+          padding-bottom: 1.0714rem;
         }
       }
 
       & + .main-header__item {
-        margin-left: 20px;
+        margin-left: 1.4286rem;
 
         @media screen and (max-width: 946px) {
           margin-left: 0;
@@ -116,7 +116,7 @@
       }
 
       &_has-submenu + .main-header__item {
-        margin-left: 28px;
+        margin-left: 2rem;
 
         @media screen and (max-width: 946px) {
           margin-left: 0;
@@ -126,11 +126,11 @@
       &_has-submenu > .main-header__link::after {
         content: '';
         display: inline-block;
-        width: 6px;
-        height: 6px;
-        margin-left: 9px;
-        margin-bottom: -2px;
-        border: 2px solid $primary-color-50;
+        width: 0.4286rem;
+        height: 0.4286rem;
+        margin-left: 0.6429rem;
+        margin-bottom: -0.1429rem;
+        border: 0.1429rem solid $primary-color-50;
         border-top: 0;
         border-left: 0;
         transform: translateY(-50%) rotate(45deg);
@@ -138,8 +138,9 @@
     }
 
     .main-header__link {
-      line-height: 24px;
+      line-height: 1.7143rem;
       color: $primary-color-50;
+      text-decoration: none;
 
       &_current {
         font-weight: bold;
@@ -158,8 +159,8 @@
     @media screen and (max-width: 946px) {
       justify-content: space-between;
       width: 100%;
-      padding-top: 15px;
-      border-top: 2px solid $primary-color-30;
+      padding-top: 1.0714rem;
+      border-top: 0.1429rem solid $primary-color-30;
     }
 
     @media screen and (max-width: 360px) {
@@ -172,12 +173,16 @@
     }
 
     .main-header__item + .main-header__item {
-      margin-left: 22px;
+      margin-left: 1.5714rem;
 
       @media screen and (max-width: 360px) {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 0.7143rem;
       }
+    }
+
+    .main-header__link {
+      text-decoration: none;
     }
   }
 }

@@ -4,10 +4,10 @@
 
   &__label {
     position: relative;
-    padding-left: 49px;
+    padding-left: 3.5rem;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.7143rem;
     color: $primary-color-75;
     text-transform: none;
 
@@ -17,10 +17,10 @@
       top: 50%;
       left: 0;
       box-sizing: border-box;
-      width: 40px;
-      height: 20px;
-      border: 1px solid $primary-color-25;
-      border-radius: 10px;
+      width: 2.8571rem;
+      height: 1.4286rem;
+      border: 0.0714rem solid $primary-color-25;
+      border-radius: 0.7143rem;
       transform: translateY(-50%);
     }
 
@@ -28,9 +28,9 @@
       content: '';
       position: absolute;
       top: 50%;
-      left: 2px;
-      width: 12px;
-      height: 12px;
+      left: 0.1429rem;
+      width: 0.8571rem;
+      height: 0.8571rem;
       background: $primary-color-25;
       border-radius: 50%;
       transform: translateY(-50%);
@@ -39,17 +39,17 @@
 
   &__button {
     &:checked + .toggle__label::before {
-      border: 1px solid $purple-color-100;
+      border: 0.0714rem solid $purple-color-100;
     }
 
     &:checked + .toggle__label::after {
-      left: 25px;
-      background: linear-gradient(180deg, $purple-color-100 0%, #8ba4f9 100%);
+      left: 1.7857rem;
+      background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
     }
 
     &:focus + .toggle__label::before {
-      outline: 5px auto rgb(77, 144, 254);
-      outline-offset: -2px;
+      outline: 0.3571rem auto $outline-color-100;
+      outline-offset: -0.1429rem;
     }
   }
 }

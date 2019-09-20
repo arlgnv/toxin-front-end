@@ -212,50 +212,49 @@
 
 .datepicker {
   box-sizing: border-box;
-  width: 320px;
-  padding: 20px;
+  width: 22.8571rem;
+  padding: 1.4286rem;
   font: inherit;
-  border: 1px solid $primary-color-25;
-  box-shadow: 0px 10px 20px $primary-color-5;
-  border-radius: 4px;
+  border: 0.0714rem solid $primary-color-25;
+  box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
+  border-radius: 0.2857rem;
 
   @media screen and (max-width: 375px) {
-    width: 270px;
-    padding: 10px 5px;
+    width: 19.2857rem;
+    padding: 0.7143rem 0.3571rem;
   }
 
   &--nav {
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0 0 2.1429rem;
     border-bottom: none;
 
     @media screen and (max-width: 375px) {
-      margin-bottom: 15px;
+      margin-bottom: 1.0714rem;
     }
 
     &-title {
       font-weight: bold;
-      font-size: 19px;
+      font-size: 1.3571rem;
       color: $primary-color-100;
-
       cursor: default;
     }
   }
 
   &--content {
     padding: 0;
-    margin: 0 0 20px;
+    margin: 0 0 1.4286rem;
   }
 
   &--days-names {
     margin: 0;
-    height: 40px;
+    height: 2.8571rem;
   }
 
   &--day-name {
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $purple-color-100;
     text-transform: none;
   }
@@ -265,14 +264,14 @@
   }
 
   &--cell-day {
-    height: 40px;
-    font-size: 12px;
-    line-height: 15px;
+    height: 2.8571rem;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $primary-color-50;
     border-radius: 0;
 
     @media screen and (max-width: 375px) {
-      height: 36px;
+      height: 2.5714rem;
     }
 
     &.-other-month- {
@@ -286,24 +285,20 @@
     &.-focus-:not(.-disabled-):not(.-current-):not(.-in-range-),
     &.-selected- {
       font-weight: bold;
-      color: #fff;
-      background: linear-gradient(180deg, $purple-color-100 0%, #8ba4f9 100%);
+      color: $white-color-100;
+      background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
       border-radius: 50%;
     }
 
     &.-current- {
       font-weight: bold;
-      color: #fff;
-      background: linear-gradient(180deg, $green-color-100 0%, #66d2ea 100%);
+      color: $white-color-100;
+      background: linear-gradient(180deg, $green-color-100 0%, $aqua-color-100 100%);
       border-radius: 50%;
     }
 
     &.-in-range-:not(.-disabled-) {
-      background: linear-gradient(
-        180deg,
-        rgba(188, 156, 255, 0.25) 0%,
-        rgba(139, 164, 249, 0.25) 100%
-      );
+      background: linear-gradient(180deg, $purple-color-25 0%, $aqua-color-light-25 100%);
     }
 
     &.-range-from-:not(.-disabled-) {
@@ -317,11 +312,7 @@
         z-index: -1;
         width: 50%;
         height: 100%;
-        background: linear-gradient(
-          180deg,
-          rgba(188, 156, 255, 0.25) 0%,
-          rgba(139, 164, 249, 0.25) 100%
-        );
+        background: linear-gradient(180deg, $purple-color-25 0%, $aqua-color-light-25 100%);
       }
     }
 
@@ -336,11 +327,7 @@
         z-index: -1;
         width: 50%;
         height: 100%;
-        background: linear-gradient(
-          180deg,
-          rgba(188, 156, 255, 0.25) 0%,
-          rgba(139, 164, 249, 0.25) 100%
-        );
+        background: linear-gradient(180deg, $purple-color-25 0%, $aqua-color-light-25 100%);
       }
     }
   }
@@ -352,10 +339,9 @@
 
   &--button {
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $primary-color-50;
-
     text-transform: uppercase;
     cursor: pointer;
 

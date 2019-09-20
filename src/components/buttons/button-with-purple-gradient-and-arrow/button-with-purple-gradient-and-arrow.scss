@@ -1,21 +1,21 @@
 .button_with-purple-gradient-and-arrow {
   position: relative;
-  color: #fff;
-  padding: 15px 30px;
-  background-image: linear-gradient(180deg, $purple-color-100 0%, rgba(139, 164, 249, 1) 100%);
+  color: $white-color-100;
+  padding: 1.0714rem 2.1429rem;
+  background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
   &:hover {
-    background-image: linear-gradient(180deg, $purple-color-50 0%, rgba(139, 164, 249, 0.5) 100%);
+    background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
   }
 
   &::before {
     content: '';
     position: absolute;
     top: 50%;
-    right: 15px;
-    width: 18px;
-    height: 18px;
-    color: red;
+    right: 1.0714rem;
+    width: 1.2857rem;
+    height: 1.2857rem;
+    color: $red-color-100;
     background-image: url('../../images/arrow-white.svg');
     transform: translateY(-50%);
   }

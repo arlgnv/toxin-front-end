@@ -6,23 +6,23 @@
 .main-page {
   position: relative;
   flex-grow: 1;
-  padding: 70px 0 386px;
-  background: lightgray url('../../images/index-page/background.jpg') no-repeat center/cover;
+  padding: 5rem 0 27.5714rem;
+  background: url('../../images/index-page/background.jpg') no-repeat center/cover;
 
-  @media screen and (max-width: 946px) {
-    padding: 30px 0;
+  @media screen and (max-width: 946) {
+    padding: 2.1429rem 0;
   }
 
   &__info {
     position: absolute;
-    bottom: 21px;
-    right: 173px;
-    width: 300px;
+    bottom: 1.5rem;
+    right: 12.3571rem;
+    width: 21.4286rem;
     margin: 0;
     text-align: right;
 
     @media screen and (max-width: 1500px) {
-      right: 15px;
+      right: 1.0714rem;
     }
 
     @media screen and (max-width: 700px) {

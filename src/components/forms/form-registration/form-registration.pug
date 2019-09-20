@@ -4,10 +4,10 @@ mixin form-registration
     form.registration__form(action="https://echo.htmlacademy.ru" method="post")
       fieldset.registration__group
         p.registration__item
-          label.visually-hidden(for="field-name") Введите имя
+          label.registration__label.visually-hidden(for="field-name") Введите имя
           +field-default(id="field-name" name="name" placeholder="Имя")
         p.registration__item
-          label.visually-hidden(for="field-surname") Введите фамилию
+          label.registration__label.visually-hidden(for="field-surname") Введите фамилию
           +field-default(id="field-surname" name="surname" placeholder="Фамилия")
         ul.registration__item.registration__list
           li
@@ -15,15 +15,15 @@ mixin form-registration
           li
             +radio({"id": "field-gender-female", "title": "Женщина"})(name="gender" value="female")
       p.registration__group
-        label(for="field-birthday") Дата рождения
+        label.registration__label(for="field-birthday") Дата рождения
         +field-default(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
       fieldset.registration__group
         legend.registration__group-title данные для входа в сервис
         p.registration__item
-          label.visually-hidden(for="field-email") Введите email
+          label.registration__label.visually-hidden(for="field-email") Введите email
           +field-default(id="field-emai" type="email" name="email" placeholder="Email")
         p.registration__item
-          label.visually-hidden(for="field-password") Введите пароль
+          label.registration__label.visually-hidden(for="field-password") Введите пароль
           +field-default(id="field-password" type="password" name="password" placeholder="Пароль")
       p.registration__group
         +toggle({"id": "field-newsletter", "title": "Получать спецпредложения"})(name="newsletter")

@@ -4,20 +4,20 @@
 
 .find-room {
   box-sizing: border-box;
-  max-width: 380px;
-  padding: 39px 29px 29px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  max-width: 27.1429rem;
+  padding: 2.7857rem 2.0714rem 2.0714rem;
+  background: $white-color-100;
+  border: 0.0714rem solid $black-color-12;
+  border-radius: 0.2857rem;
+  box-shadow: 0rem 0rem 1.7857rem $black-color-20;
 
   &__title {
-    margin: 0 0 16px;
+    margin: 0 0 1.1429rem;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.7143rem;
+    line-height: 2.1429rem;
     color: $primary-color-100;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.0357rem;
   }
 
   &__group {
@@ -26,7 +26,7 @@
     &:first-child {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 15px;
+      margin-bottom: 1.0714rem;
 
       @media screen and (max-width: 390px) {
         flex-direction: column;
@@ -34,12 +34,12 @@
     }
 
     &:nth-child(2) {
-      margin-bottom: 29px;
+      margin-bottom: 2.0714rem;
     }
   }
 
   &__item {
-    width: 150px;
+    width: 10.7143rem;
     margin: 0;
 
     @media screen and (max-width: 390px) {
@@ -47,13 +47,21 @@
     }
 
     + .find-room__item {
-      margin-left: 10px;
+      margin-left: 0.7143rem;
 
       @media screen and (max-width: 390px) {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 0.7143rem;
       }
     }
+  }
+
+  &__label {
+    font-weight: bold;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
+    color: $primary-color-100;
+    text-transform: uppercase;
   }
 
   .button {

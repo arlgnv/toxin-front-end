@@ -1,11 +1,11 @@
 @import '../field-subscription/field-subscription';
 
 .main-footer {
-  padding-top: 100px;
-  background: #fff;
+  padding-top: 7.1429rem;
+  background: $white-color-100;
 
   @media screen and (max-width: 858px) {
-    padding: 50px 0;
+    padding: 3.5714rem 0;
   }
 
   .container {
@@ -15,27 +15,27 @@
   }
 
   &__top-left {
-    width: 260px;
+    width: 18.5714rem;
 
     @media screen and (max-width: 858px) {
-      width: 560px;
-      margin: 0 auto 28px;
+      width: 40rem;
+      margin: 0 auto 2rem;
       text-align: center;
     }
   }
 
   &__logo {
     display: inline-block;
-    margin-bottom: 17px;
+    margin-bottom: 1.2143rem;
     line-height: 0;
 
     @media screen and (max-width: 858px) {
-      margin-bottom: 18px;
+      margin-bottom: 1.2857rem;
     }
   }
 
   &__text {
-    margin: 0 0 20px;
+    margin: 0 0 1.4286rem;
 
     @media screen and (max-width: 858px) {
       margin: 0;
@@ -44,23 +44,23 @@
 
   &__navigation {
     display: flex;
-    width: 561px;
+    width: 40.0714rem;
 
     @media screen and (max-width: 858px) {
       display: none;
     }
 
     & > .main-footer__item:nth-child(2n) {
-      margin: 0 92px 0 58px;
+      margin: 0 6.5714rem 0 4.1429rem;
     }
   }
 
   &__title {
     display: inline-block;
-    margin-bottom: 21px;
+    margin-bottom: 1.5rem;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $primary-color-100;
     text-transform: uppercase;
   }
@@ -71,36 +71,37 @@
     list-style-type: none;
 
     .main-footer__item {
-      margin-bottom: 21px;
-      line-height: 17px;
+      margin-bottom: 1.5rem;
+      line-height: 1.2143rem;
     }
 
     .main-footer__link {
-      line-height: 17px;
+      line-height: 1.2143rem;
       color: $primary-color-50;
+      text-decoration: none;
     }
   }
 
   &__top-right {
-    width: 260px;
+    width: 18.5714rem;
 
     @media screen and (max-width: 858px) {
       display: none;
     }
 
     .main-footer__title {
-      margin-bottom: 17px;
+      margin-bottom: 1.2143rem;
     }
 
     .main-footer__text {
-      margin-bottom: 22px;
+      margin-bottom: 1.5714rem;
     }
   }
 
   &__bottom {
-    margin-top: 76px;
-    padding: 26px 0;
-    border-top: 1px solid #e5e5e5;
+    margin-top: 5.4286rem;
+    padding: 1.8571rem 0;
+    border-top: 0.0714rem solid $gray-color-100;
 
     @media screen and (max-width: 858px) {
       margin: 0;
@@ -126,15 +127,16 @@
     }
 
     .main-footer__item + .main-footer__item {
-      margin-left: 24px;
+      margin-left: 1.7143rem;
     }
 
     .main-footer__link {
       display: inline-block;
-      width: 24px;
-      height: 24px;
+      width: 1.7143rem;
+      height: 1.7143rem;
       cursor: pointer;
       background: no-repeat center;
+      text-decoration: none;
 
       &_type_twitter {
         background-image: url('../../images/main-footer/twitter.svg');
@@ -152,7 +154,7 @@
 
   &__copyright {
     margin: 0;
-    line-height: 17px;
+    line-height: 1.2143rem;
 
     @media screen and (max-width: 858px) {
       display: none;

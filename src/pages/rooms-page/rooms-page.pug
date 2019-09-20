@@ -25,10 +25,10 @@ block content
         button.filter__close-button.filter__close-button_hidden(type="button" aria-label="Закрыть фильтр")
         form.filter__form(action="https://echo.htmlacademy/ru" method="post")
           p.filter__group
-            label(for="field-date") Даты пребывания в отеле
+            label.filter__label(for="field-date") Даты пребывания в отеле
             +field-dropdown(id="field-date" name="date" value="19 авг - 23 авг")
           p.filter__group
-            label(for="field-guests") Гости
+            label.filter__label(for="field-guests") Гости
             +field-dropdown(id="field-guests" name="guests" value="3 гостя, 1 младенец")
           p.filter__group
             +range({
@@ -64,7 +64,7 @@ block content
                   "title": "Помощник для инвалидов", 
                   "description": "На 1 этаже вас встретит специалист  и проводит до номера."})(name="helper")
           p.filter__group
-            label(for="field-comfort") Удобства номера
+            label.filter__label(for="field-comfort") Удобства номера
             +field-dropdown(id="field-comfort" class="js-dropdown-comfort" name="comfort" placeholder="Выберите удобства" readonly)
           fieldset.filter__group
             +checkbox-expandable({"title": "Дополнительные удобства", 
@@ -79,7 +79,7 @@ block content
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list
           li.rooms__item
-            a(href="../room-page/room-page.pug")
+            a(href="../room-page/room-page.pug" style="text-decoration: none;")
               +room({
                 image: "../../images/rooms/room1.jpg",
                 alt: "Роскошный номер на одного с большой кроватью",

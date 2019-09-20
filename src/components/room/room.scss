@@ -2,67 +2,67 @@
 
 .room {
   box-sizing: border-box;
-  width: 270px;
-  background: #fff;
-  box-shadow: 0px 10px 20px $primary-color-5;
-  border-radius: 4px;
+  width: 19.2857rem;
+  background: $white-color-100;
+  box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
+  border-radius: 0.2857rem;
 
   &__container {
     position: relative;
+    line-height: 0;
 
     &:hover .room__slider-arrows {
-      display: flex;
+      display: block;
     }
   }
 
   &__img {
-    border-radius: 4px 4px 0 0;
+    width: 19.3571rem;
+    height: auto;
+    border-radius: 0.2857rem 0.2857rem 0 0;
   }
 
   &__slider-buttons {
     position: absolute;
-    bottom: 9px;
-    right: 15px;
+    bottom: 1.0714rem;
+    right: 1.2143rem;
     margin: 0;
   }
 
   &__slider-button {
     box-sizing: border-box;
-    width: 7px;
-    height: 7px;
+    width: 0.5rem;
+    height: 0.5rem;
     margin: 0;
     padding: 0;
     font: inherit;
-    border: 1px solid #fff;
+    border: 0.0714rem solid $white-color-100;
     border-radius: 50%;
     background-color: transparent;
-    box-shadow: 0px 5px 5px $primary-color-30;
+    box-shadow: 0rem 0.3571rem 0.3571rem $primary-color-30;
     cursor: pointer;
 
     &_active {
-      background-color: #fff;
+      background-color: $white-color-100;
     }
 
     & + .room__slider-button {
-      margin-left: 4px;
+      margin-left: 0.2857rem;
     }
   }
 
   &__slider-arrows {
     position: absolute;
     top: 50%;
-    left: 20px;
-    right: 20px;
+    left: 1.4286rem;
+    right: 1.4286rem;
     display: none;
-    justify-content: space-between;
-    align-items: center;
     margin: 0;
     transform: translateY(-50%);
   }
 
   &__slider-arrow {
-    position: relative;
-    box-sizing: border-box;
+    position: absolute;
     margin: 0;
     padding: 0;
     font: inherit;
@@ -73,25 +73,32 @@
     &::before {
       content: '';
       position: absolute;
-      width: 7px;
-      height: 7px;
-      border: 2px solid #fff;
+      box-sizing: border-box;
+      width: 0.5rem;
+      height: 0.5rem;
+      border: 0.1429rem solid $white-color-100;
       border-top: 0;
       border-left: 0;
     }
 
-    &_prev::before {
-      transform: translateY(-50%) rotate(135deg);
+    &_prev {
+      &::before {
+        transform: translateY(-50%) rotate(135deg);
+      }
     }
 
-    &_next::before {
-      right: -1px;
-      transform: translateY(-50%) rotate(-45deg);
+    &_next {
+      right: 0;
+
+      &::before {
+        right: -0.0714rem;
+        transform: translateY(-50%) rotate(-45deg);
+      }
     }
   }
 
   &__info {
-    padding: 23px 19px 19px 20px;
+    padding: 1.6429rem 1.3571rem 1.3571rem 1.4286rem;
   }
 
   &__info-top {
@@ -99,29 +106,29 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding-bottom: 8px;
-    border-bottom: 1px solid $primary-color-10;
+    padding-bottom: 0.5714rem;
+    border-bottom: 0.0714rem solid $primary-color-10;
   }
 
   &__number {
     span:first-child {
       font-weight: bold;
-      font-size: 13px;
-      line-height: 17px;
+      font-size: 0.9286rem;
+      line-height: 1.2143rem;
       color: $primary-color-100;
     }
 
     span:nth-child(2n) {
       font-weight: bold;
-      font-size: 17px;
-      line-height: 17px;
+      font-size: 1.2143rem;
+      line-height: 1.2143rem;
       color: $primary-color-100;
     }
 
     span:last-child {
       font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.8571rem;
+      line-height: 1.0714rem;
       color: $purple-color-100;
       text-transform: uppercase;
     }
@@ -129,12 +136,12 @@
 
   &__price {
     font-weight: bold;
-    line-height: 18px;
+    line-height: 1.2857rem;
     color: $primary-color-50;
 
     span {
       font-weight: normal;
-      font-size: 12px;
+      font-size: 0.8571rem;
     }
   }
 
@@ -143,12 +150,12 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding-top: 7px;
+    padding-top: 0.5rem;
   }
 
   &__testimonials {
     font-weight: bold;
-    line-height: 18px;
+    line-height: 1.2857rem;
     color: $primary-color-50;
 
     span {

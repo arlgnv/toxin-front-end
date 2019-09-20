@@ -8,10 +8,10 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: 18px;
-    width: 6px;
-    height: 6px;
-    border: 2px solid $primary-color-50;
+    right: 1.2857rem;
+    width: 0.4286rem;
+    height: 0.4286rem;
+    border: 0.1429rem solid $primary-color-50;
     border-top: 0;
     border-left: 0;
     transform: translateY(-50%) rotate(45deg);
@@ -20,12 +20,15 @@
   &__field {
     box-sizing: border-box;
     width: 100%;
-    height: 46px; //for ie
-    padding: 10px 30px 10px 15px;
+    padding: 0.7143rem 2.1429rem 0.7143rem 1.0714rem;
     font: inherit;
     color: $primary-color-75;
-    border: 1px solid $primary-color-25;
-    border-radius: 4px;
+    border: 0.0714rem solid $primary-color-25;
+    border-radius: 0.2857rem;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: 3.2857rem;
+    }
   }
 }
 
@@ -35,11 +38,11 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 8px 5px 13px 14px;
-  border: 1px solid $primary-color-50;
+  padding: 0.5714rem 0.3571rem 0.9286rem 1rem;
+  border: 0.0714rem solid $primary-color-50;
   border-top: none;
-  box-shadow: 0px 10px 20px $primary-color-5;
-  background-color: #fff;
+  box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
+  background-color: $white-color-100;
 
   &_hidden {
     display: none;
@@ -49,18 +52,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
 
     &_shift-from-top_20 {
       margin-bottom: 0;
-      margin-top: 20px;
+      margin-top: 1.4286rem;
     }
   }
 
   &__title {
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $primary-color-100;
     text-transform: uppercase;
   }
@@ -77,9 +80,9 @@
     display: flex;
     margin: 0;
     padding: 0;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $primary-color-50;
+    width: 2.1429rem;
+    height: 2.1429rem;
+    border: 0.0714rem solid $primary-color-50;
     border-radius: 50%;
     background: transparent;
     cursor: pointer;
@@ -89,8 +92,8 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 5px;
-      height: 1px;
+      width: 0.3571rem;
+      height: 0.0714rem;
       background-color: $primary-color-50;
       transform: translate(-50%);
     }
@@ -101,7 +104,7 @@
     }
 
     &_type_add::before {
-      width: 8px;
+      width: 0.5714rem;
     }
 
     &_type_add::after {
@@ -109,19 +112,19 @@
       position: absolute;
       top: 50%;
       right: 50%;
-      width: 8px;
-      height: 1px;
+      width: 0.5714rem;
+      height: 0.0714rem;
       background-color: $primary-color-50;
       transform: rotate(90deg) translateY(-400%);
     }
   }
 
   &__amount {
-    margin: 0 6px;
-    width: 22px;
+    margin: 0 0.4286rem;
+    width: 1.5714rem;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $primary-color-100;
     text-transform: uppercase;
     text-align: center;
@@ -132,8 +135,8 @@
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     font-family: inherit;
     color: $primary-color-50;
     background: transparent;
