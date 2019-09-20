@@ -1,5 +1,5 @@
 @import '../../buttons/button-with-purple-gradient-and-arrow/button-with-purple-gradient-and-arrow';
-@import '../../field-dropdown/field-dropdown';
+@import '../../dropdowns/dropdown';
 @import '../../calendar/calendar';
 
 .find-room {
@@ -12,7 +12,7 @@
   box-shadow: 0rem 0rem 1.7857rem $black-color-20;
 
   &__title {
-    margin: 0 0 1.1429rem;
+    margin: 0 0 1.5714rem;
     font-weight: bold;
     font-size: 1.7143rem;
     line-height: 2.1429rem;
@@ -26,7 +26,7 @@
     &:first-child {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 1.0714rem;
+      margin-bottom: 1.5rem;
 
       @media screen and (max-width: 390px) {
         flex-direction: column;
@@ -34,7 +34,7 @@
     }
 
     &:nth-child(2) {
-      margin-bottom: 2.0714rem;
+      margin-bottom: 2.2714rem;
     }
   }
 
@@ -57,6 +57,8 @@
   }
 
   &__label {
+    display: block;
+    margin-bottom: 0.3571rem;
     font-weight: bold;
     font-size: 0.8571rem;
     line-height: 1.0714rem;

@@ -4,7 +4,7 @@
 @import '../../components/checkboxes/checkbox-poor/checkbox-poor';
 @import '../../components/checkboxes/checkbox-rich/checkbox-rich';
 @import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
-@import '../../components/field-dropdown/field-dropdown';
+@import '../../components/dropdowns/dropdown';
 @import '../../components/room/room';
 @import '../../components/main-header/main-header';
 @import '../../components/main-footer/main-footer';
@@ -108,11 +108,11 @@
       border: none;
 
       &:nth-child(1) {
-        margin-bottom: 1.0714rem;
+        margin-bottom: 1.1714rem;
       }
 
       &:nth-child(2) {
-        margin-bottom: 2.0714rem;
+        margin-bottom: 2.2714rem;
       }
 
       &:nth-child(3) {
@@ -152,7 +152,7 @@
       }
 
       &:nth-child(6) {
-        margin-bottom: 2.0714rem;
+        margin-bottom: 2.1714rem;
       }
     }
 

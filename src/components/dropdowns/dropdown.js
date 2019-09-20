@@ -1,52 +1,22 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */
-/* global document window NodeList */
+/* global window NodeList */
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-function initGuestsDropdown(evt) {
-  const input = evt.target;
-  input.removeEventListener('click', initGuestsDropdown);
-  input.addEventListener('click', () => dropdown.classList.toggle('dropdown_hidden'));
-
-  input.insertAdjacentHTML('afterend', `
-    <span class="dropdown">
-        <span class="dropdown__item">
-            <b class="dropdown__title">Взрослые</b>
-            <span class="dropdown__count">
-                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
-                <span class="dropdown__amount">0</span>
-                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
-            </span>
-        </span>
-        <span class="dropdown__item">
-            <b class="dropdown__title">Дети</b>
-            <span class="dropdown__count">
-                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
-                <span class="dropdown__amount">0</span>
-                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
-            </span>
-        </span>
-        <span class="dropdown__item">
-            <b class="dropdown__title">Младенцы</b>
-            <span class="dropdown__count">
-                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
-                <span class="dropdown__amount dropdown__amount_baby">0</span>
-                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
-            </span>
-        </span>
-        <span class="dropdown__item dropdown__item_shift-from-top_20">
-            <button class="dropdown__control-button dropdown__control-button_type_clear dropdown__control-button_disabled" type="button">Очистить</button>
-            <button class="dropdown__control-button dropdown__control-button_type_apply" type="button">Применить</button>
-        </span>
-    </span>`);
-
-  const dropdown = document.body.querySelector('.dropdown');
+function initGuestsDropdown() {
+  const dropdown = this;
+  const input = dropdown.querySelector('.dropdown__field');
+  const dropdownContainer = dropdown.querySelector('.dropdown__container');
   const dropdownItems = dropdown.querySelectorAll('.dropdown__item:not(:last-child)');
   const dropdownAmounts = dropdown.querySelectorAll('.dropdown__amount');
+
+  dropdown.removeEventListener('click', initGuestsDropdown);
+  dropdownContainer.classList.remove('dropdown__container_hidden');
+  input.addEventListener('click', () => dropdownContainer.classList.toggle('dropdown__container_hidden'));
 
   dropdownItems.forEach((item) => {
     const buttonDel = item.querySelector('.dropdown__button_type_delete');
@@ -137,7 +107,7 @@ function initGuestsDropdown(evt) {
         input.value += `${amountBabies} младенцев`;
     }
 
-    dropdown.classList.add('dropdown_hidden');
+    dropdownContainer.classList.add('dropdown__container_hidden');
   }
 
   function checkIsFieldsEmpty() {
@@ -152,41 +122,15 @@ function initGuestsDropdown(evt) {
   }
 }
 
-function initComfortDropdown(evt) {
-  const input = evt.target;
-  input.removeEventListener('click', initComfortDropdown);
-  input.addEventListener('click', () => dropdown.classList.toggle('dropdown_hidden'));
-
-  input.insertAdjacentHTML('afterend', `
-    <span class="dropdown">
-        <span class="dropdown__item">
-            <b class="dropdown__title">Спальни</b>
-            <span class="dropdown__count">
-                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
-                <span class="dropdown__amount">0</span>
-                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
-            </span>
-        </span>
-        <span class="dropdown__item">
-            <b class="dropdown__title">Кровати</b>
-            <span class="dropdown__count">
-                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
-                <span class="dropdown__amount">0</span>
-                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
-            </span>
-        </span>
-        <span class="dropdown__item">
-            <b class="dropdown__title">Ванные комнаты</b>
-            <span class="dropdown__count">
-                <button class="dropdown__button dropdown__button_type_delete dropdown__button_disabled" type="button"></button>
-                <span class="dropdown__amount">0</span>
-                <button class="dropdown__button dropdown__button_type_add" type="button"></button>
-            </span>
-        </span>
-    </span>`);
-
-  const dropdown = document.body.querySelector('.dropdown');
+function initComfortDropdown() {
+  const dropdown = this;
+  const input = dropdown.querySelector('.dropdown__field');
+  const dropdownContainer = dropdown.querySelector('.dropdown__container');
   const dropdownItems = dropdown.querySelectorAll('.dropdown__item');
+
+  dropdown.removeEventListener('click', initComfortDropdown);
+  dropdownContainer.classList.remove('dropdown__container_hidden');
+  input.addEventListener('click', () => dropdownContainer.classList.toggle('dropdown__container_hidden'));
 
   dropdownItems.forEach((item) => {
     const buttonDel = item.querySelector('.dropdown__button_type_delete');

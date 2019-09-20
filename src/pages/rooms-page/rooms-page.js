@@ -4,7 +4,7 @@ import 'ion-rangeslider';
 import '../../components/main-header/main-header';
 import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
 import '../../components/range/range';
-import { initComfortDropdown } from '../../components/field-dropdown/field-dropdown';
+import { initComfortDropdown } from '../../components/dropdowns/dropdown';
 
 // Filter
 const $filter = $('.js-filter');

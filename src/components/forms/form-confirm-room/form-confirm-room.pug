@@ -13,13 +13,13 @@ mixin form-confirm-room
         .confirm-room__group
           p.confirm-room__item
             label.confirm-room__label(for="field-date-from") Прибытие
-            +field-dropdown(id="field-date-from" value="19.08.2019" name="from")
+            +dropdown-default(id="field-date-from" value="19.08.2019" name="from")
           p.confirm-room__item
             label.confirm-room__label(for="field-date-to") Выезд
-            +field-dropdown(id="field-date-to" value="23.08.2019" name="to")
+            +dropdown-default(id="field-date-to" value="23.08.2019" name="to")
         p.confirm-room__item
           label.confirm-room__label(for="field-guests") Гости
-          +field-dropdown(id="field-guests" value="3 гостя" name="guests")
+          +dropdown-default(id="field-guests" value="3 гостя" name="guests")
       .confirm-room__info
         .confirm-room__group
           span.confirm-room__left-col 9 990₽ х 4 суток

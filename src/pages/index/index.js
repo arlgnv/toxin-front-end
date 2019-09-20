@@ -4,7 +4,7 @@ import '../../utilities/jquery-global';
 import 'air-datepicker';
 import '../../components/main-header/main-header';
 import '../../components/calendar/calendar';
-import { initGuestsDropdown } from '../../components/field-dropdown/field-dropdown';
+import { initGuestsDropdown } from '../../components/dropdowns/dropdown';
 
 // Dropdown
 const inputDropdownGuests = document.querySelector('.js-dropdown-guests');

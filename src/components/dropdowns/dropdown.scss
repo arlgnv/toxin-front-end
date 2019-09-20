@@ -1,17 +1,17 @@
-.field-dropdown {
+.dropdown {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 100%;
 
   &::before {
     content: '';
     position: absolute;
-    top: 50%;
-    right: 1.2857rem;
-    width: 0.4286rem;
-    height: 0.4286rem;
-    border: 0.1429rem solid $primary-color-50;
+    top: 49%;
+    right: 1.1857rem;
+    box-sizing: border-box;
+    width: 9px;
+    height: 9px;
+    border: 2.0006px solid $primary-color-50;
     border-top: 0;
     border-left: 0;
     transform: translateY(-50%) rotate(45deg);
@@ -20,7 +20,7 @@
   &__field {
     box-sizing: border-box;
     width: 100%;
-    padding: 0.7143rem 2.1429rem 0.7143rem 1.0714rem;
+    padding: 0.6429rem 2.2429rem 0.6429rem 1.0714rem;
     font: inherit;
     color: $primary-color-75;
     border: 0.0714rem solid $primary-color-25;
@@ -30,22 +30,22 @@
       height: 3.2857rem;
     }
   }
-}
 
-.dropdown {
-  position: absolute;
-  z-index: 1;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.5714rem 0.3571rem 0.9286rem 1rem;
-  border: 0.0714rem solid $primary-color-50;
-  border-top: none;
-  box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
-  background-color: $white-color-100;
+  &__container {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5714rem 0.3571rem 0.9286rem 1rem;
+    border: 0.0714rem solid $primary-color-50;
+    border-top: none;
+    box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
+    background-color: $white-color-100;
 
-  &_hidden {
-    display: none;
+    &_hidden {
+      display: none;
+    }
   }
 
   &__item {

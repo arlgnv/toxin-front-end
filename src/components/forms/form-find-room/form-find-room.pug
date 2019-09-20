@@ -5,13 +5,13 @@ mixin form-find-room
       div.find-room__group
         p.find-room__item
           label.find-room__label(for="field-date-from") Прибытие
-          +field-dropdown(id="field-date-from" class="js-date-from" name="from" placeholder="ДД.ММ.ГГГГ" readonly required)
+          +dropdown-default(id="field-date-from" class="js-date-from" name="from" placeholder="ДД.ММ.ГГГГ" readonly required)
         p.find-room__item
           label.find-room__label(for="field-date-to") Выезд
-          +field-dropdown(id="field-date-to" class="js-date-to" name="to" placeholder="ДД.ММ.ГГГГ" readonly)
+          +dropdown-default(id="field-date-to" class="js-date-to" name="to" placeholder="ДД.ММ.ГГГГ" readonly)
       p.find-room__group
         label.find-room__label(for="field-amount-guests") Гости
-        +field-dropdown(id="field-amount-guests" class="js-dropdown-guests" name="guests" placeholder="Сколько гостей" readonly)
+        +dropdown-guests(id="field-amount-guests" name="guests" placeholder="Сколько гостей" readonly)
       p.find-room__group
         +link-with-purple-gradient-and-arrow("подобрать номер")(href="../../pages/rooms-page/rooms-page.pug")
       

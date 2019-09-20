@@ -26,10 +26,10 @@ block content
         form.filter__form(action="https://echo.htmlacademy/ru" method="post")
           p.filter__group
             label.filter__label(for="field-date") Даты пребывания в отеле
-            +field-dropdown(id="field-date" name="date" value="19 авг - 23 авг")
+            +dropdown-default(id="field-date" name="date" value="19 авг - 23 авг")
           p.filter__group
             label.filter__label(for="field-guests") Гости
-            +field-dropdown(id="field-guests" name="guests" value="3 гостя, 1 младенец")
+            +dropdown-default(id="field-guests" name="guests" value="3 гостя, 1 младенец")
           p.filter__group
             +range({
               "id": "field-price", 
@@ -65,7 +65,7 @@ block content
                   "description": "На 1 этаже вас встретит специалист  и проводит до номера."})(name="helper")
           p.filter__group
             label.filter__label(for="field-comfort") Удобства номера
-            +field-dropdown(id="field-comfort" class="js-dropdown-comfort" name="comfort" placeholder="Выберите удобства" readonly)
+            +dropdown-comfort(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
           fieldset.filter__group
             +checkbox-expandable({"title": "Дополнительные удобства", 
             "items": [ 
