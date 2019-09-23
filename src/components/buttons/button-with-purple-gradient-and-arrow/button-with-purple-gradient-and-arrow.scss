@@ -1,4 +1,4 @@
-.button_with-purple-gradient-and-arrow {
+.button_theme_with-purple-gradient-and-arrow {
   position: relative;
   color: $white-color-100;
   padding: 1.0714rem 2.1429rem;
@@ -12,11 +12,23 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: 1.0714rem;
-    width: 1.2857rem;
-    height: 1.2857rem;
-    color: $red-color-100;
-    background-image: url('../../images/arrow-white.svg');
+    right: 0.9286rem;
+    width: 1.1429rem;
+    height: 0.1429rem;
+    background-color: $white-color-100;
     transform: translateY(-50%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1.0714rem;
+    width: 0.6429rem;
+    height: 0.6429rem;
+    border: 0.1429rem solid $white-color-100;
+    border-left: none;
+    border-bottom: none;
+    transform: translateY(-50%) rotate(45deg);
   }
 }

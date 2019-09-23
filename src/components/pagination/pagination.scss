@@ -34,10 +34,23 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 1.2857rem;
-          height: 1.2857rem;
-          background: url('../../images/arrow-white.svg') no-repeat center;
+          width: 1.0429rem;
+          height: 0.1429rem;
+          background-color: $white-color-100;
           transform: translate(-50%, -50%);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0.6429rem;
+          height: 0.6429rem;
+          border: 0.1429rem solid $white-color-100;
+          border-left: none;
+          border-bottom: none;
+          transform: translate(-50%, -50%) rotate(45deg);
         }
       }
     }

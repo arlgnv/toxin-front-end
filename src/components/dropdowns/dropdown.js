@@ -19,17 +19,17 @@ function initGuestsDropdown() {
   input.addEventListener('click', () => dropdownContainer.classList.toggle('dropdown__container_hidden'));
 
   dropdownItems.forEach((item) => {
-    const buttonDel = item.querySelector('.dropdown__button_type_delete');
+    const buttonDel = item.querySelector('.dropdown__control-button_theme_minus');
     buttonDel.addEventListener('click', subtractOne);
 
-    const buttonAdd = item.querySelector('.dropdown__button_type_add');
+    const buttonAdd = item.querySelector('.dropdown__control-button_theme_plus');
     buttonAdd.addEventListener('click', addOne);
   });
 
-  const buttonClear = dropdown.querySelector('.dropdown__control-button_type_clear');
+  const buttonClear = dropdown.querySelector('.dropdown__button_theme_clear-button');
   buttonClear.addEventListener('click', clearChanges);
 
-  const buttonApply = dropdown.querySelector('.dropdown__control-button_type_apply');
+  const buttonApply = dropdown.querySelector('.dropdown__button_theme_apply-button');
   buttonApply.addEventListener('click', applyChanges);
 
   function subtractOne({ target }) {
@@ -39,8 +39,8 @@ function initGuestsDropdown() {
       amountField.textContent = +amountField.textContent - 1;
 
       if (+amountField.textContent === 0) {
-        target.classList.add('dropdown__button_disabled');
-        if (checkIsFieldsEmpty() === true) buttonClear.classList.add('dropdown__control-button_disabled');
+        target.classList.add('dropdown__control-button_disabled');
+        if (checkIsFieldsEmpty() === true) buttonClear.classList.add('dropdown__button_disabled');
       }
     }
   }
@@ -50,19 +50,19 @@ function initGuestsDropdown() {
     amountField.textContent = +amountField.textContent + 1;
 
     const buttonDel = amountField.previousElementSibling;
-    buttonDel.classList.remove('dropdown__button_disabled');
+    buttonDel.classList.remove('dropdown__control-button_disabled');
 
-    buttonClear.classList.remove('dropdown__control-button_disabled');
+    buttonClear.classList.remove('dropdown__button_disabled');
   }
 
   function clearChanges({ target }) {
-    const buttonsDel = dropdown.querySelectorAll('.dropdown__button_type_delete');
-    buttonsDel.forEach((button) => button.classList.add('dropdown__button_disabled'));
+    const buttonsDel = dropdown.querySelectorAll('.dropdown__control-button_theme_minus');
+    buttonsDel.forEach((button) => button.classList.add('dropdown__control-button_disabled'));
 
     dropdownAmounts.forEach((amountField) => amountField.textContent = 0);
 
     input.value = '';
-    target.classList.add('dropdown__control-button_disabled');
+    target.classList.add('dropdown__button_disabled');
   }
 
   function applyChanges() {
@@ -133,10 +133,10 @@ function initComfortDropdown() {
   input.addEventListener('click', () => dropdownContainer.classList.toggle('dropdown__container_hidden'));
 
   dropdownItems.forEach((item) => {
-    const buttonDel = item.querySelector('.dropdown__button_type_delete');
+    const buttonDel = item.querySelector('.dropdown__control-button_theme_minus');
     buttonDel.addEventListener('click', subtractOne);
 
-    const buttonAdd = item.querySelector('.dropdown__button_type_add');
+    const buttonAdd = item.querySelector('.dropdown__control-button_theme_plus');
     buttonAdd.addEventListener('click', addOne);
   });
 
@@ -147,7 +147,7 @@ function initComfortDropdown() {
       amountField.textContent = +amountField.textContent - 1;
 
       if (+amountField.textContent === 0) {
-        target.classList.add('dropdown__button_disabled');
+        target.classList.add('dropdown__control-button_disabled');
       }
     }
 
@@ -159,7 +159,7 @@ function initComfortDropdown() {
     amount.textContent = +amount.textContent + 1;
 
     const buttonDel = amount.previousElementSibling;
-    buttonDel.classList.remove('dropdown__button_disabled');
+    buttonDel.classList.remove('dropdown__control-button_disabled');
 
     applyChanges();
   }

@@ -25,7 +25,7 @@
     }
   }
 
-  &__checkbox:checked + &__label::after {
+  &__field:checked + &__label::after {
     content: '';
     position: absolute;
     top: 0.2857rem;
@@ -35,7 +35,7 @@
     background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
   }
 
-  &__checkbox:focus + &__label::before {
+  &__field:focus + &__label::before {
     outline: 0.3571rem auto $outline-color-100;
     outline-offset: -0.1429rem;
   }

@@ -1,6 +1,6 @@
 @import '../../buttons/button-with-border-gradient/button-with-border-gradient';
 @import '../../buttons/button-with-purple-gradient-and-arrow/button-with-purple-gradient-and-arrow';
-@import '../../field-default/field-default';
+@import '../../text-field-default/text-field-default';
 
 .login {
   position: relative;
@@ -23,7 +23,7 @@
   }
 
   &__form {
-    margin-bottom: 2.2143rem;
+    margin-bottom: 2.1143rem;
 
     .button {
       width: 100%;
@@ -48,9 +48,8 @@
     justify-content: space-between;
     align-items: center;
 
-    .button {
-      width: 6.8571rem;
-      height: 2.9286rem;
+    .button__text {
+      padding: 0.9286rem 1.1429rem;
     }
   }
 

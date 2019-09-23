@@ -4,12 +4,12 @@ mixin form-login
     form.login__form(action="https://echo.htmlacademy.ru" method="post")
       p.login__group
         label.visually-hidden(for="field-email") Введите email
-        +field-default(id="field-email" name="email" type="email" placeholder="Email")
+        +text-field-default(id="field-email" name="email" type="email" placeholder="Email")
       p.login__group
         label.visually-hidden(for="field-password") Введите пароль
-        +field-default(id="field-password" name="password" type="password" placeholder="Пароль")
+        +text-field-default(id="field-password" name="password" type="password" placeholder="Пароль")
       p.login__group
         +button-with-purple-gradient-and-arrow("войти")(type="submit")
     .login__registration
       span.login__text Нет аккаунта на Toxin?
-      +link-with-border-gradient("создать", "link")(href="../../pages/registration-page/registration-page.pug")
+      +link-with-border-gradient("создать")(href="../../pages/registration-page/registration-page.pug")

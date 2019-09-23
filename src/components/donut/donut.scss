@@ -14,11 +14,11 @@
   &__segment {
     transform-origin: center;
 
-    &_great {
+    &_theme_great {
       transform: rotate(91deg);
     }
 
-    &_satisfactory {
+    &_theme_satisfactory {
       transform: rotate(-89deg);
     }
   }
@@ -67,19 +67,19 @@
       border-radius: 50%;
     }
 
-    &_great::before {
+    &_theme_great::before {
       background: linear-gradient(180deg, $desert-color-light-100 0%, $desert-color-100 100%);
     }
 
-    &_good::before {
+    &_theme_good::before {
       background: linear-gradient(180deg, $green-color-100 0%, $aqua-color-100 100%);
     }
 
-    &_satisfactory::before {
+    &_theme_satisfactory::before {
       background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
     }
 
-    &_disappointed::before {
+    &_theme_disappointed::before {
       background: linear-gradient(180deg, $dark-color-light-100 0%, $dark-color-100 100%);
     }
   }

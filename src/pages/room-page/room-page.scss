@@ -264,4 +264,14 @@
       margin-bottom: 1.1429rem;
     }
   }
+
+  .form {
+    @media screen and (max-width: 600px) {
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+  }
 }

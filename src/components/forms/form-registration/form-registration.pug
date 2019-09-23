@@ -5,30 +5,30 @@ mixin form-registration
       fieldset.registration__group
         p.registration__item
           label.registration__label.visually-hidden(for="field-name") Введите имя
-          +field-default(id="field-name" name="name" placeholder="Имя")
+          +text-field-default(id="field-name" name="name" placeholder="Имя")
         p.registration__item
           label.registration__label.visually-hidden(for="field-surname") Введите фамилию
-          +field-default(id="field-surname" name="surname" placeholder="Фамилия")
-        ul.registration__item.registration__list
-          li
-            +radio({"id": "field-gender-male", "title": "Мужчина"})(name="gender" value="male" checked)
-          li
-            +radio({"id": "field-gender-female", "title": "Женщина"})(name="gender" value="female")
+          +text-field-default(id="field-surname" name="surname" placeholder="Фамилия")
+        ul.registration__list
+          li.registration__item
+            +radio-button({"id": "field-gender-male", "title": "Мужчина"})(name="gender" value="male" checked)
+          li.registration__item
+            +radio-button({"id": "field-gender-female", "title": "Женщина"})(name="gender" value="female")
       p.registration__group
         label.registration__label(for="field-birthday") Дата рождения
-        +field-default(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
+        +text-field-default(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
       fieldset.registration__group
         legend.registration__group-title данные для входа в сервис
         p.registration__item
           label.registration__label.visually-hidden(for="field-email") Введите email
-          +field-default(id="field-emai" type="email" name="email" placeholder="Email")
+          +text-field-default(id="field-emai" type="email" name="email" placeholder="Email")
         p.registration__item
           label.registration__label.visually-hidden(for="field-password") Введите пароль
-          +field-default(id="field-password" type="password" name="password" placeholder="Пароль")
+          +text-field-default(id="field-password" type="password" name="password" placeholder="Пароль")
       p.registration__group
-        +toggle({"id": "field-newsletter", "title": "Получать спецпредложения"})(name="newsletter")
+        +toggle-button({"id": "field-newsletter", "title": "Получать спецпредложения"})(name="newsletter")
       p.registration__group
         +button-with-purple-gradient-and-arrow("перейти к оплате")(type="submit")
-    .registration__log-in
-      span Уже есть аккаунт на Toxin
+    .registration__login
+      span.registration__text Уже есть аккаунт на Toxin?
       +link-with-border-gradient("войти")(href="../../pages/login-page/login-page.pug")

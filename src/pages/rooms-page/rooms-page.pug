@@ -31,7 +31,7 @@ block content
             label.filter__label(for="field-guests") Гости
             +dropdown-default(id="field-guests" name="guests" value="3 гостя, 1 младенец")
           p.filter__group
-            +range({
+            +range-slider({
               "id": "field-price", 
               "title": "Диапазон цены", 
               "description": "Стоимость за сутки пребывания в номере"})(name="price")

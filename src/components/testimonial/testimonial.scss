@@ -1,10 +1,10 @@
-@import '../buttons/button-with-like/button-with-like';
+@import '../like-button/like-button';
 
 .testimonial {
   margin: 0;
   padding: 0;
 
-  &__top-part {
+  &__author {
     display: flex;
     align-items: flex-start;
     margin: 0 0 0.6429rem;
@@ -23,15 +23,15 @@
     display: block;
   }
 
-  &__bottom-part {
+  &__content {
     display: flex;
     align-items: flex-start;
     margin: 0;
+  }
 
-    span:first-child {
-      min-width: 3.4286rem;
-      margin: 0 0.7143rem 0 0;
-      text-align: center;
-    }
+  &__button {
+    min-width: 3.4286rem;
+    margin-right: 0.7143rem;
+    text-align: center;
   }
 }

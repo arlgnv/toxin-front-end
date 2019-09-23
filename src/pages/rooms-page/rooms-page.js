@@ -3,7 +3,7 @@ import '../../utilities/jquery-global';
 import 'ion-rangeslider';
 import '../../components/main-header/main-header';
 import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
-import '../../components/range/range';
+import '../../components/range-slider/range-slider';
 import { initComfortDropdown } from '../../components/dropdowns/dropdown';
 
 // Filter
@@ -15,24 +15,24 @@ const $filterClose = $filter.find('.filter__close-button');
 $filterShow.click((evt) => {
   evt.preventDefault();
 
-  $filterForm.css('left', '0%');
+  $filterForm.addClass('filter__form_showed');
 
   $filterClose.removeClass('filter__close-button_hidden');
   $filterClose.css('left', `${$(window).width() - $filterClose.outerWidth()}px`);
 
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('scroll-none');
 });
 
 $filterClose.click((evt) => {
   evt.preventDefault();
 
-  $filterForm.css('left', '110%');
+  $filterForm.removeClass('filter__form_showed');
 
   $filterClose.addClass('filter__close-button_hidden');
 
-  document.body.style.overflow = 'visible';
+  document.body.classList.remove('scroll-none');
 });
 
 // Dropdown comfort
-const inputDropdownComfort = document.querySelector('.js-dropdown-comfort');
+const inputDropdownComfort = document.querySelector('.js-dropdown_type_comfort');
 inputDropdownComfort.addEventListener('click', initComfortDropdown);

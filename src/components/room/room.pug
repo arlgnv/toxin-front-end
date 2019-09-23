@@ -1,27 +1,27 @@
 mixin room({image, alt, number, lux, price, rating, testimonials})
   div.room
     div.room__container
-      img.room__img(src=image width="271" height="152" alt=alt)
+      img.room__img(src=image alt=alt)
       p.room__slider-buttons
         button.room__slider-button.room__slider-button_active(type="button")
         button.room__slider-button(type="button")
         button.room__slider-button(type="button")
         button.room__slider-button(type="button")
       p.room__slider-arrows
-        button.room__slider-arrow.room__slider-arrow_prev(type="button")
-        button.room__slider-arrow.room__slider-arrow_next(type="button")
+        button.room__slider-arrow.room__slider-arrow_theme_prev(type="button")
+        button.room__slider-arrow.room__slider-arrow_theme_next(type="button")
     div.room__info
-      p.room__info-top
-        span.room__number
-          span №
-          span= " " + number + " "
-          if lux
-            span Люкс
-          else
-            span
-        span.room__price= price + " " 
-          span в сутки
-      p.room__info-bottom
+      p.room__book-info
+        span.room__number-info
+          | №
+          span.room__number= ` ${number} `
+          if lux === true
+            span.room__type Люкс
+        span.room__day-price
+          span.room__price= `${price} ` 
+          | в сутки
+      p.room__user-experience
         +rating(rating)
-        span.room__testimonials= testimonials + " " 
-          span Отзывов
+        span.room__testimonials
+          span.room__testimonials-amount= `${testimonials} `
+          | Отзывов

@@ -3,52 +3,22 @@
 
 .confirm-room {
   box-sizing: border-box;
-  max-width: 27.1429rem;
+  width: 27.1429rem;
   padding: 3.3571rem 2.0714rem 2.0714rem;
   background-color: $white-color-100;
   border: 0.0714rem solid $black-color-12;
   border-radius: 0.2857rem;
   box-shadow: 0rem 0rem 1.7857rem $black-color-20;
 
-  &__top {
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
+
+  &__room-info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 1.1429rem;
-  }
-
-  &__group {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-
-    .button {
-      width: 100%;
-      padding: 1rem 2.5rem 1rem 2rem;
-    }
-  }
-
-  &__item {
-    @media screen and (max-width: 418px) {
-      width: 100%;
-    }
-
-    + .confirm-room__item {
-      @media screen and (max-width: 418px) {
-        margin-left: 0;
-        margin-top: 0.7143rem;
-      }
-    }
-  }
-
-  &__label {
-    font-weight: bold;
-    font-size: 0.8571rem;
-    line-height: 1.0714rem;
-    color: $primary-color-100;
-    text-transform: uppercase;
   }
 
   &__room {
@@ -81,87 +51,91 @@
     color: $primary-color-50;
   }
 
-  &__form {
-    margin-bottom: 1.3571rem;
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    &:nth-child(1) {
+      margin-bottom: 1.5714rem;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 1.5rem;
+
+      .confirm-room__label {
+        margin-bottom: 0.2857rem;
+      }
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 1.5714rem;
+    }
+  }
+
+  &__item {
+    width: 10.7143rem;
+    margin: 0;
+
+    @media screen and (max-width: 390px) {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    font-weight: bold;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
+    color: $primary-color-100;
+    text-transform: uppercase;
+  }
+
+  &__book-info {
+    margin-bottom: 2.1143rem;
 
     .confirm-room__group {
-      margin-bottom: 1rem;
-
-      .confirm-room__item {
-        width: 10.7143rem;
-
-        @media screen and (max-width: 420px) {
-          width: 100%;
-        }
-      }
-
-      .confirm-room__item + .confirm-room__item {
-        margin-left: 1.4286rem;
-
-        @media screen and (max-width: 420px) {
-          margin-left: 0;
-        }
-      }
+      flex-wrap: nowrap;
+      margin-bottom: 1.2143rem;
     }
 
-    .confirm-room__item {
-      margin: 0;
-      padding: 0;
-    }
-  }
+    .confirm-room__info {
+      width: 15.4286rem;
+      margin-right: 0.7143rem;
+      line-height: 1.2857rem;
 
-  &__info {
-    margin-bottom: 2.2143rem;
+      &_theme_has-tip {
+        position: relative;
 
-    .confirm-room__group {
-      margin-bottom: 0.7143rem;
-    }
-  }
+        &::after {
+          content: 'i';
+          position: absolute;
+          top: 0;
+          right: -1.7857rem;
+          width: 1.4286rem;
+          height: 1.4286rem;
+          font-weight: bold;
+          line-height: 1.4286rem;
+          color: $primary-color-25;
+          border: 0.0714rem solid $primary-color-25;
+          border-radius: 50%;
+          text-align: center;
+          cursor: help;
 
-  &__left-col {
-    width: 15.3571rem;
-    line-height: 1.3571rem;
-
-    @media screen and (max-width: 418px) {
-      width: 70%;
-    }
-
-    &_tip {
-      position: relative;
-
-      &::after {
-        content: 'i';
-        position: absolute;
-        top: 0;
-        right: -1.7857rem;
-        width: 1.4286rem;
-        height: 1.4286rem;
-        font-weight: bold;
-        line-height: 1.4286rem;
-        color: $primary-color-25;
-        border: 0.0714rem solid $primary-color-25;
-        border-radius: 50%;
-        text-align: center;
-        cursor: help;
-
-        @media screen and (max-width: 418px) {
-          display: none;
+          @media screen and (max-width: 400px) {
+            display: none;
+          }
         }
       }
     }
-  }
 
-  &__right-col {
-    max-width: 5.3571rem;
-
-    @media screen and (max-width: 418px) {
-      width: 30%;
+    .confirm-room__price {
+      width: 5rem;
+      font-weight: normal;
+      line-height: 1.2857rem;
       text-align: right;
     }
-  }
-
-  &__bottom &__group:first-child {
-    margin-bottom: 1.2857rem;
   }
 
   &__total {
@@ -181,5 +155,10 @@
     flex-grow: 1;
     margin: 0 0.3571rem 0.3571rem;
     border-bottom: 0.0714rem dashed $primary-color-25;
+  }
+
+  .button_theme_with-purple-gradient-and-arrow {
+    width: 100%;
+    padding: 1rem 2.5rem 1rem 2rem;
   }
 }

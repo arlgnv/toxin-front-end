@@ -1,4 +1,4 @@
-@import '../field-subscription/field-subscription';
+@import '../text-field-subscription/text-field-subscription';
 
 .main-footer {
   padding-top: 7.1429rem;
@@ -14,7 +14,7 @@
     justify-content: space-between;
   }
 
-  &__top-left {
+  &__site-info {
     width: 18.5714rem;
 
     @media screen and (max-width: 858px) {
@@ -50,7 +50,7 @@
       display: none;
     }
 
-    & > .main-footer__item:nth-child(2n) {
+    > .main-footer__item:nth-child(2n) {
       margin: 0 6.5714rem 0 4.1429rem;
     }
   }
@@ -82,7 +82,7 @@
     }
   }
 
-  &__top-right {
+  &__newsletter {
     width: 18.5714rem;
 
     @media screen and (max-width: 858px) {
@@ -98,7 +98,7 @@
     }
   }
 
-  &__bottom {
+  &__other-info {
     margin-top: 5.7286rem;
     padding: 1.6571rem 0;
     border-top: 0.0714rem solid $gray-color-100;

@@ -9,9 +9,9 @@
     top: 49%;
     right: 1.1857rem;
     box-sizing: border-box;
-    width: 9px;
-    height: 9px;
-    border: 2.0006px solid $primary-color-50;
+    width: 0.6429rem;
+    height: 0.6429rem;
+    border: 0.1429rem solid $primary-color-50;
     border-top: 0;
     border-left: 0;
     transform: translateY(-50%) rotate(45deg);
@@ -74,7 +74,7 @@
     align-items: center;
   }
 
-  &__button {
+  &__control-button {
     position: relative;
     box-sizing: border-box;
     display: flex;
@@ -103,11 +103,11 @@
       cursor: default;
     }
 
-    &_type_add::before {
+    &_theme_plus::before {
       width: 0.5714rem;
     }
 
-    &_type_add::after {
+    &_theme_plus::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -130,7 +130,7 @@
     text-align: center;
   }
 
-  &__control-button {
+  &__button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -148,7 +148,7 @@
       display: none;
     }
 
-    &_type_apply {
+    &_theme_apply-button {
       margin-left: auto;
       color: $purple-color-100;
     }

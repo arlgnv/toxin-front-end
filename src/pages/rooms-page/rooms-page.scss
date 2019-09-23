@@ -1,6 +1,6 @@
 @import '../../utilities/init';
 @import '../../components/pagination/pagination';
-@import '../../components/range/range';
+@import '../../components/range-slider/range-slider';
 @import '../../components/checkboxes/checkbox-poor/checkbox-poor';
 @import '../../components/checkboxes/checkbox-rich/checkbox-rich';
 @import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
@@ -42,6 +42,10 @@
         background: $white-color-100;
         overflow: scroll;
         transition: left ease 1s;
+      }
+
+      &_showed {
+        left: 0;
       }
     }
 
@@ -185,7 +189,7 @@
     }
   }
 
-  .range {
+  .range-slider {
     &__group {
       margin-bottom: 1.4286rem;
     }
@@ -212,13 +216,6 @@
 
     @media screen and (max-width: 1159px) {
       width: 100%;
-    }
-
-    &__container {
-      @media screen and (max-width: 1159px) {
-        width: 100%;
-        height: auto;
-      }
     }
 
     &__title {
@@ -261,10 +258,15 @@
     }
 
     .room {
-      width: 100%;
+      @media screen and (max-width: 1159px) {
+        width: 100%;
+      }
 
       &__img {
-        width: 100%;
+        @media screen and (max-width: 1159px) {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }

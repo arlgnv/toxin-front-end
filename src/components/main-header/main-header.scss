@@ -84,7 +84,7 @@
   &__site-navigation {
     display: flex;
     margin: 0;
-    margin-right: 2.2143rem;
+    margin-right: 2.0143rem;
     padding: 0;
     list-style-type: none;
 
@@ -115,7 +115,7 @@
         }
       }
 
-      &_has-submenu + .main-header__item {
+      &_theme_has-submenu + .main-header__item {
         margin-left: 2rem;
 
         @media screen and (max-width: 946px) {
@@ -123,7 +123,7 @@
         }
       }
 
-      &_has-submenu > .main-header__link::after {
+      &_theme_has-submenu > .main-header__link::after {
         content: '';
         display: inline-block;
         width: 0.4286rem;
@@ -173,7 +173,7 @@
     }
 
     .main-header__item + .main-header__item {
-      margin-left: 1.5714rem;
+      margin-left: 1.4714rem;
 
       @media screen and (max-width: 360px) {
         margin-left: 0;

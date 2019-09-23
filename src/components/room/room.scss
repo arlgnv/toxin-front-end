@@ -18,7 +18,7 @@
 
   &__img {
     width: 19.3571rem;
-    height: auto;
+    height: 10.8571rem;
     border-radius: 0.2857rem 0.2857rem 0 0;
   }
 
@@ -81,13 +81,13 @@
       border-left: 0;
     }
 
-    &_prev {
+    &_theme_prev {
       &::before {
         transform: translateY(-50%) rotate(135deg);
       }
     }
 
-    &_next {
+    &_theme_next {
       right: 0;
 
       &::before {
@@ -101,7 +101,7 @@
     padding: 1.6429rem 1.3571rem 1.3571rem 1.4286rem;
   }
 
-  &__info-top {
+  &__book-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,41 +111,32 @@
   }
 
   &__number {
-    span:first-child {
-      font-weight: bold;
-      font-size: 0.9286rem;
-      line-height: 1.2143rem;
-      color: $primary-color-100;
-    }
+    font-weight: bold;
+    font-size: 1.2286rem;
+    line-height: 1.2143rem;
+    color: $primary-color-100;
+  }
 
-    span:nth-child(2n) {
-      font-weight: bold;
-      font-size: 1.2143rem;
-      line-height: 1.2143rem;
-      color: $primary-color-100;
-    }
+  &__type {
+    font-weight: bold;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
+    color: $purple-color-100;
+    text-transform: uppercase;
+  }
 
-    span:last-child {
-      font-weight: bold;
-      font-size: 0.8571rem;
-      line-height: 1.0714rem;
-      color: $purple-color-100;
-      text-transform: uppercase;
-    }
+  &__day-price {
+    font-size: 0.8571rem;
+    color: $primary-color-50;
   }
 
   &__price {
     font-weight: bold;
+    font-size: 1rem;
     line-height: 1.2857rem;
-    color: $primary-color-50;
-
-    span {
-      font-weight: normal;
-      font-size: 0.8571rem;
-    }
   }
 
-  &__info-bottom {
+  &__user-experience {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,12 +145,11 @@
   }
 
   &__testimonials {
+    color: $primary-color-50;
+  }
+
+  &__testimonials-amount {
     font-weight: bold;
     line-height: 1.2857rem;
-    color: $primary-color-50;
-
-    span {
-      font-weight: normal;
-    }
   }
 }
