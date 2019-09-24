@@ -1,5 +1,5 @@
 mixin checkbox-rich({id = "set id!", title = "set title!", description = "set description!"})
   p.checkbox-rich
-    input.checkbox-rich__field.visually-hidden(id=id type="checkbox")&attributes(attributes)
+    input.checkbox-rich__field.checkbox-rich__field_hidden(id=id type="checkbox")&attributes(attributes)
     label.checkbox-rich__label(for= id)= title
     span.checkbox-rich__description= description

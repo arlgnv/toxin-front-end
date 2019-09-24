@@ -4,10 +4,10 @@ mixin form-registration
     form.registration__form(action="https://echo.htmlacademy.ru" method="post")
       fieldset.registration__group
         p.registration__item
-          label.registration__label.visually-hidden(for="field-name") Введите имя
+          label.registration__label.registration__label_hidden(for="field-name") Введите имя
           +text-field-default(id="field-name" name="name" placeholder="Имя")
         p.registration__item
-          label.registration__label.visually-hidden(for="field-surname") Введите фамилию
+          label.registration__label.registration__label_hidden(for="field-surname") Введите фамилию
           +text-field-default(id="field-surname" name="surname" placeholder="Фамилия")
         ul.registration__list
           li.registration__item
@@ -20,10 +20,10 @@ mixin form-registration
       fieldset.registration__group
         legend.registration__group-title данные для входа в сервис
         p.registration__item
-          label.registration__label.visually-hidden(for="field-email") Введите email
+          label.registration__label.registration__label_hidden(for="field-email") Введите email
           +text-field-default(id="field-emai" type="email" name="email" placeholder="Email")
         p.registration__item
-          label.registration__label.visually-hidden(for="field-password") Введите пароль
+          label.registration__label.registration__label_hidden(for="field-password") Введите пароль
           +text-field-default(id="field-password" type="password" name="password" placeholder="Пароль")
       p.registration__group
         +toggle-button({"id": "field-newsletter", "title": "Получать спецпредложения"})(name="newsletter")

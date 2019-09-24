@@ -26,19 +26,33 @@
     }
   }
 
-  &__field:checked + &__label::after {
-    content: '';
-    position: absolute;
-    top: 0.2857rem;
-    left: 0.4286rem;
-    width: 0.7143rem;
-    height: 0.7857rem;
-    background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
-  }
+  &__field {
+    &:checked + .checkbox-rich__label::after {
+      content: '';
+      position: absolute;
+      top: 0.2857rem;
+      left: 0.4286rem;
+      width: 0.7143rem;
+      height: 0.7857rem;
+      background: url('../../images/checkbox/checkbox-arrow.svg') no-repeat center;
+    }
 
-  &__field:focus + &__label::before {
-    outline: 0.3571rem auto $outline-color-100;
-    outline-offset: -0.1429rem;
+    &:focus + .checkbox-rich__label::before {
+      outline: 0.3571rem auto $outline-color-100;
+      outline-offset: -0.1429rem;
+    }
+
+    &_hidden {
+      position: absolute;
+      width: 0.0714rem;
+      height: 0.0714rem;
+      margin: -0.0714rem;
+      border: 0;
+      padding: 0;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
   }
 
   &__description {

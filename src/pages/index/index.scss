@@ -1,4 +1,5 @@
 @import '../../utilities/init';
+@import '../../components/buttons/button';
 @import '../../components/main-header/main-header';
 @import '../../components/forms/form-find-room/form-find-room';
 @import '../../components/main-footer/main-footer';
@@ -11,6 +12,20 @@
 
   @media screen and (max-width: 946px) {
     padding: 2.1429rem 0;
+  }
+
+  &__title {
+    &_hidden {
+      position: absolute;
+      width: 0.0714rem;
+      height: 0.0714rem;
+      margin: -0.0714rem;
+      border: 0;
+      padding: 0;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
   }
 
   &__info {

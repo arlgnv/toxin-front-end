@@ -51,5 +51,17 @@
       outline: 0.3571rem auto $outline-color-100;
       outline-offset: -0.1429rem;
     }
+
+    &_hidden {
+      position: absolute;
+      width: 0.0714rem;
+      height: 0.0714rem;
+      margin: -0.0714rem;
+      border: 0;
+      padding: 0;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
   }
 }

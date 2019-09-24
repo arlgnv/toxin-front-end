@@ -1,4 +1,4 @@
 mixin radio-button({id = "set id!", title = "set title!"})
   p.radio-button
-    input.radio-button__field.visually-hidden(id= id type="radio")&attributes(attributes)
+    input.radio-button__field.radio-button__field_hidden(id= id type="radio")&attributes(attributes)
     label.radio-button__label(for= id)= title

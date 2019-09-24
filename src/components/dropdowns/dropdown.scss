@@ -17,6 +17,14 @@
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &_theme_date-field {
+    width: 150px;
+
+    .dropdown__field::placeholder {
+      line-height: 18px;
+    }
+  }
+
   &__field {
     box-sizing: border-box;
     width: 100%;

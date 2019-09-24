@@ -1,15 +1,13 @@
-.button {
-  &_theme_with-border-gradient {
-    padding: 0.1429rem;
-    border-radius: 1.5714rem;
-    background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+.button_theme_with-border-gradient {
+  padding: 0.1429rem;
+  border-radius: 1.5714rem;
+  background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
-    &:hover {
-      background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
-    }
+  &:hover {
+    background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
   }
 
-  &__text {
+  .button__text {
     box-sizing: border-box;
     display: inline-block;
     padding: 0.5714rem 1.2857rem;

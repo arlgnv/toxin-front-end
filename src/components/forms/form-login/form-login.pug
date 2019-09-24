@@ -3,10 +3,10 @@ mixin form-login
     h2.login__title Войти
     form.login__form(action="https://echo.htmlacademy.ru" method="post")
       p.login__group
-        label.visually-hidden(for="field-email") Введите email
+        label.login__label.login__label_hidden(for="field-email") Введите email
         +text-field-default(id="field-email" name="email" type="email" placeholder="Email")
       p.login__group
-        label.visually-hidden(for="field-password") Введите пароль
+        label.login__label.login__label_hidden(for="field-password") Введите пароль
         +text-field-default(id="field-password" name="password" type="password" placeholder="Пароль")
       p.login__group
         +button-with-purple-gradient-and-arrow("войти")(type="submit")

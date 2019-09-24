@@ -1,4 +1,5 @@
 @import '../../utilities/init';
+@import '../../components/buttons/button';
 @import '../../components/main-header/main-header';
 @import '../../components/forms/form-registration/form-registration';
 @import '../../components/main-footer/main-footer';
@@ -7,6 +8,20 @@
   flex-grow: 1;
   padding: 2.1429rem 0 1.8571rem;
   background: url('../../images/login-page/background.jpg') no-repeat center / cover;
+
+  &__title {
+    &_hidden {
+      position: absolute;
+      width: 0.0714rem;
+      height: 0.0714rem;
+      margin: -0.0714rem;
+      border: 0;
+      padding: 0;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
 
   .registration {
     margin: 0 auto;

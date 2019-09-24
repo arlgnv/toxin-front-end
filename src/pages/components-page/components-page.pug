@@ -1,0 +1,100 @@
+extends ../../templates/template-base
+
+block title
+  title Отель Toxin | Страница с компонентами проекта
+
+block styles
+  link(rel="stylesheet" href="./components-page.scss")
+
+block content
+  include ../../utilities/mixins-components
+
+  main.components-page
+    .container
+      h1.visually-hidden Компоненты проекта
+      article.ui-kit
+        h2.ui-kit__title Цвета и шрифты
+        .ui-kit__group
+            p.ui-kit__item
+              span.ui-kit__dye
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Dark shade 100%
+                  span.ui-kit__dye-hex #1f2041
+              span.ui-kit__dye.ui-kit__dye_theme_75
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Dark shade 75%
+                  span.ui-kit__dye-hex #1f2041
+              span.ui-kit__dye.ui-kit__dye_theme_50
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Dark shade 50%
+                  span.ui-kit__dye-hex #1f2041
+              span.ui-kit__dye.ui-kit__dye_theme_25
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Dark shade 25%
+                  span.ui-kit__dye-hex #1f2041
+              span.ui-kit__dye.ui-kit__dye_theme_5
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Dark shade 5%
+                  span.ui-kit__dye-hex #1f2041
+              span.ui-kit__dye.ui-kit__dye_theme_purple
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Purple
+                  span.ui-kit__dye-hex #bc9cff
+              span.ui-kit__dye.ui-kit__dye_theme_green
+                span.ui-kit__dye-image
+                span.ui-kit__dye-name Green
+                  span.ui-kit__dye-hex #6fcf97
+            p.ui-kit__item
+              span.ui-kit__font.ui-kit__font_theme_h1
+                span.ui-kit__font-type h1
+                span.ui-kit__font-example This one is the sub-section or widget title
+              span.ui-kit__font.ui-kit__font_theme_h2
+                span.ui-kit__font-type h2
+                span.ui-kit__font-example Next one is the item title inside widgets
+              span.ui-kit__font.ui-kit__font_theme_h3
+                span.ui-kit__font-type h3
+                span.ui-kit__font-example This is a label or CTA text
+              span.ui-kit__font
+                span.ui-kit__font-type Body
+                span.ui-kit__font-example This is the body text which is used for most of the design, like paragraphs, lists, etc.
+      article.ui-kit
+        h2.ui-kit__title Элементы формы
+        .ui-kit__group
+            p.ui-kit__item
+              span.ui-kit__text-field.ui-kit__text-field_theme_with-tip(data-tip="default")
+                label.ui-kit__label(for="field-1") text field
+                +text-field-default(id="field-1" placeholder="Email")
+              span.ui-kit__text-field.ui-kit__text-field_theme_with-tip(data-tip="hover / focus")
+                label.ui-kit__label(for="field-2") text field
+                +text-field-default(id="field-2" value="This is pretty awesome" autofocus)
+              span.ui-kit__text-field.ui-kit__text-field_theme_with-tip(data-tip="default")
+                label.ui-kit__label(for="field-3") dropdown
+                +dropdown-default(id="field-3" placeholder="Сколько гостей")
+              span.ui-kit__text-field.ui-kit__text-field_theme_with-tip(data-tip="default")
+                label.ui-kit__label(for="field-4") masked text field
+                +text-field-masked(id="field-4" placeholder="дд.мм.гггг")
+              span.ui-kit__group
+                span.ui-kit__text-field
+                  label.ui-kit__label(for="field-5") date dropdown
+                  +dropdown-date(id="field-5" placeholder="дд.мм.гггг")
+                span.ui-kit__text-field
+                  label.ui-kit__label(for="field-6") date dropdown
+                  +dropdown-date(id="field-6" value="19.08.2019")
+              span.ui-kit__text-field
+                label.ui-kit__label(for="field-7") filter date dropdown
+                +dropdown-default(id="field-7" value="19 авг - 23 авг")
+              span.ui-kit__text-field
+                label.ui-kit__label(for="field-8") subscription text field
+                +text-field-subscription(id="field-8" placeholder="Email")
+            p.ui-kit__item
+              span.ui-kit__buttons-group
+                b.ui-kit__buttons-title checkbox buttons
+                +checkbox-poor({"id": "field-9", "title": "Можно курить"})
+                +checkbox-poor({"id": "field-10", "title": "Можно с питомцами"})(checked)
+                +checkbox-poor({"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)"})(checked)
+              span.ui-kit__buttons-group
+                b.ui-kit__buttons-title radio buttons
+                +radio-button({"id": "field-12", "title": "Мужчина"})(name="gender" checked)
+                +radio-button({"id": "field-13", "title": "Женщина"})(name="gender")
+
+  script(src="./components-page.js")
