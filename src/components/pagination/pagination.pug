@@ -1,15 +1,22 @@
 mixin pagination
   ul.pagination
-    li.pagination__item.pagination__item_current
-      a.pagination__link(href="mock-adress/change-me") 1
-    li.pagination__item
-      a.pagination__link(href="mock-adress/change-me") 2
-    li.pagination__item
-      a.pagination__link(href="mock-adress/change-me") 3
-    li.pagination__item
-      a.pagination__link(href="mock-adress/change-me") ...
-    li.pagination__item
-      a.pagination__link(href="mock-adress/change-me") 15
-    li.pagination__item.pagination__item_next-page
-      a.pagination__link(href="mock-adress/change-me")
+    -
+      const items = 
+      [
+        {"number": "1", "isCurrent": true, "isNextPage": false},
+        {"number": "2", "isCurrent": false, "isNextPage": false},
+        {"number": "3", "isCurrent": false, "isNextPage": false},
+        {"number": "...", "isCurrent": false, "isNextPage": false},
+        {"number": "15", "isCurrent": false, "isNextPage": true}
+      ]
+    each item in items
+      if item.isCurrent === true
+        li.pagination__item.pagination__item_current
+          a.pagination__link(href="mock-adress/change-me")= item.number
+      else if item.isNextPage === true
+        li.pagination__item.pagination__item_next-page
+          a.pagination__link(href="mock-adress/change-me")
+      else
+        li.pagination__item
+          a.pagination__link(href="mock-adress/change-me")= item.number
   p.pagination__description 1 – 12 из 100+ вариантов аренды

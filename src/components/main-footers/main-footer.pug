@@ -1,0 +1,43 @@
+mixin main-footer
+  footer.main-footer
+    .main-footer__main-info
+      .container
+        .main-footer__site-info
+          a.main-footer__logo(href="../index/index.pug")
+            img.main-footer__logo-image(src="../../logo.svg" alt="Отель Toxin")
+          p.main-footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        nav.main-footer__navigation
+          -
+            const itemsMenu = 
+            [
+              {"title": "Навигация", "subItems": ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+              {"title": "О нас", "subItems": ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+              {"title": "Служба поддержки", "subItems": ["Соглашения", "Сообщества", "Связь с нами"]}
+            ]
+          each itemMenu in itemsMenu
+            .main-footer__item
+              b.main-footer__title= itemMenu.title
+              ul.main-footer__list
+                each subItem in itemMenu.subItems
+                  li.main-footer__item
+                    a.main-footer__link(href="/mock-address/change-me")= subItem
+        .main-footer__newsletter
+          b.main-footer__title Подписка
+          p.main-footer__text Получайте специальные предложения и новости сервиса
+          form.main-footer__form(action="https://echo.htmlacademy.ru" method="post")
+            label.main-footer__label.main-footer__label_hidden(for="field-subscription") Введите email
+            +text-field-subscription(id="field-subscription" name="email" placeholder="Email")
+    .main-footer__other-info
+      .container
+        p.main-footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.
+        ul.main-footer__list
+          -
+            const items = 
+            [
+              {"theme": "twitter", "description": "Твиттер"},
+              {"theme": "facebook", "description": "Фейсбук"},
+              {"theme": "instagram", "description": "Инстаграм"}
+            ]
+          each item in items
+            li.main-footer__item
+              a(class=`main-footer__link main-footer__link_theme_${item.theme}` href="/mock-address/change-me" arail-label=`${item.description}`)

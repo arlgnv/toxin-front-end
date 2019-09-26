@@ -1,0 +1,7 @@
+mixin checkbox({id = "set id!", title = "set title!", theme = "", description = ""})
+  - const className = theme !== "" ? `checkbox checkbox_theme_${theme}` : "checkbox"
+  span(class= className)
+    input.checkbox__field.checkbox__field_hidden(id= id type="checkbox")&attributes(attributes)
+    label.checkbox__label(for= id)= title
+    if description !== ''
+      span.checkbox__description= description

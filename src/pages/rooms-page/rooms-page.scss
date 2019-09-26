@@ -1,14 +1,12 @@
 @import '../../utilities/init';
-@import '../../components/buttons/button';
 @import '../../components/pagination/pagination';
 @import '../../components/range-slider/range-slider';
-@import '../../components/checkboxes/checkbox-poor/checkbox-poor';
-@import '../../components/checkboxes/checkbox-rich/checkbox-rich';
-@import '../../components/checkboxes/checkbox-expandable/checkbox-expandable';
+@import '../../components/checkbox/checkbox';
+@import '../../components/checkbox/checkbox-expandable/checkbox-expandable';
 @import '../../components/dropdowns/dropdown';
 @import '../../components/room/room';
-@import '../../components/main-header/main-header';
-@import '../../components/main-footer/main-footer';
+@import '../../components/main-headers/main-header';
+@import '../../components/main-footers/main-footer';
 
 .rooms-page {
   flex-grow: 1;
@@ -283,6 +281,10 @@
       @media screen and (max-width: 591px) {
         width: 100%;
         margin-right: 0;
+      }
+
+      &-link {
+        text-decoration: none;
       }
     }
 

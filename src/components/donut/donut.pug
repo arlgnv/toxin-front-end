@@ -21,7 +21,13 @@ mixin donut
         text(x="50%" y="50%" transform="translate(0 19)") голосов
     figcaption(class="donut__description")
       ul(class="donut__list")
-        li(class="donut__item donut__item_theme_great") Великолепно
-        li(class="donut__item donut__item_theme_good") Хорошо
-        li(class="donut__item donut__item_theme_satisfactory") Удовлетворительно
-        li(class="donut__item donut__item_theme_disappointed") Разочарован
+        -
+          const items = 
+          [
+            {"text": "Великолепно", "theme": "great"},
+            {"text": "Хорошо", "theme": "good"},
+            {"text": "Удовлетворительно", "theme": "satisfactory"},
+            {"text": "Разочарован", "theme": "disappointed"}
+          ]
+        each item in items
+          li(class=`donut__item donut__item_theme_${item.theme}`)= item.text

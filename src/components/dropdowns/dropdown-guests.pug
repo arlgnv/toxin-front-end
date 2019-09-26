@@ -2,24 +2,14 @@ mixin dropdown-guests
   span.dropdown.dropdown_type_guests.js-dropdown_type_guests
     input.dropdown__field(type="text")&attributes(attributes)
     span.dropdown__container.dropdown__container_hidden
-      span.dropdown__item
-        b.dropdown__title Взрослые
-        span.dropdown__count
-          button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-          span.dropdown__amount 0
-          button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-      span.dropdown__item
-        b.dropdown__title Дети
-        span.dropdown__count
-          button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-          span.dropdown__amount 0
-          button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-      span.dropdown__item
-        b.dropdown__title Младенцы
-        span.dropdown__count
-          button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-          span.dropdown__amount.dropdown__amount_baby 0
-          button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
+      - const items = ["Взрослые", "Дети", "Младенцы"]
+      each item in items
+        span.dropdown__item
+          b.dropdown__title= item
+          span.dropdown__count
+            button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
+            span.dropdown__amount 0
+            button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
       span.dropdown__item.dropdown__item_shift-from-top_20
         button.dropdown__button.dropdown__button_theme_clear-button.dropdown__button_disabled(type="button") Очистить
         button.dropdown__button.dropdown__button_theme_apply-button(type="button") Применить

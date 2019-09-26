@@ -3,21 +3,52 @@
 @import '../../components/dropdowns/dropdown';
 @import '../../components/text-field-masked/text-field-masked';
 @import '../../components/text-field-subscription/text-field-subscription';
-@import '../../components/checkboxes/checkbox-poor/checkbox-poor';
 @import '../../components/radio-button/radio-button';
-@import '../../components/main-header/main-header';
-@import '../../components/main-footer/main-footer';
+@import '../../components/toggle-button/toggle-button';
+@import '../../components/buttons/button-like/button-like';
+@import '../../components/rating/rating';
+@import '../../components/range-slider/range-slider';
+@import '../../components/buttons/button-default/button-default';
+@import '../../components/buttons/button-with-purple-gradient-and-arrow/button-with-purple-gradient-and-arrow';
+@import '../../components/pagination/pagination';
+@import '../../components/checkbox/checkbox-expandable/checkbox-expandable';
+@import '../../components/checkbox/checkbox';
+@import '../../components/bullet-list/bullet-list';
+@import '../../components/advantage/advantage';
+@import '../../components/testimonial/testimonial';
+@import '../../components/forms/form-find-room/form-find-room';
+@import '../../components/forms/form-confirm-room/form-confirm-room';
+@import '../../components/forms/form-registration/form-registration';
+@import '../../components/forms/form-login/form-login';
+@import '../../components/room/room';
+@import '../../components/main-headers/main-header';
+@import '../../components/main-footers/main-footer';
 
 .components-page {
   min-height: 100vh;
   background-color: #e5e5e5;
+
+  &__title {
+    &_hidden {
+      position: absolute;
+      width: 0.0714rem;
+      height: 0.0714rem;
+      margin: -0.0714rem;
+      border: 0;
+      padding: 0;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
 }
 
 .ui-kit {
   position: relative;
   box-sizing: border-box;
+  width: 1440px;
   //height: 900px;
-  margin: 50px 0;
+  margin: 50px auto;
   padding: 159px 140px 140px 140px;
   background-color: $white-color-100;
 
@@ -31,6 +62,10 @@
     background: url('../../logo.svg') no-repeat left center;
   }
 
+  &_theme_light {
+    background-color: #f4f4f6;
+  }
+
   &__title {
     position: absolute;
     top: -25px;
@@ -41,23 +76,19 @@
     font-size: 19px;
     color: $primary-color-100;
   }
+}
 
-  &__group {
-    display: flex;
-    justify-content: space-between;
-  }
+.colors-fonts {
+  display: flex;
+  justify-content: space-between;
 
-  &__item {
-    margin: 0;
-    padding: 0;
-  }
-
-  &__dye {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__colors {
     width: 269px;
-    margin-bottom: 20px;
+  }
+
+  &__color {
+    display: flex;
+    margin: 0;
 
     &-image {
       width: 70px;
@@ -81,36 +112,38 @@
       text-transform: uppercase;
     }
 
-    &_theme_75 .ui-kit__dye-image {
+    &_theme_75 .colors-fonts__color-image {
       background-color: $primary-color-75;
     }
 
-    &_theme_50 .ui-kit__dye-image {
+    &_theme_50 .colors-fonts__color-image {
       background-color: $primary-color-50;
     }
 
-    &_theme_25 .ui-kit__dye-image {
+    &_theme_25 .colors-fonts__color-image {
       background-color: $primary-color-25;
     }
 
-    &_theme_5 .ui-kit__dye-image {
+    &_theme_5 .colors-fonts__color-image {
       background-color: $primary-color-5;
     }
 
-    &_theme_purple .ui-kit__dye-image {
+    &_theme_purple .colors-fonts__color-image {
       background-color: $purple-color-100;
     }
 
-    &_theme_green .ui-kit__dye-image {
+    &_theme_green .colors-fonts__color-image {
       background-color: $green-color-100;
     }
   }
 
+  &__fonts {
+    width: 403px;
+  }
+
   &__font {
     display: flex;
-    justify-content: space-between;
-    width: 403px;
-    margin-bottom: 10px;
+    margin: 0;
 
     &-type {
       width: 37px;
@@ -125,12 +158,12 @@
     &_theme_h1 {
       font-size: 24px;
 
-      .ui-kit__font-type {
+      .colors-fonts__font-type {
         line-height: 29px;
         text-transform: uppercase;
       }
 
-      .ui-kit__font-example {
+      .colors-fonts__font-example {
         font-weight: bold;
         line-height: 30px;
         color: $primary-color-100;
@@ -140,12 +173,12 @@
     &_theme_h2 {
       font-size: 19px;
 
-      .ui-kit__font-type {
+      .colors-fonts__font-type {
         line-height: 23px;
         text-transform: uppercase;
       }
 
-      .ui-kit__font-example {
+      .colors-fonts__font-example {
         font-weight: bold;
         line-height: 34px;
         color: $primary-color-100;
@@ -156,19 +189,35 @@
       font-size: 12px;
       line-height: 15px;
 
-      .ui-kit__font-type {
+      .colors-fonts__font-type {
         text-transform: uppercase;
       }
 
-      .ui-kit__font-example {
+      .colors-fonts__font-example {
         font-weight: bold;
         color: $primary-color-100;
       }
     }
   }
+}
+
+.form-elements {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__text-fields {
+    width: 320px;
+  }
 
   &__text-field {
-    display: block;
+    margin: 0;
 
     &_theme_with-tip {
       position: relative;
@@ -186,7 +235,7 @@
     }
   }
 
-  &__label {
+  &__title {
     display: block;
     font-style: normal;
     font-weight: bold;
@@ -195,4 +244,42 @@
     text-transform: uppercase;
     color: $primary-color-100;
   }
+
+  &__buttons-one {
+    width: 260px;
+  }
+
+  &__buttons-two {
+    width: 320px;
+  }
+
+  &__buttons {
+    margin: 0;
+  }
+
+  &__dropdowns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-group {
+      &:nth-child(1) {
+        width: 320px;
+      }
+
+      &:nth-child(2) {
+        width: 260px;
+      }
+
+      &:nth-child(3) {
+        width: 320px;
+      }
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
