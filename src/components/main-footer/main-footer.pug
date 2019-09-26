@@ -1,7 +1,8 @@
-mixin main-footer
-  footer.main-footer
+mixin main-footer({theme = ''} = {})
+  - const className = theme === '' ? 'main-footer' : `main-footer main-footer_theme_${theme}`
+  footer(class= className)
     .main-footer__main-info
-      .container
+      .main-footer__container
         .main-footer__site-info
           a.main-footer__logo(href="../index/index.pug")
             img.main-footer__logo-image(src="../../logo.svg" alt="Отель Toxin")
@@ -28,7 +29,7 @@ mixin main-footer
             label.main-footer__label.main-footer__label_hidden(for="field-subscription") Введите email
             +text-field-subscription(id="field-subscription" name="email" placeholder="Email")
     .main-footer__other-info
-      .container
+      .main-footer__container
         p.main-footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.
         ul.main-footer__list
           -

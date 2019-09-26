@@ -2,6 +2,8 @@
 @import '../../dropdowns/dropdown';
 
 .confirm-room {
+  $root: &;
+
   box-sizing: border-box;
   width: 27.1429rem;
   padding: 3.3571rem 2.0714rem 2.0714rem;
@@ -79,7 +81,7 @@
     &:nth-child(2) {
       margin-bottom: 1.5rem;
 
-      .confirm-room__label {
+      #{$root}__label {
         margin-bottom: 0.2857rem;
       }
     }
@@ -109,12 +111,12 @@
   &__book-info {
     margin-bottom: 2.1143rem;
 
-    .confirm-room__group {
+    #{$root}__group {
       flex-wrap: nowrap;
       margin-bottom: 1.2143rem;
     }
 
-    .confirm-room__info {
+    #{$root}__info {
       width: 15.4286rem;
       margin-right: 0.7143rem;
       line-height: 1.2857rem;
@@ -144,7 +146,7 @@
       }
     }
 
-    .confirm-room__price {
+    #{$root}__price {
       width: 5rem;
       font-weight: normal;
       line-height: 1.2857rem;
@@ -169,10 +171,5 @@
     flex-grow: 1;
     margin: 0 0.3571rem 0.3571rem;
     border-bottom: 0.0714rem dashed $primary-color-25;
-  }
-
-  .button_theme_with-purple-gradient-and-arrow {
-    width: 100%;
-    padding: 1rem 2.5rem 1rem 2rem;
   }
 }

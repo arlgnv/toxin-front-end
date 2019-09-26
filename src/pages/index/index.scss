@@ -1,16 +1,23 @@
 @import '../../utilities/init';
-@import '../../components/main-headers/main-header';
+@import '../../components/main-header/main-header';
 @import '../../components/forms/form-find-room/form-find-room';
-@import '../../components/main-footers/main-footer';
+@import '../../components/main-footer/main-footer';
 
 .main-page {
   position: relative;
   flex-grow: 1;
-  padding: 5rem 0 27.5714rem;
+  padding: 5rem 0 27.4714rem;
   background: url('../../images/index-page/background.jpg') no-repeat center/cover;
 
   @media screen and (max-width: 946px) {
     padding: 2.1429rem 0;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 84.2857rem;
+    margin: 0 auto;
+    padding: 0 0.7143rem;
   }
 
   &__title {
@@ -43,10 +50,10 @@
       display: none;
     }
   }
+}
 
-  .find-room {
-    @media screen and (max-width: 700px) {
-      margin: 0 auto;
-    }
+.find-room {
+  @media screen and (max-width: 700px) {
+    margin: 0 auto;
   }
 }

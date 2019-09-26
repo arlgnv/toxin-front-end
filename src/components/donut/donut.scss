@@ -23,18 +23,18 @@
     }
   }
 
-  &__text {
+  &__votes {
     fill: $purple-color-100;
     font-weight: bold;
     transform: translateY(-0.1429rem);
 
-    text:first-child {
+    &-amount {
       font-size: 1.7143rem;
       line-height: 2.1429rem;
       text-anchor: middle;
     }
 
-    text:last-child {
+    &-text {
       font-size: 0.8571rem;
       line-height: 1.0714rem;
       text-transform: uppercase;

@@ -1,12 +1,19 @@
 @import '../../utilities/init';
-@import '../../components/main-headers/main-header';
+@import '../../components/main-header/main-header';
 @import '../../components/forms/form-registration/form-registration';
-@import '../../components/main-footers/main-footer';
+@import '../../components/main-footer/main-footer';
 
 .registration-page {
   flex-grow: 1;
   padding: 2.1429rem 0 1.8571rem;
   background: url('../../images/login-page/background.jpg') no-repeat center / cover;
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 84.2857rem;
+    margin: 0 auto;
+    padding: 0 0.7143rem;
+  }
 
   &__title {
     &_hidden {
@@ -21,8 +28,8 @@
       overflow: hidden;
     }
   }
+}
 
-  .registration {
-    margin: 0 auto;
-  }
+.registration {
+  margin: 0 auto;
 }

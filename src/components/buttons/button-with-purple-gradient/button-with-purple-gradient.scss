@@ -1,9 +1,11 @@
-.button_theme_with-purple-gradient {
-  color: $white-color-100;
-  padding: 0.6429rem 1.4286rem;
-  background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+.button {
+  &_theme_with-purple-gradient {
+    color: $white-color-100;
+    padding: 0.6429rem 1.4286rem;
+    background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
-  &:hover {
-    background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
+    &:hover {
+      background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
+    }
   }
 }

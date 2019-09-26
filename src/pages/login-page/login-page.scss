@@ -1,7 +1,7 @@
 @import '../../utilities/init';
-@import '../../components/main-headers/main-header';
+@import '../../components/main-header/main-header';
 @import '../../components/forms/form-login/form-login';
-@import '../../components/main-footers/main-footer';
+@import '../../components/main-footer/main-footer';
 
 .login-page {
   flex-grow: 1;
@@ -10,6 +10,13 @@
 
   @media screen and (max-width: 946px) {
     padding: 2.1429rem 0;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 84.2857rem;
+    margin: 0 auto;
+    padding: 0 0.7143rem;
   }
 
   &__title {
@@ -25,8 +32,8 @@
       overflow: hidden;
     }
   }
+}
 
-  .login {
-    margin: 0 auto;
-  }
+.login {
+  margin: 0 auto;
 }

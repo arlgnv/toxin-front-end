@@ -1,7 +1,7 @@
 /* global $ window document */
 import '../../utilities/jquery-global';
 import 'ion-rangeslider';
-import '../../components/main-headers/main-header';
+import '../../components/main-header/main-header';
 import '../../components/checkbox/checkbox-expandable/checkbox-expandable';
 import '../../components/range-slider/range-slider';
 import { initComfortDropdown } from '../../components/dropdowns/dropdown';

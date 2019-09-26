@@ -24,17 +24,13 @@
 
   &__form {
     margin-bottom: 2.1143rem;
-
-    .button {
-      width: 100%;
-    }
   }
 
   &__group {
     margin: 0;
     padding: 0;
 
-    &:first-child {
+    &:nth-child(1) {
       margin-bottom: 0.7143rem;
     }
 
@@ -61,10 +57,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .button__text {
-      padding: 0.9286rem 1.1429rem;
-    }
   }
 
   &__text {

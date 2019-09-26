@@ -89,9 +89,9 @@ block content
             .form-elements__buttons-one
               p.form-elements__buttons
                 b.form-elements__title checkbox buttons
-                +checkbox-poor({"id": "field-9", "title": "Можно курить"})
-                +checkbox-poor({"id": "field-10", "title": "Можно с питомцами"})(checked)
-                +checkbox-poor({"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)"})(checked)
+                +checkbox({"id": "field-9", "title": "Можно курить"})
+                +checkbox({"id": "field-10", "title": "Можно с питомцами"})(checked)
+                +checkbox({"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)"})(checked)
               p.form-elements__buttons
                 b.form-elements__title radio buttons
                 +radio-button({"id": "field-12", "title": "Мужчина"})(name="gender" checked)
@@ -156,8 +156,8 @@ block content
                 {"title": "Шампунь", "name": "shampoo"}]})
             .form-elements__checkbox-rich
               b.form-elements__title rich checkbox buttons
-              +checkbox-rich({"id": "field-21", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см."})
-              +checkbox-rich({"id": "field-22", "title": "Помощник для инвалидов", "description": "На 1 этаже вас встретит специалист  и проводит до номера."})
+              +checkbox({"id": "field-21", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см."})
+              +checkbox({"id": "field-22", "title": "Помощник для инвалидов", "description": "На 1 этаже вас встретит специалист  и проводит до номера."})
             .form-elements__bullet-list
               b.form-elements__title bullet list
               +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
@@ -201,9 +201,9 @@ block content
       .container
         .headers-footers
           +main-header
-          +main-header-logged
+          +main-header({"theme": "logged"})
           +main-footer
-          +main-footer-poor
+          +main-footer({"theme": "poor"})
 
 
   script(src="./components-page.js")

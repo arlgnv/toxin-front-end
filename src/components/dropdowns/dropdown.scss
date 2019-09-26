@@ -1,4 +1,6 @@
 .dropdown {
+  $root: &;
+
   position: relative;
   display: inline-block;
   width: 100%;
@@ -18,10 +20,10 @@
   }
 
   &_theme_date-field {
-    width: 150px;
+    width: 10.7143rem;
 
-    .dropdown__field::placeholder {
-      line-height: 18px;
+    #{$root}__field::placeholder {
+      line-height: 1.2857rem;
     }
   }
 

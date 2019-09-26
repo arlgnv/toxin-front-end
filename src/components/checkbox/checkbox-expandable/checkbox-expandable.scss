@@ -1,13 +1,15 @@
 .checkbox-expandable {
+  $root: &;
+
   padding: 0;
   margin: 0;
 
   &_expanded {
-    .checkbox-expandable__title::after {
+    #{$root}__title::after {
       transform: rotate(-135deg);
     }
 
-    .checkbox-expandable__list {
+    #{$root}__list {
       display: block;
     }
   }

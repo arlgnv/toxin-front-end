@@ -1,18 +1,22 @@
-.button_theme_with-border-gradient {
-  padding: 0.1429rem;
-  border-radius: 1.5714rem;
-  background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+.button {
+  $root: &;
 
-  &:hover {
-    background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
-  }
-
-  .button__text {
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 0.5714rem 1.2857rem;
-    color: $purple-color-100;
+  &_theme_with-border-gradient {
+    padding: 0.1429rem;
     border-radius: 1.5714rem;
-    background-color: $white-color-100;
+    background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+
+    &:hover {
+      background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
+    }
+
+    #{$root}__text {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 0.9286rem 1.2143rem;
+      color: $purple-color-100;
+      border-radius: 1.5714rem;
+      background-color: $white-color-100;
+    }
   }
 }

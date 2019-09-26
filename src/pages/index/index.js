@@ -2,7 +2,7 @@
 import '../../utilities/jquery-global';
 
 import 'air-datepicker';
-import '../../components/main-headers/main-header';
+import '../../components/main-header/main-header';
 import '../../components/calendar/calendar';
 import { initGuestsDropdown } from '../../components/dropdowns/dropdown';
 

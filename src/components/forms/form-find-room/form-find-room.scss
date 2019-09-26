@@ -3,6 +3,8 @@
 @import '../../calendar/calendar';
 
 .find-room {
+  $root: &;
+
   box-sizing: border-box;
   max-width: 27.1429rem;
   padding: 2.7857rem 2.0714rem 2.0714rem;
@@ -23,7 +25,7 @@
   &__group {
     margin: 0;
 
-    &:first-child {
+    &:nth-child(1) {
       display: flex;
       justify-content: space-between;
       margin-bottom: 1.5rem;
@@ -46,7 +48,7 @@
       width: 100%;
     }
 
-    + .find-room__item {
+    + #{$root}__item {
       margin-left: 0.7143rem;
 
       @media screen and (max-width: 390px) {
@@ -64,9 +66,5 @@
     line-height: 1.0714rem;
     color: $primary-color-100;
     text-transform: uppercase;
-  }
-
-  .button {
-    width: 100%;
   }
 }

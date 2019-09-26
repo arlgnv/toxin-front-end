@@ -1,4 +1,6 @@
 .radio-button {
+  $root: &;
+
   margin: 0;
   padding: 0;
 
@@ -26,11 +28,11 @@
   }
 
   &__field {
-    &:checked + .radio-button__label {
+    &:checked + #{$root}__label {
       color: $primary-color-75;
     }
 
-    &:checked + .radio-button__label::after {
+    &:checked + #{$root}__label::after {
       content: '';
       position: absolute;
       top: 0.7rem;
@@ -43,7 +45,7 @@
       transform: translate(-50%, -50%);
     }
 
-    &:focus + .radio-button__label::before {
+    &:focus + #{$root}__label::before {
       outline: 0.3571rem auto $outline-color-100;
       outline-offset: -0.1429rem;
     }

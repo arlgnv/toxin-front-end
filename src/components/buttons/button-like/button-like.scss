@@ -1,48 +1,52 @@
-.button_theme_like {
-  position: relative;
-  box-sizing: border-box;
-  min-width: 2.8571rem;
-  margin: 0;
-  padding: 0.0714rem;
-  font: inherit;
-  line-height: 0;
-  border: none;
-  border-radius: 1.5714rem;
-  background: $primary-color-25;
-  cursor: pointer;
+.button {
+  $root: &;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0.2143rem;
-    height: 0.7143rem;
-    width: 0.7143rem;
-    background: url('../../images/button-with-like/heart.svg') no-repeat center;
-    transform: translateY(-50%);
-  }
-
-  .button__text {
-    display: inline-block;
+  &_theme_like {
+    position: relative;
     box-sizing: border-box;
-    min-width: 2.7143rem;
-    padding: 0.2143rem 0.3571rem 0.2143rem 1.0714rem;
-    font-size: 0.7143rem;
-    line-height: 0.8571rem;
-    color: $primary-color-25;
+    min-width: 2.8571rem;
+    margin: 0;
+    padding: 0.0714rem;
+    font: inherit;
+    line-height: 0;
+    border: none;
     border-radius: 1.5714rem;
-    background-color: $white-color-100;
+    background: $primary-color-25;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0.2143rem;
+      height: 0.7143rem;
+      width: 0.7143rem;
+      background: url('../../images/button-with-like/heart.svg') no-repeat center;
+      transform: translateY(-50%);
+    }
+
+    #{$root}__text {
+      display: inline-block;
+      box-sizing: border-box;
+      min-width: 2.7143rem;
+      padding: 0.2143rem 0.3571rem 0.2143rem 1.0714rem;
+      font-size: 0.7143rem;
+      line-height: 0.8571rem;
+      color: $primary-color-25;
+      border-radius: 1.5714rem;
+      background-color: $white-color-100;
+    }
   }
-}
 
-.button_theme_liked {
-  background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+  &_theme_liked {
+    background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
-  &::before {
-    background-image: url('../../images/button-with-like/heart-filled.svg');
-  }
+    &::before {
+      background-image: url('../../images/button-with-like/heart-filled.svg');
+    }
 
-  .button__text {
-    color: $purple-color-100;
+    #{$root}__text {
+      color: $purple-color-100;
+    }
   }
 }

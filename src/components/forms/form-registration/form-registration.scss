@@ -5,6 +5,8 @@
 @import '../../checkbox/checkbox';
 
 .registration {
+  $root: &;
+
   position: relative;
   z-index: 1;
   box-sizing: border-box;
@@ -36,11 +38,11 @@
     &:nth-child(1) {
       margin-bottom: 0.5143rem;
 
-      .registration__item:nth-child(1) {
+      #{$root}__item:nth-child(1) {
         margin-bottom: 0.7143rem;
       }
 
-      .registration__item:nth-child(2) {
+      #{$root}__item:nth-child(2) {
         margin-bottom: 0.5714rem;
       }
     }
@@ -52,7 +54,7 @@
     &:nth-child(3) {
       margin-bottom: 0.5286rem;
 
-      .registration__item:nth-of-type(1) {
+      #{$root}__item:nth-of-type(1) {
         margin-bottom: 0.7857rem;
       }
     }
@@ -106,7 +108,7 @@
     padding: 0;
     list-style-type: none;
 
-    .registration__item + .registration__item {
+    #{$root}__item + #{$root}__item {
       margin-left: 1.5rem;
     }
   }
@@ -125,11 +127,9 @@
     color: $black-color-100;
   }
 
-  .button_theme_with-purple-gradient-and-arrow {
-    width: 100%;
-  }
-
-  .button__text {
-    padding: 0.9286rem 1.6429rem;
+  .button_theme_with-border-gradient {
+    .button__text {
+      padding: 0.9286rem 1.7143rem;
+    }
   }
 }

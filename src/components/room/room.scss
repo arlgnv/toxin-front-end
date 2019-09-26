@@ -1,6 +1,8 @@
 @import '../../components/rating/rating';
 
 .room {
+  $root: &;
+
   box-sizing: border-box;
   width: 19.2857rem;
   background: $white-color-100;
@@ -11,7 +13,7 @@
     position: relative;
     line-height: 0;
 
-    &:hover .room__slider-arrows {
+    &:hover #{$root}__slider-arrows {
       display: block;
     }
   }
@@ -46,7 +48,7 @@
       background-color: $white-color-100;
     }
 
-    & + .room__slider-button {
+    + #{$root}__slider-button {
       margin-left: 0.2857rem;
     }
   }

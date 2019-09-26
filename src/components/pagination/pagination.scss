@@ -1,4 +1,6 @@
 .pagination {
+  $root: &;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +15,7 @@
     &_current {
       background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
-      .pagination__link {
+      #{$root}__link {
         font-weight: bold;
         color: $white-color-100;
       }
@@ -24,7 +26,7 @@
       line-height: 0;
       background: linear-gradient(180deg, $green-color-100 0%, $aqua-color-100 100%);
 
-      .pagination__link {
+      #{$root}__link {
         position: relative;
         width: 2.8571rem;
         height: 2.8571rem;
