@@ -2,8 +2,14 @@
   padding: 0;
   margin: 0;
 
-  &_expanded &__title::after {
-    transform: rotate(-135deg);
+  &_expanded {
+    .checkbox-expandable__title::after {
+      transform: rotate(-135deg);
+    }
+
+    .checkbox-expandable__list {
+      display: block;
+    }
   }
 
   &__title {

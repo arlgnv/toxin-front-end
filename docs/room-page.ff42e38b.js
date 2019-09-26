@@ -9,10 +9,10 @@ var e,t=arguments[3],n=require("process");!function(e,t){"use strict";"object"==
 },{"process":"FT5O"}],"hUZf":[function(require,module,exports) {
 "use strict";var e=u(require("jquery"));function u(e){return e&&e.__esModule?e:{default:e}}window.jQuery=e.default,window.$=e.default;
 },{"jquery":"lwLq"}],"kG68":[function(require,module,exports) {
-var e=$(".js-main-header__burger");e.click(function(r){r.preventDefault(),e.toggleClass("main-header__burger_opened"),e.next().slideToggle(1e3)});
+var e=$(".js-main-header__burger"),a=e.next();e.click(function(n){n.preventDefault(),e.toggleClass("main-header__burger_theme_cross"),a.toggleClass("main-header__navigation_opened")});
 },{}],"J/2i":[function(require,module,exports) {
 var t=$(".js-button_theme_like");t.each(function(){var t=$(this),e=t.find(".button__text");t.on("click",function(n){n.preventDefault(),t.toggleClass("button_theme_liked"),t.hasClass("button_theme_liked")?e.html("".concat(+e.html()+1)):e.html("".concat(+e.html()-1))})});
 },{}],"HDI3":[function(require,module,exports) {
 "use strict";require("../../utilities/jquery-global"),require("../../components/main-headers/main-header"),require("../../components/buttons/button-like/button-like");
 },{"../../utilities/jquery-global":"hUZf","../../components/main-headers/main-header":"kG68","../../components/buttons/button-like/button-like":"J/2i"}]},{},["HDI3"], null)
-//# sourceMappingURL=/toxin/room-page.50c72815.js.map
+//# sourceMappingURL=/toxin/room-page.ff42e38b.js.map

@@ -48,12 +48,12 @@
       box-shadow: 0 -0.4286rem 0 0 $white-color-100, 0 0.4286rem 0 0 $white-color-100;
     }
 
-    &_opened::before {
+    &_theme_cross::before {
       transform: translate(-50%, -50%) rotate(45deg);
       box-shadow: none;
     }
 
-    &_opened::after {
+    &_theme_cross::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -78,6 +78,10 @@
       padding: 0.3571rem 0.7143rem 0.7143rem;
       border: 0.2143rem solid $primary-color-50;
       border-radius: 0.7143rem;
+    }
+
+    &_opened {
+      display: block;
     }
   }
 
