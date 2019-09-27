@@ -1,11 +1,11 @@
-mixin testimonial({image, author, date, text, likes})
+mixin testimonial({image = "", author = "", date = "", text = "", likes = ""} = {})
   p.testimonial
     span.testimonial__author
-      img.testimonial__img(src=image width="44" height="44" alt=author)
+      img.testimonial__img(src=image alt=author)
       span.testimonial__author-info
         b.testimonial__name= author
         span.testimonial__date= date
     span.testimonial__content
       span.testimonial__button
-        +button-like(likes)(type="button")
+        +button({"text": likes, "theme": "like", "jsClasses": "js-button_theme_like"})(type="button")
       span.testimonial__text= text

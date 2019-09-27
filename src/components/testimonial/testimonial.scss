@@ -1,4 +1,4 @@
-@import '../buttons/button-like/button-like';
+@import '../button/button';
 
 .testimonial {
   margin: 0;
@@ -11,9 +11,10 @@
   }
 
   &__img {
+    box-sizing: border-box;
+    width: 3.4286rem;
+    height: 3.4286rem;
     margin-right: 0.7143rem;
-    max-width: 100%;
-    height: auto;
     border: 0.1429rem solid $white-color-100;
     border-radius: 50%;
     box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-10;
@@ -30,8 +31,9 @@
   }
 
   &__button {
-    min-width: 3.4286rem;
-    margin-right: 0.7143rem;
-    text-align: center;
+    box-sizing: border-box;
+    margin-right: 0.5714rem;
+    padding: 0.2857rem 0.3571rem;
+    line-height: 0;
   }
 }

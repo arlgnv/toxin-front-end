@@ -1,0 +1,7 @@
+mixin dropdown({theme = "", jsClasses = ""} = {})
+  - const className = `dropdown${theme ? ` dropdown_theme_${theme}` : ''}${jsClasses ? ` ${jsClasses}` : ''}`
+  span(class=className)
+    input.dropdown__field(type="text")&attributes(attributes)
+    if block
+      block
+    

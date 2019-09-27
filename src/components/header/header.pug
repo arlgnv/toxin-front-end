@@ -1,0 +1,30 @@
+mixin header({theme = ""} = {})
+  - const className = theme === '' ? 'header' : `header header_theme_${theme}`
+  header(class= className)
+    .header__container
+      a.header__logo(href="../index/index.pug")
+        img.header__logo-image(src="../../logo.svg" alt="Отель Toxin")
+      button.header__burger.js-header__burger(aria-label="Показать меню")
+      nav.header__navigation
+        ul.header__site-navigation
+          -
+            const items = 
+            [ 
+              {"title": "Компоненты", "className": "header__item header__item_theme_bold", "link": "../components-page/components-page.pug"},
+              {"title": "О нас", "className": "header__item", "link": "/mock-address/change-me"},
+              {"title": "Услуги", "className": "header__item header__item_theme_has-submenu", "link": "/mock-address/change-me"},
+              {"title": "Вакансии", "className": "header__item", "link": "/mock-address/change-me"},
+              {"title": "Новости", "className": "header__item", "link": "/mock-address/change-me"},
+              {"title": "Соглашения", "className": "header__item header__item_theme_has-submenu", "link": "/mock-address/change-me"}
+            ]
+          each item in items
+            li(class= item.className)
+              a.header__link(href= item.link)= item.title
+        ul.header__user-navigation
+          li.header__item
+            +link({"text": "войти", "theme": "account-action"})(href="../login-page/login-page.pug" class="button_position_header")
+          li.header__item
+            +link({"text": "зарегистрироваться", "theme": "registration"})(href="../registration-page/registration-page.pug")
+        ul.header__user-menu
+          li.header__item
+            a.header__link(href="/mock-address/change-me") Артём Лагунов

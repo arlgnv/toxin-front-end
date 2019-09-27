@@ -1,10 +1,11 @@
 /* global $ window document */
 import '../../utilities/jquery-global';
+
 import 'ion-rangeslider';
-import '../../components/main-header/main-header';
-import '../../components/checkbox/checkbox-expandable/checkbox-expandable';
-import '../../components/range-slider/range-slider';
-import { initComfortDropdown } from '../../components/dropdowns/dropdown';
+import '../../components/header/header';
+import '../../components/checkboxInput/checkboxInput';
+import '../../components/rangeSlider/rangeSlider';
+import { initComfortDropdown } from '../../components/dropdown/dropdown';
 
 // Filter
 const $filter = $('.js-filter');
@@ -34,5 +35,5 @@ $filterClose.click((evt) => {
 });
 
 // Dropdown comfort
-const inputDropdownComfort = document.querySelector('.js-dropdown_type_comfort');
+const inputDropdownComfort = document.querySelector('.js-dropdown-comfort');
 inputDropdownComfort.addEventListener('click', initComfortDropdown);

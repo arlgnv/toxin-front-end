@@ -1,0 +1,45 @@
+mixin footer({theme = ''} = {})
+  - const className = theme === '' ? 'footer' : `footer footer_theme_${theme}`
+  footer(class= className)
+    .footer__main-info
+      .footer__container
+        .footer__site-info
+          a.footer__logo(href="../index/index.pug")
+            img.footer__logo-image(src="../../logo.svg" alt="Отель Toxin")
+          p.footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        nav.footer__navigation
+          -
+            const itemsMenu = 
+            [
+              {"title": "Навигация", "subItems": ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+              {"title": "О нас", "subItems": ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+              {"title": "Служба поддержки", "subItems": ["Соглашения", "Сообщества", "Связь с нами"]}
+            ]
+          each itemMenu in itemsMenu
+            .footer__item
+              b.footer__title= itemMenu.title
+              ul.footer__list
+                each subItem in itemMenu.subItems
+                  li.footer__item
+                    a.footer__link(href="/mock-address/change-me")= subItem
+        .footer__newsletter
+          b.footer__title Подписка
+          p.footer__text Получайте специальные предложения и новости сервиса
+          form.footer__form(action="https://echo.htmlacademy.ru" method="post")
+            label.footer__label.footer__label_hidden(for="field-subscription") Введите email
+            +textInput({"theme": "newsletter"})(id="field-subscription" name="email" placeholder="Email")
+              button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")
+    .footer__other-info
+      .footer__container
+        p.footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.
+        ul.footer__list
+          -
+            const items = 
+            [
+              {"theme": "twitter", "description": "Твиттер"},
+              {"theme": "facebook", "description": "Фейсбук"},
+              {"theme": "instagram", "description": "Инстаграм"}
+            ]
+          each item in items
+            li.footer__item
+              a(class=`footer__link footer__link_theme_${item.theme}` href="/mock-address/change-me" arail-label=`${item.description}`)

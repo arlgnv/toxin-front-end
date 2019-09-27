@@ -1,12 +1,11 @@
 @import '../../utilities/init';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
 @import '../../components/pagination/pagination';
-@import '../../components/range-slider/range-slider';
-@import '../../components/checkbox/checkbox';
-@import '../../components/checkbox/checkbox-expandable/checkbox-expandable';
-@import '../../components/dropdowns/dropdown';
+@import '../../components/rangeSlider/rangeSlider';
+@import '../../components/checkboxInput/checkboxInput';
+@import '../../components/dropdown/dropdown';
 @import '../../components/room/room';
-@import '../../components/main-header/main-header';
-@import '../../components/main-footer/main-footer';
 
 .rooms-page {
   flex-grow: 1;
@@ -158,10 +157,10 @@
     }
 
     &:nth-child(4) {
-      margin-bottom: 2.1429rem;
+      margin-bottom: 2.3429rem;
 
       #{$root}__group-title {
-        margin-bottom: 0.9286rem;
+        margin-bottom: 1.2286rem;
       }
 
       #{$root}__list {
@@ -170,7 +169,7 @@
     }
 
     &:nth-child(5) {
-      margin-bottom: 1.5571rem;
+      margin-bottom: 1.8571rem;
 
       #{$root}__group-title {
         margin-bottom: 1.2143rem;
@@ -185,7 +184,7 @@
           }
 
           + #{$root}__item {
-            margin-top: 0.5286rem;
+            margin-top: 0.9286rem;
           }
         }
       }
@@ -220,30 +219,8 @@
     list-style-type: none;
 
     #{$root}__item + #{$root}__item {
-      margin-top: 0.5714rem;
+      margin-top: 0.8714rem;
     }
-  }
-}
-
-.range-slider {
-  &__group {
-    margin-bottom: 1.4286rem;
-  }
-
-  &__description {
-    display: inline-block;
-    margin-top: 0.7857rem;
-  }
-}
-
-.checkbox-expandable {
-  @media screen and (max-width: 1159px) {
-    display: inline-block;
-  }
-
-  &__title::after {
-    top: 0.3571rem;
-    right: 1.4286rem;
   }
 }
 

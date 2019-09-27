@@ -1,0 +1,7 @@
+mixin button({text = "", theme = "", jsClasses = ""} = {})
+  - const className = theme === "" ? "button" : `button button_theme_${theme}${jsClasses ? ` ${jsClasses}` : ''}`
+  button(class= className)&attributes(attributes)
+    if theme === "account-action" || theme === "like"
+      span.button__text= text
+    else
+      = text

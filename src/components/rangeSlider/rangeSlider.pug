@@ -1,0 +1,7 @@
+mixin rangeSlider({id = "", title = "", description = ""} = {})
+  span.range-slider.js-range-slider
+    span.range-slider__group
+      label.range-slider__label(for=id)= title
+      span.range-slider__price
+    input.range-slider__field(id=id type="text")&attributes(attributes)
+    span.range-slider__description= description

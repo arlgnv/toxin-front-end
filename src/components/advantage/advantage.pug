@@ -1,6 +1,6 @@
-mixin advantage({icon = "set icon!", title = "set title!", description = "set description!"})
+mixin advantage({icon = "", title = "", description = ""} = {})
   p.advantage
-    span.advantage__icon(style=`background-image: url("${icon}")`)
+    span.advantage__icon(style=`background-image: url('${icon}')`)
     span.advantage__text
       b.advantage__lead= title
       = description

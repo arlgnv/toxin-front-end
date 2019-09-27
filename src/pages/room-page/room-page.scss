@@ -1,11 +1,11 @@
 @import '../../utilities/init';
-@import '../../components/main-header/main-header';
-@import '../../components/forms/form-confirm-room/form-confirm-room';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/roomBook/roomBook';
 @import '../../components/testimonial/testimonial';
 @import '../../components/advantage/advantage';
-@import '../../components/bullet-list/bullet-list';
+@import '../../components/bulletList/bulletList';
 @import '../../components/donut/donut';
-@import '../../components/main-footer/main-footer';
 
 .room-page {
   flex-grow: 1;
@@ -276,17 +276,6 @@
   @media screen and (max-width: 660px) {
     width: 90%;
     margin-bottom: 1.0714rem;
-  }
-}
-
-.bullet-list {
-  &__item {
-    margin-bottom: 0.7143rem;
-
-    &::before {
-      top: 0.5rem;
-      left: -1.3571rem;
-    }
   }
 }
 

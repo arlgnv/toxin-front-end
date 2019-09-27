@@ -1,0 +1,11 @@
+mixin checkboxInput({id = "", title = "", theme = "", description = "", jsClasses = ""} = {})
+  - const className = `checkbox-input${theme ? ` checkbox-input_theme_${theme}` : ''}${jsClasses ? ` ${jsClasses}` : ''}`
+  div(class=className)
+    if block
+      block
+    else
+      input.checkbox-input__field.checkbox-input__field_hidden(id=id type="checkbox")&attributes(attributes)
+      label.checkbox-input__label(for=id)= title
+      if description
+        span.checkbox-input__description= description
+      

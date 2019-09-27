@@ -1,4 +1,4 @@
-mixin room({image, alt, number, lux, price, rating, testimonials})
+mixin room({image = "", alt = "", number = "", lux = "", price = "", rating = "", testimonials = ""} = {})
   div.room
     div.room__container
       img.room__img(src=image alt=alt)

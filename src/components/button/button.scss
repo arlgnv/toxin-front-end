@@ -1,0 +1,133 @@
+.button {
+  $root: &;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: bold;
+  font-size: 0.8571rem;
+  line-height: 1.0714rem;
+  border: none;
+  border-radius: 1.5714rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__text {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    background-color: $white-color-100;
+    border-radius: 1.5714rem;
+  }
+
+  &_theme_bold {
+    color: $purple-color-100;
+
+    &:hover {
+      color: $primary-color-50;
+    }
+  }
+
+  &_theme_like {
+    position: relative;
+    padding: 0.0714rem;
+    min-width: 2.8571rem;
+    background: $primary-color-25;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0.2143rem;
+      height: 0.7143rem;
+      width: 0.7143rem;
+      background: url('../../images/button-with-like/heart.svg') no-repeat center;
+      transform: translateY(-50%);
+    }
+
+    #{$root}__text {
+      padding: 0.2143rem 0.1571rem 0.2143rem 0.7714rem;
+      font-size: 0.7143rem;
+      line-height: 0.8571rem;
+      color: $primary-color-25;
+    }
+  }
+
+  &_theme_liked {
+    background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+
+    &::before {
+      background-image: url('../../images/button-with-like/heart-filled.svg');
+    }
+
+    #{$root}__text {
+      color: $purple-color-100;
+    }
+  }
+
+  &_theme_account-action {
+    padding: 0.1429rem;
+    background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+
+    &:hover {
+      background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
+    }
+
+    #{$root}__text {
+      padding: 0.9286rem 1.2143rem;
+      color: $purple-color-100;
+    }
+  }
+
+  &_theme_account-action#{$root}_position_header {
+    #{$root}__text {
+      padding: 0.5286rem 1.2143rem;
+    }
+  }
+
+  &_theme_registration {
+    color: $white-color-100;
+    padding: 0.6429rem 1.4286rem;
+    background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+
+    &:hover {
+      background-image: linear-gradient(180deg, $purple-color-50 0%, $aqua-color-light-50 100%);
+    }
+  }
+
+  &_theme_submit {
+    position: relative;
+    padding: 1.0714rem 2.5rem;
+    color: $white-color-100;
+    background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0.9286rem;
+      width: 1.1429rem;
+      height: 0.1429rem;
+      background-color: $white-color-100;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1.0714rem;
+      width: 0.6429rem;
+      height: 0.6429rem;
+      border: 0.1429rem solid $white-color-100;
+      border-left: none;
+      border-bottom: none;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}

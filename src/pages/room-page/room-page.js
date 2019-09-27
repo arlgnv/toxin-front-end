@@ -1,3 +1,3 @@
 import '../../utilities/jquery-global';
-import '../../components/main-header/main-header';
-import '../../components/buttons/button-like/button-like';
+import '../../components/header/header';
+import '../../components/button/button';

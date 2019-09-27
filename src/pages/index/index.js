@@ -2,10 +2,10 @@
 import '../../utilities/jquery-global';
 
 import 'air-datepicker';
-import '../../components/main-header/main-header';
+import '../../components/header/header';
 import '../../components/calendar/calendar';
-import { initGuestsDropdown } from '../../components/dropdowns/dropdown';
+import { initGuestsDropdown } from '../../components/dropdown/dropdown';
 
 // Dropdown
-const inputDropdownGuests = document.querySelector('.js-dropdown_type_guests');
+const inputDropdownGuests = document.querySelector('.js-dropdown-guests');
 inputDropdownGuests.addEventListener('click', initGuestsDropdown);

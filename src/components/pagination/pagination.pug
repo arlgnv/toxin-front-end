@@ -1,15 +1,6 @@
-mixin pagination
+mixin pagination({pages = [{"number": "0", "className": "pagination__item", "link": "mock-adress/change-me"}], description = ""} = {})
   ul.pagination
-    -
-      const items = 
-      [
-        {"number": "1", "className": "pagination__item pagination__item_current"},
-        {"number": "2", "className": "pagination__item"},
-        {"number": "3", "className": "pagination__item"},
-        {"number": "...", "className": "pagination__item"},
-        {"number": "", "className": "pagination__item pagination__item_next-page"}
-      ]
-    each item in items
-      li(class= item.className)
-        a.pagination__link(href="mock-adress/change-me")= item.number
-  p.pagination__description 1 – 12 из 100+ вариантов аренды
+    each page in pages
+      li(class= page.className)
+        a.pagination__link(href=page.link)= page.number
+  p.pagination__description= description

@@ -15,7 +15,7 @@ block styles
 block content
   include ../../utilities/mixins-components
 
-  +main-header
+  +header
   main.room-page
     h1.room-page__title.room-page__title_hidden Люксовый номер №888
     section.photos
@@ -62,13 +62,13 @@ block content
         .info__group
           section.rules
             h3.info__subtitle Правила
-            +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+            +bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
           section.cancel
             h3.info__subtitle Отмена
             p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       section.form
         h2.form__title.form__title_hidden Форма бронирования номера
-        +form-confirm-room
-  +main-footer
+        +roomBook
+  +footer
 
   script(src="./room-page.js")

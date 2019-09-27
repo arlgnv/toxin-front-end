@@ -15,7 +15,7 @@ block styles
 block content
   include ../../utilities/mixins-components
 
-  +main-header
+  +header
   main.rooms-page
     h1.rooms-page__title.rooms-page__title_hidden Поиск номеров
     .rooms-page__container
@@ -26,48 +26,65 @@ block content
         form.filter__form(action="https://echo.htmlacademy/ru" method="post")
           p.filter__group
             label.filter__label(for="field-date") Даты пребывания в отеле
-            +dropdown-default(id="field-date" name="date" value="19 авг - 23 авг")
+            +dropdown(id="field-date" name="date" value="19 авг - 23 авг")
           p.filter__group
             label.filter__label(for="field-guests") Гости
-            +dropdown-default(id="field-guests" name="guests" value="3 гостя, 1 младенец")
+            +dropdown(id="field-guests" name="guests" value="3 гостя, 1 младенец")
           p.filter__group
-            +range-slider({"id": "field-price", "title": "Диапазон цены", "description": "Стоимость за сутки пребывания в номере"})(name="price")
+            +rangeSlider({"id": "field-price", "title": "Диапазон цены", "description": "Стоимость за сутки пребывания в номере"})(name="price")
           fieldset.filter__group
             legend.filter__group-title Дополнительные возможности
             ul.filter__list
               li.filter__item
-                +checkbox({"id": "field-smoke", "title": "Можно курить"})(name="smoke")
+                +checkboxInput({"id": "field-smoke", "title": "Можно курить"})(name="smoke")
               li.filter__item
-                +checkbox({"id": "field-pets", "title": "Можно с питомцами"})(name="pets" checked)
+                +checkboxInput({"id": "field-pets", "title": "Можно с питомцами"})(name="pets" checked)
               li.filter__item
-                +checkbox({"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)"})(name="allow-guests" checked)
+                +checkboxInput({"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)"})(name="allow-guests" checked)
           fieldset.filter__group
             legend.filter__group-title Доступность
             ul.filter__list
               li.filter__item
-                +checkbox({
-                  "id": "field-wide-aisle", 
+                +checkboxInput({
+                  "id": "field-wide-aisle",
+                  "theme": "rich", 
                   "title": "Широкий коридор",
-                  "theme": "rich",
                   "description": "Ширина коридоров в номере не менее 91 см."})(name="wide-aisle")
               li.filter__item
-                +checkbox({
-                  "id": "field-hepler", 
-                  "title": "Помощник для инвалидов",
+                +checkboxInput({
+                  "id": "field-hepler",
                   "theme": "rich",
+                  "title": "Помощник для инвалидов",
                   "description": "На 1 этаже вас встретит специалист  и проводит до номера."})(name="helper")
           p.filter__group
             label.filter__label(for="field-comfort") Удобства номера
-            +dropdown-comfort(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
+            +dropdown({"jsClasses": "js-dropdown-comfort"})(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
+              span.dropdown__container.dropdown__container_hidden
+                - const items = ["Спальни", "Кровати", "Ванные комнаты"]
+                each item in items
+                  span.dropdown__item
+                    b.dropdown__title= item
+                    span.dropdown__count
+                      button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
+                      span.dropdown__amount 0
+                      button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
           fieldset.filter__group
-            +checkbox-expandable({"title": "Дополнительные удобства", 
-            "items": [ 
-              {"title": "Завтрак", "name": "breakfast"},
-              {"title": "Письменный стол", "name": "desk"},
-              {"title": "Стул для кормления", "name": "chair"},
-              {"title": "Кроватка", "name": "bed"},
-              {"title": "Телевизор", "name": "tv"},
-              {"title": "Шампунь", "name": "shampoo"}]})
+            +checkboxInput({"theme": "expandable", "jsClasses": "js-checkbox-input_theme_expandable"})
+              -
+                const checkboxInputItems =
+                [ 
+                  {"title": "Завтрак", "name": "breakfast"},
+                  {"title": "Письменный стол", "name": "desk"},
+                  {"title": "Стул для кормления", "name": "chair"},
+                  {"title": "Кроватка", "name": "bed"},
+                  {"title": "Телевизор", "name": "tv"},
+                  {"title": "Шампунь", "name": "shampoo"}
+                ]
+              b.checkbox-input__group-title.js-checkboxInput__group-title Дополнительные удобства
+              ul.checkbox-input__list
+                each checkboxInput in checkboxInputItems
+                  li.checkbox-input__item
+                    +checkboxInput({"id": `field-${checkboxInput.name}`, "title": checkboxInput.title})
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list
@@ -87,15 +104,25 @@ block content
               {"image": "../../images/rooms/room11.jpg","alt": "Роскошный номер с двумя кроватями","number": 444,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 15},
               {"image": "../../images/rooms/room12.jpg","alt": "Роскошный номер с большой кроватью","number": 352,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 55}
             ]
-          each item, index in rooms
+          each room, index in rooms
             if index === 0
               li.rooms__item
                 a.rooms__item-link(href="../room-page/room-page.pug")
-                  +room(item)
+                  +room(room)
             else
               li.rooms__item
-                  +room(item)
-        +pagination
-  +main-footer
+                  +room(room)
+        -
+          const pages = 
+          [
+            {"number": "1", "className": "pagination__item pagination__item_current", "link": "mock-adress/change-me"},
+            {"number": "2", "className": "pagination__item", "link": "mock-adress/change-me"},
+            {"number": "3", "className": "pagination__item", "link": "mock-adress/change-me"},
+            {"number": "...", "className": "pagination__item", "link": "mock-adress/change-me"},
+            {"number": "15", "className": "pagination__item", "link": "mock-adress/change-me"},
+            {"number": "", "className": "pagination__item pagination__item_next-page", "link": "mock-adress/change-me"}
+          ]
+        +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"}) 
+  +footer
 
   script(src="./rooms-page.js")

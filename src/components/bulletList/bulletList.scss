@@ -1,0 +1,22 @@
+.bullet-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &__item {
+    position: relative;
+    margin-bottom: 0.7143rem;
+    color: $primary-color-75;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.5rem;
+      left: -1.3571rem;
+      width: 0.7143rem;
+      height: 0.7143rem;
+      background-color: $primary-color-25;
+      border-radius: 50%;
+    }
+  }
+}

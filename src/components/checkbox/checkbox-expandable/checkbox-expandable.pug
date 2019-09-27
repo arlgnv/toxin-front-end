@@ -1,7 +1,0 @@
-mixin checkbox-expandable({title = "set title!", items = []})
-  div.checkbox-expandable.js-checkbox-expandable
-    b.checkbox-expandable__title= title
-    ul.checkbox-expandable__list
-      each item in items
-        li.checkbox-expandable__item
-          +checkbox({"id": `field-${item.name}`, "title": item.title})(name= item.name)
