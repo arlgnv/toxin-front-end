@@ -1,35 +1,16 @@
 mixin signIn
   article.sign-in
-    h2.sign-in__title Регистрация аккаунта
+    h2.sign-in__title Войти
     form.sign-in__form(action="https://echo.htmlacademy.ru" method="post")
-      fieldset.sign-in__group
-        p.sign-in__item
-          label.sign-in__label.sign-in__label_hidden(for="field-name") Введите имя
-          +textInput(id="field-name" name="name" placeholder="Имя")
-        p.sign-in__item
-          label.sign-in__label.sign-in__label_hidden(for="field-surname") Введите фамилию
-          +textInput(id="field-surname" name="surname" placeholder="Фамилия")
-        ul.sign-in__list
-          li.sign-in__item
-            +radioInput({"id": "field-gender-male", "title": "Мужчина"})(name="gender" value="male" checked)
-          li.sign-in__item
-            +radioInput({"id": "field-gender-female", "title": "Женщина"})(name="gender" value="female")
       p.sign-in__group
-        label.sign-in__label(for="field-birthday") Дата рождения
-        +textInput(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
-      fieldset.sign-in__group
-        legend.sign-in__group-title данные для входа в сервис
-        p.sign-in__item
-          label.sign-in__label.sign-in__label_hidden(for="field-email") Введите email
-          +textInput(id="field-emai" type="email" name="email" placeholder="Email")
-        p.sign-in__item
-          label.sign-in__label.sign-in__label_hidden(for="field-password") Введите пароль
-          +textInput(id="field-password" type="password" name="password" placeholder="Пароль")
-      .sign-in__group
-        +checkboxInput({"id": "field-newsletter", "title": "Получать спецпредложения", "theme": "toggle"})(name="newsletter")
+        label.sign-in__label.sign-in__label_hidden(for="field-email") Введите email
+        +textInput(id="field-email" name="email" type="email" placeholder="Email")
       p.sign-in__group
-        +button({"text": "перейти к оплате", "theme": "submit"})(type="submit")
-    .sign-in__login
-      span.sign-in__text Уже есть аккаунт на Toxin?
-      span.sign-in__login-button
-        +link({"text": "войти", "theme": "account-action"})(href="../../pages/login-page/login-page.pug")
+        label.sign-in__label.sign-in__label_hidden(for="field-password") Введите пароль
+        +textInput(id="field-password" name="password" type="password" placeholder="Пароль")
+      p.sign-in__group
+        +button({"text": "войти", "theme": "submit"})(type="submit")
+    .sign-in__registration
+      span.sign-in__text Нет аккаунта на Toxin?
+      span.sign-in__sign-in-button
+        +link({"text": "создать", "theme": "account-action"})(href="../../pages/registration-page/registration-page.pug")

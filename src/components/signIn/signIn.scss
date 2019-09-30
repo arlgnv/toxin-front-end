@@ -1,14 +1,10 @@
 @import '../button/button';
 @import '../textInput/textInput';
-@import '../radioInput/radioInput';
-@import '../checkboxInput/checkboxInput';
 
 .sign-in {
-  $root: &;
-
   box-sizing: border-box;
-  max-width: 27.1429rem;
-  padding: 2.8571rem 2.1429rem 2.1429rem;
+  width: 27.1429rem;
+  padding: 2.8571rem 2.1429rem 2.2857rem;
   background: $white-color-100;
   border: 0.0714rem solid $black-color-12;
   border-radius: 0.2857rem;
@@ -19,7 +15,7 @@
   }
 
   &__title {
-    margin: 0 0 1.4286rem -0.1429rem;
+    margin: 0 0 1.4286rem;
     font-weight: bold;
     font-size: 1.7143rem;
     line-height: 2.1429rem;
@@ -34,44 +30,17 @@
   &__group {
     margin: 0;
     padding: 0;
-    border: none;
 
     &:nth-child(1) {
-      margin-bottom: 0.5143rem;
-
-      #{$root}__item:nth-child(1) {
-        margin-bottom: 0.7143rem;
-      }
-
-      #{$root}__item:nth-child(2) {
-        margin-bottom: 0.5714rem;
-      }
+      margin-bottom: 0.7143rem;
     }
 
     &:nth-child(2) {
-      margin-bottom: 1.5714rem;
-    }
-
-    &:nth-child(3) {
-      margin-bottom: 0.5286rem;
-
-      #{$root}__item:nth-of-type(1) {
-        margin-bottom: 0.7857rem;
-      }
-    }
-
-    &:nth-child(4) {
-      margin-bottom: 1.5714rem;
+      margin-bottom: 1.3571rem;
     }
   }
 
   &__label {
-    font-weight: bold;
-    font-size: 0.8571rem;
-    line-height: 1.0714rem;
-    color: $primary-color-100;
-    text-transform: uppercase;
-
     &_hidden {
       position: absolute;
       width: 0.0714rem;
@@ -85,48 +54,16 @@
     }
   }
 
-  &__group-title {
-    margin: 0 0 0.3571rem;
-    font-weight: bold;
-    font-size: 0.8571rem;
-    line-height: 1.0714rem;
-    color: $primary-color-100;
-    text-transform: uppercase;
-  }
-
-  &__item {
-    margin: 0;
-  }
-
-  &__field {
-    width: 100%;
-    padding: 0.9286rem 1.0714rem;
-  }
-
-  &__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    #{$root}__item + #{$root}__item {
-      margin-left: 1.5rem;
-    }
-  }
-
-  &__login {
+  &__registration {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__text {
+    max-width: 15.1429rem;
     margin-right: 0.7143rem;
     line-height: 1.2857rem;
     color: $black-color-100;
-  }
-
-  &__login-button {
-    min-width: 98px;
   }
 }

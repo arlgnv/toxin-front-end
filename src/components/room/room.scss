@@ -112,11 +112,14 @@
     border-bottom: 0.0714rem solid $primary-color-10;
   }
 
-  &__number {
+  &__number-info {
     font-weight: bold;
+    color: $primary-color-100;
+  }
+
+  &__number {
     font-size: 1.2286rem;
     line-height: 1.2143rem;
-    color: $primary-color-100;
   }
 
   &__type {

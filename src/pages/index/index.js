@@ -7,5 +7,6 @@ import '../../components/calendar/calendar';
 import { initGuestsDropdown } from '../../components/dropdown/dropdown';
 
 // Dropdown
-const inputDropdownGuests = document.querySelector('.js-dropdown-guests');
+const inputDropdownGuests = document.querySelector('.js-dropdown');
+
 inputDropdownGuests.addEventListener('click', initGuestsDropdown);

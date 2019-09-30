@@ -156,15 +156,6 @@
     }
   }
 
-  &__subtitle {
-    margin: 0 0 1.3286rem;
-    padding: 0;
-    font-weight: bold;
-    font-size: 1.3571rem;
-    color: $primary-color-100;
-    letter-spacing: -0.0357rem;
-  }
-
   &__group {
     &:nth-of-type(1) {
       display: flex;
@@ -218,6 +209,15 @@
     margin-bottom: 1.4286rem;
   }
 
+  &__title {
+    margin: 0 0 1.3286rem;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.3571rem;
+    color: $primary-color-100;
+    letter-spacing: -0.0357rem;
+  }
+
   &__item {
     padding-bottom: 1.4286rem;
     border-bottom: 0.0714rem solid $primary-color-10;
@@ -236,10 +236,28 @@
 
 .impression {
   width: 22.1429rem;
+
+  &__title {
+    margin: 0 0 1.3286rem;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.3571rem;
+    color: $primary-color-100;
+    letter-spacing: -0.0357rem;
+  }
 }
 
 .testimonials {
   $root: &;
+
+  &__title {
+    margin: 0 0 1.3286rem;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.3571rem;
+    color: $primary-color-100;
+    letter-spacing: -0.0357rem;
+  }
 
   &__amount {
     position: absolute;
@@ -277,6 +295,15 @@
     width: 90%;
     margin-bottom: 1.0714rem;
   }
+
+  &__title {
+    margin: 0 0 1.3286rem;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.3571rem;
+    color: $primary-color-100;
+    letter-spacing: -0.0357rem;
+  }
 }
 
 .cancel {
@@ -288,6 +315,15 @@
 
   @media screen and (max-width: 660px) {
     width: 100%;
+  }
+
+  &__title {
+    margin: 0 0 1.3286rem;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.3571rem;
+    color: $primary-color-100;
+    letter-spacing: -0.0357rem;
   }
 }
 

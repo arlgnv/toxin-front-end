@@ -1,18 +1,23 @@
 .pagination {
   $root: &;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  width: 17.2143rem;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 0.7143rem;
+    list-style-type: none;
+  }
 
   &__item {
     padding: 0 0.3571rem;
     border-radius: 50%;
 
-    &_current {
+    &_theme_current {
       background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
       #{$root}__link {
@@ -21,7 +26,7 @@
       }
     }
 
-    &_next-page {
+    &_theme_next-page {
       padding: 0;
       line-height: 0;
       background: linear-gradient(180deg, $green-color-100 0%, $aqua-color-100 100%);
@@ -67,5 +72,10 @@
     color: $primary-color-50;
     text-align: center;
     text-decoration: none;
+  }
+
+  &__description {
+    margin: 0;
+    text-align: center;
   }
 }

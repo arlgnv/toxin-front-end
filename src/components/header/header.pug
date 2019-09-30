@@ -1,6 +1,6 @@
 mixin header({theme = ""} = {})
-  - const className = theme === '' ? 'header' : `header header_theme_${theme}`
-  header(class= className)
+  - const className = theme === "" ? "" : `header_theme_${theme}`
+  header.header(class= className)
     .header__container
       a.header__logo(href="../index/index.pug")
         img.header__logo-image(src="../../logo.svg" alt="Отель Toxin")
@@ -10,15 +10,16 @@ mixin header({theme = ""} = {})
           -
             const items = 
             [ 
-              {"title": "Компоненты", "className": "header__item header__item_theme_bold", "link": "../components-page/components-page.pug"},
-              {"title": "О нас", "className": "header__item", "link": "/mock-address/change-me"},
-              {"title": "Услуги", "className": "header__item header__item_theme_has-submenu", "link": "/mock-address/change-me"},
-              {"title": "Вакансии", "className": "header__item", "link": "/mock-address/change-me"},
-              {"title": "Новости", "className": "header__item", "link": "/mock-address/change-me"},
-              {"title": "Соглашения", "className": "header__item header__item_theme_has-submenu", "link": "/mock-address/change-me"}
+              {"title": "Компоненты", "theme": "bold", "link": "../components-page/components-page.pug"},
+              {"title": "О нас", "link": "/mock-address/change-me"},
+              {"title": "Услуги", "theme": "has-submenu", "link": "/mock-address/change-me"},
+              {"title": "Вакансии", "link": "/mock-address/change-me"},
+              {"title": "Новости", "link": "/mock-address/change-me"},
+              {"title": "Соглашения", "theme": "has-submenu", "link": "/mock-address/change-me"}
             ]
           each item in items
-            li(class= item.className)
+            - const className = "theme" in item ? `header__item_theme_${item.theme}` : ""
+            li.header__item(class= className)
               a.header__link(href= item.link)= item.title
         ul.header__user-navigation
           li.header__item

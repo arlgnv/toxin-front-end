@@ -33,14 +33,6 @@
     }
   }
 
-  &_theme_date {
-    width: 10.7143rem;
-
-    #{$root}__field::placeholder {
-      line-height: 1.2857rem;
-    }
-  }
-
   &__container {
     position: absolute;
     z-index: 1;

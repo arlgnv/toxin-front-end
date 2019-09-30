@@ -1,6 +1,6 @@
-mixin footer({theme = ''} = {})
-  - const className = theme === '' ? 'footer' : `footer footer_theme_${theme}`
-  footer(class= className)
+mixin footer({theme = ""} = {})
+  - const className = theme === "" ? "" : `footer_theme_${theme}`
+  footer.footer(class= className)
     .footer__main-info
       .footer__container
         .footer__site-info
@@ -36,10 +36,10 @@ mixin footer({theme = ''} = {})
           -
             const items = 
             [
-              {"theme": "twitter", "description": "Твиттер"},
-              {"theme": "facebook", "description": "Фейсбук"},
-              {"theme": "instagram", "description": "Инстаграм"}
+              {"theme": "twitter", "description": "Твиттер", "link": "/mock-address/change-me"},
+              {"theme": "facebook", "description": "Фейсбук", "link": "/mock-address/change-me"},
+              {"theme": "instagram", "description": "Инстаграм", "link": "/mock-address/change-me"}
             ]
           each item in items
             li.footer__item
-              a(class=`footer__link footer__link_theme_${item.theme}` href="/mock-address/change-me" arail-label=`${item.description}`)
+              a.footer__link(class=`footer__link_theme_${item.theme}` href= item.link aria-label=`${item.description}`)

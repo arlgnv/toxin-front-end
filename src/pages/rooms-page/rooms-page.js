@@ -35,5 +35,5 @@ $filterClose.click((evt) => {
 });
 
 // Dropdown comfort
-const inputDropdownComfort = document.querySelector('.js-dropdown-comfort');
+const inputDropdownComfort = document.querySelector('.js-dropdown');
 inputDropdownComfort.addEventListener('click', initComfortDropdown);

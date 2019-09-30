@@ -2,6 +2,7 @@
 /* global $ */
 
 const $buttons = $('.js-button_theme_like');
+
 $buttons.each(function () {
   const $button = $(this);
   const $buttonText = $button.find('.button__text');

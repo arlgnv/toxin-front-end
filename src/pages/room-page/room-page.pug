@@ -30,7 +30,7 @@ block content
         h2.info__title.info__title_hidden Информация о номере
         .info__group
           section.advantages
-            h3.info__subtitle Сведения о номере
+            h3.advantages__title Сведения о номере
             ul.advantages__list
               -
                 const advantages = 
@@ -43,11 +43,11 @@ block content
                 li.advantages__item
                   +advantage(item)
           section.impression
-            h3.info__subtitle Впечатления от номера
+            h3.impression__title Впечатления от номера
             +donut
         .info__group
           section.testimonials
-            h3.info__subtitle Отзывы посетителей номера
+            h3.testimonials__title Отзывы посетителей номера
             span.testimonials__amount 2 отзыва
             ul.testimonials__list
               -
@@ -61,10 +61,10 @@ block content
                   +testimonial(item)
         .info__group
           section.rules
-            h3.info__subtitle Правила
+            h3.rules__title Правила
             +bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
           section.cancel
-            h3.info__subtitle Отмена
+            h3.cancel__title Отмена
             p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       section.form
         h2.form__title.form__title_hidden Форма бронирования номера

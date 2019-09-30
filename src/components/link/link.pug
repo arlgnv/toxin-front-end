@@ -1,9 +1,9 @@
-mixin button({text = "", theme = "", jsClasses = ""} = {})
+mixin link({text = "", theme = "", jsClasses = ""} = {})
   -
     let className = theme === "" ? "" : `button_theme_${theme}`
     className = `${className} ${jsClasses}`.trim()
     
-  button.button(class= className)&attributes(attributes)
+  a.button(class= className)&attributes(attributes)
     if theme === "account-action" || theme === "like"
       span.button__text= text
     else

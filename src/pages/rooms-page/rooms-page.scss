@@ -286,18 +286,8 @@
       }
     }
   }
-}
 
-.pagination {
-  width: 17.1429rem;
-  margin: 0 0 0.7143rem 20.7143rem;
-
-  @media screen and (max-width: 1159px) {
-    margin: 0 auto 0.7143rem;
-  }
-
-  &__description {
-    width: 17.1429rem;
-    margin: 0 auto;
+  &__pagination {
+    padding-right: 0.9286rem;
   }
 }

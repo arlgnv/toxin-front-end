@@ -58,7 +58,7 @@ block content
                   "description": "На 1 этаже вас встретит специалист  и проводит до номера."})(name="helper")
           p.filter__group
             label.filter__label(for="field-comfort") Удобства номера
-            +dropdown({"jsClasses": "js-dropdown-comfort"})(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
+            +dropdown({"jsClasses": "js-dropdown"})(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
               span.dropdown__container.dropdown__container_hidden
                 - const items = ["Спальни", "Кровати", "Ванные комнаты"]
                 each item in items
@@ -115,14 +115,15 @@ block content
         -
           const pages = 
           [
-            {"number": "1", "className": "pagination__item pagination__item_current", "link": "mock-adress/change-me"},
-            {"number": "2", "className": "pagination__item", "link": "mock-adress/change-me"},
-            {"number": "3", "className": "pagination__item", "link": "mock-adress/change-me"},
-            {"number": "...", "className": "pagination__item", "link": "mock-adress/change-me"},
-            {"number": "15", "className": "pagination__item", "link": "mock-adress/change-me"},
-            {"number": "", "className": "pagination__item pagination__item_next-page", "link": "mock-adress/change-me"}
+            {"number": "1", "theme": "current", "link": "mock-adress/change-me"},
+            {"number": "2", "link": "mock-adress/change-me"},
+            {"number": "3", "link": "mock-adress/change-me"},
+            {"number": "...", "link": "mock-adress/change-me"},
+            {"number": "15", "link": "mock-adress/change-me"},
+            {"number": "", "theme": "next-page", "link": "mock-adress/change-me"}
           ]
-        +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"}) 
+        .rooms__pagination
+          +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"}) 
   +footer
 
   script(src="./rooms-page.js")

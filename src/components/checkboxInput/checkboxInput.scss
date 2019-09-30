@@ -1,9 +1,6 @@
 .checkbox-input {
   $root: &;
 
-  margin: 0;
-  padding: 0;
-
   &__label {
     position: relative;
     display: block;
@@ -124,7 +121,7 @@
       position: relative;
       display: block;
       padding: 0 0.7143rem 0 0;
-      margin: 0 0 1.1429rem 0;
+      margin: 0 0 1.4429rem 0;
       font-weight: bold;
       font-size: 0.8571rem;
       line-height: 1.0714rem;
@@ -153,7 +150,7 @@
     }
 
     #{$root}__item + #{$root}__item {
-      margin-top: 0.4286rem;
+      margin-top: 0.9286rem;
     }
   }
 

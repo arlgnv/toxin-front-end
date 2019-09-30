@@ -1,6 +1,9 @@
 mixin dropdown({theme = "", jsClasses = ""} = {})
-  - const className = `dropdown${theme ? ` dropdown_theme_${theme}` : ''}${jsClasses ? ` ${jsClasses}` : ''}`
-  span(class=className)
+  -
+    let className = theme === "" ? "" : `dropdown_theme_${theme}`
+    className = `${className} ${jsClasses}`.trim()
+    
+  span.dropdown(class= className)
     input.dropdown__field(type="text")&attributes(attributes)
     if block
       block

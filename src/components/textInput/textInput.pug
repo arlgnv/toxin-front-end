@@ -1,6 +1,7 @@
 mixin textInput({theme = "", jsClasses = ""} = {})
-  - const className = `text-input${theme ? ` text-input_theme_${theme}` : ''}${jsClasses ? ` ${jsClasses}` : ''}`
-  span(class=className)
+  - const className = theme === "" ? "" : `text-input_theme_${theme}`
+  
+  span.text-input(class= className)
     input.text-input__field&attributes(attributes)
     if block
       block
