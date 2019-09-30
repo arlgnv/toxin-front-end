@@ -19,6 +19,18 @@
     transform: translateY(-50%) rotate(45deg);
   }
 
+  &_theme_date {
+    #{$root}__field::placeholder {
+      text-transform: uppercase;
+    }
+  }
+
+  &_expanded {
+    #{$root}__container {
+      display: block;
+    }
+  }
+
   &__field {
     box-sizing: border-box;
     width: 100%;
@@ -36,18 +48,14 @@
   &__container {
     position: absolute;
     z-index: 1;
-    display: block;
+    display: none;
     box-sizing: border-box;
     width: 100%;
-    padding: 0.5714rem 0.3571rem 0.9286rem 1rem;
+    padding: 0.3714rem 0.3571rem 0 1rem;
     border: 0.0714rem solid $primary-color-50;
     border-top: none;
     box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
     background-color: $white-color-100;
-
-    &_hidden {
-      display: none;
-    }
   }
 
   &__item {
@@ -56,9 +64,9 @@
     align-items: center;
     margin-bottom: 0.5rem;
 
-    &_shift-from-top_20 {
-      margin-bottom: 0;
-      margin-top: 1.4286rem;
+    &:nth-child(4) {
+      margin: 22px 0 10px;
+      margin-bottom: 10px;
     }
   }
 

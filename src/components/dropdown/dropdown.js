@@ -15,8 +15,8 @@ function initGuestsDropdown() {
   const dropdownAmounts = dropdown.querySelectorAll('.dropdown__amount');
 
   dropdown.removeEventListener('click', initGuestsDropdown);
-  dropdownContainer.classList.remove('dropdown__container_hidden');
-  input.addEventListener('click', () => dropdownContainer.classList.toggle('dropdown__container_hidden'));
+  dropdown.classList.add('dropdown_expanded');
+  input.addEventListener('click', () => dropdown.classList.toggle('dropdown_expanded'));
 
   dropdownItems.forEach((item) => {
     const buttonDel = item.querySelector('.dropdown__control-button_theme_minus');
@@ -125,12 +125,11 @@ function initGuestsDropdown() {
 function initComfortDropdown() {
   const dropdown = this;
   const input = dropdown.querySelector('.dropdown__field');
-  const dropdownContainer = dropdown.querySelector('.dropdown__container');
   const dropdownItems = dropdown.querySelectorAll('.dropdown__item');
 
   dropdown.removeEventListener('click', initComfortDropdown);
-  dropdownContainer.classList.remove('dropdown__container_hidden');
-  input.addEventListener('click', () => dropdownContainer.classList.toggle('dropdown__container_hidden'));
+  dropdown.classList.add('dropdown_expanded');
+  input.addEventListener('click', () => dropdown.classList.toggle('dropdown_expanded'));
 
   dropdownItems.forEach((item) => {
     const buttonDel = item.querySelector('.dropdown__control-button_theme_minus');

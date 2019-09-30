@@ -23,9 +23,9 @@ mixin header({theme = ""} = {})
               a.header__link(href= item.link)= item.title
         ul.header__user-navigation
           li.header__item
-            +link({"text": "войти", "theme": "account-action"})(href="../login-page/login-page.pug" class="button_position_header")
+            +link({"text": "войти", "theme": "account-action"})(href="../login-page/login-page.pug" class="button_size_small")
           li.header__item
-            +link({"text": "зарегистрироваться", "theme": "registration"})(href="../registration-page/registration-page.pug")
+            +link({"text": "зарегистрироваться", "theme": "registration"})(href="../registration-page/registration-page.pug" class="button_size_small")
         ul.header__user-menu
           li.header__item
             a.header__link(href="/mock-address/change-me") Артём Лагунов

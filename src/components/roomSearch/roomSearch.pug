@@ -12,7 +12,7 @@ mixin roomSearch
       p.room-search__group
         label.room-search__label(for="field-amount-guests") Гости
         +dropdown({"jsClasses": "js-dropdown"})(id="field-amount-guests" name="guests" placeholder="Сколько гостей" readonly)
-          span.dropdown__container.dropdown__container_hidden
+          span.dropdown__container
             - const items = ["Взрослые", "Дети", "Младенцы"]
             each item in items
               span.dropdown__item
@@ -21,7 +21,7 @@ mixin roomSearch
                   button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
                   span.dropdown__amount 0
                   button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-            span.dropdown__item.dropdown__item_shift-from-top_20
+            span.dropdown__item
               button.dropdown__button.dropdown__button_theme_clear-button.dropdown__button_disabled(type="button") Очистить
               button.dropdown__button.dropdown__button_theme_apply-button(type="button") Применить
       p.room-search__group

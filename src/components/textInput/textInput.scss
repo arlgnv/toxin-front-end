@@ -55,7 +55,9 @@
 
   &_theme_masked {
     #{$root}__field {
-      line-height: 1.7143rem;
+      &::placeholder {
+        text-transform: uppercase;
+      }
     }
   }
 }

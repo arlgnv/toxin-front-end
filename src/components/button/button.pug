@@ -4,7 +4,4 @@ mixin button({text = "", theme = "", jsClasses = ""} = {})
     className = `${className} ${jsClasses}`.trim()
     
   button.button(class= className)&attributes(attributes)
-    if theme === "account-action" || theme === "like"
-      span.button__text= text
-    else
-      = text
+    span.button__text= text

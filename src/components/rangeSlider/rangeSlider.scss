@@ -1,6 +1,9 @@
 @import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min';
 
 .range-slider {
+  display: inline-block;
+  width: 100%;
+
   &__group {
     display: flex;
     justify-content: space-between;

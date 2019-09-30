@@ -59,7 +59,7 @@ block content
           p.filter__group
             label.filter__label(for="field-comfort") Удобства номера
             +dropdown({"jsClasses": "js-dropdown"})(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
-              span.dropdown__container.dropdown__container_hidden
+              span.dropdown__container
                 - const items = ["Спальни", "Кровати", "Ванные комнаты"]
                 each item in items
                   span.dropdown__item
@@ -71,7 +71,7 @@ block content
           fieldset.filter__group
             +checkboxInput({"theme": "expandable", "jsClasses": "js-checkbox-input_theme_expandable"})
               -
-                const checkboxInputItems =
+                const checkboxes =
                 [ 
                   {"title": "Завтрак", "name": "breakfast"},
                   {"title": "Письменный стол", "name": "desk"},
@@ -80,11 +80,11 @@ block content
                   {"title": "Телевизор", "name": "tv"},
                   {"title": "Шампунь", "name": "shampoo"}
                 ]
-              b.checkbox-input__group-title.js-checkboxInput__group-title Дополнительные удобства
+              b.checkbox-input__group-title Дополнительные удобства
               ul.checkbox-input__list
-                each checkboxInput in checkboxInputItems
+                each checkbox in checkboxes
                   li.checkbox-input__item
-                    +checkboxInput({"id": `field-${checkboxInput.name}`, "title": checkboxInput.title})
+                    +checkboxInput({"id": `field-${checkbox.name}`, "title": checkbox.title})
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list
