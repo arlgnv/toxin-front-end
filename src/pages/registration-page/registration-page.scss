@@ -28,8 +28,13 @@
       overflow: hidden;
     }
   }
-}
 
-.sign-up {
-  margin: 0 auto;
+  &__sign-up {
+    width: 380px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+  }
 }

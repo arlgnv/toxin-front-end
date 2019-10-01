@@ -110,10 +110,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 750px) {
-    justify-content: center;
-  }
-
   &__colors {
     width: 19.2143rem;
 
@@ -139,12 +135,13 @@
     &-image {
       width: 5rem;
       height: 5rem;
+      margin-right: 10px;
       background-color: $primary-color-100;
       border-radius: 0.4286rem;
     }
 
     &-name {
-      min-width: 11.3571rem;
+      width: 11.3571rem;
       font-weight: bold;
       font-size: 1.2143rem;
       line-height: 2.0714rem;
@@ -784,6 +781,17 @@
       @media screen and (max-width: 1420px) {
         margin-left: 0;
       }
+    }
+  }
+
+  &__room-search,
+  &__room-book,
+  &__sign-in,
+  &__sign-up {
+    width: 380px;
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
     }
   }
 }

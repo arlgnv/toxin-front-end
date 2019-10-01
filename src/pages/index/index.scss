@@ -50,10 +50,16 @@
       display: none;
     }
   }
-}
 
-.room-search {
-  @media screen and (max-width: 700px) {
-    margin: 0 auto;
+  &__room-search {
+    width: 380px;
+
+    @media screen and (max-width: 700px) {
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
   }
 }

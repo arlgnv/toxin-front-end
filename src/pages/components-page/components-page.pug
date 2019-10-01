@@ -220,17 +220,17 @@ block content
               +bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
         .form-elements__group
           .advantages
-            .advantages__group
-              +advantage({ "icon": "../../images/advantages/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"})
-            .advantages__group
-              +advantage({"icon": "../../images/advantages/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"})
+            -
+              const advantages = 
+              [
+                {"icon": "../../images/advantages/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"},
+                {"icon": "../../images/advantages/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"}
+              ]
+            each advantage in advantages
+              .advantages__group
+                +advantage(advantage)
           .testimonials
-            +testimonial({
-              "image": "../../images/testimonials/1.jpg",
-              "author": "Мурад Сарафанов",
-              "date": "5 дней назад",
-              "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей",
-              "likes": "12"})
+            +testimonial({"image": "../../images/testimonials/1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": "12"})
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Карточки
       .cards
@@ -247,35 +247,36 @@ block content
         .cards__group
           //- calendar
           .cards__rooms
-            .cards__room
-              +room({
-              "image": "../../images/rooms/room1.jpg",
-              "alt": "Роскошный номер на одного с большой кроватью",
-              "number": 888,
-              "lux": true,
-              "price": "9 990₽",
-              "rating": 5,
-              "testimonials": 145})
-            .cards__room
-              +room({
-                "image": "../../images/rooms/room2.jpg",
-                "alt": "Просторный номер на троих с тремя кроватями",
-                "number": 840,
-                "lux": false,
-                "price": "9 990₽",
-                "rating": 4,
-                "testimonials": 65})
+            -
+              const rooms =
+              [
+                {"image": "../../images/rooms/room1.jpg","alt": "Роскошный номер на одного с большой кроватью","number": 888,"lux": true,"price": "9 990₽","rating": 5,"testimonials": 145},
+                {"image": "../../images/rooms/room2.jpg","alt": "Просторный номер на троих с тремя кроватями","number": 840,"lux": false,"price": "9 990₽","rating": 4,"testimonials": 65}
+              ]
+            each room in rooms
+              .cards__room
+                +room(room)
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Хедеры и футеры
       .headers-footers
-        .headers-footers__group
-          +header
-        .headers-footers__group
-          +header({"theme": "logged"})
-        .headers-footers__group
-          +footer
-        .headers-footers__group
-          +footer({"theme": "poor"})
+        -
+          const headers = 
+          [
+            {"theme": ""},
+            {"theme": "logged"},
+          ]
+        each header in headers
+          .headers-footers__group
+            +header(header)
+        -
+          const footers = 
+          [
+            {"theme": ""},
+            {"theme": "poor"},
+          ]
+        each footer in footers
+          .headers-footers__group
+            +footer(footer)
 
 
   script(src="./components-page.js")
