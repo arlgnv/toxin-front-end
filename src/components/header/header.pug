@@ -1,10 +1,13 @@
-mixin header({theme = ""} = {})
-  - const className = theme === "" ? "" : `header_theme_${theme}`
+mixin header({theme = "", jsClasses = ""} = {})
+  -
+    let className = theme === "" ? "" : `header_theme_${theme}`
+    className = `${className} ${jsClasses}`.trim()
+
   header.header(class= className)
     .header__container
       a.header__logo(href="../index/index.pug")
         img.header__logo-image(src="../../logo.svg" alt="Отель Toxin")
-      button.header__burger.js-header__burger(aria-label="Показать меню")
+      button.header__burger(aria-label="Показать меню")
       nav.header__navigation
         ul.header__site-navigation
           -

@@ -289,5 +289,10 @@
 
   &__pagination {
     margin-left: 20.7857rem;
+
+    @media screen and (max-width: 1159px) {
+      width: 17.2143rem;
+      margin: 0 auto;
+    }
   }
 }

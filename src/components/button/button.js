@@ -1,18 +1,18 @@
-/* eslint-disable func-names */
-/* global $ */
+export default class ButtonLike {
+  constructor(button) {
+    this.button = button;
+    this.buttonText = button.querySelector('.button__text');
 
-const $buttons = $('.js-button_theme_like');
+    this.button.addEventListener('click', this.toggleLike.bind(this));
+  }
 
-$buttons.each(function () {
-  const $button = $(this);
-  const $buttonText = $button.find('.button__text');
-
-  $button.on('click', (evt) => {
+  toggleLike(evt) {
     evt.preventDefault();
 
-    $button.toggleClass('button_theme_liked');
+    this.button.classList.toggle('button_theme_liked');
 
-    if ($button.hasClass('button_theme_liked')) $buttonText.html(`${+$buttonText.html() + 1}`);
-    else $buttonText.html(`${+$buttonText.html() - 1}`);
-  });
-});
+    this.buttonText.textContent = this.button.classList.contains('button_theme_liked')
+      ? +this.buttonText.textContent + 1
+      : +this.buttonText.textContent - 1;
+  }
+}

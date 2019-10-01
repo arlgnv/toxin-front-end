@@ -107,7 +107,7 @@ function initGuestsDropdown() {
         input.value += `${amountBabies} младенцев`;
     }
 
-    dropdownContainer.classList.add('dropdown__container_hidden');
+    dropdown.classList.remove('dropdown_expanded');
   }
 
   function checkIsFieldsEmpty() {

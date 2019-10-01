@@ -1,4 +1,4 @@
 import '../../utilities/jquery-global';
 
+import 'air-datepicker';
 import 'ion-rangeslider';
-import '../../components/rangeSlider/rangeSlider';

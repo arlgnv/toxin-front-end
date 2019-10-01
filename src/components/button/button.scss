@@ -33,8 +33,8 @@
 
   &_theme_like {
     position: relative;
-    min-width: 40px;
-    padding: 1px;
+    min-width: 2.8571rem;
+    padding: 0.0714rem;
     background: $primary-color-25;
 
     &::before {
@@ -49,7 +49,7 @@
     }
 
     #{$root}__text {
-      padding: 3px 3px 3px 12px;
+      padding: 0.2143rem 0.2143rem 0.2143rem 0.8571rem;
       font-size: 0.7143rem;
       line-height: 0.8571rem;
       color: $primary-color-25;
@@ -67,7 +67,7 @@
   }
 
   &_theme_account-action {
-    min-width: 44px;
+    min-width: 3.1429rem;
     padding: 0.1429rem;
     color: $purple-color-100;
     background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
@@ -77,13 +77,13 @@
     }
 
     #{$root}__text {
-      padding: 13px 18px;
+      padding: 0.9286rem 1.2857rem;
       background-color: $white-color-100;
     }
   }
 
   &_theme_registration {
-    min-width: 44px;
+    min-width: 3.1429rem;
     color: $white-color-100;
     background-image: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
 
@@ -92,7 +92,7 @@
     }
 
     #{$root}__text {
-      padding: 15px 20px;
+      padding: 1.0714rem 1.4286rem;
     }
   }
 
@@ -126,19 +126,19 @@
     }
 
     #{$root}__text {
-      padding: 15px 35px;
+      padding: 1.0714rem 2.5rem;
     }
   }
 
   &_size_small#{$root}_theme_account-action {
     #{$root}__text {
-      padding: 8px 18px;
+      padding: 0.5714rem 1.2857rem;
     }
   }
 
   &_size_small#{$root}_theme_registration {
     #{$root}__text {
-      padding: 10px 20px;
+      padding: 0.7143rem 1.4286rem;
     }
   }
 }

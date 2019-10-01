@@ -13,264 +13,268 @@ block content
     h1.components-page__title.components-page__title_hidden Компоненты проекта
     article.ui-kit
       h2.ui-kit__title Цвета и шрифты
-      .container
-        .colors-fonts
-          .colors-fonts__colors
-            -
-              const colors =
-              [
-                {"name": "Dark shade 100%", "hex" : "#1f2041"},
-                {"name": "Dark shade 75%", "hex" : "#1f2041", "theme" : "75-transparency"},
-                {"name": "Dark shade 50%", "hex" : "#1f2041", "theme" : "50-transparency"},
-                {"name": "Dark shade 25%", "hex" : "#1f2041", "theme" : "25-transparency"},
-                {"name": "Dark shade 5%", "hex" : "#1f2041", "theme" : "5-transparency"},
-                {"name": "Purple", "hex" : "#bc9cff", "theme" : "purple"},
-                {"name": "Green", "hex" : "#6fcf97", "theme" : "green"}
-              ]
-            each color in colors
-              - const className = "theme" in color ? `colors-fonts__color_theme_${color.theme}` : ""
-              p.colors-fonts__color(class= className)
-                span.colors-fonts__color-image
-                span.colors-fonts__color-name= color.name
-                  span.colors-fonts__color-hex= color.hex
-          .colors-fonts__fonts
-            -
-              const fonts = 
-              [
-                {"name": "h1", "text": "This one is the sub-section or widget title", "theme": "h1"},
-                {"name": "h2", "text": "Next one is the item title inside widgets", "theme": "h2"},
-                {"name": "h3", "text": "This is a label or CTA text", "theme": "h3"},
-                {"name": "body", "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
-              ]
-            each font in fonts
-              - const className = "theme" in font ? `colors-fonts__font_theme_${font.theme}` : ""
-              p.colors-fonts__font(class= className)
-                span.colors-fonts__font-type= font.name
-                span.colors-fonts__font-example= font.text
+      .colors-fonts
+        .colors-fonts__colors
+          -
+            const colors =
+            [
+              {"name": "Dark shade 100%", "hex" : "#1f2041"},
+              {"name": "Dark shade 75%", "hex" : "#1f2041", "theme" : "75-transparency"},
+              {"name": "Dark shade 50%", "hex" : "#1f2041", "theme" : "50-transparency"},
+              {"name": "Dark shade 25%", "hex" : "#1f2041", "theme" : "25-transparency"},
+              {"name": "Dark shade 5%", "hex" : "#1f2041", "theme" : "5-transparency"},
+              {"name": "Purple", "hex" : "#bc9cff", "theme" : "purple"},
+              {"name": "Green", "hex" : "#6fcf97", "theme" : "green"}
+            ]
+          each color in colors
+            - const className = "theme" in color ? `colors-fonts__color_theme_${color.theme}` : ""
+            p.colors-fonts__color(class= className)
+              span.colors-fonts__color-image
+              span.colors-fonts__color-name= color.name
+                span.colors-fonts__color-hex= color.hex
+        .colors-fonts__fonts
+          -
+            const fonts = 
+            [
+              {"name": "h1", "text": "This one is the sub-section or widget title", "theme": "h1"},
+              {"name": "h2", "text": "Next one is the item title inside widgets", "theme": "h2"},
+              {"name": "h3", "text": "This is a label or CTA text", "theme": "h3"},
+              {"name": "body", "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+            ]
+          each font in fonts
+            - const className = "theme" in font ? `colors-fonts__font_theme_${font.theme}` : ""
+            p.colors-fonts__font(class= className)
+              span.colors-fonts__font-type= font.name
+              span.colors-fonts__font-example= font.text
     article.ui-kit
       h2.ui-kit__title Элементы формы
-      .container
-        .form-elements
-          .form-elements__group
-            .text-fields
-              p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
-                label.text-fields__title(for="field-1") text field
-                +textInput(id="field-1" placeholder="Email")
-              p.text-fields__group.text-fields__group_theme_with-tip(data-tip="hover / focus")
-                label.text-fields__title(for="field-2") text field
-                +textInput(id="field-2" value="This is pretty awesome")
-              p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
-                label.text-fields__title(for="field-3") dropdown
-                +dropdown(id="field-3" placeholder="Сколько гостей")
-              p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
-                label.text-fields__title(for="field-4") masked text field
-                +textInput({"theme": "masked"})(id="field-4" placeholder="дд.мм.гггг")
-              p.text-fields__group
-                span.text-fields__item
-                  label.text-fields__title(for="field-5") date dropdown
-                  +dropdown({"theme": "date"})(id="field-5" placeholder="дд.мм.гггг")
-                span.text-fields__item
-                  label.text-fields__title(for="field-6") date dropdown
-                  +dropdown({"theme": "date"})(id="field-6" value="19.08.2019")
-              p.text-fields__group
-                label.text-fields__title(for="field-7") filter date dropdown
-                +dropdown(id="field-7" value="19 авг - 23 авг")
-              p.text-fields__group
-                label.text-fields__title(for="field-8") subscription text field
-                +textInput({"theme": "newsletter"})(id="field-8" placeholder="Email")
-                  button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")
-            .buttons
-              .buttons__group
+      .form-elements
+        .form-elements__group
+          .text-fields
+            p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
+              label.text-fields__title(for="field-1") text field
+              +textInput(id="field-1" placeholder="Email")
+            p.text-fields__group.text-fields__group_theme_with-tip(data-tip="hover / focus")
+              label.text-fields__title(for="field-2") text field
+              +textInput(id="field-2" value="This is pretty awesome")
+            p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
+              label.text-fields__title(for="field-3") dropdown
+              +dropdown(id="field-3" placeholder="Сколько гостей")
+            p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
+              label.text-fields__title(for="field-4") masked text field
+              +textInput({"theme": "masked"})(id="field-4" placeholder="дд.мм.гггг")
+            p.text-fields__group
+              span.text-fields__item
+                label.text-fields__title(for="field-5") date dropdown
+                +dropdown({"theme": "date"})(id="field-5" placeholder="дд.мм.гггг")
+              span.text-fields__item
+                label.text-fields__title(for="field-6") date dropdown
+                +dropdown({"theme": "date"})(id="field-6" value="19.08.2019")
+            p.text-fields__group
+              label.text-fields__title(for="field-7") filter date dropdown
+              +dropdown(id="field-7" value="19 авг - 23 авг")
+            p.text-fields__group
+              label.text-fields__title(for="field-8") subscription text field
+              +textInput({"theme": "newsletter"})(id="field-8" placeholder="Email")
+                button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")
+          .buttons
+            .buttons__group
+              .buttons__subgroup
+                b.buttons__title checkbox buttons
+                .checkbox-poor
+                  +checkboxInput({"id": "field-9", "title": "Можно курить"})
+                .checkbox-poor
+                  +checkboxInput({"id": "field-10", "title": "Можно с питомцами"})(checked)
+                .checkbox-poor
+                  +checkboxInput({"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)"})(checked)
+              .buttons__subgroup
+                b.buttons__title radio buttons
+                span.radio
+                  +radioInput({"id": "field-12", "title": "Мужчина"})(name="gender" checked)
+                span.radio
+                  +radioInput({"id": "field-13", "title": "Женщина"})(name="gender")
+              .buttons__subgroup
+                b.buttons__title toggle
+                .checkbox-toggle
+                  +checkboxInput({"id": "field-14", "title": "Получать спецпредложения", "theme": "toggle"})(checked)
+                .checkbox-toggle
+                  +checkboxInput({"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"})
+              .buttons__subgroup
+                b.buttons__title like button
+                span.button-like
+                  +button({"theme": "like", "text": "2"})(type="button")
+                span.button-like
+                  +button({"theme": "like", "text": "12"})(type="button" class="button_theme_liked")
+              .buttons__subgroup
+                b.buttons__title rate button
+                span.rating-item
+                  +rating(4)
+                span.rating-item
+                  +rating(5)
+            .buttons__group
                 .buttons__subgroup
-                  b.buttons__title checkbox buttons
-                  .checkbox-poor
-                    +checkboxInput({"id": "field-9", "title": "Можно курить"})
-                  .checkbox-poor
-                    +checkboxInput({"id": "field-10", "title": "Можно с питомцами"})(checked)
-                  .checkbox-poor
-                    +checkboxInput({"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)"})(checked)
+                  +rangeSlider({"id": "field-16", "title": "range slider", "description": ""})
                 .buttons__subgroup
-                  b.buttons__title radio buttons
-                  span.radio
-                    +radioInput({"id": "field-12", "title": "Мужчина"})(name="gender" checked)
-                  span.radio
-                    +radioInput({"id": "field-13", "title": "Женщина"})(name="gender")
+                  b.buttons__title buttons
+                  span.button-registration
+                    +link({"text": "click me", "theme": "registration"})
+                  span.button-registration
+                    +link({"text": "click me", "theme": "registration"})
                 .buttons__subgroup
-                  b.buttons__title toggle
-                  .checkbox-toggle
-                    +checkboxInput({"id": "field-14", "title": "Получать спецпредложения", "theme": "toggle"})(checked)
-                  .checkbox-toggle
-                    +checkboxInput({"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"})
+                  span.button-account-action
+                    +link({"text": "click me", "theme": "account-action"})
+                  span.button-account-action
+                    +link({"text": "click me", "theme": "account-action"})
                 .buttons__subgroup
-                  b.buttons__title like button
-                  span.button-like
-                    +button({"theme": "like", "text": "2"})(type="button")
-                  span.button-like
-                    +button({"theme": "like", "text": "12"})(type="button" class="button_theme_liked")
+                  span.button-link
+                    +link({"text": "click me", "theme": "bold"})
+                  span.button-link
+                    +link({"text": "click me", "theme": "bold"})
                 .buttons__subgroup
-                  b.buttons__title rate button
-                  span.rating-item
-                    +rating(4)
-                  span.rating-item
-                    +rating(5)
-              .buttons__group
-                  .buttons__subgroup
-                    +rangeSlider({"id": "field-16", "title": "range slider", "description": ""})
-                  .buttons__subgroup
-                    b.buttons__title buttons
-                    span.button-registration
-                      +link({"text": "click me", "theme": "registration"})
-                    span.button-registration
-                      +link({"text": "click me", "theme": "registration"})
-                  .buttons__subgroup
-                    span.button-account-action
-                      +link({"text": "click me", "theme": "account-action"})
-                    span.button-account-action
-                      +link({"text": "click me", "theme": "account-action"})
-                  .buttons__subgroup
-                    span.button-link
-                      +link({"text": "click me", "theme": "bold"})
-                    span.button-link
-                      +link({"text": "click me", "theme": "bold"})
-                  .buttons__subgroup
-                    +link({"text": "перейти к оплате", "theme": "submit"})
-                  .buttons__subgroup
-                    b.buttons__title pagination
-                    -
-                      const pages = 
-                      [
-                        {"number": "1", "theme": "current", "link": "mock-adress/change-me"},
-                        {"number": "2", "link": "mock-adress/change-me"},
-                        {"number": "3", "link": "mock-adress/change-me"},
-                        {"number": "...", "link": "mock-adress/change-me"},
-                        {"number": "15", "link": "mock-adress/change-me"},
-                        {"number": "", "theme": "next-page", "link": "mock-adress/change-me"}
-                      ]
-                    +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
-          .form-elements__group
-            .dropdowns
-              .dropdowns__group
-                span.dropdowns__item.dropdowns__item_theme_with-tip(data-tip="default")
-                  label.dropdowns__title(for="field-17") dropdown
-                  +dropdown(id="field-17" value="2 спальни, 2 кровати...")
-                span.dropdowns__item.dropdowns__item_theme_with-tip(data-tip="expanded")
-                  label.dropdowns__title(for="field-18") dropdown
-                  +dropdown({"theme": "expanded", "state": "expanded"})(id="field-18" value="2 спальни, 2 кровати...")
-                    span.dropdown__container
-                      - const items = ["Спальни", "Кровати", "Ванные комнаты"]
-                      each item in items
-                        span.dropdown__item
-                          b.dropdown__title= item
-                          span.dropdown__count
-                            button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-              .dropdowns__group
-                span.dropdowns__item
-                  label.dropdowns__title(for="field-19") dropdown
-                  +dropdown({"theme": "expanded", "state": "expanded"})(id="field-19" placeholder="Сколько гостей")
-                    span.dropdown__container
-                      - const items = ["Взрослые", "Дети", "Младенцы"]
-                      each item in items
-                        span.dropdown__item
-                          b.dropdown__title= item
-                          span.dropdown__count
-                            button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-                      span.dropdown__item
-                        button.dropdown__button.dropdown__button_theme_clear-button.dropdown__button_disabled(type="button") Очистить
-                        button.dropdown__button.dropdown__button_theme_apply-button(type="button") Применить
-              .dropdowns__group
-                span.dropdowns__item
-                  label.dropdowns__title(for="field-20") dropdown
-                  +dropdown({"theme": "expanded", "state": "expanded"})(id="field-20" value="3 гостя")
-                    span.dropdown__container
-                      - const items = ["Взрослые", "Дети", "Младенцы"]
-                      each item in items
-                        span.dropdown__item
-                          b.dropdown__title= item
-                          span.dropdown__count
-                            button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-                      span.dropdown__item
-                        button.dropdown__button.dropdown__button_theme_clear-button.dropdown__button_disabled(type="button") Очистить
-                        button.dropdown__button.dropdown__button_theme_apply-button(type="button") Применить
-          .form-elements__group
-            .checkbox-expandable
-              .checkbox-expandable__item
-                +checkboxInput({"theme": "expandable"})
-                  b.checkbox-input__group-title expandable checkbox list
-              .checkbox-expandable__item
-                +checkboxInput({"theme": "expandable", "state": "expanded"})
+                  +link({"text": "перейти к оплате", "theme": "submit"})
+                .buttons__subgroup
+                  b.buttons__title pagination
                   -
-                    const checkboxes =
-                    [ 
-                      {"title": "Завтрак", "name": "breakfast"},
-                      {"title": "Письменный стол", "name": "desk"},
-                      {"title": "Стул для кормления", "name": "chair"},
-                      {"title": "Кроватка", "name": "bed"},
-                      {"title": "Телевизор", "name": "tv"},
-                      {"title": "Шампунь", "name": "shampoo"}
+                    const pages = 
+                    [
+                      {"number": "1", "theme": "current", "link": "mock-adress/change-me"},
+                      {"number": "2", "link": "mock-adress/change-me"},
+                      {"number": "3", "link": "mock-adress/change-me"},
+                      {"number": "...", "link": "mock-adress/change-me"},
+                      {"number": "15", "link": "mock-adress/change-me"},
+                      {"number": "", "theme": "next-page", "link": "mock-adress/change-me"}
                     ]
-                  b.checkbox-input__group-title expandable checkbox list
-                  ul.checkbox-input__list
-                    each checkbox in checkboxes
-                      li.checkbox-input__item
-                        +checkboxInput({"id": `field-${checkbox.name}`, "title": checkbox.title})
-            .checkbox-rich
-              b.checkbox-rich__title rich checkbox buttons
-              .checkbox-rich__group
-                +checkboxInput({"id": "field-21", "title": "Широкий коридор", "theme": "rich", "description": "Ширина коридоров в номере не менее 91 см."})
-              .checkbox-rich__group
-                +checkboxInput({"id": "field-22", "title": "Помощник для инвалидов", "theme": "rich", "description": "На 1 этаже вас встретит специалист  и проводит до номера."})
-            .bullet
-              b.bullet__title bullet list
-              .bullet__list
-                +bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
-          .form-elements__group
-            .form-elements__advantages
+                  +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
+        .form-elements__group
+          .dropdowns
+            .dropdowns__group
+              span.dropdowns__item.dropdowns__item_theme_with-tip(data-tip="default")
+                label.dropdowns__title(for="field-17") dropdown
+                +dropdown(id="field-17" value="2 спальни, 2 кровати...")
+              span.dropdowns__item.dropdowns__item_theme_with-tip(data-tip="expanded")
+                label.dropdowns__title(for="field-18") dropdown
+                +dropdown({"theme": "expanded", "state": "expanded"})(id="field-18" value="2 спальни, 2 кровати...")
+                  span.dropdown__container
+                    - const items = ["Спальни", "Кровати", "Ванные комнаты"]
+                    each item in items
+                      span.dropdown__item
+                        b.dropdown__title= item
+                        span.dropdown__count
+                          button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
+                          span.dropdown__amount 0
+                          button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
+            -
+              const dropdowns =
+              [
+                {"title": "dropdown", "id": "field-19", "placeholder": "Сколько гостей", "value": ""},
+                {"title": "dropdown", "id": "field-19", "placeholder": "", "value": "3 гостя"},
+              ]
+            each item in dropdowns
+              .dropdowns__group
+                span.dropdowns__item
+                  label.dropdowns__title(for= item.id)= item.title
+                  +dropdown({"theme": "expanded", "state": "expanded"})(id= item.id placeholder= item.placeholder value= item.value)
+                    span.dropdown__container
+                      - const items = ["Взрослые", "Дети", "Младенцы"]
+                      each item in items
+                        span.dropdown__item
+                          b.dropdown__title= item
+                          span.dropdown__count
+                            button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
+                            span.dropdown__amount 0
+                            button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
+                      span.dropdown__item
+                        button.dropdown__button.dropdown__button_theme_clear-button.dropdown__button_disabled(type="button") Очистить
+                        button.dropdown__button.dropdown__button_theme_apply-button(type="button") Применить
+        .form-elements__group
+          .checkbox-expandable
+            .checkbox-expandable__item
+              +checkboxInput({"theme": "expandable"})
+                b.checkbox-input__group-title expandable checkbox list
+            .checkbox-expandable__item
+              +checkboxInput({"theme": "expandable", "state": "expanded"})
+                -
+                  const checkboxes =
+                  [ 
+                    {"title": "Завтрак", "name": "breakfast"},
+                    {"title": "Письменный стол", "name": "desk"},
+                    {"title": "Стул для кормления", "name": "chair"},
+                    {"title": "Кроватка", "name": "bed"},
+                    {"title": "Телевизор", "name": "tv"},
+                    {"title": "Шампунь", "name": "shampoo"}
+                  ]
+                b.checkbox-input__group-title expandable checkbox list
+                ul.checkbox-input__list
+                  each checkbox in checkboxes
+                    li.checkbox-input__item
+                      +checkboxInput({"id": `field-${checkbox.name}`, "title": checkbox.title})
+          .checkbox-rich
+            b.checkbox-rich__title rich checkbox buttons
+            .checkbox-rich__group
+              +checkboxInput({"id": "field-21", "title": "Широкий коридор", "theme": "rich", "description": "Ширина коридоров в номере не менее 91 см."})
+            .checkbox-rich__group
+              +checkboxInput({"id": "field-22", "title": "Помощник для инвалидов", "theme": "rich", "description": "На 1 этаже вас встретит специалист  и проводит до номера."})
+          .bullet
+            b.bullet__title bullet list
+            .bullet__list
+              +bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+        .form-elements__group
+          .advantages
+            .advantages__group
               +advantage({ "icon": "../../images/advantages/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"})
+            .advantages__group
               +advantage({"icon": "../../images/advantages/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"})
-            .form-elements__testimonials
-              +testimonial({
-                "image": "../../images/testimonials/1.jpg",
-                "author": "Мурад Сарафанов",
-                "date": "5 дней назад",
-                "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей",
-                "likes": "12"})
+          .testimonials
+            +testimonial({
+              "image": "../../images/testimonials/1.jpg",
+              "author": "Мурад Сарафанов",
+              "date": "5 дней назад",
+              "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей",
+              "likes": "12"})
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Карточки
-      .container
-        .cards
-          +roomSearch
-          +roomBook
-          +signUp
-          +signIn
-          +room({
-            "image": "../../images/rooms/room1.jpg",
-            "alt": "Роскошный номер на одного с большой кроватью",
-            "number": 888,
-            "lux": true,
-            "price": "9 990₽",
-            "rating": 5,
-            "testimonials": 145})
-          +room({
-            "image": "../../images/rooms/room2.jpg",
-            "alt": "Просторный номер на троих с тремя кроватями",
-            "number": 840,
-            "lux": false,
-            "price": "9 990₽",
-            "rating": 4,
-            "testimonials": 65})
+      .cards
+        .cards__group
+          .cards__room-search
+            +roomSearch
+          .cards__sign-up
+            +signUp
+        .cards__group
+          .cards__room-book
+            +roomBook
+          .cards__sign-in
+            +signIn
+        .cards__group
+          //- calendar
+          .cards__rooms
+            .cards__room
+              +room({
+              "image": "../../images/rooms/room1.jpg",
+              "alt": "Роскошный номер на одного с большой кроватью",
+              "number": 888,
+              "lux": true,
+              "price": "9 990₽",
+              "rating": 5,
+              "testimonials": 145})
+            .cards__room
+              +room({
+                "image": "../../images/rooms/room2.jpg",
+                "alt": "Просторный номер на троих с тремя кроватями",
+                "number": 840,
+                "lux": false,
+                "price": "9 990₽",
+                "rating": 4,
+                "testimonials": 65})
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Хедеры и футеры
-      .container
-        .headers-footers
+      .headers-footers
+        .headers-footers__group
           +header
+        .headers-footers__group
           +header({"theme": "logged"})
+        .headers-footers__group
           +footer
+        .headers-footers__group
           +footer({"theme": "poor"})
 
 

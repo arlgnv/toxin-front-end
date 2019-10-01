@@ -1,7 +1,8 @@
 .advantage {
   display: flex;
-  align-items: center;
   margin: 0;
+  padding-bottom: 1.4286rem;
+  border-bottom: 0.0714rem solid $primary-color-10;
 
   &__icon {
     display: inline-block;

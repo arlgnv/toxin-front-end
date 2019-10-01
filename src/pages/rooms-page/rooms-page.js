@@ -1,11 +1,15 @@
+/* eslint-disable no-new */
 /* global $ window document */
+
 import '../../utilities/jquery-global';
 
 import 'ion-rangeslider';
-import '../../components/header/header';
+import Header from '../../components/header/header';
 import '../../components/checkboxInput/checkboxInput';
-import '../../components/rangeSlider/rangeSlider';
 import { initComfortDropdown } from '../../components/dropdown/dropdown';
+
+const header = document.querySelector('.js-header');
+new Header(header);
 
 // Filter
 const $filter = $('.js-filter');
@@ -37,3 +41,23 @@ $filterClose.click((evt) => {
 // Dropdown comfort
 const inputDropdownComfort = document.querySelector('.js-dropdown');
 inputDropdownComfort.addEventListener('click', initComfortDropdown);
+
+
+// Range slider
+
+const $range = $('.js-range-slider');
+const $rangeField = $range.find('.range-slider__field');
+const $rangePrice = $range.find('.range-slider__price');
+
+$rangeField.ionRangeSlider({
+  skin: 'custom',
+  type: 'double',
+  min: 0,
+  max: 15000,
+  hide_min_max: true,
+  from: 5000,
+  to: 10000,
+  hide_from_to: true,
+  onStart: (data) => $rangePrice.html(`${data.from}₽ - ${data.to}₽`),
+  onChange: (data) => $rangePrice.html(`${data.from}₽ - ${data.to}₽`),
+});

@@ -218,13 +218,8 @@
     letter-spacing: -0.0357rem;
   }
 
-  &__item {
-    padding-bottom: 1.4286rem;
-    border-bottom: 0.0714rem solid $primary-color-10;
-
-    + #{$root}__item {
-      margin-top: 1.4286rem;
-    }
+  &__item + #{$root}__item {
+    margin-top: 1.4286rem;
   }
 
   &__list {
