@@ -3,6 +3,10 @@ export default class ButtonLike {
     this.button = button;
     this.buttonText = button.querySelector('.button__text');
 
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
     this.button.addEventListener('click', this.toggleLike.bind(this));
   }
 

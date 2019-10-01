@@ -5,11 +5,17 @@ import '../../utilities/jquery-global';
 
 import 'ion-rangeslider';
 import Header from '../../components/header/header';
-import '../../components/checkboxInput/checkboxInput';
-import { initComfortDropdown } from '../../components/dropdown/dropdown';
+import CheckboxExpandable from '../../components/checkboxInput/checkboxInput';
+import DropdownComfort from '../../components/dropdown/dropdownComfort';
+
+const dropdownComfort = document.querySelector('.js-dropdown');
+new DropdownComfort(dropdownComfort);
 
 const header = document.querySelector('.js-header');
 new Header(header);
+
+const checkbox = document.querySelector('.js-checkbox-input');
+new CheckboxExpandable(checkbox);
 
 // Filter
 const $filter = $('.js-filter');
@@ -38,13 +44,7 @@ $filterClose.click((evt) => {
   document.body.classList.remove('scroll-none');
 });
 
-// Dropdown comfort
-const inputDropdownComfort = document.querySelector('.js-dropdown');
-inputDropdownComfort.addEventListener('click', initComfortDropdown);
-
-
 // Range slider
-
 const $range = $('.js-range-slider');
 const $rangeField = $range.find('.range-slider__field');
 const $rangePrice = $range.find('.range-slider__price');

@@ -4,6 +4,10 @@ export default class Header {
     this.headerNavigation = header.querySelector('.header__navigation');
     this.headerButtonBurger = header.querySelector('.header__burger');
 
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
     this.headerButtonBurger.addEventListener('click', this.toggleHeader.bind(this));
   }
 

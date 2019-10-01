@@ -4,14 +4,14 @@ import '../../utilities/jquery-global';
 
 import 'air-datepicker';
 import Header from '../../components/header/header';
-import { initGuestsDropdown } from '../../components/dropdown/dropdown';
+import DropdownGuests from '../../components/dropdown/dropdownGuests';
 
 const header = document.querySelector('.js-header');
 new Header(header);
 
 // Dropdown
-const inputDropdownGuests = document.querySelector('.js-dropdown');
-inputDropdownGuests.addEventListener('click', initGuestsDropdown);
+const dropdownGuests = document.querySelector('.js-dropdown');
+new DropdownGuests(dropdownGuests);
 
 // Calendar
 const $from = $('.js-dropdown-date-from');
