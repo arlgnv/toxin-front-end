@@ -21,7 +21,7 @@
 .components-page {
   min-height: 100vh;
   padding: 0 0.7143rem;
-  background-color: #e5e5e5;
+  background-color: $gray-color-100;
 
   &__title {
     &_hidden {
@@ -58,37 +58,37 @@
   &:nth-of-type(1) {
     padding: 10.3571rem 13.6429rem 10rem 10.7143rem;
 
-    @media screen and (max-width: 1200px) {
-      padding: 100px 10px;
+    @media screen and (max-width: 1400px) {
+      padding: 7.1429rem 0.7143rem;
     }
   }
 
   &:nth-of-type(2) {
     padding: 10.2857rem 10.0714rem 10rem 10.0714rem;
 
-    @media screen and (max-width: 1200px) {
-      padding: 100px 10px;
+    @media screen and (max-width: 1400px) {
+      padding: 7.1429rem 0.7143rem;
     }
   }
 
   &:nth-of-type(3) {
     padding: 10.7857rem 13.4714rem 10rem 10.0714rem;
 
-    @media screen and (max-width: 1200px) {
-      padding: 100px 10px;
+    @media screen and (max-width: 1400px) {
+      padding: 7.1429rem 0.7143rem;
     }
   }
 
   &:nth-of-type(4) {
     padding: 10.7857rem 0 3.4714rem;
 
-    @media screen and (max-width: 1200px) {
-      padding: 100px 10px;
+    @media screen and (max-width: 1400px) {
+      padding: 7.1429rem 0.7143rem;
     }
   }
 
   &_theme_light {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $white-color-50;
   }
 
   &__title {
@@ -113,11 +113,8 @@
   &__colors {
     width: 19.2143rem;
 
-    @media screen and (max-width: 750px) {
-      margin-bottom: 70px;
-    }
-
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 711px) {
+      margin-bottom: 5rem;
       width: 100%;
     }
   }
@@ -128,6 +125,10 @@
     align-items: center;
     margin: 0;
 
+    @media screen and (max-width: 711px) {
+      justify-content: flex-start;
+    }
+
     + #{$root}__color {
       margin-top: 1.5rem;
     }
@@ -135,7 +136,7 @@
     &-image {
       width: 5rem;
       height: 5rem;
-      margin-right: 10px;
+      margin-right: 0.7143rem;
       background-color: $primary-color-100;
       border-radius: 0.4286rem;
     }
@@ -183,7 +184,7 @@
   &__fonts {
     width: 28.7857rem;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 711px) {
       width: 100%;
     }
   }
@@ -193,6 +194,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
+
+    @media screen and (max-width: 711px) {
+      justify-content: flex-start;
+    }
 
     &:nth-child(1) {
       margin-bottom: 3.6429rem;
@@ -208,9 +213,14 @@
 
     &-type {
       width: 2.6429rem;
+      margin-right: 0.7143rem;
       color: $primary-color-25;
       text-align: right;
       text-transform: capitalize;
+
+      @media screen and (max-width: 711px) {
+        width: auto;
+      }
     }
 
     &-example {
@@ -299,11 +309,11 @@
   $root: &;
 
   width: 22.8571rem;
-  margin-right: 20px;
+  margin-right: 1.4286rem;
 
   @media screen and (max-width: 1353px) {
     width: 100%;
-    margin: 0 0 50px;
+    margin: 0 0 3.5714rem;
   }
 
   &__group {
@@ -397,7 +407,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 712px;
+  width: 50.8571rem;
 
   @media screen and (max-width: 1353px) {
     justify-content: flex-start;
@@ -418,10 +428,10 @@
   &__group {
     &:nth-child(1) {
       width: 18.5714rem;
-      margin-right: 20px;
+      margin-right: 1.4286rem;
 
       @media screen and (max-width: 1353px) {
-        margin-right: 30px;
+        margin-right: 2.1429rem;
       }
 
       #{$root}__subgroup {
@@ -600,7 +610,7 @@
       }
 
       @media screen and (max-width: 1000px) {
-        margin-bottom: 150px;
+        margin-bottom: 10.7143rem;
       }
 
       @media screen and (max-width: 400px) {
@@ -617,7 +627,7 @@
       }
 
       @media screen and (max-width: 1000px) {
-        margin-bottom: 190px;
+        margin-bottom: 13.5714rem;
       }
 
       @media screen and (max-width: 400px) {
@@ -634,7 +644,7 @@
       }
 
       @media screen and (max-width: 1000px) {
-        margin-bottom: 100px;
+        margin-bottom: 7.1429rem;
       }
 
       @media screen and (max-width: 400px) {
@@ -688,7 +698,7 @@
   }
 
   @media screen and (max-width: 1000px) {
-    margin-top: 50px;
+    margin-top: 3.5714rem;
   }
 
   &__title {
@@ -717,7 +727,7 @@
   }
 
   @media screen and (max-width: 1000px) {
-    margin-top: 50px;
+    margin-top: 3.5714rem;
   }
 
   &__title {
@@ -752,7 +762,7 @@
   padding-top: 0.7143rem;
 
   @media screen and (max-width: 1400px) {
-    margin-top: 50px;
+    margin-top: 3.5714rem;
   }
 
   @media screen and (max-width: 1050px) {
@@ -772,11 +782,11 @@
 
   &__group {
     @media screen and (max-width: 1420px) {
-      margin-bottom: 50px;
+      margin-bottom: 3.5714rem;
     }
 
     + #{$root}__group {
-      margin-left: 20px;
+      margin-left: 1.4286rem;
 
       @media screen and (max-width: 1420px) {
         margin-left: 0;
@@ -788,7 +798,7 @@
   &__room-book,
   &__sign-in,
   &__sign-up {
-    width: 380px;
+    width: 27.1429rem;
 
     @media screen and (max-width: 420px) {
       width: 100%;
