@@ -219,6 +219,12 @@
 
     #{$root}__user-menu {
       display: block;
+
+      @media screen and (max-width: 1057px) {
+        padding: 10px 0 0;
+        border-left: none;
+        border-top: 0.2143rem solid $primary-color-50;
+      }
     }
   }
 }

@@ -62,6 +62,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 0.5rem;
 
     &:nth-child(4) {
@@ -131,7 +132,7 @@
 
   &__amount {
     margin: 0 0.4286rem;
-    width: 1.5714rem;
+    min-width: 1.5714rem;
     font-weight: bold;
     font-size: 0.8571rem;
     line-height: 1.0714rem;

@@ -245,7 +245,8 @@ block content
           .cards__sign-in
             +signIn
         .cards__group
-          //- calendar
+          .cards__calendar
+            +textInput(id="" class="js-dropdown-date" name="" placeholder="" readonly)
           .cards__rooms
             -
               const rooms =
@@ -262,8 +263,8 @@ block content
         -
           const headers = 
           [
-            {"theme": ""},
-            {"theme": "logged"},
+            {"theme": "", "jsClasses": "js-header"},
+            {"theme": "logged", "jsClasses": "js-header"},
           ]
         each header in headers
           .headers-footers__group
