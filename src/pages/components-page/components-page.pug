@@ -81,12 +81,16 @@ block content
             .buttons__group
               .buttons__subgroup
                 b.buttons__title checkbox buttons
-                .checkbox-poor
-                  +checkboxInput({"id": "field-9", "title": "Можно курить"})
-                .checkbox-poor
-                  +checkboxInput({"id": "field-10", "title": "Можно с питомцами"})(checked)
-                .checkbox-poor
-                  +checkboxInput({"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)"})(checked)
+                -
+                  const checkboxesPoor =
+                  [
+                    {"id": "field-9", "title": "Можно курить"},
+                    {"id": "field-10", "title": "Можно с питомцами", "checked": true},
+                    {"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)", "checked": true}
+                  ]
+                each checkbox in checkboxesPoor
+                  .checkbox-poor
+                    +checkboxInput(checkbox)
               .buttons__subgroup
                 b.buttons__title radio buttons
                 span.radio
@@ -196,24 +200,29 @@ block content
                 -
                   const checkboxes =
                   [ 
-                    {"title": "Завтрак", "name": "breakfast"},
-                    {"title": "Письменный стол", "name": "desk"},
-                    {"title": "Стул для кормления", "name": "chair"},
-                    {"title": "Кроватка", "name": "bed"},
-                    {"title": "Телевизор", "name": "tv"},
-                    {"title": "Шампунь", "name": "shampoo"}
+                    {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                    {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                    {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                    {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                    {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                    {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
                   ]
                 b.checkbox-input__group-title expandable checkbox list
                 ul.checkbox-input__list
                   each checkbox in checkboxes
                     li.checkbox-input__item
-                      +checkboxInput({"id": `field-${checkbox.name}`, "title": checkbox.title})
+                      +checkboxInput(checkbox)
           .checkbox-rich
             b.checkbox-rich__title rich checkbox buttons
-            .checkbox-rich__group
-              +checkboxInput({"id": "field-21", "title": "Широкий коридор", "theme": "rich", "description": "Ширина коридоров в номере не менее 91 см."})
-            .checkbox-rich__group
-              +checkboxInput({"id": "field-22", "title": "Помощник для инвалидов", "theme": "rich", "description": "На 1 этаже вас встретит специалист  и проводит до номера."})
+            -
+              const checkboxesRich =
+              [
+                {"id": "field-21", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
+                {"id": "field-22","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
+              ]
+            each checkbox in checkboxesRich
+              .checkbox-rich__group
+                +checkboxInput(checkbox)
           .bullet
             b.bullet__title bullet list
             .bullet__list

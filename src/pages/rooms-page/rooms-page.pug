@@ -35,27 +35,28 @@ block content
           fieldset.filter__group
             legend.filter__group-title Дополнительные возможности
             ul.filter__list
-              li.filter__item
-                +checkboxInput({"id": "field-smoke", "title": "Можно курить"})(name="smoke")
-              li.filter__item
-                +checkboxInput({"id": "field-pets", "title": "Можно с питомцами"})(name="pets" checked)
-              li.filter__item
-                +checkboxInput({"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)"})(name="allow-guests" checked)
+              -
+                const checkboxesPoor =
+                [
+                  {"id": "field-smoke", "title": "Можно курить", "name": "smoke"},
+                  {"id": "field-pets", "title": "Можно с питомцами", "name": "pets", "checked": true},
+                  {"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)", "name": "allow-guests", "checked": true}
+                ]
+              each checkbox in checkboxesPoor     
+                li.filter__item
+                  +checkboxInput(checkbox)
           fieldset.filter__group
             legend.filter__group-title Доступность
             ul.filter__list
-              li.filter__item
-                +checkboxInput({
-                  "id": "field-wide-aisle",
-                  "theme": "rich", 
-                  "title": "Широкий коридор",
-                  "description": "Ширина коридоров в номере не менее 91 см."})(name="wide-aisle")
-              li.filter__item
-                +checkboxInput({
-                  "id": "field-hepler",
-                  "theme": "rich",
-                  "title": "Помощник для инвалидов",
-                  "description": "На 1 этаже вас встретит специалист  и проводит до номера."})(name="helper")
+              -
+                const checkboxesRich =
+                [
+                  {"id": "field-wide-aisle", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
+                  {"id": "field-hepler","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
+                ]
+              each checkbox in checkboxesRich
+                li.filter__item
+                  +checkboxInput(checkbox)
           p.filter__group
             label.filter__label(for="field-comfort") Удобства номера
             +dropdown({"jsClasses": "js-dropdown"})(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
@@ -73,18 +74,18 @@ block content
               -
                 const checkboxes =
                 [ 
-                  {"title": "Завтрак", "name": "breakfast"},
-                  {"title": "Письменный стол", "name": "desk"},
-                  {"title": "Стул для кормления", "name": "chair"},
-                  {"title": "Кроватка", "name": "bed"},
-                  {"title": "Телевизор", "name": "tv"},
-                  {"title": "Шампунь", "name": "shampoo"}
+                  {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                  {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                  {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                  {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                  {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                  {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
                 ]
               b.checkbox-input__group-title Дополнительные удобства
               ul.checkbox-input__list
                 each checkbox in checkboxes
                   li.checkbox-input__item
-                    +checkboxInput({"id": `field-${checkbox.name}`, "title": checkbox.title})
+                    +checkboxInput(checkbox)
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list
