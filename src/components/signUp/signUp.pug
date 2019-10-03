@@ -10,10 +10,15 @@ mixin signUp
           label.sign-up__label.sign-up__label_hidden(for="field-surname") Введите фамилию
           +textInput(id="field-surname" name="surname" placeholder="Фамилия")
         ul.sign-up__list
-          li.sign-up__item
-            +radioInput({"id": "field-gender-male", "title": "Мужчина"})(name="gender" value="male" checked)
-          li.sign-up__item
-            +radioInput({"id": "field-gender-female", "title": "Женщина"})(name="gender" value="female")
+          -
+            const radioInputs =
+            [
+              {"id": "field-gender-male", "title": "Мужчина", "name": "gender", "checked": true},
+              {"id": "field-gender-female", "title": "Женщина", "name": "gender"}
+            ]
+          each radio in radioInputs
+            li.sign-up__item
+              +radioInput(radio)
       p.sign-up__group
         label.sign-up__label(for="field-birthday") Дата рождения
         +textInput(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")

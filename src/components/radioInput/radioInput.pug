@@ -1,4 +1,4 @@
-mixin radioInput({id = "", title = ""} = {})
+mixin radioInput({id = "", title = "", name = "", value="", checked = false} = {})
   span.radio-input
-    input.radio-input__field.radio-input__field_hidden(id= id type="radio")&attributes(attributes)
+    input.radio-input__field.radio-input__field_hidden(id= id type="radio" name= name value= value checked= checked)&attributes(attributes)
     label.radio-input__label(for= id)= title

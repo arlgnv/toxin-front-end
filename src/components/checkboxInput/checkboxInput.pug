@@ -8,10 +8,7 @@ mixin checkboxInput({id = "", title = "", theme = "", state =  "", jsClasses = "
     if block
       block
     else
-      if checked === true
-        input.checkbox-input__field.checkbox-input__field_hidden(id= id type="checkbox" name= name checked)&attributes(attributes)
-      else
-        input.checkbox-input__field.checkbox-input__field_hidden(id= id type="checkbox" name= name)&attributes(attributes)
+      input.checkbox-input__field.checkbox-input__field_hidden(id= id type="checkbox" name= name checked= checked)&attributes(attributes)
       label.checkbox-input__label(for= id)= title
       if description
         span.checkbox-input__description= description

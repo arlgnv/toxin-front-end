@@ -93,16 +93,26 @@ block content
                     +checkboxInput(checkbox)
               .buttons__subgroup
                 b.buttons__title radio buttons
-                span.radio
-                  +radioInput({"id": "field-12", "title": "Мужчина"})(name="gender" checked)
-                span.radio
-                  +radioInput({"id": "field-13", "title": "Женщина"})(name="gender")
+                -
+                  const radioInputs =
+                  [
+                    {"id": "field-12", "title": "Мужчина", "name": "gender", "checked": true},
+                    {"id": "field-13", "title": "Женщина", "name": "gender"}
+                  ]
+                each radioInput in radioInputs
+                  span.radio
+                    +radioInput(radioInput)
               .buttons__subgroup
                 b.buttons__title toggle
-                .checkbox-toggle
-                  +checkboxInput({"id": "field-14", "title": "Получать спецпредложения", "theme": "toggle"})(checked)
-                .checkbox-toggle
-                  +checkboxInput({"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"})
+                -
+                  const checkboxesToggle =
+                  [
+                    {"id": "field-14", "title": "Получать спецпредложения", "theme": "toggle", "checked": true},
+                    {"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"}
+                  ]
+                each checkbox in checkboxesToggle
+                  .checkbox-toggle
+                    +checkboxInput(checkbox)
               .buttons__subgroup
                 b.buttons__title like button
                 span.button-like
