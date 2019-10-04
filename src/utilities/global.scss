@@ -1,6 +1,7 @@
 html {
   font: $basic-font;
   color: $primary-color-75;
+  background-color: $white-color-100;
 }
 
 body {
@@ -11,5 +12,4 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  background-color: $white-color-100;
 }

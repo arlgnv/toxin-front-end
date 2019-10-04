@@ -5,10 +5,10 @@ mixin roomSearch
       div.room-search__group
         p.room-search__item
           label.room-search__label(for="field-date-from") Прибытие
-          +dropdown(id="field-date-from" class="js-dropdown-date-from" name="from" placeholder="ДД.ММ.ГГГГ" readonly)
+          +dropdown({"theme": "date", "jsClasses": "js-dropdown-date-from"})(id="field-date-from" name="from" placeholder="дд.мм.гггг" readonly)
         p.room-search__item
           label.room-search__label(for="field-date-to") Выезд
-          +dropdown(id="field-date-to" class="js-dropdown-date-to" name="to" placeholder="ДД.ММ.ГГГГ" readonly)
+          +dropdown({"theme": "date", "jsClasses": "js-dropdown-date-to"})(id="field-date-to" name="to" placeholder="дд.мм.гггг" readonly)
       p.room-search__group
         label.room-search__label(for="field-amount-guests") Гости
         +dropdown({"jsClasses": "js-dropdown"})(id="field-amount-guests" name="guests" placeholder="Сколько гостей" readonly)

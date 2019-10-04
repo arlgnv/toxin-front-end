@@ -1,7 +1,7 @@
 mixin dropdown({theme = "", state =  "", jsClasses = ""} = {})
   -
     let className = theme === "" ? "" : `dropdown_theme_${theme}`
-    className = `${className} ${state === "" ? "" : `dropdown_${state}`}`
+    className = `${className} ${state === "" ? "" : `dropdown_${state}`}`.trim()
     className = `${className} ${jsClasses}`.trim()
     
   span.dropdown(class= className)

@@ -1,7 +1,7 @@
 mixin checkboxInput({id = "", title = "", theme = "", state =  "", jsClasses = "", description = "", name = "", checked = false} = {})
   -
     let className = theme === "" ? "" : `checkbox-input_theme_${theme}`
-    className = `${className} ${state === "" ? "" : `checkbox-input_${state}`}`
+    className = `${className} ${state === "" ? "" : `checkbox-input_${state}`}`.trim()
     className = `${className} ${jsClasses}`.trim()
     
   div.checkbox-input(class= className)

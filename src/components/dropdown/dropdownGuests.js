@@ -39,10 +39,10 @@ export default class DropdownGuests {
     const buttonDecrease = item.querySelector('.dropdown__control-button_theme_minus');
     const amount = item.querySelector('.dropdown__amount');
 
-    if (+amount.textContent > 0) {
-      amount.textContent = +amount.textContent - 1;
+    if (amount.textContent > 0) {
+      amount.textContent -= 1;
 
-      if (+amount.textContent === 0) {
+      if (amount.textContent === 0) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
         if (this.checkIsFieldsEmpty() === true) this.buttonClear.classList.add('dropdown__button_disabled');
       }

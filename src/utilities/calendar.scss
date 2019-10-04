@@ -1,6 +1,8 @@
-@import '../../../node_modules/air-datepicker/dist/css/datepicker.min';
+@import 'air-datepicker/dist/css/datepicker.min';
 
 .datepicker {
+  $root: &;
+
   box-sizing: border-box;
   width: 22.8571rem;
   padding: 1.0286rem 1.4286rem 0.8286rem;
@@ -121,10 +123,13 @@
       border-radius: 50%;
     }
 
-    &.-current- {
+    &.-current-,
+    &.-current-.-in-range-,
+    &.-current-.-focus-,
+    &.-current-.-selected- {
       font-weight: bold;
-      color: $white-color-100 !important;
-      background: linear-gradient(180deg, $green-color-100 0%, $aqua-color-100 100%) !important;
+      color: $white-color-100;
+      background: linear-gradient(180deg, $green-color-100 0%, $aqua-color-100 100%);
       border-radius: 50%;
     }
 
@@ -134,11 +139,7 @@
 
     &.-in-range-:not(.-disabled-):not(.-current-),
     &.-in-range-.other-month- {
-      background: linear-gradient(
-        180deg,
-        $purple-color-25 0%,
-        $aqua-color-light-25 100%
-      ) !important;
+      background: linear-gradient(180deg, $purple-color-25 0%, $aqua-color-light-25 100%);
     }
 
     &.-range-from-:not(.-disabled-) {
@@ -188,16 +189,16 @@
     cursor: pointer;
 
     &:hover {
-      background-color: transparent !important;
+      background-color: transparent;
     }
 
     &[data-action='today'] {
-      color: $purple-color-100 !important;
+      color: $purple-color-100;
       order: 1;
     }
 
     &[data-action='clear'] {
-      color: $purple-color-50 !important;
+      color: $purple-color-50;
     }
   }
 }

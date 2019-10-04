@@ -35,10 +35,10 @@ export default class DropdownComfort {
     const buttonDecrease = item.querySelector('.dropdown__control-button_theme_minus');
     const amount = item.querySelector('.dropdown__amount');
 
-    if (+amount.textContent > 0) {
-      amount.textContent = +amount.textContent - 1;
+    if (amount.textContent > 0) {
+      amount.textContent -= 1;
 
-      if (+amount.textContent === 0) {
+      if (amount.textContent === 0) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
       }
     }
@@ -59,74 +59,39 @@ export default class DropdownComfort {
   }
 
   apply() {
-    let amountBedrooms = 0;
-    let amountBeds = 0;
-    let amountBathrooms = 0;
+    const cases = {
+      0: ['спален', 'кроватей', 'ванных комнат'],
+      1: ['спальня', 'кровать', 'ванная комната'],
+      2: ['спальни', 'кровати', 'ванные комнаты'],
+      3: ['спальни', 'кровати', 'ванные комнаты'],
+      4: ['спальни', 'кровати', 'ванные комнаты'],
+      5: ['спален', 'кроватей', 'ванных комнат'],
+      6: ['спален', 'кроватей', 'ванных комнат'],
+      7: ['спален', 'кроватей', 'ванных комнат'],
+      8: ['спален', 'кроватей', 'ванных комнат'],
+      9: ['спален', 'кроватей', 'ванных комнат'],
+      10: ['спален', 'кроватей', 'ванных комнат'],
+    };
 
     this.items.forEach((item) => {
       const title = item.querySelector('.dropdown__title').textContent;
-      const amount = +item.querySelector('.dropdown__amount').textContent;
+      const amount = item.querySelector('.dropdown__amount').textContent;
 
       switch (title) {
         case 'Спальни':
-          amountBedrooms += amount;
+          this.input.value = `${amount} ${cases[amount][0]}, `;
           break;
 
         case 'Кровати':
-          amountBeds += amount;
+          this.input.value += `${amount} ${cases[amount][1]}, `;
           break;
 
         case 'Ванные комнаты':
-          amountBathrooms += amount;
+          this.input.value += `${amount} ${cases[amount][2]}`;
           break;
 
         default: break;
       }
     });
-
-    switch (amountBedrooms) {
-      case 1:
-        this.input.value = `${amountBedrooms} спальня, `;
-        break;
-
-      case 2:
-      case 3:
-      case 4:
-        this.input.value = `${amountBedrooms} спальни, `;
-        break;
-
-      default:
-        this.input.value = `${amountBedrooms} спален, `;
-    }
-
-    switch (amountBeds) {
-      case 1:
-        this.input.value += `${amountBeds} кровать, `;
-        break;
-
-      case 2:
-      case 3:
-      case 4:
-        this.input.value += `${amountBeds} кровати, `;
-        break;
-
-      default:
-        this.input.value += `${amountBeds} кроватей, `;
-    }
-
-    switch (amountBathrooms) {
-      case 1:
-        this.input.value += `${amountBathrooms} ванная комната`;
-        break;
-
-      case 2:
-      case 3:
-      case 4:
-        this.input.value += `${amountBathrooms} ванные комнаты`;
-        break;
-
-      default:
-        this.input.value += `${amountBathrooms} ванных комнат`;
-    }
   }
 }

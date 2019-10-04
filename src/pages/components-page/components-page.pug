@@ -1,5 +1,11 @@
 extends ../../templates/template-base
 
+block description
+  meta(name="description" content="Компоненты нашего сайта. Из этих маленьких кусочков собирается большой проект")
+
+block keywords
+  meta(name="keywords" content="форма поиска номера, форма бронирования номера, кнопка с градиентом")
+
 block title
   title Отель Toxin | Страница с компонентами проекта
 
@@ -181,7 +187,7 @@ block content
               const dropdowns =
               [
                 {"title": "dropdown", "id": "field-19", "placeholder": "Сколько гостей", "value": ""},
-                {"title": "dropdown", "id": "field-19", "placeholder": "", "value": "3 гостя"},
+                {"title": "dropdown", "id": "field-20", "placeholder": "", "value": "3 гостя"},
               ]
             each item in dropdowns
               .dropdowns__group
@@ -264,8 +270,7 @@ block content
           .cards__sign-in
             +signIn
         .cards__group
-          .cards__calendar
-            +textInput(id="" class="js-dropdown-date" name="" placeholder="" readonly)
+          .cards__calendar.datepicker-here
           .cards__rooms
             -
               const rooms =

@@ -1,6 +1,6 @@
 @import '../button/button';
 @import '../dropdown/dropdown';
-@import '../calendar/calendar';
+@import '../../utilities/calendar';
 
 .room-search {
   $root: &;

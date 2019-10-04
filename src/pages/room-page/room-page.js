@@ -9,5 +9,5 @@ import ButtonLike from '../../components/button/button';
 const header = document.querySelector('.js-header');
 new Header(header);
 
-const likeButtons = document.querySelectorAll('.js-button');
-likeButtons.forEach((button) => new ButtonLike(button));
+const buttonsLike = document.querySelectorAll('.js-button');
+buttonsLike.forEach((button) => new ButtonLike(button));
