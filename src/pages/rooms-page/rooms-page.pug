@@ -63,12 +63,12 @@ block content
               span.dropdown__container
                 - const items = ["Спальни", "Кровати", "Ванные комнаты"]
                 each item in items
-                  span.dropdown__item
+                  span.dropdown__group
                     b.dropdown__title= item
-                    span.dropdown__count
-                      button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-                      span.dropdown__amount 0
-                      button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
+                    span.dropdown__counter
+                      button.dropdown__control-button.dropdown__control-button_disabled(type="button" data-dropdown-button-type="decrease") -
+                      span.dropdown__counter-value 0
+                      button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
           fieldset.filter__group
             +checkboxInput({"theme": "expandable", "jsClasses": "js-checkbox-input"})
               -

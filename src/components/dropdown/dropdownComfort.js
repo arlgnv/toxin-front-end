@@ -11,10 +11,10 @@ export default class DropdownComfort {
   constructor(dropdown) {
     this.dropdown = dropdown;
     this.input = this.dropdown.querySelector('.dropdown__field');
-    this.items = this.dropdown.querySelectorAll('.dropdown__item');
-    this.amounts = this.dropdown.querySelectorAll('.dropdown__amount');
-    this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button_theme_minus');
-    this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button_theme_plus');
+    this.groups = this.dropdown.querySelectorAll('.dropdown__group');
+    this.counters = this.dropdown.querySelectorAll('.dropdown__counter');
+    this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
+    this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
 
     this.addEventListeners();
   }
@@ -31,14 +31,13 @@ export default class DropdownComfort {
   }
 
   decreaseValue(evt) {
-    const item = evt.currentTarget.parentElement;
-    const buttonDecrease = item.querySelector('.dropdown__control-button_theme_minus');
-    const amount = item.querySelector('.dropdown__amount');
+    const counterField = evt.currentTarget.nextElementSibling;
+    const buttonDecrease = evt.currentTarget;
 
-    if (amount.textContent > 0) {
-      amount.textContent -= 1;
+    if (counterField.textContent > 0) {
+      counterField.textContent -= 1;
 
-      if (amount.textContent === 0) {
+      if (+counterField.textContent === 0) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
       }
     }
@@ -47,11 +46,10 @@ export default class DropdownComfort {
   }
 
   increaseValue(evt) {
-    const item = evt.currentTarget.parentElement;
-    const buttonDecrease = item.querySelector('.dropdown__control-button_theme_minus');
-    const amount = item.querySelector('.dropdown__amount');
+    const counterField = evt.currentTarget.previousElementSibling;
+    const buttonDecrease = counterField.previousElementSibling;
 
-    amount.textContent = +amount.textContent + 1;
+    counterField.textContent = +counterField.textContent + 1;
 
     buttonDecrease.classList.remove('dropdown__control-button_disabled');
 
@@ -73,21 +71,21 @@ export default class DropdownComfort {
       10: ['спален', 'кроватей', 'ванных комнат'],
     };
 
-    this.items.forEach((item) => {
-      const title = item.querySelector('.dropdown__title').textContent;
-      const amount = item.querySelector('.dropdown__amount').textContent;
+    this.groups.forEach((group) => {
+      const title = group.querySelector('.dropdown__title').textContent;
+      const value = group.querySelector('.dropdown__counter-value').textContent;
 
       switch (title) {
         case 'Спальни':
-          this.input.value = `${amount} ${cases[amount][0]}, `;
+          this.input.value = `${value} ${cases[value][0]}, `;
           break;
 
         case 'Кровати':
-          this.input.value += `${amount} ${cases[amount][1]}, `;
+          this.input.value += `${value} ${cases[value][1]}, `;
           break;
 
         case 'Ванные комнаты':
-          this.input.value += `${amount} ${cases[amount][2]}`;
+          this.input.value += `${value} ${cases[value][2]}`;
           break;
 
         default: break;

@@ -177,12 +177,12 @@ block content
                   span.dropdown__container
                     - const items = ["Спальни", "Кровати", "Ванные комнаты"]
                     each item in items
-                      span.dropdown__item
+                      span.dropdown__group
                         b.dropdown__title= item
-                        span.dropdown__count
-                          button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-                          span.dropdown__amount 0
-                          button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
+                        span.dropdown__counter
+                          button.dropdown__control-button.dropdown__control-button_disabled(type="button" data-dropdown-button-type="decrease") -
+                          span.dropdown__counter-value 0
+                          button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
             -
               const dropdowns =
               [
@@ -197,15 +197,15 @@ block content
                     span.dropdown__container
                       - const items = ["Взрослые", "Дети", "Младенцы"]
                       each item in items
-                        span.dropdown__item
+                        span.dropdown__group
                           b.dropdown__title= item
-                          span.dropdown__count
-                            button.dropdown__control-button.dropdown__control-button_theme_minus.dropdown__control-button_disabled(type="button")
-                            span.dropdown__amount 0
-                            button.dropdown__control-button.dropdown__control-button_theme_plus(type="button")
-                      span.dropdown__item
-                        button.dropdown__button.dropdown__button_theme_clear.dropdown__button_disabled(type="button") Очистить
-                        button.dropdown__button.dropdown__button_theme_apply(type="button") Применить
+                          span.dropdown__counter
+                            button.dropdown__control-button.dropdown__control-button_disabled(type="button" data-dropdown-button-type="decrease") -
+                            span.dropdown__counter-value 0
+                            button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
+                      span.dropdown__group
+                        button.dropdown__button.dropdown__button_hidden(type="button" data-dropdown-button-type="clear") Очистить
+                        button.dropdown__button.dropdown__button_theme_purple(type="button" data-dropdown-button-type="apply") Применить
         .form-elements__group
           .checkbox-expandable
             .checkbox-expandable__item

@@ -58,12 +58,12 @@
     background-color: $white-color-100;
   }
 
-  &__item {
+  &__group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 
     &:nth-child(4) {
       margin: 1.5714rem 0 0.7143rem;
@@ -79,58 +79,32 @@
     text-transform: uppercase;
   }
 
-  &__count {
+  &__counter {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__control-button {
-    position: relative;
     box-sizing: border-box;
-    display: flex;
     margin: 0;
     padding: 0;
     width: 2.1429rem;
-    height: 2.1429rem;
+    font-size: 1.4286rem;
+    line-height: 2.1429rem;
+    color: $primary-color-50;
     border: 0.0714rem solid $primary-color-50;
     border-radius: 50%;
     background: transparent;
     cursor: pointer;
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 0.3571rem;
-      height: 0.0714rem;
-      background-color: $primary-color-50;
-      transform: translate(-50%);
-    }
-
     &_disabled {
       opacity: 0.4;
       cursor: default;
     }
-
-    &_theme_plus::before {
-      width: 0.5714rem;
-    }
-
-    &_theme_plus::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      width: 0.5714rem;
-      height: 0.0714rem;
-      background-color: $primary-color-50;
-      transform: rotate(90deg) translateY(-400%);
-    }
   }
 
-  &__amount {
+  &__counter-value {
     margin: 0 0.4286rem;
     min-width: 1.5714rem;
     font-weight: bold;
@@ -155,11 +129,11 @@
     text-transform: uppercase;
     cursor: pointer;
 
-    &_disabled {
+    &_hidden {
       display: none;
     }
 
-    &_theme_apply {
+    &_theme_purple {
       margin-left: auto;
       color: $purple-color-100;
     }
