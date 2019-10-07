@@ -10,9 +10,9 @@ export default class DropdownGuests {
   constructor(dropdown) {
     this.dropdown = dropdown;
     this.input = this.dropdown.querySelector('.dropdown__field');
-    this.groups = this.dropdown.querySelectorAll('.dropdown__group:not(:last-child)');
-    this.counters = this.dropdown.querySelectorAll('.dropdown__counter');
-    this.counterFields = this.dropdown.querySelectorAll('.dropdown__counter-value');
+    this.groups = Array.from(this.dropdown.querySelectorAll('.dropdown__group:not(:last-child)'));
+    this.counters = Array.from(this.dropdown.querySelectorAll('.dropdown__counter'));
+    this.counterFields = Array.from(this.dropdown.querySelectorAll('.dropdown__counter-value'));
     this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
     this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
     this.buttonClear = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=clear]');
@@ -70,46 +70,16 @@ export default class DropdownGuests {
   }
 
   apply() {
-    let amountGuests = 0;
-    let amountBabies = 0;
+    const countersGuests = ['гостей', 'гость', 'гостя', 'гостя', 'гостя'];
+    const countersBabies = ['младенцев', 'младенец', 'младенца', 'младенца', 'младенца'];
 
-    this.groups.forEach((group) => {
-      const title = group.querySelector('.dropdown__title').textContent;
-      const value = +group.querySelector('.dropdown__counter-value').textContent;
+    let guestsAmount = this.counterFields.reduce((acc, field) => +field.textContent + acc, 0);
+    guestsAmount += ` ${countersGuests[guestsAmount] || 'гостей'}, `;
 
-      if (title === 'Младенцы') amountBabies += value;
-      amountGuests += value;
-    });
+    let amountBabies = this.counterFields[2].textContent;
+    amountBabies += ` ${countersBabies[this.counterFields[2].textContent] || 'младенцев'}`;
 
-    switch (amountGuests) {
-      case 1:
-        this.input.value = `${amountGuests} гость, `;
-        break;
-
-      case 2:
-      case 3:
-      case 4:
-        this.input.value = `${amountGuests} гостя, `;
-        break;
-
-      default:
-        this.input.value = `${amountGuests} гостей, `;
-    }
-
-    switch (amountBabies) {
-      case 1:
-        this.input.value += `${amountBabies} младенец`;
-        break;
-
-      case 2:
-      case 3:
-      case 4:
-        this.input.value += `${amountBabies} младенца`;
-        break;
-
-      default:
-        this.input.value += `${amountBabies} младенцев`;
-    }
+    this.input.value = guestsAmount + amountBabies;
 
     this.dropdown.classList.remove('dropdown_expanded');
   }
