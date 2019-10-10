@@ -1,27 +1,19 @@
-/* eslint-disable no-return-assign */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-use-before-define */
-/* global window NodeList */
-
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
-}
-
 export default class DropdownComfort {
   constructor(dropdown) {
+    this.findDOMElements(dropdown);
+    this.addEventListeners();
+  }
+
+  findDOMElements(dropdown) {
     this.dropdown = dropdown;
     this.input = this.dropdown.querySelector('.dropdown__field');
-    this.groups = Array.from(this.dropdown.querySelectorAll('.dropdown__group'));
-    this.counters = Array.from(this.dropdown.querySelectorAll('.dropdown__counter'));
+    this.groups = this.dropdown.querySelectorAll('.dropdown__group');
     this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
     this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
-
-    this.addEventListeners();
   }
 
   addEventListeners() {
     this.input.addEventListener('click', this.toggleDropdown.bind(this));
-
     this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.decreaseValue.bind(this)));
     this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.increaseValue.bind(this)));
   }
@@ -72,5 +64,7 @@ export default class DropdownComfort {
       return counters.map((counter) => Number(Object.keys(counter)[0]))
         .reduce((acc, quantity, i) => (value >= quantity ? ` ${value} ${counters[i][quantity][index]}` : acc), '');
     });
+
+    this.input.value = this.input.value.trim();
   }
 }

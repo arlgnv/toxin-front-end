@@ -2,13 +2,8 @@ mixin roomSearch
   article.room-search
     h2.room-search__title Найдём номера под ваши пожелания
     form.room-search__form(action="https://echo.htmlacademy.ru" method="post")
-      div.room-search__group
-        p.room-search__item
-          label.room-search__label(for="field-date-from") Прибытие
-          +dropdown({"theme": "date", "jsClasses": "js-dropdown-date-from"})(id="field-date-from" name="from" placeholder="дд.мм.гггг" readonly)
-        p.room-search__item
-          label.room-search__label(for="field-date-to") Выезд
-          +dropdown({"theme": "date", "jsClasses": "js-dropdown-date-to"})(id="field-date-to" name="to" placeholder="дд.мм.гггг" readonly)
+      .room-search__group
+        +calendar
       p.room-search__group
         label.room-search__label(for="field-amount-guests") Гости
         +dropdown({"jsClasses": "js-dropdown"})(id="field-amount-guests" name="guests" placeholder="Сколько гостей" readonly)

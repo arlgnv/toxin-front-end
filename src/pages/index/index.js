@@ -1,18 +1,22 @@
+/* eslint-disable func-names */
 /* eslint-disable no-new */
 /* global document $ */
 
 import '../../utilities/jquery-global';
 
+import 'air-datepicker';
+
+import '../../utilities/polyfills';
+
 import Header from '../../components/header/header';
 import Calendar from '../../components/calendar/calendar';
 import DropdownGuests from '../../components/dropdown/dropdownGuests';
 
-const header = document.querySelector('.js-header');
-new Header(header);
+const headers = document.querySelectorAll('.js-header');
+headers.forEach((header) => new Header(header));
 
-const dropdownGuests = document.querySelector('.js-dropdown');
-new DropdownGuests(dropdownGuests);
+const dropdownsGuests = document.querySelectorAll('.js-dropdown');
+dropdownsGuests.forEach((dropdown) => new DropdownGuests(dropdown));
 
-const calendarCheckIn = $('.js-dropdown-date-from');
-const calendarCheckOut = $('.js-dropdown-date-to');
-new Calendar(calendarCheckIn, calendarCheckOut);
+const $calendar = $('.js-calendar');
+$calendar.each(function () { new Calendar($(this)); });

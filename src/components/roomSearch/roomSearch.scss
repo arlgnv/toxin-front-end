@@ -1,6 +1,6 @@
 @import '../button/button';
 @import '../dropdown/dropdown';
-@import '../../utilities/calendar';
+@import '../calendar/calendar';
 
 .room-search {
   $root: &;
@@ -14,7 +14,7 @@
   box-shadow: 0rem 0rem 1.7857rem $black-color-20;
 
   &__title {
-    margin: 0 0 1.5714rem;
+    margin: 0 0 1.1714rem;
     font-weight: bold;
     font-size: 1.7143rem;
     line-height: 2.1429rem;
@@ -26,35 +26,11 @@
     margin: 0;
 
     &:nth-child(1) {
-      display: flex;
-      justify-content: space-between;
       margin-bottom: 1.6rem;
-
-      @media screen and (max-width: 390px) {
-        flex-direction: column;
-      }
     }
 
     &:nth-child(2) {
       margin-bottom: 2.2714rem;
-    }
-  }
-
-  &__item {
-    width: 10.7143rem;
-    margin: 0;
-
-    @media screen and (max-width: 390px) {
-      width: 100%;
-    }
-
-    + #{$root}__item {
-      margin-left: 0.7143rem;
-
-      @media screen and (max-width: 390px) {
-        margin-left: 0;
-        margin-top: 0.7143rem;
-      }
     }
   }
 

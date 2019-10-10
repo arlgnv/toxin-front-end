@@ -1,32 +1,26 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
-/* global window NodeList */
-
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
-}
 
 export default class DropdownGuests {
   constructor(dropdown) {
+    this.findDOMElements(dropdown);
+    this.addEventListeners();
+  }
+
+  findDOMElements(dropdown) {
     this.dropdown = dropdown;
     this.input = this.dropdown.querySelector('.dropdown__field');
-    this.groups = Array.from(this.dropdown.querySelectorAll('.dropdown__group:not(:last-child)'));
-    this.counters = Array.from(this.dropdown.querySelectorAll('.dropdown__counter'));
-    this.counterFields = Array.from(this.dropdown.querySelectorAll('.dropdown__counter-value'));
+    this.counterFields = this.dropdown.querySelectorAll('.dropdown__counter-value');
     this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
     this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
     this.buttonClear = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=clear]');
     this.buttonApply = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=apply]');
-
-    this.addEventListeners();
   }
 
   addEventListeners() {
     this.input.addEventListener('click', this.toggleDropdown.bind(this));
-
     this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.decreaseValue.bind(this)));
     this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.increaseValue.bind(this)));
-
     this.buttonClear.addEventListener('click', this.reset.bind(this));
     this.buttonApply.addEventListener('click', this.apply.bind(this));
   }
@@ -44,7 +38,7 @@ export default class DropdownGuests {
 
       if (+counterField.textContent === 0) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
-        if (this.checkIsFieldsEmpty() === true) this.buttonClear.classList.add('dropdown__button_hidden');
+        if (this.isCounterFieldsEmpty()) this.buttonClear.classList.add('dropdown__button_hidden');
       }
     }
   }
@@ -60,37 +54,34 @@ export default class DropdownGuests {
     this.buttonClear.classList.remove('dropdown__button_hidden');
   }
 
-  reset() {
-    this.buttonsDecrease.forEach((button) => button.classList.add('dropdown__control-button_disabled'));
+  reset(evt) {
+    evt.preventDefault();
 
-    this.counterFields.forEach((counterField) => counterField.textContent = 0);
-
+    evt.currentTarget.classList.add('dropdown__button_hidden');
     this.input.value = '';
-    this.buttonClear.classList.add('dropdown__button_hidden');
+    this.buttonsDecrease.forEach((button) => button.classList.add('dropdown__control-button_disabled'));
+    this.counterFields.forEach((counterField) => counterField.textContent = 0);
   }
 
   apply() {
-    const countersGuests = ['гостей', 'гость', 'гостя', 'гостя', 'гостя'];
-    const countersBabies = ['младенцев', 'младенец', 'младенца', 'младенца', 'младенца'];
+    const counters = [
+      { guest: 'гостей', baby: 'младенцев' },
+      { guest: 'гость', baby: 'младенец' },
+      { guest: 'гостя', baby: 'младенеца' },
+      { guest: 'гостя', baby: 'младенеца' },
+      { guest: 'гостя', baby: 'младенеца' },
+      { guest: 'гостей', baby: 'младенцев' },
+    ];
 
-    let guestsAmount = this.counterFields.reduce((acc, field) => +field.textContent + acc, 0);
-    guestsAmount += ` ${countersGuests[guestsAmount] || 'гостей'}, `;
+    const guestsAmount = this.counterFields.reduce((acc, it) => +it.textContent + acc, 0);
+    const amountBabies = this.counterFields[2].textContent;
 
-    let amountBabies = this.counterFields[2].textContent;
-    amountBabies += ` ${countersBabies[this.counterFields[2].textContent] || 'младенцев'}`;
-
-    this.input.value = guestsAmount + amountBabies;
+    this.input.value = counters.reduce((acc, it, i) => (guestsAmount >= i ? `${guestsAmount} ${it.guest}, ${amountBabies} ${amountBabies >= i ? it.baby : counters[amountBabies].baby}` : acc), '');
 
     this.dropdown.classList.remove('dropdown_expanded');
   }
 
-  checkIsFieldsEmpty() {
-    let flag = true;
-
-    this.counters.forEach((counter) => {
-      if (counter.textContent > 0) flag = false;
-    });
-
-    return flag;
+  isCounterFieldsEmpty() {
+    return this.counterFields.every((field) => field.textContent <= 0);
   }
 }

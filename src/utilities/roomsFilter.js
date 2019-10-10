@@ -1,13 +1,16 @@
 /* global document */
 
-export default class FilterRooms {
+export default class RoomsFilter {
   constructor(filter) {
+    this.findDOMElements(filter);
+    this.addEventListeners();
+  }
+
+  findDOMElements(filter) {
     this.filter = filter;
     this.filterForm = this.filter.querySelector('.filter__form');
     this.filterShow = this.filter.querySelector('.filter__show-button');
     this.filterClose = this.filter.querySelector('.filter__close-button');
-
-    this.addEventListeners();
   }
 
   addEventListeners() {

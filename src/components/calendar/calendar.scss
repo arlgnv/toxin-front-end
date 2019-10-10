@@ -1,20 +1,128 @@
 @import 'air-datepicker/dist/css/datepicker.min';
 
+.calendar {
+  position: relative;
+  z-index: 1;
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 0 0.4143rem;
+  }
+
+  &__item {
+    width: 47%;
+
+    @media screen and (max-width: 370px) {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 0.3571rem;
+    font-weight: bold;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
+    color: $primary-color-100;
+    text-transform: uppercase;
+  }
+
+  &__field-wrapper {
+    position: relative;
+    display: block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.4286rem;
+      right: 1.1857rem;
+      box-sizing: border-box;
+      width: 0.6429rem;
+      height: 0.6429rem;
+      border: 0.1429rem solid $primary-color-50;
+      border-top: 0;
+      border-left: 0;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__field {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.6429rem 2.2429rem 0.6429rem 1.0714rem;
+    font: inherit;
+    color: $primary-color-75;
+    border: 0.0714rem solid $primary-color-25;
+    border-radius: 0.2857rem;
+    text-transform: uppercase;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: 3.2857rem;
+    }
+
+    &[data-field-type='init'] {
+      display: none;
+    }
+  }
+
+  &__container {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    padding: 1.0286rem 1.4286rem 1.3286rem;
+    border: 0.0714rem solid $primary-color-25;
+    box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
+    border-radius: 0.2857rem;
+    background-color: $white-color-100;
+
+    @media screen and (max-width: 375px) {
+      top: 5.3714rem;
+      padding: 1.0286rem 0.3286rem;
+    }
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 0;
+
+    @media screen and (max-width: 375px) {
+      justify-content: space-around;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    font: inherit;
+    font-weight: bold;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
+    color: $primary-color-50;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &_theme_purple {
+      color: $purple-color-100;
+    }
+  }
+}
+
 .datepicker {
   $root: &;
 
   box-sizing: border-box;
-  width: 22.8571rem;
-  padding: 1.0286rem 1.4286rem 0.8286rem;
+  width: 100%;
   font: inherit;
-  border: 0.0714rem solid $primary-color-25;
-  box-shadow: 0rem 0.7143rem 1.4286rem $primary-color-5;
-  border-radius: 0.2857rem;
-
-  @media screen and (max-width: 375px) {
-    width: 19.2857rem;
-    padding: 0.7143rem 0.3571rem;
-  }
+  background-color: transparent;
+  border: none;
 
   &--nav {
     align-items: center;
@@ -30,11 +138,6 @@
       font-weight: bold;
       font-size: 1.3571rem;
       color: $primary-color-100;
-      cursor: default;
-
-      &:hover {
-        background-color: transparent;
-      }
     }
   }
 
@@ -77,6 +180,7 @@
     border-radius: 0;
 
     @media screen and (max-width: 375px) {
+      width: 2.5714rem;
       height: 2.5714rem;
     }
 
@@ -103,6 +207,10 @@
 
     &.-in-range- {
       color: $primary-color-50;
+
+      @media screen and (max-width: 375px) {
+        flex-grow: 1;
+      }
     }
 
     &.-in-range-.-disabled- {
@@ -170,35 +278,6 @@
         height: 100%;
         background: linear-gradient(180deg, $purple-color-25 0%, $aqua-color-light-25 100%);
       }
-    }
-  }
-
-  &--buttons {
-    justify-content: space-between;
-    padding: 0;
-    border: none;
-  }
-
-  &--button {
-    flex-grow: 0;
-    font-weight: bold;
-    font-size: 0.8571rem;
-    line-height: 1.0714rem;
-    color: $primary-color-50;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover {
-      background-color: transparent;
-    }
-
-    &[data-action='today'] {
-      color: $purple-color-100;
-      order: 1;
-    }
-
-    &[data-action='clear'] {
-      color: $purple-color-50;
     }
   }
 }

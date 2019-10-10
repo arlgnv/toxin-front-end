@@ -1,10 +1,13 @@
 export default class Header {
   constructor(header) {
+    this.findDOMElements(header);
+    this.addEventListeners();
+  }
+
+  findDOMElements(header) {
     this.header = header;
     this.headerNavigation = header.querySelector('.header__navigation');
     this.headerButtonBurger = header.querySelector('.header__burger');
-
-    this.addEventListeners();
   }
 
   addEventListeners() {
