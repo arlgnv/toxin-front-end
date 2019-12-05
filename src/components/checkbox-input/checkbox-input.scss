@@ -1,0 +1,165 @@
+.checkbox-input {
+  $root: &;
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 2.1429rem;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.2857rem;
+    color: $primary-color-50;
+    text-transform: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.0714rem;
+      left: 0;
+      box-sizing: border-box;
+      width: 1.4286rem;
+      height: 1.4286rem;
+      border: 0.0714rem solid $primary-color-25;
+      border-radius: 0.2857rem;
+    }
+  }
+
+  &__field {
+    &:checked + #{$root}__label::after {
+      content: '';
+      position: absolute;
+      top: 0.2143rem;
+      left: 0.4286rem;
+      width: 0.7143rem;
+      height: 0.7857rem;
+      background: url('../../images/checkbox-input/checkbox-arrow.svg') no-repeat center;
+    }
+
+    &:focus + #{$root}__label::before {
+      outline: 0.3571rem auto $outline-color-100;
+      outline-offset: -0.1429rem;
+    }
+
+    &_hidden {
+      position: absolute;
+      width: 0.0714rem;
+      height: 0.0714rem;
+      margin: -0.0714rem;
+      border: 0;
+      padding: 0;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+
+  &_theme_rich {
+    #{$root}__label {
+      margin-bottom: 0.3571rem;
+      font-weight: bold;
+      color: $primary-color-75;
+    }
+
+    #{$root}__description {
+      display: block;
+      padding-left: 2.1429rem;
+      font-weight: normal;
+      font-size: 0.8571rem;
+      line-height: 1rem;
+      color: $primary-color-50;
+    }
+  }
+
+  &_theme_toggle {
+    #{$root}__label {
+      padding-left: 3.5rem;
+      line-height: 1.7143rem;
+      color: $primary-color-75;
+
+      &::before {
+        top: 0.0714rem;
+        width: 2.8571rem;
+        height: 1.4286rem;
+        border: 0.0714rem solid $primary-color-25;
+        border-radius: 0.7143rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0.8571rem;
+        left: 0.2429rem;
+        width: 0.8571rem;
+        height: 0.8571rem;
+        background: $primary-color-25;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    #{$root}__field {
+      &:checked + #{$root}__label::before {
+        top: 0.0714rem;
+        border: 0.0714rem solid $purple-color-100;
+      }
+
+      &:checked + #{$root}__label::after {
+        top: 0.8571rem;
+        left: 1.7857rem;
+        background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
+      }
+
+      &:focus + #{$root}__label::before {
+        outline: 0.3571rem auto $outline-color-100;
+        outline-offset: -0.1429rem;
+      }
+    }
+  }
+
+  &_theme_expandable {
+    #{$root}__group-title {
+      position: relative;
+      display: block;
+      margin: 0 0 1.4429rem 0;
+      font-weight: bold;
+      font-size: 0.8571rem;
+      line-height: 1.0714rem;
+      color: $primary-color-100;
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 1.2857rem;
+        width: 0.4286rem;
+        height: 0.4286rem;
+        border: 0.1429rem solid $primary-color-50;
+        border-top: 0;
+        border-left: 0;
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+
+    #{$root}__list {
+      display: none;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    #{$root}__item + #{$root}__item {
+      margin-top: 0.9286rem;
+    }
+  }
+
+  &_expanded {
+    #{$root}__group-title::after {
+      transform: rotate(-135deg);
+    }
+
+    #{$root}__list {
+      display: block;
+    }
+  }
+}

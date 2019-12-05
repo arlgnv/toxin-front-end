@@ -1,10 +1,10 @@
 @import '../../utilities/init';
 @import '../../components/header/header';
 @import '../../components/footer/footer';
-@import '../../components/roomBook/roomBook';
+@import '../../components/room-book/room-book';
 @import '../../components/testimonial/testimonial';
 @import '../../components/advantage/advantage';
-@import '../../components/bulletList/bulletList';
+@import '../../components/bullet-list/bullet-list';
 @import '../../components/donut/donut';
 
 .room-page {
@@ -75,14 +75,12 @@
         height: auto;
       }
 
-      @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) and (min-width: 750px) {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 750px) {
         width: 68%;
         height: 100%;
       }
 
-      @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) and (max-width: 750px) {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 750px) {
         width: 100%;
         height: 50%;
       }
@@ -96,14 +94,12 @@
         flex-direction: row;
       }
 
-      @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) and (min-width: 750px) {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 750px) {
         width: 32%;
         height: 100%;
       }
 
-      @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) and (max-width: 750px) {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 750px) {
         width: 100%;
         height: 100%;
       }
@@ -117,14 +113,12 @@
           max-width: 50%;
         }
 
-        @media screen and (-ms-high-contrast: active),
-          (-ms-high-contrast: none) and (min-width: 750px) {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 750px) {
           width: 100%;
           height: 49.7%;
         }
 
-        @media screen and (-ms-high-contrast: active),
-          (-ms-high-contrast: none) and (max-width: 750px) {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 750px) {
           width: 50%;
           height: 100%;
         }

@@ -4,16 +4,18 @@
 
 import '../../utilities/jquery-global';
 
-import 'ion-rangeslider';
+import 'ion-rangeSlider';
 import 'air-datepicker';
 
 import '../../utilities/polyfills';
 
-import RangeSlider from '../../components/rangeSlider/rangeSlider';
+import RangeSlider from '../../components/range-slider/range-slider';
 import Header from '../../components/header/header';
 
 const headers = document.querySelectorAll('.js-header');
-headers.forEach((header) => new Header(header));
+headers.forEach(header => new Header(header));
 
 const $sliders = $('.js-range-slider');
-$sliders.each(function () { new RangeSlider($(this)); });
+$sliders.each(function() {
+  new RangeSlider($(this));
+});

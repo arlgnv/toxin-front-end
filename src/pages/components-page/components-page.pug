@@ -59,16 +59,16 @@ block content
           .text-fields
             p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
               label.text-fields__title(for="field-1") text field
-              +textInput(id="field-1" placeholder="Email")
+              +text-input(id="field-1" placeholder="Email")
             p.text-fields__group.text-fields__group_theme_with-tip(data-tip="hover / focus")
               label.text-fields__title(for="field-2") text field
-              +textInput(id="field-2" value="This is pretty awesome")
+              +text-input(id="field-2" value="This is pretty awesome")
             p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
               label.text-fields__title(for="field-3") dropdown
               +dropdown(id="field-3" placeholder="Сколько гостей")
             p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
               label.text-fields__title(for="field-4") masked text field
-              +textInput({"theme": "masked"})(id="field-4" placeholder="дд.мм.гггг")
+              +text-input({"theme": "masked"})(id="field-4" placeholder="дд.мм.гггг")
             p.text-fields__group
               span.text-fields__item
                 label.text-fields__title(for="field-5") date dropdown
@@ -81,7 +81,7 @@ block content
               +dropdown(id="field-7" value="19 авг - 23 авг")
             p.text-fields__group
               label.text-fields__title(for="field-8") subscription text field
-              +textInput({"theme": "newsletter"})(id="field-8" type="email" placeholder="Email")
+              +text-input({"theme": "newsletter"})(id="field-8" type="email" placeholder="Email")
                 button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")
           .buttons
             .buttons__group
@@ -96,18 +96,18 @@ block content
                   ]
                 each checkbox in checkboxesPoor
                   .checkbox-poor
-                    +checkboxInput(checkbox)
+                    +checkbox-input(checkbox)
               .buttons__subgroup
                 b.buttons__title radio buttons
                 -
-                  const radioInputs =
+                  const radioInputss =
                   [
                     {"id": "field-12", "title": "Мужчина", "name": "gender", "checked": true},
                     {"id": "field-13", "title": "Женщина", "name": "gender"}
                   ]
-                each radioInput in radioInputs
+                each radioInputs in radioInputss
                   span.radio
-                    +radioInput(radioInput)
+                    +radio-input(radioInputs)
               .buttons__subgroup
                 b.buttons__title toggle
                 -
@@ -118,7 +118,7 @@ block content
                   ]
                 each checkbox in checkboxesToggle
                   .checkbox-toggle
-                    +checkboxInput(checkbox)
+                    +checkbox-input(checkbox)
               .buttons__subgroup
                 b.buttons__title like button
                 span.button-like
@@ -133,7 +133,7 @@ block content
                   +rating(5)
             .buttons__group
                 .buttons__subgroup
-                  +rangeSlider({"id": "field-16", "title": "range slider", "description": ""})
+                  +range-slider({"id": "field-16", "title": "range slider", "description": ""})
                 .buttons__subgroup
                   b.buttons__title buttons
                   span.button-registration
@@ -209,10 +209,10 @@ block content
         .form-elements__group
           .checkbox-expandable
             .checkbox-expandable__item
-              +checkboxInput({"theme": "expandable"})
+              +checkbox-input({"theme": "expandable"})
                 b.checkbox-input__group-title expandable checkbox list
             .checkbox-expandable__item
-              +checkboxInput({"theme": "expandable", "state": "expanded"})
+              +checkbox-input({"theme": "expandable", "state": "expanded"})
                 -
                   const checkboxes =
                   [ 
@@ -227,7 +227,7 @@ block content
                 ul.checkbox-input__list
                   each checkbox in checkboxes
                     li.checkbox-input__item
-                      +checkboxInput(checkbox)
+                      +checkbox-input(checkbox)
           .checkbox-rich
             b.checkbox-rich__title rich checkbox buttons
             -
@@ -238,11 +238,11 @@ block content
               ]
             each checkbox in checkboxesRich
               .checkbox-rich__group
-                +checkboxInput(checkbox)
+                +checkbox-input(checkbox)
           .bullet
             b.bullet__title bullet list
             .bullet__list
-              +bulletList(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+              +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
         .form-elements__group
           .advantages
             -
@@ -261,14 +261,14 @@ block content
       .cards
         .cards__group
           .cards__room-search
-            +roomSearch
+            +room-search
           .cards__sign-up
-            +signUp
+            +sign-up
         .cards__group
           .cards__room-book
-            +roomBook
+            +room-book
           .cards__sign-in
-            +signIn
+            +sign-in
         .cards__group
           .cards__calendar
             .datepicker-here

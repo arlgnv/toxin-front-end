@@ -1,0 +1,37 @@
+mixin room-book
+  article.room-book
+    h2.room-book__title.room-book__title_hidden Подтверждение параметров номера
+    .room-book__room-info
+      p.room-book__room №
+        span.room-book__number  888
+        span.room-book__type  Люкс
+      p.room-book__day-price
+        span.room-book__price 9 990₽
+        |  в сутки
+    form.room-book__form(action="https://echo.htmlacademy.ru" method="post")
+      .room-book__group
+        p.room-book__item
+          label.room-book__label(for="field-date-from") Прибытие
+          +dropdown(id="field-date-from" value="19.08.2019" name="from")
+        p.room-book__item
+          label.room-book__label(for="field-date-to") Выезд
+          +dropdown(id="field-date-to" value="23.08.2019" name="to")
+      p.room-book__group
+        label.room-book__label(for="field-guests") Гости
+        +dropdown(id="field-guests" value="3 гостя" name="guests")
+      .room-book__book-info
+        .room-book__group
+          span.room-book__info 9 990₽ х 4 суток
+          span.room-book__price 39 960₽
+        .room-book__group
+          span.room-book__info.room-book__info_theme_has-tip Сбор за услуги: скидка 2 179₽
+          span.room-book__price 0₽
+        .room-book__group
+          span.room-book__info.room-book__info_theme_has-tip Сбор за дополнительные услуги
+          span.room-book__price 300₽
+      .room-book__group
+        span.room-book__total Итого
+        span.room-book__spacer
+        span.room-book__total-price 38 081₽
+      .room-book__group
+        +button({"text": "забронировать", "theme": "submit"})(type="submit")

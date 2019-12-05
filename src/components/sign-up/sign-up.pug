@@ -1,0 +1,40 @@
+mixin sign-up
+  article.sign-up
+    h2.sign-up__title Регистрация аккаунта
+    form.sign-up__form(action="https://echo.htmlacademy.ru" method="post")
+      fieldset.sign-up__group
+        p.sign-up__item
+          label.sign-up__label.sign-up__label_hidden(for="field-name") Введите имя
+          +text-input(id="field-name" name="name" placeholder="Имя")
+        p.sign-up__item
+          label.sign-up__label.sign-up__label_hidden(for="field-surname") Введите фамилию
+          +text-input(id="field-surname" name="surname" placeholder="Фамилия")
+        ul.sign-up__list
+          -
+            const radioInputs =
+            [
+              {"id": "field-gender-male", "title": "Мужчина", "name": "gender", "checked": true},
+              {"id": "field-gender-female", "title": "Женщина", "name": "gender"}
+            ]
+          each radio in radioInputs
+            li.sign-up__item
+              +radio-input(radio)
+      p.sign-up__group
+        label.sign-up__label(for="field-birthday") Дата рождения
+        +text-input(id="field-birthday" name="birthday" placeholder="ДД.ММ.ГГГГ")
+      fieldset.sign-up__group
+        legend.sign-up__group-title данные для входа в сервис
+        p.sign-up__item
+          label.sign-up__label.sign-up__label_hidden(for="field-email") Введите email
+          +text-input(id="field-emai" type="email" name="email" placeholder="Email")
+        p.sign-up__item
+          label.sign-up__label.sign-up__label_hidden(for="field-password") Введите пароль
+          +text-input(id="field-password" type="password" name="password" placeholder="Пароль")
+      .sign-up__group
+        +checkbox-input({"id": "field-newsletter", "title": "Получать спецпредложения", "theme": "toggle"})(name="newsletter")
+      p.sign-up__group
+        +button({"text": "перейти к оплате", "theme": "submit"})(type="submit")
+    .sign-up__login
+      span.sign-up__text Уже есть аккаунт на Toxin?
+      span.sign-up__login-button
+        +link({"text": "войти", "theme": "account-action"})(href="../../pages/login-page/login-page.pug")
