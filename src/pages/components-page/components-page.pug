@@ -81,7 +81,7 @@ block content
               +dropdown(id="field-7" value="19 авг - 23 авг")
             p.text-fields__group
               label.text-fields__title(for="field-8") subscription text field
-              +textInput({"theme": "newsletter"})(id="field-8" placeholder="Email")
+              +textInput({"theme": "newsletter"})(id="field-8" type="email" placeholder="Email")
                 button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")
           .buttons
             .buttons__group
@@ -242,7 +242,7 @@ block content
           .bullet
             b.bullet__title bullet list
             .bullet__list
-              +bulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+              +bulletList(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
         .form-elements__group
           .advantages
             -

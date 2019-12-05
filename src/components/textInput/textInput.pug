@@ -3,5 +3,5 @@ mixin textInput({theme = "", jsClasses = ""} = {})
   
   span.text-input(class= className)
     input.text-input__field&attributes(attributes)
-    if block
-      block
+    if theme === "newsletter"
+      button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")
