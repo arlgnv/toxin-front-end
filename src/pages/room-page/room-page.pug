@@ -33,11 +33,11 @@ block content
             h3.advantages__title Сведения о номере
             ul.advantages__list
               -
-                const advantages = 
+                const advantages =
                 [
-                  {"icon": "../../images/advantages/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"},
-                  {"icon": "../../images/advantages/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"},
-                  {"icon": "../../images/advantages/cozy.svg","title": "Уют","description": "Номер оснащен камином"}
+                  {"icon": "../../components/advantage/images/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"},
+                  {"icon": "../../components/advantage/images/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"},
+                  {"icon": "../../components/advantage/images/cozy.svg","title": "Уют","description": "Номер оснащен камином"}
                 ]
               each item in advantages
                 li.advantages__item
@@ -53,8 +53,8 @@ block content
               -
                 const testimonials =
                 [
-                  {"image": "../../images/testimonials/1.jpg", "author": "Мурад Сарафанов", "date": "5 дней назад", "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей", "likes": "12"},
-                  {"image": "../../images/testimonials/2.jpg", "author": "Патрисия Стёклышкова", "date": "Неделю назад", "text": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", "likes": "2"}
+                  {"image": "../../components/testimonial/images/1.jpg", "author": "Мурад Сарафанов", "date": "5 дней назад", "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей", "likes": "12"},
+                  {"image": "../../components/testimonial/images/2.jpg", "author": "Патрисия Стёклышкова", "date": "Неделю назад", "text": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", "likes": "2"}
                 ]
               each item in testimonials
                 li.testimonials__item

@@ -32,7 +32,7 @@
       left: 0.4286rem;
       width: 0.7143rem;
       height: 0.7857rem;
-      background: url('../../images/checkbox-input/checkbox-arrow.svg') no-repeat center;
+      background: url('../../components/checkbox-input/images/checkbox-arrow.svg') no-repeat center;
     }
 
     &:focus + #{$root}__label::before {

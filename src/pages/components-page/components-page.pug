@@ -40,7 +40,7 @@ block content
                 span.colors-fonts__color-hex= color.hex
         .colors-fonts__fonts
           -
-            const fonts = 
+            const fonts =
             [
               {"name": "h1", "text": "This one is the sub-section or widget title", "theme": "h1"},
               {"name": "h2", "text": "Next one is the item title inside widgets", "theme": "h2"},
@@ -155,7 +155,7 @@ block content
                 .buttons__subgroup
                   b.buttons__title pagination
                   -
-                    const pages = 
+                    const pages =
                     [
                       {"number": "1", "theme": "current", "link": "mock-adress/change-me"},
                       {"number": "2", "link": "mock-adress/change-me"},
@@ -215,7 +215,7 @@ block content
               +checkbox-input({"theme": "expandable", "state": "expanded"})
                 -
                   const checkboxes =
-                  [ 
+                  [
                     {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
                     {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
                     {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
@@ -246,16 +246,16 @@ block content
         .form-elements__group
           .advantages
             -
-              const advantages = 
+              const advantages =
               [
-                {"icon": "../../images/advantages/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"},
-                {"icon": "../../images/advantages/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"}
+                {"icon": "../../components/advantage/images/comfort.svg","title": "Комфорт","description": "Шумопоглощающие стены"},
+                {"icon": "../../components/advantage/images/convenience.svg","title": "Удобство","description": "Окно в каждой из спален"}
               ]
             each advantage in advantages
               .advantages__group
                 +advantage(advantage)
           .testimonials
-            +testimonial({"image": "../../images/testimonials/1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": "12"})
+            +testimonial({"image": "../../components/testimonial/images/1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": "12"})
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Карточки
       .cards
@@ -286,7 +286,7 @@ block content
       h2.ui-kit__title Хедеры и футеры
       .headers-footers
         -
-          const headers = 
+          const headers =
           [
             {"theme": "", "jsClasses": "js-header"},
             {"theme": "logged", "jsClasses": "js-header"},
@@ -295,7 +295,7 @@ block content
           .headers-footers__group
             +header(header)
         -
-          const footers = 
+          const footers =
           [
             {"theme": ""},
             {"theme": "poor"},
