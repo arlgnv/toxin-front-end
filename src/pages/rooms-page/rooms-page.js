@@ -10,7 +10,7 @@ import 'ion-rangeSlider';
 
 import Header from '../../components/header/header';
 import CheckboxExpandable from '../../components/checkbox-input/checkbox-input';
-import DropdownComfort from '../../components/dropdown/dropdownComfort';
+import DropdownComfort from '../../components/dropdown/dropdown-comfort';
 import RangeSlider from '../../components/range-slider/range-slider';
 import RoomsFilter from '../../utilities/rooms-filter';
 

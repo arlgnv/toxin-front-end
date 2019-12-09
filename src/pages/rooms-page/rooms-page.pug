@@ -42,7 +42,7 @@ block content
                   {"id": "field-pets", "title": "Можно с питомцами", "name": "pets", "checked": true},
                   {"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)", "name": "allow-guests", "checked": true}
                 ]
-              each checkbox in checkboxesPoor     
+              each checkbox in checkboxesPoor
                 li.filter__item
                   +checkbox-input(checkbox)
           fieldset.filter__group
@@ -73,7 +73,7 @@ block content
             +checkbox-input({"theme": "expandable", "jsClasses": "js-checkbox-input"})
               -
                 const checkboxes =
-                [ 
+                [
                   {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
                   {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
                   {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
@@ -92,18 +92,18 @@ block content
           -
             const rooms =
             [
-              {"image": "../../images/rooms/room1.jpg","alt": "Роскошный номер на одного с большой кроватью","number": 888,"lux": true,"price": "9 990₽","rating": 5,"testimonials": 145},
-              {"image": "../../images/rooms/room2.jpg","alt": "Просторный номер на троих с тремя кроватями","number": 840,"lux": false,"price": "9 990₽","rating": 4,"testimonials": 65},
-              {"image": "../../images/rooms/room3.jpg","alt": "Светлый номер на одного","number": 980,"lux": true,"price": "8 500₽","rating": 3,"testimonials": 35},
-              {"image": "../../images/rooms/room4.jpg","alt": "Светло-голубой номер на одного","number": 856,"lux": false,"price": "7 300₽","rating": 5,"testimonials": 19},
-              {"image": "../../images/rooms/room5.jpg","alt": "Роскошный номер на одного","number": 740,"lux": false,"price": "6 600₽","rating": 4,"testimonials": 44},
-              {"image": "../../images/rooms/room6.jpg","alt": "Роскошный номер на одного","number": 982,"lux": false,"price": "5 800₽","rating": 3,"testimonials": 56},
-              {"image": "../../images/rooms/room7.jpg","alt": "Большой номер с телевизором","number": 678,"lux": false,"price": "5 500₽","rating": 5,"testimonials": 45},
-              {"image": "../../images/rooms/room8.jpg","alt": "Роскошный номер с большой кроватью","number": 450,"lux": false,"price": "5 300₽","rating": 4,"testimonials": 39},
-              {"image": "../../images/rooms/room9.jpg","alt": "Роскошный номер с большой кроватью","number": 350,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 77},
-              {"image": "../../images/rooms/room10.jpg","alt": "Роскошный номер с двумя кроватями и шкафом","number": 666,"lux": false,"price": "5 000₽","rating": 5,"testimonials": 25},
-              {"image": "../../images/rooms/room11.jpg","alt": "Роскошный номер с двумя кроватями","number": 444,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 15},
-              {"image": "../../images/rooms/room12.jpg","alt": "Роскошный номер с большой кроватью","number": 352,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 55}
+              {"image": "../../images/rooms/room-1.jpg","alt": "Роскошный номер на одного с большой кроватью","number": 888,"lux": true,"price": "9 990₽","rating": 5,"testimonials": 145},
+              {"image": "../../images/rooms/room-2.jpg","alt": "Просторный номер на троих с тремя кроватями","number": 840,"lux": false,"price": "9 990₽","rating": 4,"testimonials": 65},
+              {"image": "../../images/rooms/room-3.jpg","alt": "Светлый номер на одного","number": 980,"lux": true,"price": "8 500₽","rating": 3,"testimonials": 35},
+              {"image": "../../images/rooms/room-4.jpg","alt": "Светло-голубой номер на одного","number": 856,"lux": false,"price": "7 300₽","rating": 5,"testimonials": 19},
+              {"image": "../../images/rooms/room-5.jpg","alt": "Роскошный номер на одного","number": 740,"lux": false,"price": "6 600₽","rating": 4,"testimonials": 44},
+              {"image": "../../images/rooms/room-6.jpg","alt": "Роскошный номер на одного","number": 982,"lux": false,"price": "5 800₽","rating": 3,"testimonials": 56},
+              {"image": "../../images/rooms/room-7.jpg","alt": "Большой номер с телевизором","number": 678,"lux": false,"price": "5 500₽","rating": 5,"testimonials": 45},
+              {"image": "../../images/rooms/room-8.jpg","alt": "Роскошный номер с большой кроватью","number": 450,"lux": false,"price": "5 300₽","rating": 4,"testimonials": 39},
+              {"image": "../../images/rooms/room-9.jpg","alt": "Роскошный номер с большой кроватью","number": 350,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 77},
+              {"image": "../../images/rooms/room-10.jpg","alt": "Роскошный номер с двумя кроватями и шкафом","number": 666,"lux": false,"price": "5 000₽","rating": 5,"testimonials": 25},
+              {"image": "../../images/rooms/room-11.jpg","alt": "Роскошный номер с двумя кроватями","number": 444,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 15},
+              {"image": "../../images/rooms/room-12.jpg","alt": "Роскошный номер с большой кроватью","number": 352,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 55}
             ]
           each room, index in rooms
             if index === 0
@@ -114,7 +114,7 @@ block content
               li.rooms__item
                   +room(room)
         -
-          const pages = 
+          const pages =
           [
             {"number": "1", "theme": "current", "link": "mock-adress/change-me"},
             {"number": "2", "link": "mock-adress/change-me"},
@@ -124,7 +124,7 @@ block content
             {"number": "", "theme": "next-page", "link": "mock-adress/change-me"}
           ]
         .rooms__pagination
-          +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"}) 
+          +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
   +footer
 
   script(src="./rooms-page.js")
