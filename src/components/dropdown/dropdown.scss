@@ -2,6 +2,7 @@
   $root: &;
 
   position: relative;
+  z-index: 1;
   display: inline-block;
   width: 100%;
 
@@ -35,13 +36,12 @@
     border-radius: 0.2857rem;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      height: 3.2857rem;
+      min-height: 3.2857rem;
     }
   }
 
   &__container {
     position: absolute;
-    z-index: 1;
     display: none;
     box-sizing: border-box;
     width: 100%;

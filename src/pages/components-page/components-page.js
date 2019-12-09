@@ -4,7 +4,7 @@
 
 import '../../utilities/jquery-global';
 
-import 'ion-rangeSlider';
+import 'ion-rangeslider';
 import 'air-datepicker';
 
 import '../../utilities/polyfills';

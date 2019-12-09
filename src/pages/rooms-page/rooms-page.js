@@ -6,7 +6,7 @@ import '../../utilities/jquery-global';
 
 import '../../utilities/polyfills';
 
-import 'ion-rangeSlider';
+import 'ion-rangeslider';
 
 import Header from '../../components/header/header';
 import CheckboxExpandable from '../../components/checkbox-input/checkbox-input';

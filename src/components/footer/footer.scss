@@ -76,11 +76,6 @@
     @media screen and (max-width: 858px) {
       margin-bottom: 1.2857rem;
     }
-
-    &-image {
-      width: 7.5714rem;
-      height: 2.8571rem;
-    }
   }
 
   &__text {
@@ -202,7 +197,7 @@
       width: 1.7143rem;
       height: 1.7143rem;
       cursor: pointer;
-      background: no-repeat center;
+      background: no-repeat center/cover;
       text-decoration: none;
 
       &_theme_twitter {
