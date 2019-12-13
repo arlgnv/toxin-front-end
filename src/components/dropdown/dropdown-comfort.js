@@ -9,18 +9,14 @@ export default class DropdownComfort {
   findDomElements() {
     this.input = this.dropdown.querySelector('.dropdown__field');
     this.groups = this.dropdown.querySelectorAll('.dropdown__group');
-    this.buttonsDecrease = this.dropdown.querySelectorAll(
-      '.dropdown__control-button[data-dropdown-button-type=decrease]'
-    );
-    this.buttonsIncrease = this.dropdown.querySelectorAll(
-      '.dropdown__control-button[data-dropdown-button-type=increase]'
-    );
+    this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
+    this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
   }
 
   addEventListeners() {
-    this.input.addEventListener('click.dropdown', this.toggleDropdown.bind(this));
-    this.buttonsDecrease.forEach(button => button.addEventListener('click.dropdown', this.decreaseValue.bind(this)));
-    this.buttonsIncrease.forEach(button => button.addEventListener('click.dropdown', this.increaseValue.bind(this)));
+    this.input.addEventListener('click', this.toggleDropdown.bind(this));
+    this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.decreaseValue.bind(this)));
+    this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.increaseValue.bind(this)));
   }
 
   toggleDropdown() {
@@ -67,7 +63,7 @@ export default class DropdownComfort {
       const value = group.querySelector('.dropdown__counter-value').textContent;
 
       return counters
-        .map(counter => Number(Object.keys(counter)[0]))
+        .map((counter) => Number(Object.keys(counter)[0]))
         .reduce((acc, quantity, i) => (value >= quantity ? ` ${value} ${counters[i][quantity][index]}` : acc), '');
     });
 

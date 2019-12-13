@@ -12,7 +12,7 @@ export default class Header {
   }
 
   addEventListeners() {
-    this.headerButtonBurger.addEventListener('click.header', this.toggleHeader.bind(this));
+    this.headerButtonBurger.addEventListener('click', this.toggleHeader.bind(this));
   }
 
   toggleHeader(evt) {

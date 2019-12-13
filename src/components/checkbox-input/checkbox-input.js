@@ -2,11 +2,11 @@ export default class CheckboxExpandable {
   constructor(checkbox) {
     this.checkbox = checkbox;
 
-    this.findDomElements();
+    this.findDOMElements();
     this.addEventListeners();
   }
 
-  findDomElements() {
+  findDOMElements() {
     this.titleCheckbox = this.checkbox.querySelector('.checkbox-input__group-title');
   }
 

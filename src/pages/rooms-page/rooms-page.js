@@ -15,18 +15,18 @@ import RangeSlider from '../../components/range-slider/range-slider';
 import RoomsFilter from '../../utilities/rooms-filter';
 
 const headers = document.querySelectorAll('.js-header');
-headers.forEach(header => new Header(header));
+headers.forEach((header) => new Header(header));
 
 const dropdownsComfort = document.querySelectorAll('.js-dropdown');
-dropdownsComfort.forEach(dropdown => new DropdownComfort(dropdown));
+dropdownsComfort.forEach((dropdown) => new DropdownComfort(dropdown));
 
 const checkboxes = document.querySelectorAll('.js-checkbox-input');
-checkboxes.forEach(checkbox => new CheckboxExpandable(checkbox));
+checkboxes.forEach((checkbox) => new CheckboxExpandable(checkbox));
 
 const $sliders = $('.js-range-slider');
-$sliders.each(function() {
+$sliders.each(function () {
   new RangeSlider($(this));
 });
 
 const filters = document.querySelectorAll('.js-filter');
-filters.forEach(filter => new RoomsFilter(filter));
+filters.forEach((filter) => new RoomsFilter(filter));

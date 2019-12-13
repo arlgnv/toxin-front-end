@@ -1,10 +1,10 @@
 export default class Calendar {
-  constructor(calendar) {
+  constructor(calendar, index) {
     this.calendar = calendar;
 
     this.findDomElements();
     this.init();
-    this.addEventListeners();
+    this.addEventListeners(index);
   }
 
   findDomElements() {
@@ -36,10 +36,12 @@ export default class Calendar {
     this.calendarData = this.fieldInit.data('datepicker');
   }
 
-  addEventListeners() {
-    this.fieldFrom.on('click.calendar', this.toggleCalendar.bind(this));
-    this.applyButton.on('click.calendar', this.toggleCalendar.bind(this));
-    this.clearButton.on('click.calendar', this.handleClearButtonClick.bind(this));
+  addEventListeners(index) {
+    const namespace = `calendar.calendar-${index}`;
+
+    this.fieldFrom.on(`click.${namespace}`, this.toggleCalendar.bind(this));
+    this.applyButton.on(`click.${namespace}`, this.toggleCalendar.bind(this));
+    this.clearButton.on(`click.${namespace}`, this.handleClearButtonClick.bind(this));
   }
 
   toggleCalendar() {
