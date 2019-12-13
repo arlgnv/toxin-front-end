@@ -2,12 +2,13 @@
 
 export default class RoomsFilter {
   constructor(filter) {
-    this.findDOMElements(filter);
+    this.filter = filter;
+
+    this.findDOMElements();
     this.addEventListeners();
   }
 
-  findDOMElements(filter) {
-    this.filter = filter;
+  findDOMElements() {
     this.filterForm = this.filter.querySelector('.filter__form');
     this.filterShow = this.filter.querySelector('.filter__show-button');
     this.filterClose = this.filter.querySelector('.filter__close-button');

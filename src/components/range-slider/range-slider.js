@@ -1,11 +1,12 @@
 export default class RangeSlider {
   constructor(slider) {
-    this.findDOMElements(slider);
+    this.slider = slider;
+
+    this.findDOMElements();
     this.init();
   }
 
-  findDOMElements(slider) {
-    this.slider = slider;
+  findDOMElements() {
     this.sliderField = this.slider.find('.range-slider__field');
     this.sliderPrice = this.slider.find('.range-slider__price');
   }

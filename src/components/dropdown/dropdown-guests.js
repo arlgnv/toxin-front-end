@@ -3,24 +3,29 @@
 
 export default class DropdownGuests {
   constructor(dropdown) {
-    this.findDOMElements(dropdown);
+    this.dropdown = dropdown;
+
+    this.findDOMElements();
     this.addEventListeners();
   }
 
-  findDOMElements(dropdown) {
-    this.dropdown = dropdown;
+  findDOMElements() {
     this.input = this.dropdown.querySelector('.dropdown__field');
     this.counterFields = this.dropdown.querySelectorAll('.dropdown__counter-value');
-    this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
-    this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
+    this.buttonsDecrease = this.dropdown.querySelectorAll(
+      '.dropdown__control-button[data-dropdown-button-type=decrease]'
+    );
+    this.buttonsIncrease = this.dropdown.querySelectorAll(
+      '.dropdown__control-button[data-dropdown-button-type=increase]'
+    );
     this.buttonClear = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=clear]');
     this.buttonApply = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=apply]');
   }
 
   addEventListeners() {
     this.input.addEventListener('click', this.toggleDropdown.bind(this));
-    this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.decreaseValue.bind(this)));
-    this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.increaseValue.bind(this)));
+    this.buttonsDecrease.forEach(button => button.addEventListener('click', this.decreaseValue.bind(this)));
+    this.buttonsIncrease.forEach(button => button.addEventListener('click', this.increaseValue.bind(this)));
     this.buttonClear.addEventListener('click', this.reset.bind(this));
     this.buttonApply.addEventListener('click', this.apply.bind(this));
   }
@@ -59,8 +64,8 @@ export default class DropdownGuests {
 
     evt.currentTarget.classList.add('dropdown__button_hidden');
     this.input.value = '';
-    this.buttonsDecrease.forEach((button) => button.classList.add('dropdown__control-button_disabled'));
-    this.counterFields.forEach((counterField) => counterField.textContent = 0);
+    this.buttonsDecrease.forEach(button => button.classList.add('dropdown__control-button_disabled'));
+    this.counterFields.forEach(counterField => (counterField.textContent = 0));
   }
 
   apply() {
@@ -76,12 +81,18 @@ export default class DropdownGuests {
     const guestsAmount = this.counterFields.reduce((acc, it) => +it.textContent + acc, 0);
     const amountBabies = this.counterFields[2].textContent;
 
-    this.input.value = counters.reduce((acc, it, i) => (guestsAmount >= i ? `${guestsAmount} ${it.guest}, ${amountBabies} ${amountBabies >= i ? it.baby : counters[amountBabies].baby}` : acc), '');
+    this.input.value = counters.reduce(
+      (acc, it, i) =>
+        guestsAmount >= i
+          ? `${guestsAmount} ${it.guest}, ${amountBabies} ${amountBabies >= i ? it.baby : counters[amountBabies].baby}`
+          : acc,
+      ''
+    );
 
     this.dropdown.classList.remove('dropdown_expanded');
   }
 
   isCounterFieldsEmpty() {
-    return this.counterFields.every((field) => field.textContent <= 0);
+    return this.counterFields.every(field => field.textContent <= 0);
   }
 }

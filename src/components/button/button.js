@@ -1,10 +1,10 @@
 export default class ButtonLike {
   constructor(button) {
-    this.findDOMElements(button);
+    this.findDomElements(button);
     this.addEventListeners();
   }
 
-  findDOMElements(button) {
+  findDomElements(button) {
     this.button = button;
     this.buttonText = button.querySelector('.button__text');
   }
