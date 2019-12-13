@@ -2,11 +2,11 @@ export default class DropdownComfort {
   constructor(dropdown) {
     this.dropdown = dropdown;
 
-    this.findDOMElements();
+    this.findDomElements();
     this.addEventListeners();
   }
 
-  findDOMElements() {
+  findDomElements() {
     this.input = this.dropdown.querySelector('.dropdown__field');
     this.groups = this.dropdown.querySelectorAll('.dropdown__group');
     this.buttonsDecrease = this.dropdown.querySelectorAll(
@@ -18,9 +18,9 @@ export default class DropdownComfort {
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.toggleDropdown.bind(this));
-    this.buttonsDecrease.forEach(button => button.addEventListener('click', this.decreaseValue.bind(this)));
-    this.buttonsIncrease.forEach(button => button.addEventListener('click', this.increaseValue.bind(this)));
+    this.input.addEventListener('click.dropdown', this.toggleDropdown.bind(this));
+    this.buttonsDecrease.forEach(button => button.addEventListener('click.dropdown', this.decreaseValue.bind(this)));
+    this.buttonsIncrease.forEach(button => button.addEventListener('click.dropdown', this.increaseValue.bind(this)));
   }
 
   toggleDropdown() {

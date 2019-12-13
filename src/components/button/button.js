@@ -10,7 +10,7 @@ export default class ButtonLike {
   }
 
   addEventListeners() {
-    this.button.addEventListener('click', this.toggleLike.bind(this));
+    this.button.addEventListener('click.button', this.toggleLike.bind(this));
   }
 
   toggleLike(evt) {

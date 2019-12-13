@@ -5,11 +5,11 @@ export default class DropdownGuests {
   constructor(dropdown) {
     this.dropdown = dropdown;
 
-    this.findDOMElements();
+    this.findDomElements();
     this.addEventListeners();
   }
 
-  findDOMElements() {
+  findDomElements() {
     this.input = this.dropdown.querySelector('.dropdown__field');
     this.counterFields = this.dropdown.querySelectorAll('.dropdown__counter-value');
     this.buttonsDecrease = this.dropdown.querySelectorAll(
@@ -23,11 +23,11 @@ export default class DropdownGuests {
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.toggleDropdown.bind(this));
-    this.buttonsDecrease.forEach(button => button.addEventListener('click', this.decreaseValue.bind(this)));
-    this.buttonsIncrease.forEach(button => button.addEventListener('click', this.increaseValue.bind(this)));
-    this.buttonClear.addEventListener('click', this.reset.bind(this));
-    this.buttonApply.addEventListener('click', this.apply.bind(this));
+    this.input.addEventListener('click.dropdown', this.toggleDropdown.bind(this));
+    this.buttonsDecrease.forEach(button => button.addEventListener('click.dropdown', this.decreaseValue.bind(this)));
+    this.buttonsIncrease.forEach(button => button.addEventListener('click.dropdown', this.increaseValue.bind(this)));
+    this.buttonClear.addEventListener('click.dropdown', this.reset.bind(this));
+    this.buttonApply.addEventListener('click.dropdown', this.apply.bind(this));
   }
 
   toggleDropdown() {

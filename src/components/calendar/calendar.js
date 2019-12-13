@@ -30,19 +30,27 @@ export default class Calendar {
       range: true,
       multipleDatesSeparator: '-',
       inline: true,
-      onSelect: this.onSelect.bind(this),
+      onSelect: this.handleCalendarSelectedData.bind(this),
     });
 
     this.calendarData = this.fieldInit.data('datepicker');
   }
 
   addEventListeners() {
-    this.fieldFrom.on('click', () => this.container.toggleClass('calendar__container_hidden'));
-    this.applyButton.on('click', () => this.container.toggleClass('calendar__container_hidden'));
-    this.clearButton.on('click', () => this.calendarData.clear());
+    this.fieldFrom.on('click.calendar', this.toggleCalendar.bind(this));
+    this.applyButton.on('click.calendar', this.toggleCalendar.bind(this));
+    this.clearButton.on('click.calendar', this.handleClearButtonClick.bind(this));
   }
 
-  onSelect(formattedDate) {
+  toggleCalendar() {
+    this.container.toggleClass('calendar__container_hidden');
+  }
+
+  handleClearButtonClick() {
+    this.calendarData.clear();
+  }
+
+  handleCalendarSelectedData(formattedDate) {
     const arrDates = formattedDate.split('-');
 
     this.fieldFrom.val(arrDates[0]);

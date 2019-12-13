@@ -2,17 +2,17 @@ export default class Header {
   constructor(header) {
     this.header = header;
 
-    this.findDOMElements();
+    this.findDomElements();
     this.addEventListeners();
   }
 
-  findDOMElements() {
-    this.headerNavigation = header.querySelector('.header__navigation');
-    this.headerButtonBurger = header.querySelector('.header__burger');
+  findDomElements() {
+    this.headerNavigation = this.header.querySelector('.header__navigation');
+    this.headerButtonBurger = this.header.querySelector('.header__burger');
   }
 
   addEventListeners() {
-    this.headerButtonBurger.addEventListener('click', this.toggleHeader.bind(this));
+    this.headerButtonBurger.addEventListener('click.header', this.toggleHeader.bind(this));
   }
 
   toggleHeader(evt) {
