@@ -18,7 +18,7 @@ headers.forEach((header) => new Header(header));
 const dropdownsGuests = document.querySelectorAll('.js-dropdown');
 dropdownsGuests.forEach((dropdown) => new DropdownGuests(dropdown));
 
-const $calendar = $('.js-calendar');
-$calendar.each(function (i) {
+const $calendars = $('.js-calendar');
+$calendars.each(function (i) {
   new Calendar($(this), i);
 });
