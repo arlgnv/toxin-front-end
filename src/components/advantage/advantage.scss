@@ -11,6 +11,18 @@
     height: 3.4286rem;
     background-repeat: no-repeat;
     background-position: center;
+
+    &_theme_comfort {
+      background-image: url('../../components/advantage/images/comfort.svg');
+    }
+
+    &_theme_convenience {
+      background-image: url('../../components/advantage/images/convenience.svg');
+    }
+
+    &_theme_cozy {
+      background-image: url('../../components/advantage/images/cozy.svg');
+    }
   }
 
   &__text {

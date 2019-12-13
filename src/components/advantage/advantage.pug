@@ -1,6 +1,9 @@
-mixin advantage({icon = "", title = "", description = ""} = {})
+mixin advantage({theme = "", title = "", description = ""} = {})
+  -
+    let className = theme === "" ? "" : `advantage__icon_theme_${theme}`
+
   p.advantage
-    span.advantage__icon(style=`background-image: url(${icon})`)
+    span.advantage__icon(class= className)
     span.advantage__text
       b.advantage__lead= title
       = description
