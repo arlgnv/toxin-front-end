@@ -1,4 +1,4 @@
-export default class Calendar {
+class Calendar {
   constructor($calendar, index) {
     this.$calendar = $calendar;
 
@@ -59,3 +59,5 @@ export default class Calendar {
     this.$fieldTo.val(arrDates[1]);
   }
 }
+
+export default Calendar;

@@ -1,7 +1,7 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 
-export default class DropdownGuests {
+class DropdownGuests {
   constructor(dropdown) {
     this.dropdown = dropdown;
 
@@ -88,3 +88,5 @@ export default class DropdownGuests {
     return this.counterFields.every((field) => field.textContent <= 0);
   }
 }
+
+export default DropdownGuests;

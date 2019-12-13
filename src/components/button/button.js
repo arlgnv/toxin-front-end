@@ -1,4 +1,4 @@
-export default class ButtonLike {
+class ButtonLike {
   constructor(button) {
     this.button = button;
 
@@ -24,3 +24,5 @@ export default class ButtonLike {
       : +this.buttonText.textContent - 1;
   }
 }
+
+export default ButtonLike;

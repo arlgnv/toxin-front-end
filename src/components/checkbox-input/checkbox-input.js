@@ -1,4 +1,4 @@
-export default class CheckboxExpandable {
+class CheckboxExpandable {
   constructor(checkbox) {
     this.checkbox = checkbox;
 
@@ -18,3 +18,5 @@ export default class CheckboxExpandable {
     this.checkbox.classList.toggle('checkbox-input_expanded');
   }
 }
+
+export default CheckboxExpandable;

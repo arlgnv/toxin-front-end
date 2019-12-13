@@ -1,6 +1,6 @@
 /* global document */
 
-export default class RoomsFilter {
+class RoomsFilter {
   constructor(filter) {
     this.filter = filter;
 
@@ -38,3 +38,5 @@ export default class RoomsFilter {
     document.body.classList.remove('scroll-none');
   }
 }
+
+export default RoomsFilter;

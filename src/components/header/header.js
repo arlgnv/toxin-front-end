@@ -1,4 +1,4 @@
-export default class Header {
+class Header {
   constructor(header) {
     this.header = header;
 
@@ -22,3 +22,5 @@ export default class Header {
     this.headerNavigation.classList.toggle('header__navigation_opened');
   }
 }
+
+export default Header;

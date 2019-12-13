@@ -1,4 +1,4 @@
-export default class RangeSlider {
+class RangeSlider {
   constructor($slider) {
     this.$slider = $slider;
 
@@ -34,3 +34,5 @@ export default class RangeSlider {
     this.$sliderPrice.html(`${value.from}₽ - ${value.to}₽`);
   }
 }
+
+export default RangeSlider;

@@ -1,4 +1,4 @@
-export default class DropdownComfort {
+class DropdownComfort {
   constructor(dropdown) {
     this.dropdown = dropdown;
 
@@ -70,3 +70,5 @@ export default class DropdownComfort {
     this.input.value = this.input.value.trim();
   }
 }
+
+export default DropdownComfort;
