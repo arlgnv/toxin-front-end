@@ -1,7 +1,7 @@
-mixin text-input({theme = "", jsClasses = ""} = {})
+mixin text-input({theme = "", type = "text", jsClasses = ""} = {})
   - const className = theme === "" ? "" : `text-input_theme_${theme}`
-  
+
   span.text-input(class= className)
-    input.text-input__field&attributes(attributes)
+    input.text-input__field(type= type)&attributes(attributes)
     if theme === "newsletter"
       button.text-input__submit-button(type="submit" aria-label="Подписаться на рассылку")

@@ -81,7 +81,7 @@ block content
               +dropdown(id="field-7" value="19 авг - 23 авг")
             p.text-fields__group
               label.text-fields__title(for="field-8") subscription text field
-              +text-input({"theme": "newsletter"})(id="field-8" type="email" placeholder="Email")
+              +text-input({"theme": "newsletter", "type": "email"})(id="field-8" placeholder="Email")
           .buttons
             .buttons__group
               .buttons__subgroup
@@ -121,9 +121,9 @@ block content
               .buttons__subgroup
                 b.buttons__title like button
                 span.button-like
-                  +button({"theme": "like", "text": "2"})(type="button")
+                  +button({"theme": "like", "text": "2"})
                 span.button-like
-                  +button({"theme": "like", "text": "12"})(type="button" class="button_theme_liked")
+                  +button({"theme": "like", "text": "12"})(class="button_theme_liked")
               .buttons__subgroup
                 b.buttons__title rate button
                 span.rating-item

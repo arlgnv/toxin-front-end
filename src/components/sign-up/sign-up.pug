@@ -26,14 +26,14 @@ mixin sign-up
         legend.sign-up__group-title данные для входа в сервис
         p.sign-up__item
           label.sign-up__label.sign-up__label_hidden(for="field-email") Введите email
-          +text-input(id="field-emai" type="email" name="email" placeholder="Email")
+          +text-input({"type": "email"})(id="field-emai" name="email" placeholder="Email")
         p.sign-up__item
           label.sign-up__label.sign-up__label_hidden(for="field-password") Введите пароль
-          +text-input(id="field-password" type="password" name="password" placeholder="Пароль")
+          +text-input({"type": "password"})(id="field-password" name="password" placeholder="Пароль")
       .sign-up__group
         +checkbox-input({"id": "field-newsletter", "title": "Получать спецпредложения", "theme": "toggle"})(name="newsletter")
       p.sign-up__group
-        +button({"text": "перейти к оплате", "theme": "submit"})(type="submit")
+        +button({"text": "перейти к оплате", "theme": "submit", "type": "submit"})
     .sign-up__login
       span.sign-up__text Уже есть аккаунт на Toxin?
       span.sign-up__login-button

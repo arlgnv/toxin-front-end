@@ -4,12 +4,12 @@ mixin sign-in
     form.sign-in__form(action="https://echo.htmlacademy.ru" method="post")
       p.sign-in__group
         label.sign-in__label.sign-in__label_hidden(for="field-email") Введите email
-        +text-input(id="field-email" name="email" type="email" placeholder="Email")
+        +text-input({"type": "email"})(id="field-email" name="email" placeholder="Email")
       p.sign-in__group
         label.sign-in__label.sign-in__label_hidden(for="field-password") Введите пароль
-        +text-input(id="field-password" name="password" type="password" placeholder="Пароль")
+        +text-input({"type": "password"})(id="field-password" name="password" placeholder="Пароль")
       p.sign-in__group
-        +button({"text": "войти", "theme": "submit"})(type="submit")
+        +button({"text": "войти", "theme": "submit", "type": "submit"})
     .sign-in__registration
       span.sign-in__text Нет аккаунта на Toxin?
       span.sign-in__sign-in-button

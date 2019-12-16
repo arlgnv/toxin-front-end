@@ -7,5 +7,5 @@ mixin testimonial({image = "", author = "", date = "", text = "", likes = ""} = 
         span.testimonial__date= date
     span.testimonial__content
       span.testimonial__button
-        +button({"text": likes, "theme": "like", "jsClasses": "js-button"})(type="button")
+        +button({"text": likes, "theme": "like", "jsClasses": "js-button"})
       span.testimonial__text= text

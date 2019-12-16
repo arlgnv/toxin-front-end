@@ -1,7 +1,7 @@
-mixin button({text = "", theme = "", jsClasses = ""} = {})
+mixin button({text = "", theme = "", type = "button", jsClasses = ""} = {})
   -
     let className = theme === "" ? "" : `button_theme_${theme}`
     className = `${className} ${jsClasses}`.trim()
-    
-  button.button(class= className)&attributes(attributes)
+
+  button.button(class= className type= type)&attributes(attributes)
     span.button__text= text
