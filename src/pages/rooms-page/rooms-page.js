@@ -6,7 +6,7 @@ import '../../utilities/jquery-global';
 import '../../utilities/polyfills';
 
 import Header from '../../components/header/header';
-import CheckboxExpandable from '../../components/checkbox-input/checkbox-input';
+import CheckboxExpandable from '../../components/checkbox-expandable/checkbox-expandable';
 import DropdownComfort from '../../components/dropdown/dropdown-comfort';
 import RangeSlider from '../../components/range-slider/range-slider';
 import RoomsFilter from '../../utilities/rooms-filter';
@@ -17,7 +17,7 @@ headers.forEach((header) => new Header(header));
 const dropdownsComfort = document.querySelectorAll('.js-dropdown');
 dropdownsComfort.forEach((dropdown) => new DropdownComfort(dropdown));
 
-const checkboxes = document.querySelectorAll('.js-checkbox-input');
+const checkboxes = document.querySelectorAll('.js-checkbox-expandable');
 checkboxes.forEach((checkbox) => new CheckboxExpandable(checkbox));
 
 const $sliders = $('.js-range-slider');

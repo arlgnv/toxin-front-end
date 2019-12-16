@@ -7,6 +7,7 @@
 @import '../../components/range-slider/range-slider';
 @import '../../components/pagination/pagination';
 @import '../../components/checkbox-input/checkbox-input';
+@import '../../components/checkbox-expandable/checkbox-expandable';
 @import '../../components/button-like/button-like';
 @import '../../components/bullet-list/bullet-list';
 @import '../../components/advantage/advantage';
@@ -526,7 +527,7 @@
     }
 
     .checkbox-poor + .checkbox-poor {
-      margin-top: 0.9286rem;
+      margin-top: 0.4286rem;
     }
 
     .radio {
@@ -541,10 +542,10 @@
       margin-top: 0.5714rem;
     }
 
-    .button-like {
+    .buttons__group-like {
       display: inline-block;
 
-      + .button-like {
+      + .buttons__group-like {
         margin-left: 0.8571rem;
       }
     }
@@ -686,7 +687,7 @@
   }
 }
 
-.checkbox-expandable {
+.exapndable-checkbox {
   $root: &;
 
   width: 19rem;

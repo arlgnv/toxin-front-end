@@ -15,8 +15,8 @@ class RoomsFilter {
   }
 
   addEventListeners() {
-    this.filterShow.addEventListener('click.filter', this.showFilter.bind(this));
-    this.filterClose.addEventListener('click.filter', this.closeFilter.bind(this));
+    this.filterShow.addEventListener('click', this.showFilter.bind(this));
+    this.filterClose.addEventListener('click', this.closeFilter.bind(this));
   }
 
   showFilter(evt) {

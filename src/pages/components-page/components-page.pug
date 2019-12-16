@@ -120,10 +120,10 @@ block content
                     +checkbox-input(checkbox)
               .buttons__subgroup
                 b.buttons__title like button
-                span.button-like
-                  +button({"theme": "like", "text": "2"})
-                span.button-like
-                  +button({"theme": "like", "text": "12"})(class="button_theme_liked")
+                span.buttons__group-like
+                  +button-like({"text": "2"})
+                span.buttons__group-like
+                  +button-like({"text": "12"})(class="button-like_theme_liked")
               .buttons__subgroup
                 b.buttons__title rate button
                 span.rating-item
@@ -206,27 +206,21 @@ block content
                         button.dropdown__button.dropdown__button_hidden(type="button" data-dropdown-button-type="clear") Очистить
                         button.dropdown__button.dropdown__button_theme_purple(type="button" data-dropdown-button-type="apply") Применить
         .form-elements__group
-          .checkbox-expandable
-            .checkbox-expandable__item
-              +checkbox-input({"theme": "expandable"})
-                b.checkbox-input__group-title expandable checkbox list
-            .checkbox-expandable__item
-              +checkbox-input({"theme": "expandable", "state": "expanded"})
-                -
-                  const checkboxes =
-                  [
-                    {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
-                    {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
-                    {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
-                    {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
-                    {"id": "field-tv", "title": "Телевизор", "name": "tv"},
-                    {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
-                  ]
-                b.checkbox-input__group-title expandable checkbox list
-                ul.checkbox-input__list
-                  each checkbox in checkboxes
-                    li.checkbox-input__item
-                      +checkbox-input(checkbox)
+          .exapndable-checkbox
+            .exapndable-checkbox__item
+              +checkbox-expandable({"title": "expandable checkbox list"})
+            .exapndable-checkbox__item
+              -
+                const checkboxesExpandable =
+                [
+                  {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                  {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                  {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                  {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                  {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                  {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
+                ]
+              +checkbox-expandable({"title": "expandable checkbox list", "state": "expanded", "items": checkboxesExpandable})
           .checkbox-rich
             b.checkbox-rich__title rich checkbox buttons
             -

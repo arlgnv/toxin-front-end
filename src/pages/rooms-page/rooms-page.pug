@@ -70,22 +70,18 @@ block content
                       span.dropdown__counter-value 0
                       button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
           fieldset.filter__group
-            +checkbox-input({"theme": "expandable", "jsClasses": "js-checkbox-input"})
-              -
-                const checkboxes =
-                [
-                  {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
-                  {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
-                  {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
-                  {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
-                  {"id": "field-tv", "title": "Телевизор", "name": "tv"},
-                  {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
-                ]
-              b.checkbox-input__group-title Дополнительные удобства
-              ul.checkbox-input__list
-                each checkbox in checkboxes
-                  li.checkbox-input__item
-                    +checkbox-input(checkbox)
+            -
+              const checkboxesExpandable =
+              [
+                {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
+              ]
+            +checkbox-expandable({"title": "Дополнительные удобства", "jsClasses": "js-checkbox-expandable", "items": checkboxesExpandable})
+
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали
         ul.rooms__list

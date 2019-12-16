@@ -7,15 +7,15 @@ class CheckboxExpandable {
   }
 
   findDOMElements() {
-    this.titleCheckbox = this.checkbox.querySelector('.checkbox-input__group-title');
+    this.checkboxTitle = this.checkbox.querySelector('.checkbox-expandable__title');
   }
 
   addEventListeners() {
-    this.titleCheckbox.addEventListener('click', this.toggleCheckbox.bind(this));
+    this.checkboxTitle.addEventListener('click', this.toggleCheckbox.bind(this));
   }
 
   toggleCheckbox() {
-    this.checkbox.classList.toggle('checkbox-input_expanded');
+    this.checkbox.classList.toggle('checkbox-expandable_expanded');
   }
 }
 

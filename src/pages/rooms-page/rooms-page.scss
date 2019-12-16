@@ -4,6 +4,7 @@
 @import '../../components/pagination/pagination';
 @import '../../components/range-slider/range-slider';
 @import '../../components/checkbox-input/checkbox-input';
+@import '../../components/checkbox-expandable/checkbox-expandable';
 @import '../../components/dropdown/dropdown';
 @import '../../components/room/room';
 
@@ -157,7 +158,7 @@
     }
 
     &:nth-child(4) {
-      margin-bottom: 2.3429rem;
+      margin-bottom: 2.1429rem;
 
       #{$root}__group-title {
         margin-bottom: 1.2286rem;
@@ -169,7 +170,7 @@
     }
 
     &:nth-child(5) {
-      margin-bottom: 1.8571rem;
+      margin-bottom: 1.5571rem;
 
       #{$root}__group-title {
         margin-bottom: 1.2143rem;
@@ -184,7 +185,7 @@
           }
 
           + #{$root}__item {
-            margin-top: 0.9286rem;
+            margin-top: 0.5286rem;
           }
         }
       }
@@ -219,7 +220,7 @@
     list-style-type: none;
 
     #{$root}__item + #{$root}__item {
-      margin-top: 0.8714rem;
+      margin-top: 0.4714rem;
     }
   }
 }
