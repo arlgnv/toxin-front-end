@@ -31,41 +31,6 @@
     }
   }
 
-  &_theme_like {
-    position: relative;
-    min-width: 2.8571rem;
-    padding: 0.0714rem;
-    background: $primary-color-25;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0.2143rem;
-      height: 0.7143rem;
-      width: 0.7143rem;
-      background: url('../../components/button/images/heart.svg') no-repeat center;
-      transform: translateY(-50%);
-    }
-
-    #{$root}__text {
-      padding: 0.2143rem 0.2143rem 0.2143rem 0.8571rem;
-      font-size: 0.7143rem;
-      line-height: 0.8571rem;
-      color: $primary-color-25;
-      background-color: $white-color-100;
-    }
-  }
-
-  &_theme_liked {
-    color: $purple-color-100;
-    background: linear-gradient(180deg, $purple-color-100 0%, $aqua-color-light-100 100%);
-
-    &::before {
-      background-image: url('../../components/button/images/heart-filled.svg');
-    }
-  }
-
   &_theme_account-action {
     min-width: 3.1429rem;
     padding: 0.1429rem;

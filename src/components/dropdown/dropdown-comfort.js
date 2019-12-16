@@ -30,7 +30,7 @@ class DropdownComfort {
     if (counterField.textContent > 0) {
       counterField.textContent -= 1;
 
-      if (+counterField.textContent === 0) {
+      if (Number(counterField.textContent) === 0) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
       }
     }

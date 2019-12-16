@@ -37,7 +37,7 @@ class DropdownGuests {
     if (counterField.textContent > 0) {
       counterField.textContent -= 1;
 
-      if (+counterField.textContent === 0) {
+      if (Number(counterField.textContent) === 0) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
         if (this.isCounterFieldsEmpty()) this.buttonClear.classList.add('dropdown__button_hidden');
       }
@@ -48,7 +48,7 @@ class DropdownGuests {
     const counterField = evt.currentTarget.previousElementSibling;
     const buttonDecrease = counterField.previousElementSibling;
 
-    counterField.textContent = +counterField.textContent + 1;
+    counterField.textContent = Number(counterField.textContent) + 1;
 
     buttonDecrease.classList.remove('dropdown__control-button_disabled');
 
@@ -74,7 +74,7 @@ class DropdownGuests {
       { guest: 'гостей', baby: 'младенцев' },
     ];
 
-    const guestsAmount = this.counterFields.reduce((acc, it) => +it.textContent + acc, 0);
+    const guestsAmount = this.counterFields.reduce((acc, it) => Number(it.textContent) + acc, 0);
     const amountBabies = this.counterFields[2].textContent;
 
     this.input.value = counters.reduce((acc, it, i) => (guestsAmount >= i
