@@ -1,3 +1,5 @@
+import 'air-datepicker';
+
 class Calendar {
   constructor($calendar, index) {
     this.$calendar = $calendar;

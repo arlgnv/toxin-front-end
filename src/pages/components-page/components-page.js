@@ -3,10 +3,6 @@
 /* eslint-disable no-new */
 
 import '../../utilities/jquery-global';
-
-import 'ion-rangeslider';
-import 'air-datepicker';
-
 import '../../utilities/polyfills';
 
 import RangeSlider from '../../components/range-slider/range-slider';

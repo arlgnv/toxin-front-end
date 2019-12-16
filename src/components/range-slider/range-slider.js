@@ -1,3 +1,5 @@
+import 'ion-rangeslider';
+
 class RangeSlider {
   constructor($slider) {
     this.$slider = $slider;

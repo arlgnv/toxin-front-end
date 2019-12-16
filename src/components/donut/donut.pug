@@ -1,33 +1,13 @@
-mixin donut
-  figure.donut
-    svg.donut__chart
-      circle.donut__segment.donut__segment_theme_great(cx="50%" cy="50%" r="58" fill="transparent" stroke="url(#gradient1)" stroke-width="4" stroke-dasharray="180 400" transform="rotate(91 58 58)")
-      defs
-        linearGradient#gradient1
-          stop(offset="0" stop-color="#ffe39d")
-          stop(offset="1" stop-color="#ffba9d")
-      circle.donut__segment.donut__segment_theme_satisfactory(cx="50%" cy="50%" r="55" fill="transparent" stroke="url(#gradient2)" stroke-width="10" stroke-dasharray="84 400" transform="rotate(-89 60 60)")
-      defs
-        linearGradient#gradient2
-          stop(offset="0" stop-color="#a49ffd")
-          stop(offset="1" stop-color="#bb9dff")
-      circle.donut__segment.donut__segment_theme_good(cx="50%" cy="50%" r="58" fill="transparent" stroke="url(#gradient3)" stroke-width="4" stroke-dasharray="90 400")
-      defs
-        linearGradient#gradient3
-          stop(offset="0" stop-color="#6cd1c1")
-          stop(offset="1" stop-color="#6ecf99")
-      g.donut__votes
-        text.donut__votes-amount(x="50%" y="50%") 260
-        text.donut__votes-text(x="50%" y="50%" transform="translate(0 19)") голосов
-    figcaption.donut__description
-      ul(class="donut__list")
-        -
-          const items = 
-          [
-            {"text": "Великолепно", "theme": "great"},
-            {"text": "Хорошо", "theme": "good"},
-            {"text": "Удовлетворительно", "theme": "satisfactory"},
-            {"text": "Разочарован", "theme": "disappointed"}
-          ]
-        each item in items
-          li(class=`donut__item donut__item_theme_${item.theme}`)= item.text
+mixin donut({great = 10, good = 5, satisfactory = 2, disappointed = 0} = {})
+  figure.donut.js-donut
+    ul.donut__list
+      -
+        const items =
+        [
+          {"text": "Великолепно", "theme": "great", "amount": great, "color": "#ffba9c"},
+          {"text": "Хорошо", "theme": "good", "amount": good, "color": "#bc9cff"},
+          {"text": "Удовлетворительно", "theme": "satisfactory", "amount": satisfactory, "color": "#6fcf97"},
+          {"text": "Разочарован", "theme": "disappointed", "amount": disappointed, "color": "#919191"}
+        ]
+      each item in items
+        li.donut__item(class=`donut__item_theme_${item.theme}` data-amount= item.amount data-color= item.color)= item.text

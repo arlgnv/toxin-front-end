@@ -3,10 +3,7 @@
 /* global $ document */
 
 import '../../utilities/jquery-global';
-
 import '../../utilities/polyfills';
-
-import 'ion-rangeslider';
 
 import Header from '../../components/header/header';
 import CheckboxExpandable from '../../components/checkbox-input/checkbox-input';

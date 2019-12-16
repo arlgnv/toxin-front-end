@@ -3,9 +3,6 @@
 /* global document $ */
 
 import '../../utilities/jquery-global';
-
-import 'air-datepicker';
-
 import '../../utilities/polyfills';
 
 import Header from '../../components/header/header';

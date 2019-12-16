@@ -2,50 +2,9 @@
   width: 22.1429rem;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   flex-wrap: wrap;
   margin: 0;
-
-  &__chart {
-    width: 8.5714rem;
-    height: 8.5714rem;
-    margin-right: 0.3571rem;
-  }
-
-  &__segment {
-    transform-origin: center;
-
-    &_theme_great {
-      transform: rotate(91deg);
-    }
-
-    &_theme_satisfactory {
-      transform: rotate(-89deg);
-    }
-  }
-
-  &__votes {
-    fill: $purple-color-100;
-    font-weight: bold;
-    transform: translateY(-0.1429rem);
-
-    &-amount {
-      font-size: 1.7143rem;
-      line-height: 2.1429rem;
-      text-anchor: middle;
-    }
-
-    &-text {
-      font-size: 0.8571rem;
-      line-height: 1.0714rem;
-      text-transform: uppercase;
-      text-anchor: middle;
-      transform: translateY(1.3571rem);
-    }
-  }
-
-  &__description {
-    align-self: flex-end;
-  }
 
   &__list {
     margin: 0;
