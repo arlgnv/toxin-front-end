@@ -88,6 +88,7 @@
 
   &__navigation {
     display: flex;
+    flex-wrap: wrap;
     width: 40.0714rem;
 
     @media screen and (max-width: 858px) {
