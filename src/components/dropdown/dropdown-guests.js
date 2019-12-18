@@ -1,6 +1,3 @@
-/* eslint-disable no-return-assign */
-/* eslint-disable no-param-reassign */
-
 class DropdownGuests {
   constructor(dropdown) {
     this.dropdown = dropdown;

@@ -1,7 +1,3 @@
-/* eslint-disable func-names */
-/* global $ document */
-/* eslint-disable no-new */
-
 import '../../utilities/jquery-global';
 import '../../utilities/polyfills';
 
