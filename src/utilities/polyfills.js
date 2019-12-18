@@ -1,5 +1,3 @@
-/* global window NodeList */
-
 if (window.NodeList) {
   if (!NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;

@@ -1,6 +1,5 @@
 mixin advantage({theme = "", title = "", description = ""} = {})
-  -
-    let className = theme === "" ? "" : `advantage__icon_theme_${theme}`
+  - const className = theme === "" ? "" : `advantage__icon_theme_${theme}`
 
   p.advantage
     span.advantage__icon(class= className)

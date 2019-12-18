@@ -13,7 +13,9 @@ block styles
   link(rel="stylesheet" href="./login-page.scss")
 
 block content
-  include ../../utilities/mixins-components
+  include ../../components/header/header
+  include ../../components/sign-in/sign-in
+  include ../../components/footer/footer
 
   +header({"jsClasses": "js-header"})
   main.login-page

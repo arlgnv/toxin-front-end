@@ -1,6 +1,5 @@
 import '../../utilities/jquery-global';
 import '../../utilities/polyfills';
-
 import Header from '../../components/header/header';
 import CheckboxExpandable from '../../components/checkbox-expandable/checkbox-expandable';
 import DropdownComfort from '../../components/dropdown/dropdown-comfort';

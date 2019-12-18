@@ -1,3 +1,7 @@
+include ../calendar/calendar
+include ../dropdown/dropdown
+include ../link/link
+
 mixin room-search
   article.room-search
     h2.room-search__title Найдём номера под ваши пожелания
@@ -21,4 +25,3 @@ mixin room-search
               button.dropdown__button.dropdown__button_theme_purple(type="button" data-dropdown-button-type="apply") Применить
       p.room-search__group
         +link({"text": "подобрать номер", "theme": "submit"})(href="../../pages/rooms-page/rooms-page.pug")
-      

@@ -1,5 +1,3 @@
-/* global document */
-
 class RoomsFilter {
   constructor(filter) {
     this.filter = filter;

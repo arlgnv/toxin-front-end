@@ -1,12 +1,11 @@
 @import '../../utilities/init';
 @import '../../components/header/header';
-@import '../../components/footer/footer';
-@import '../../components/room-book/room-book';
-@import '../../components/testimonial/testimonial';
-@import '../../components/button-like/button-like';
 @import '../../components/advantage/advantage';
-@import '../../components/bullet-list/bullet-list';
 @import '../../components/donut/donut';
+@import '../../components/testimonial/testimonial';
+@import '../../components/bullet-list/bullet-list';
+@import '../../components/room-book/room-book';
+@import '../../components/footer/footer';
 
 .room-page {
   flex-grow: 1;

@@ -5,15 +5,15 @@
  * Dependencies: jQuery 1.4.2+
 */
 (function ($) {
-  let _renderPie = function (canvas, settings) {
+  const _renderPie = function (canvas, settings) {
     // Resize canvas to settings' max radius * 2.
-    let canvasSize = 2 * settings._maxRadius;
+    const canvasSize = 2 * settings._maxRadius;
     canvas.attr('width', canvasSize).attr('height', canvasSize);
 
-    let context = canvas[0].getContext('2d');
+    const context = canvas[0].getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-    var {angle} = settings;
+    var { angle } = settings;
     var j = settings.sliceIndex;
 
     // Render slices.
@@ -32,7 +32,7 @@
       angle = endAngle;
       j++;
       if (j >= settings.slices.length) // wrap around.
-        {j = 0;}
+      { j = 0; }
     }
 
     // Render inner circle.
@@ -46,7 +46,7 @@
 
     // rerender current slice
 
-    var {angle} = settings; // + Math.PI/2;
+    var { angle } = settings; // + Math.PI/2;
     var j = settings.sliceIndex;
 
     for (var i = 0; i < settings.slices.length; i++) {
@@ -65,7 +65,7 @@
       angle = endAngle;
       j++;
       if (j >= settings.slices.length) // wrap around.
-        {j = 0;}
+      { j = 0; }
     }
 
     // rerender small inner circle
@@ -80,20 +80,20 @@
 
     // Render percentage.
     if (settings.fontSize > 0) {
-      let slice = settings.slices[settings.sliceIndex];
+      const slice = settings.slices[settings.sliceIndex];
 
       // Font color defaults to slice color if fontColor not set.
       context.fillStyle = slice.fontColor || slice.color;
 
-      let bigFont = `${settings.fontWeight  } ${  settings.fontSize  }px ${  settings.fontFamily}`;
-      let smallFont = `${settings.fontWeight  } ${  0.5 * settings.fontSize  }px ${  settings.fontFamily}`;
+      const bigFont = `${settings.fontWeight} ${settings.fontSize}px ${settings.fontFamily}`;
+      const smallFont = `${settings.fontWeight} ${0.5 * settings.fontSize}px ${settings.fontFamily}`;
 
       /*
             var whole = Math.floor(settings.percentage);
             var fraction = Math.round(10 * (settings.percentage - Math.floor(settings.percentage)));
             */
 
-      let whole = Math.floor(slice.amount);
+      const whole = Math.floor(slice.amount);
 
       context.textAlign = 'middle';
       context.textBaseline = 'middle';
@@ -131,16 +131,16 @@
     }
   };
 
-  let _rotatePie = function (canvas, sliceIndex) {
+  const _rotatePie = function (canvas, sliceIndex) {
     // Retrieve settings from canvas.
-    let settings = canvas.data('settings');
+    const settings = canvas.data('settings');
 
     // Cancel if animation in progress.
     if (settings.animating) return false;
 
     // Callback.
     if (settings.beforeAnimate) {
-      let returnVal = settings.beforeAnimate.call(canvas, sliceIndex, settings);
+      const returnVal = settings.beforeAnimate.call(canvas, sliceIndex, settings);
       if (returnVal === false) return false; // If user returns false, cancel animation.
     }
 
@@ -156,19 +156,19 @@
       if (tempIndex >= settings.slices.length) tempIndex = 0; // wrap sliceIndex around.
       angle
                     += tempIndex == sliceIndex // end index?
-                    /* 0.5 * settings.slices[tempIndex].radians*/ ? 0 // Half of end angle.
-                    : settings.slices[tempIndex].radians;
+        /* 0.5 * settings.slices[tempIndex].radians */ ? 0 // Half of end angle.
+          : settings.slices[tempIndex].radians;
     }
 
     let endAngle;
-    let endPercentage = settings.slices[sliceIndex].percentage;
+    const endPercentage = settings.slices[sliceIndex].percentage;
     let deltaAngle;
     let fraction;
     let deltaRadius; // The radius difference between frames during animation (radius of selected slice is animated smaller during rotation and bigger after rotation).
     let deltaInnerRadius;
     let deltaFontSize;
     let deltaPercentage;
-    let rotateClockwise = true;// sliceIndex > settings.sliceIndex;
+    const rotateClockwise = true;// sliceIndex > settings.sliceIndex;
 
     if (rotateClockwise) // Rotate clockwise.
     {
@@ -192,19 +192,19 @@
       {
         // Animate currently selected slice from big to small while rotating.
         settings.selectedRadius -= deltaRadius;
-        if (settings.selectedRadius <= settings._minRadius) {settings.selectedRadius = settings._minRadius;} // Cap at min radius.
+        if (settings.selectedRadius <= settings._minRadius) { settings.selectedRadius = settings._minRadius; } // Cap at min radius.
 
         // Animate inner circle smaller.
         settings.innerRadius -= deltaInnerRadius;
-        if (settings.innerRadius <= settings._minInnerRadius) {settings.innerRadius = settings._minInnerRadius;} // Cap at min inner radius.
+        if (settings.innerRadius <= settings._minInnerRadius) { settings.innerRadius = settings._minInnerRadius; } // Cap at min inner radius.
 
         // Animate fontsize smaller.
         settings.fontSize -= deltaFontSize;
-        if (settings.fontSize <= settings._minFontSize) {settings.fontSize = settings._minFontSize;} // Cap at min fontsize.
+        if (settings.fontSize <= settings._minFontSize) { settings.fontSize = settings._minFontSize; } // Cap at min fontsize.
 
         // Animate percentage number.
         settings.percentage += deltaPercentage;
-        if ((deltaPercentage > 0 && settings.percentage >= endPercentage) || (deltaPercentage < 0 && settings.percentage <= endPercentage)) {settings.percentage = endPercentage;} // Cap percentage.
+        if ((deltaPercentage > 0 && settings.percentage >= endPercentage) || (deltaPercentage < 0 && settings.percentage <= endPercentage)) { settings.percentage = endPercentage; } // Cap percentage.
 
         // Rotate.
         if (settings.sliceIndex != sliceIndex) {
@@ -212,7 +212,7 @@
           if (rotateClockwise && settings.angle >= endAngle || (!rotateClockwise && settings.angle <= endAngle)) // Cap angle.
           {
             settings.sliceIndex = sliceIndex;
-            settings.angle = -0.5 * Math.PI /* -  0.5 * settings.slices[settings.sliceIndex].radians */;
+            settings.angle = -0.5 * Math.PI;
           }
         }
 
@@ -255,20 +255,20 @@
 
       _renderPie(canvas, settings);
       requestAnimationFrame(() => {
-                animatePie();
-            });
+        animatePie();
+      });
     };
 
     requestAnimationFrame(() => {
-            animatePie();
-        });
+      animatePie();
+    });
   };
 
-  let _pieClick = function (e) {
-    let canvas = $(this);
-    let settings = canvas.data('settings');
-    let x = e.offsetX - settings._maxRadius;
-    let y = -e.offsetY + settings._maxRadius;
+  const _pieClick = function (e) {
+    const canvas = $(this);
+    const settings = canvas.data('settings');
+    const x = e.offsetX - settings._maxRadius;
+    const y = -e.offsetY + settings._maxRadius;
     let alpha = Math.atan(Math.abs(y) / Math.abs(x));
 
     if (x > 0) {
@@ -289,14 +289,13 @@
   };
 
   // If value is percentage convert to absolute pixel value of containerWidth.
-  let _getDimension = function (containerWidth, value) {
-        var percentage = value.toString();
-        if (percentage.substring(value.length - 1) == '%')
-            return Math.round(containerWidth * parseFloat(percentage) / 100);
-        return value;
-    };
+  const _getDimension = function (containerWidth, value) {
+    const percentage = value.toString();
+    if (percentage.substring(value.length - 1) == '%') return Math.round(containerWidth * parseFloat(percentage) / 100);
+    return value;
+  };
 
-  let _setDefaults = function (canvas, settings) {
+  const _setDefaults = function (canvas, settings) {
     let totalSumm = 0;
     for (var i = 0; i < settings.slices.length; i++) totalSumm += settings.slices[i].amount;
 
@@ -307,11 +306,11 @@
       settings.slices[i].radians = settings.slices[i].percentage / 100 * 2 * Math.PI;
 
       // If no color provided, set to transparant.
-      if (!settings.slices[i].color) {settings.slices[i].color = 'rgba(0, 0, 0, 0)';}
+      if (!settings.slices[i].color) { settings.slices[i].color = 'rgba(0, 0, 0, 0)'; }
     }
 
     // Convert percentage dimensions to pixel values.
-    let containerWidth = canvas.parent().width();
+    const containerWidth = canvas.parent().width();
     settings._maxRadius = _getDimension(containerWidth, settings.maxRadius);
     settings._minRadius = _getDimension(containerWidth, settings.minRadius);
     settings._maxInnerRadius = _getDimension(containerWidth, settings.maxInnerRadius);
@@ -328,17 +327,17 @@
 
     // If settings.clickable a user can select a different percentage by clicking on the canvas.
     canvas.unbind();
-    if (settings.clickable) {canvas.click(_pieClick);}
+    if (settings.clickable) { canvas.click(_pieClick); }
   };
 
   $.fn.rotapie = function (options) {
-    let wrapped = this;
+    const wrapped = this;
 
     wrapped.each(function () {
-      let container = $(this);
+      const container = $(this);
 
       // Create default settings.
-      let settings = $.extend({
+      const settings = $.extend({
         slices: [
           { color: '#006673', percentage: 10 }, // If color not set, slice will be transparant.
           { color: '#0294a8', percentage: 30 }, // Font color to render percentage defaults to 'color' but can be overriden by setting 'fontColor'.
@@ -376,13 +375,13 @@
 
       // Single global window resize event updates all pie dimensions on page for all pies that use percentages.
       $(window).unbind('resize.rotapie').bind('resize.rotapie', (e) => {
-                $('canvas.rotapie').each(function () {
-                    var canvas = $(this);
-                    var settings = canvas.data('settings');
-                    _setDefaults(canvas, settings);
-                    _renderPie(canvas, settings);
-                });
-            });
+        $('canvas.rotapie').each(function () {
+          const canvas = $(this);
+          const settings = canvas.data('settings');
+          _setDefaults(canvas, settings);
+          _renderPie(canvas, settings);
+        });
+      });
 
       // Render pie.
       _renderPie(canvas, settings);
@@ -390,52 +389,44 @@
 
     // Return public API.
     return {
-      animate (index, pieIndex) {
-                if (pieIndex === undefined) // Animate every pie in wrapped set if pie index not specified.
-                {
-                    wrapped.each(function () {
-                        _rotatePie($(this).find('canvas.rotapie'), index);
-                    });
-                }
-                else
-                {
-                    _rotatePie($(wrapped[pieIndex]).find('canvas.rotapie'), index);
-                }
-            },
-      repaint (pieIndex) {
-                if (pieIndex === undefined) // Repaint every pie in wrapped set if index not specified.
-                {
-                    wrapped.each(function () {
-                        var canvas = $(this).find('canvas.rotapie');
-                        var settings = canvas.data('settings');
-                        _setDefaults(canvas, settings);
-                        _renderPie(canvas, settings);
-                    });
+      animate(index, pieIndex) {
+        if (pieIndex === undefined) // Animate every pie in wrapped set if pie index not specified.
+        {
+          wrapped.each(function () {
+            _rotatePie($(this).find('canvas.rotapie'), index);
+          });
+        } else {
+          _rotatePie($(wrapped[pieIndex]).find('canvas.rotapie'), index);
+        }
+      },
+      repaint(pieIndex) {
+        if (pieIndex === undefined) // Repaint every pie in wrapped set if index not specified.
+        {
+          wrapped.each(function () {
+            const canvas = $(this).find('canvas.rotapie');
+            const settings = canvas.data('settings');
+            _setDefaults(canvas, settings);
+            _renderPie(canvas, settings);
+          });
+        } else {
+          const canvas = $(wrapped[pieIndex]).find('canvas.rotapie');
+          const settings = canvas.data('settings');
+          _setDefaults(canvas, settings);
+          _renderPie(canvas, settings);
+        }
+      },
+      getSettings(pieIndex) {
+        if (pieIndex === undefined && wrapped.length > 1) // Return all pie settings in wrapped set if index not specified.
+        {
+          const settings = [];
+          wrapped.each(function () {
+            settings.push($(this).find('canvas.rotapie').data('settings'));
+          });
 
-                }
-                else
-                {
-                    var canvas = $(wrapped[pieIndex]).find('canvas.rotapie');
-                    var settings = canvas.data('settings');
-                    _setDefaults(canvas, settings);
-                    _renderPie(canvas, settings);
-                }
-            },
-      getSettings (pieIndex) {
-                if (pieIndex === undefined && wrapped.length > 1) // Return all pie settings in wrapped set if index not specified.
-                {
-                    var settings = [];
-                    wrapped.each(function () {
-                        settings.push($(this).find('canvas.rotapie').data('settings'));
-                    });
-
-                    return settings;
-                }
-                else
-                {
-                    return wrapped.find('canvas.rotapie').data('settings');
-                }
-            },
+          return settings;
+        }
+        return wrapped.find('canvas.rotapie').data('settings');
+      },
     };
   };
 }(jQuery));

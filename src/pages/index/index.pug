@@ -13,8 +13,10 @@ block styles
   link(rel="stylesheet" href="./index.scss")
 
 block content
-  include ../../utilities/mixins-components
- 
+  include ../../components/header/header
+  include ../../components/room-search/room-search
+  include ../../components/footer/footer
+
   +header({"jsClasses": "js-header"})
   main.main-page
     h1.main-page__title.main-page__title_hidden Отель Toxin

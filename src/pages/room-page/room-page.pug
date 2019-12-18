@@ -13,7 +13,13 @@ block styles
   link(rel="stylesheet" href="./room-page.scss")
 
 block content
-  include ../../utilities/mixins-components
+  include ../../components/header/header
+  include ../../components/advantage/advantage
+  include ../../components/donut/donut
+  include ../../components/testimonial/testimonial
+  include ../../components/bullet-list/bullet-list
+  include ../../components/room-book/room-book
+  include ../../components/footer/footer
 
   +header({"jsClasses": "js-header"})
   main.room-page

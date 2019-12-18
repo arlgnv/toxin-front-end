@@ -1,12 +1,11 @@
 @import '../../utilities/init';
 @import '../../components/header/header';
-@import '../../components/footer/footer';
-@import '../../components/pagination/pagination';
-@import '../../components/range-slider/range-slider';
-@import '../../components/checkbox-input/checkbox-input';
-@import '../../components/checkbox-expandable/checkbox-expandable';
 @import '../../components/dropdown/dropdown';
+@import '../../components/range-slider/range-slider';
+@import '../../components/checkbox-expandable/checkbox-expandable';
 @import '../../components/room/room';
+@import '../../components/pagination/pagination';
+@import '../../components/footer/footer';
 
 .rooms-page {
   flex-grow: 1;

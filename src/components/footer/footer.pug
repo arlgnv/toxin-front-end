@@ -1,3 +1,5 @@
+include ../text-input/text-input
+
 mixin footer({theme = ""} = {})
   - const className = theme === "" ? "" : `footer_theme_${theme}`
   footer.footer(class= className)

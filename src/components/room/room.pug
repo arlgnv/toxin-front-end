@@ -1,3 +1,5 @@
+include ../rating/rating
+
 mixin room({image = "", alt = "", number = "", lux = "", price = "", rating = "", testimonials = ""} = {})
   div.room
     div.room__container
@@ -18,7 +20,7 @@ mixin room({image = "", alt = "", number = "", lux = "", price = "", rating = ""
           if lux === true
             span.room__type Люкс
         span.room__day-price
-          span.room__price= `${price} ` 
+          span.room__price= `${price} `
           | в сутки
       p.room__user-experience
         +rating(rating)
