@@ -1,6 +1,3 @@
-/* eslint-disable func-names */
-/* eslint-disable class-methods-use-this */
-/* global $ */
 import '../../utilities/jquery.rotapie';
 
 class Donut {

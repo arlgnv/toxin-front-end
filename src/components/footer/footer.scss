@@ -95,11 +95,11 @@
       display: none;
     }
 
-    > #{$root}__item:nth-child(1) {
+    > #{$root}__item:nth-child(3n + 1) {
       margin-right: 4.1429rem;
     }
 
-    > #{$root}__item:nth-child(2) {
+    > #{$root}__item:nth-child(3n + 2) {
       margin-right: 6.5714rem;
     }
   }
