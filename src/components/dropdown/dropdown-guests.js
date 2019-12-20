@@ -16,18 +16,18 @@ class DropdownGuests {
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.toggleDropdown.bind(this));
-    this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.decreaseValue.bind(this)));
-    this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.increaseValue.bind(this)));
+    this.input.addEventListener('click', this.handleFieldClick.bind(this));
+    this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.handleDecreaseButtonClick.bind(this)));
+    this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.handleIncreaseButtonClick.bind(this)));
     this.buttonClear.addEventListener('click', this.reset.bind(this));
     this.buttonApply.addEventListener('click', this.apply.bind(this));
   }
 
-  toggleDropdown() {
+  handleFieldClick() {
     this.dropdown.classList.toggle('dropdown_expanded');
   }
 
-  decreaseValue(evt) {
+  handleDecreaseButtonClick(evt) {
     const counterField = evt.currentTarget.nextElementSibling;
     const buttonDecrease = evt.currentTarget;
 
@@ -41,7 +41,7 @@ class DropdownGuests {
     }
   }
 
-  increaseValue(evt) {
+  handleIncreaseButtonClick(evt) {
     const counterField = evt.currentTarget.previousElementSibling;
     const buttonDecrease = counterField.previousElementSibling;
 

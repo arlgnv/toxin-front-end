@@ -13,11 +13,11 @@ class RoomsFilter {
   }
 
   addEventListeners() {
-    this.filterShow.addEventListener('click', this.showFilter.bind(this));
-    this.filterClose.addEventListener('click', this.closeFilter.bind(this));
+    this.filterShow.addEventListener('click', this.handleShowButtonClick.bind(this));
+    this.filterClose.addEventListener('click', this.handleCloseButtonClick.bind(this));
   }
 
-  showFilter(evt) {
+  handleShowButtonClick(evt) {
     evt.preventDefault();
 
     this.filterForm.classList.add('filter__form_showed');
@@ -27,7 +27,7 @@ class RoomsFilter {
     document.body.classList.add('scroll-none');
   }
 
-  closeFilter(evt) {
+  handleCloseButtonClick(evt) {
     evt.preventDefault();
 
     this.filterForm.classList.remove('filter__form_showed');

@@ -11,10 +11,10 @@ class CheckboxExpandable {
   }
 
   addEventListeners() {
-    this.checkboxTitle.addEventListener('click', this.toggleCheckbox.bind(this));
+    this.checkboxTitle.addEventListener('click', this.handleTitleClick.bind(this));
   }
 
-  toggleCheckbox() {
+  handleTitleClick() {
     this.checkbox.classList.toggle('checkbox-expandable_expanded');
   }
 }

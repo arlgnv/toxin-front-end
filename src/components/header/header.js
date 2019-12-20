@@ -8,17 +8,17 @@ class Header {
 
   findDomElements() {
     this.headerNavigation = this.header.querySelector('.header__navigation');
-    this.headerButtonBurger = this.header.querySelector('.header__burger');
+    this.headerBurgerButton = this.header.querySelector('.header__burger-button');
   }
 
   addEventListeners() {
-    this.headerButtonBurger.addEventListener('click', this.toggleHeader.bind(this));
+    this.headerBurgerButton.addEventListener('click', this.handleBurgerButtonClick.bind(this));
   }
 
-  toggleHeader(evt) {
+  handleBurgerButtonClick(evt) {
     evt.preventDefault();
 
-    this.headerButtonBurger.classList.toggle('header__burger_theme_cross');
+    this.headerBurgerButton.classList.toggle('header__burger-button_theme_cross');
     this.headerNavigation.classList.toggle('header__navigation_opened');
   }
 }

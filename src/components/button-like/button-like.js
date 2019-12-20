@@ -11,10 +11,10 @@ class ButtonLike {
   }
 
   addEventListeners() {
-    this.button.addEventListener('click', this.toggleLike.bind(this));
+    this.button.addEventListener('click', this.handleButtonLikeClick.bind(this));
   }
 
-  toggleLike(evt) {
+  handleButtonLikeClick(evt) {
     evt.preventDefault();
 
     this.button.classList.toggle('button-like_theme_liked');

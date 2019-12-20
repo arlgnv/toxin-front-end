@@ -4,7 +4,6 @@ class RangeSlider {
   constructor($slider) {
     this.$slider = $slider;
 
-    this.findDomElements();
     this.init();
   }
 
@@ -14,6 +13,8 @@ class RangeSlider {
   }
 
   init() {
+    this.findDomElements();
+
     this.$sliderField.ionRangeSlider({
       skin: 'custom',
       type: 'double',
@@ -23,16 +24,20 @@ class RangeSlider {
       from: 5000,
       to: 10000,
       hide_from_to: true,
-      onStart: this.onStart.bind(this),
-      onChange: this.onChange.bind(this),
+      onStart: this.handleSliderStart.bind(this),
+      onChange: this.handleRunnerDrag.bind(this),
     });
   }
 
-  onStart(value) {
-    this.$sliderPrice.html(`${value.from}₽ - ${value.to}₽`);
+  handleSliderStart(value) {
+    this.changePrice(value);
   }
 
-  onChange(value) {
+  handleRunnerDrag(value) {
+    this.changePrice(value);
+  }
+
+  changePrice(value) {
     this.$sliderPrice.html(`${value.from}₽ - ${value.to}₽`);
   }
 }
