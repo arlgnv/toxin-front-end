@@ -2,8 +2,18 @@ class ButtonLike {
   constructor(button) {
     this.button = button;
 
+    this.init();
+  }
+
+  init() {
     this.findDomElements();
     this.addEventListeners();
+
+    const amountLikes = parseInt(this.button.getAttribute('data-amount-likes'), 10);
+    this.count = Number.isNaN(amountLikes) ? 0 : amountLikes;
+
+    this.button.setAttribute('data-amount-likes', this.count);
+    this.buttonText.textContent = this.count;
   }
 
   findDomElements() {
@@ -18,9 +28,9 @@ class ButtonLike {
     evt.preventDefault();
 
     this.button.classList.toggle('button-like_theme_liked');
-
-    this.buttonText.textContent = this.button.classList.contains('button-like_theme_liked')
-      ? Number(this.buttonText.textContent) + 1 : Number(this.buttonText.textContent) - 1;
+    this.count += this.button.classList.contains('button-like_theme_liked') ? 1 : -1;
+    this.button.setAttribute('data-amount-likes', this.count);
+    this.buttonText.textContent = this.count;
   }
 }
 
