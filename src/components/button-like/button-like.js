@@ -20,8 +20,7 @@ class ButtonLike {
     this.button.classList.toggle('button-like_theme_liked');
 
     this.buttonText.textContent = this.button.classList.contains('button-like_theme_liked')
-      ? Number(this.buttonText.textContent) + 1
-      : Number(this.buttonText.textContent) - 1;
+      ? Number(this.buttonText.textContent) + 1 : Number(this.buttonText.textContent) - 1;
   }
 }
 

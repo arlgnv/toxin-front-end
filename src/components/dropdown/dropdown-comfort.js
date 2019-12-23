@@ -42,7 +42,7 @@ class DropdownComfort {
     const counterField = evt.currentTarget.previousElementSibling;
     const buttonDecrease = counterField.previousElementSibling;
 
-    counterField.textContent = +counterField.textContent + 1;
+    counterField.textContent = Number(counterField.textContent) + 1;
 
     buttonDecrease.classList.remove('dropdown__control-button_disabled');
 
