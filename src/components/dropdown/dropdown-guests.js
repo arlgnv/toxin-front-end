@@ -74,9 +74,13 @@ class DropdownGuests {
     const guestsAmount = this.counterFields.reduce((acc, it) => Number(it.textContent) + acc, 0);
     const amountBabies = this.counterFields[2].textContent;
 
-    this.input.value = counters.reduce((acc, it, i) => (guestsAmount >= i
-      ? `${guestsAmount} ${it.guest}, ${amountBabies} ${amountBabies >= i ? it.baby : counters[amountBabies].baby}`
-      : acc), '');
+    this.input.value = counters.reduce((acc, it, i) => {
+      const babies = amountBabies >= i ? it.baby : counters[amountBabies].baby;
+
+      return guestsAmount >= i
+        ? `${guestsAmount} ${it.guest}, ${amountBabies} ${babies}`
+        : acc;
+    }, '');
 
     this.dropdown.classList.remove('dropdown_expanded');
   }
