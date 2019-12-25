@@ -65,9 +65,9 @@ class DropdownGuests {
     const counters = [
       { guest: 'гостей', baby: 'младенцев' },
       { guest: 'гость', baby: 'младенец' },
-      { guest: 'гостя', baby: 'младенеца' },
-      { guest: 'гостя', baby: 'младенеца' },
-      { guest: 'гостя', baby: 'младенеца' },
+      { guest: 'гостя', baby: 'младенца' },
+      { guest: 'гостя', baby: 'младенца' },
+      { guest: 'гостя', baby: 'младенца' },
       { guest: 'гостей', baby: 'младенцев' },
     ];
 

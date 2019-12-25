@@ -134,9 +134,9 @@ block content
               .buttons__subgroup
                 b.buttons__title like button
                 span.buttons__group-like
-                  +button-like({"text": "2"})
+                  +button-like({"likes": 2, "jsClasses": "js-button-like"})
                 span.buttons__group-like
-                  +button-like({"text": "12"})(class="button-like_theme_liked")
+                  +button-like({"likes": 12, "jsClasses": "js-button-like"})(class="button-like_theme_liked")
               .buttons__subgroup
                 b.buttons__title rate button
                 span.rating-item
@@ -261,7 +261,7 @@ block content
               .advantages__group
                 +advantage(advantage)
           .testimonials
-            +testimonial({"image": "../../components/testimonial/images/testimonial-1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": "12"})
+            +testimonial({"image": "../../components/testimonial/images/testimonial-1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": 12})
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Карточки
       .cards
