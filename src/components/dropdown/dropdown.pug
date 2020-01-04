@@ -5,7 +5,6 @@ mixin dropdown({theme = "", state =  "", jsClasses = ""} = {})
     className = `${className} ${jsClasses}`.trim()
     
   span.dropdown(class= className)
-    input.dropdown__field(type="text")&attributes(attributes)
+    input.dropdown__input(type="text")&attributes(attributes)
     if block
       block
-    

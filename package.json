@@ -17,19 +17,19 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.19.0"
+    "eslint-plugin-import": "^2.19.1"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.7.3",
     "cssnano": "^4.1.10",
-    "ion-rangeslider": "^2.3.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.4.1",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.4.1",
     "pug": "^2.0.4",
     "rimraf": "^2.7.1",
-    "sass": "^1.23.7"
+    "sass": "^1.24.0"
   },
   "browserslist": "> 0.25%, last 4 versions",
   "bugs": {

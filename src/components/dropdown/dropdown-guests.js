@@ -7,7 +7,7 @@ class DropdownGuests {
   }
 
   findDomElements() {
-    this.input = this.dropdown.querySelector('.dropdown__field');
+    this.input = this.dropdown.querySelector('.dropdown__input');
     this.counterFields = this.dropdown.querySelectorAll('.dropdown__counter-value');
     this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
     this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
@@ -16,14 +16,14 @@ class DropdownGuests {
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.handleFieldClick.bind(this));
+    this.input.addEventListener('click', this.handleInputClick.bind(this));
     this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.handleDecreaseButtonClick.bind(this)));
     this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.handleIncreaseButtonClick.bind(this)));
-    this.buttonClear.addEventListener('click', this.reset.bind(this));
-    this.buttonApply.addEventListener('click', this.apply.bind(this));
+    this.buttonClear.addEventListener('click', this.handleButtonClearClick.bind(this));
+    this.buttonApply.addEventListener('click', this.handleButtonApplyClick.bind(this));
   }
 
-  handleFieldClick() {
+  handleInputClick() {
     this.dropdown.classList.toggle('dropdown_expanded');
   }
 
@@ -52,7 +52,7 @@ class DropdownGuests {
     this.buttonClear.classList.remove('dropdown__button_hidden');
   }
 
-  reset(evt) {
+  handleButtonClearClick(evt) {
     evt.preventDefault();
 
     evt.currentTarget.classList.add('dropdown__button_hidden');
@@ -61,7 +61,7 @@ class DropdownGuests {
     this.counterFields.forEach((counterField) => (counterField.textContent = 0));
   }
 
-  apply() {
+  handleButtonApplyClick() {
     const counters = [
       { guest: 'гостей', baby: 'младенцев' },
       { guest: 'гость', baby: 'младенец' },

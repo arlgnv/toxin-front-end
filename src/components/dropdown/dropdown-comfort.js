@@ -7,19 +7,19 @@ class DropdownComfort {
   }
 
   findDomElements() {
-    this.input = this.dropdown.querySelector('.dropdown__field');
+    this.input = this.dropdown.querySelector('.dropdown__input');
     this.groups = this.dropdown.querySelectorAll('.dropdown__group');
     this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
     this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.handleFieldClick.bind(this));
+    this.input.addEventListener('click', this.handleInputClick.bind(this));
     this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.handleDecreaseButtonClick.bind(this)));
     this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.handleIncreaseButtonClick.bind(this)));
   }
 
-  handleFieldClick() {
+  handleInputClick() {
     this.dropdown.classList.toggle('dropdown_expanded');
   }
 
