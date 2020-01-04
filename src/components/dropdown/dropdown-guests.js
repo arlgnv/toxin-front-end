@@ -1,53 +1,36 @@
-class DropdownGuests {
-  constructor(dropdown) {
-    this.dropdown = dropdown;
+import Dropdown from './dropdown';
 
-    this.findDomElements();
-    this.addEventListeners();
+class DropdownGuests extends Dropdown {
+  constructor(dropdown) {
+    super(dropdown);
   }
 
   findDomElements() {
-    this.input = this.dropdown.querySelector('.dropdown__input');
-    this.counterFields = this.dropdown.querySelectorAll('.dropdown__counter-value');
-    this.buttonsDecrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=decrease]');
-    this.buttonsIncrease = this.dropdown.querySelectorAll('.dropdown__control-button[data-dropdown-button-type=increase]');
+    super.findDomElements();
+
     this.buttonClear = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=clear]');
     this.buttonApply = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=apply]');
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.handleInputClick.bind(this));
-    this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.handleDecreaseButtonClick.bind(this)));
-    this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.handleIncreaseButtonClick.bind(this)));
+    super.addEventListeners();
+
     this.buttonClear.addEventListener('click', this.handleButtonClearClick.bind(this));
     this.buttonApply.addEventListener('click', this.handleButtonApplyClick.bind(this));
   }
 
-  handleInputClick() {
-    this.dropdown.classList.toggle('dropdown_expanded');
-  }
-
   handleDecreaseButtonClick(evt) {
+    super.handleDecreaseButtonClick(evt);
+
     const counterField = evt.currentTarget.nextElementSibling;
-    const buttonDecrease = evt.currentTarget;
-
-    if (counterField.textContent > 0) {
-      counterField.textContent -= 1;
-
-      if (Number(counterField.textContent) === 0) {
-        buttonDecrease.classList.add('dropdown__control-button_disabled');
-        if (this.isCounterFieldsEmpty()) this.buttonClear.classList.add('dropdown__button_hidden');
-      }
+    const isNeedToHideButtonClear = Number(counterField.textContent) === 0 && this.isCounterFieldsEmpty();
+    if (isNeedToHideButtonClear) {
+      this.buttonClear.classList.add('dropdown__button_hidden');
     }
   }
 
   handleIncreaseButtonClick(evt) {
-    const counterField = evt.currentTarget.previousElementSibling;
-    const buttonDecrease = counterField.previousElementSibling;
-
-    counterField.textContent = Number(counterField.textContent) + 1;
-
-    buttonDecrease.classList.remove('dropdown__control-button_disabled');
+    super.handleIncreaseButtonClick(evt);
 
     this.buttonClear.classList.remove('dropdown__button_hidden');
   }
