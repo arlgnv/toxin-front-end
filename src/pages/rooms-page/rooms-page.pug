@@ -21,21 +21,21 @@ block content
   include ../../components/pagination/pagination
   include ../../components/footer/footer
 
-  +header({"jsClasses": "js-header"})
+  +header
   main.rooms-page
     h1.rooms-page__title.rooms-page__title_hidden Поиск номеров
     .rooms-page__container
       section.filter.js-filter
         h2.filter__title.filter__title_hidden Фильтр номеров
-        button.filter__show-button(type="button") Показать фильтр
-        button.filter__close-button.filter__close-button_hidden(type="button" aria-label="Закрыть фильтр")
-        form.filter__form(action="https://echo.htmlacademy/ru" method="post")
+        button.filter__show-button.js-filter__show-button(type="button") Показать фильтр
+        button.filter__close-button.js-filter__close-button.filter__close-button_hidden(type="button" aria-label="Закрыть фильтр")
+        form.filter__form.js-filter__form(action="https://echo.htmlacademy/ru" method="post")
           p.filter__group
             label.filter__label(for="field-date") Даты пребывания в отеле
-            +dropdown(id="field-date" name="date" value="19 авг - 23 авг")
+            +dropdown({"id": "field-date", "name": "date", "value": "19 авг - 23 авг"})
           p.filter__group
             label.filter__label(for="field-guests") Гости
-            +dropdown(id="field-guests" name="guests" value="3 гостя, 1 младенец")
+            +dropdown({"id": "field-guests", "name": "guests", "value": "3 гостя, 1 младенец"})
           p.filter__group
             +range-slider({"id": "field-price", "title": "Диапазон цены", "description": "Стоимость за сутки пребывания в номере"})(name="price")
           fieldset.filter__group
@@ -65,16 +65,7 @@ block content
                   +checkbox-input(checkbox)
           p.filter__group
             label.filter__label(for="field-comfort") Удобства номера
-            +dropdown({"jsClasses": "js-dropdown"})(id="field-comfort" name="comfort" placeholder="Выберите удобства" readonly)
-              span.dropdown__container
-                - const items = ["Спальни", "Кровати", "Ванные комнаты"]
-                each item in items
-                  span.dropdown__group
-                    b.dropdown__title= item
-                    span.dropdown__counter
-                      button.dropdown__control-button.dropdown__control-button_disabled(type="button" data-dropdown-button-type="decrease") -
-                      span.dropdown__counter-value 0
-                      button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
+            +dropdown({"type": "comfort", "items": ["Спальни", "Кровати", "Ванные комнаты"], "id": "field-comfort", "name": "comfort", "placeholder": "Выберите удобства"})
           fieldset.filter__group
             -
               const checkboxesExpandable =
@@ -86,7 +77,7 @@ block content
                 {"id": "field-tv", "title": "Телевизор", "name": "tv"},
                 {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
               ]
-            +checkbox-expandable({"title": "Дополнительные удобства", "jsClasses": "js-checkbox-expandable", "items": checkboxesExpandable})
+            +checkbox-expandable({"title": "Дополнительные удобства", "items": checkboxesExpandable})
 
       section.rooms
         h2.rooms__title Номера, которые мы для вас подобрали

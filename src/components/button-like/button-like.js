@@ -17,7 +17,7 @@ class ButtonLike {
   }
 
   findDomElements() {
-    this.buttonText = this.button.querySelector('.button-like__text');
+    this.buttonText = this.button.querySelector('.js-button-like__text');
   }
 
   addEventListeners() {

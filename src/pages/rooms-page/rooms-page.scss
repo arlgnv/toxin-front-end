@@ -191,7 +191,9 @@
     }
 
     &:nth-child(6) {
+      position: relative;
       margin-bottom: 2.1714rem;
+      z-index: 1;
     }
   }
 

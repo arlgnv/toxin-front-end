@@ -8,8 +8,8 @@ class DropdownGuests extends Dropdown {
   findDomElements() {
     super.findDomElements();
 
-    this.buttonClear = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=clear]');
-    this.buttonApply = this.dropdown.querySelector('.dropdown__button[data-dropdown-button-type=apply]');
+    this.buttonClear = this.dropdown.querySelector('.js-dropdown__button_type_clear');
+    this.buttonApply = this.dropdown.querySelector('.js-dropdown__button_type_apply');
   }
 
   addEventListeners() {

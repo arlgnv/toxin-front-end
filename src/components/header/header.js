@@ -7,8 +7,8 @@ class Header {
   }
 
   findDomElements() {
-    this.headerNavigation = this.header.querySelector('.header__navigation');
-    this.headerBurgerButton = this.header.querySelector('.header__burger-button');
+    this.headerNavigation = this.header.querySelector('.js-header__navigation');
+    this.headerBurgerButton = this.header.querySelector('.js-header__burger-button');
   }
 
   addEventListeners() {

@@ -1,12 +1,10 @@
 include ../checkbox-input/checkbox-input
 
-mixin checkbox-expandable({title = "", state = "", jsClasses = "", items = []} = {})
-  -
-    let className = state === "" ? "" : `checkbox-expandable_${state}`
-    className = `${className} ${jsClasses}`.trim()
+mixin checkbox-expandable({title = "", state = "", items = []} = {})
+  - const className = state ? `checkbox-expandable_${state}` : ""
 
-  div.checkbox-expandable(class= className)
-    span.checkbox-expandable__title= title
+  div.checkbox-expandable.js-checkbox-expandable(class= className)
+    span.checkbox-expandable__title.js-checkbox-expandable__title= title
     ul.checkbox-expandable__list
       each item in items
         li.checkbox-expandable__item

@@ -10,4 +10,4 @@ mixin donut({great = 10, good = 5, satisfactory = 2, disappointed = 0} = {})
           {"text": "Разочарован", "theme": "disappointed", "amount": disappointed, "color": "#919191"}
         ]
       each item in items
-        li.donut__item(class=`donut__item_theme_${item.theme}` data-amount= item.amount data-color= item.color)= item.text
+        li.donut__item.js-donut__item(class=`donut__item_theme_${item.theme}` data-amount= item.amount data-color= item.color)= item.text

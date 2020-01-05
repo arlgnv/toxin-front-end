@@ -29,7 +29,8 @@
     "postcss-modules": "^1.4.1",
     "pug": "^2.0.4",
     "rimraf": "^2.7.1",
-    "sass": "^1.24.0"
+    "sass": "^1.24.0",
+    "rotapie": "file:src/utilities/jquery.rotapie"
   },
   "browserslist": "> 0.25%, last 4 versions",
   "bugs": {

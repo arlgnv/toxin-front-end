@@ -7,9 +7,9 @@ class RoomsFilter {
   }
 
   findDomElements() {
-    this.filterForm = this.filter.querySelector('.filter__form');
-    this.filterShow = this.filter.querySelector('.filter__show-button');
-    this.filterClose = this.filter.querySelector('.filter__close-button');
+    this.filterForm = this.filter.querySelector('.js-filter__form');
+    this.filterShow = this.filter.querySelector('.js-filter__show-button');
+    this.filterClose = this.filter.querySelector('.js-filter__close-button');
   }
 
   addEventListeners() {

@@ -1,16 +1,14 @@
 include ../link/link
 
-mixin header({theme = "", jsClasses = ""} = {})
-  -
-    let className = theme === "" ? "" : `header_theme_${theme}`
-    className = `${className} ${jsClasses}`.trim()
+mixin header({theme = ""} = {})
+  - const themeClass = theme ? `header_theme_${theme}` : ""
 
-  header.header(class= className)
+  header.header.js-header(class= [themeClass])
     .header__container
       a.header__logo(href="../index/index.pug")
         img.header__logo-image(src="../../images/logo.svg" alt="Отель Toxin")
-      button.header__burger-button(aria-label="Показать меню")
-      nav.header__navigation
+      button.header__burger-button.js-header__burger-button(aria-label="Показать меню")
+      nav.header__navigation.js-header__navigation
         ul.header__site-navigation
           -
             const items =

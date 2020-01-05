@@ -1,16 +1,18 @@
 import '../../utilities/jquery.rotapie';
 
 class Donut {
-  constructor(donut) {
-    this.donut = donut;
+  constructor($donut) {
+    this.$donut = $donut;
 
     this.init();
   }
 
   init() {
+    this.findDomElements();
+
     const that = this;
     const data = [];
-    this.donut.find('.donut__item').each(function () {
+    this.$items.each(function () {
       data.push({
         color: $(this).attr('data-color'),
         amount: Number($(this).attr('data-amount')),
@@ -18,7 +20,11 @@ class Donut {
       });
     });
 
-    this.donut.rotapie({ slices: data });
+    this.$donut.rotapie({ slices: data });
+  }
+
+  findDomElements() {
+    this.$items = this.$donut.find('.js-donut__item');
   }
 
   getWordForm(num, words = ['голос', 'голоса', 'голосов']) {

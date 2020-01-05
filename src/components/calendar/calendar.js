@@ -32,12 +32,12 @@ class Calendar {
   }
 
   findDomElements() {
-    this.$container = this.$calendar.find('.calendar__container');
-    this.$fieldInit = this.$calendar.find('.calendar__field[data-field-type=init]');
-    this.$fieldFrom = this.$calendar.find('.calendar__field[data-field-type=from]');
-    this.$fieldTo = this.$calendar.find('.calendar__field[data-field-type=to]');
-    this.$applyButton = this.$calendar.find('.calendar__button[data-button-type=apply]');
-    this.$clearButton = this.$calendar.find('.calendar__button[data-button-type=clear]');
+    this.$container = this.$calendar.find('.js-calendar__container');
+    this.$fieldInit = this.$calendar.find('.js-calendar__field_type_init');
+    this.$fieldFrom = this.$calendar.find('.js-calendar__field_type_from');
+    this.$fieldTo = this.$calendar.find('.js-calendar__field_type_to');
+    this.$applyButton = this.$calendar.find('.js-calendar__button_type_apply');
+    this.$clearButton = this.$calendar.find('.js-calendar__button_type_clear');
   }
 
   addEventListeners(index) {

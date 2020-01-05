@@ -7,7 +7,7 @@ class CheckboxExpandable {
   }
 
   findDOMElements() {
-    this.checkboxTitle = this.checkbox.querySelector('.checkbox-expandable__title');
+    this.checkboxTitle = this.checkbox.querySelector('.js-checkbox-expandable__title');
   }
 
   addEventListeners() {

@@ -78,20 +78,20 @@ block content
               +text-input(id="field-2" value="This is pretty awesome")
             p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
               label.text-fields__title(for="field-3") dropdown
-              +dropdown(id="field-3" placeholder="Сколько гостей")
+              +dropdown({"id": "field-3", "placeholder": "Сколько гостей"})
             p.text-fields__group.text-fields__group_theme_with-tip(data-tip="default")
               label.text-fields__title(for="field-4") masked text field
               +text-input({"theme": "masked"})(id="field-4" placeholder="дд.мм.гггг")
             p.text-fields__group
               span.text-fields__item
                 label.text-fields__title(for="field-5") date dropdown
-                +dropdown({"theme": "date"})(id="field-5" placeholder="дд.мм.гггг")
+                +dropdown({"id": "field-5", "placeholder": "ДД.ММ.ГГГГ"})
               span.text-fields__item
                 label.text-fields__title(for="field-6") date dropdown
-                +dropdown({"theme": "date"})(id="field-6" value="19.08.2019")
+                +dropdown({"id": "field-6", "placeholder": "19.08.2019"})
             p.text-fields__group
               label.text-fields__title(for="field-7") filter date dropdown
-              +dropdown(id="field-7" value="19 авг - 23 авг")
+              +dropdown({"id": "field-7", "value": "19 авг - 23 авг"})
             p.text-fields__group
               label.text-fields__title(for="field-8") subscription text field
               +text-input({"theme": "newsletter", "type": "email"})(id="field-8" placeholder="Email")
@@ -134,9 +134,9 @@ block content
               .buttons__subgroup
                 b.buttons__title like button
                 span.buttons__group-like
-                  +button-like({"likes": 2, "jsClasses": "js-button-like"})
+                  +button-like({"likes": 2})
                 span.buttons__group-like
-                  +button-like({"likes": 12, "jsClasses": "js-button-like"})(class="button-like_theme_liked")
+                  +button-like({"likes": 12, "theme": "liked"})
               .buttons__subgroup
                 b.buttons__title rate button
                 span.rating-item
@@ -182,42 +182,18 @@ block content
             .dropdowns__group
               span.dropdowns__item.dropdowns__item_theme_with-tip(data-tip="default")
                 label.dropdowns__title(for="field-17") dropdown
-                +dropdown(id="field-17" value="2 спальни, 2 кровати...")
+                +dropdown({"id": "field-17", "value": "2 спальни, 2 кровати..."})
               span.dropdowns__item.dropdowns__item_theme_with-tip(data-tip="expanded")
                 label.dropdowns__title(for="field-18") dropdown
-                +dropdown({"theme": "expanded", "state": "expanded"})(id="field-18" value="2 спальни, 2 кровати...")
-                  span.dropdown__container
-                    - const items = ["Спальни", "Кровати", "Ванные комнаты"]
-                    each item in items
-                      span.dropdown__group
-                        b.dropdown__title= item
-                        span.dropdown__counter
-                          button.dropdown__control-button.dropdown__control-button_disabled(type="button" data-dropdown-button-type="decrease") -
-                          span.dropdown__counter-value 0
-                          button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
-            -
-              const dropdowns =
-              [
-                {"title": "dropdown", "id": "field-19", "placeholder": "Сколько гостей", "value": ""},
-                {"title": "dropdown", "id": "field-20", "placeholder": "", "value": "3 гостя"},
-              ]
-            each item in dropdowns
-              .dropdowns__group
-                span.dropdowns__item
-                  label.dropdowns__title(for= item.id)= item.title
-                  +dropdown({"theme": "expanded", "state": "expanded"})(id= item.id placeholder= item.placeholder value= item.value)
-                    span.dropdown__container
-                      - const items = ["Взрослые", "Дети", "Младенцы"]
-                      each item in items
-                        span.dropdown__group
-                          b.dropdown__title= item
-                          span.dropdown__counter
-                            button.dropdown__control-button.dropdown__control-button_disabled(type="button" data-dropdown-button-type="decrease") -
-                            span.dropdown__counter-value 0
-                            button.dropdown__control-button(type="button" data-dropdown-button-type="increase") +
-                      span.dropdown__group
-                        button.dropdown__button.dropdown__button_hidden(type="button" data-dropdown-button-type="clear") Очистить
-                        button.dropdown__button.dropdown__button_theme_purple(type="button" data-dropdown-button-type="apply") Применить
+                +dropdown({"state": "expanded", "type": "comfort", "items": ["Спальни", "Кровати", "Ванные комнаты"], "id": "field-18", "value": "2 спальни, 2 кровати..."})
+            .dropdowns__group
+              span.dropdowns__item
+                label.dropdowns__title(for="field-19") dropdown
+                +dropdown({"state": "expanded", "type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-19", "placeholder": "Сколько гостей"})
+            .dropdowns__group
+              span.dropdowns__item
+                label.dropdowns__title(for="field-20") dropdown
+                +dropdown({"state": "expanded", "type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-20", "value": "3 гостя"})
         .form-elements__group
           .exapndable-checkbox
             .exapndable-checkbox__item
@@ -294,8 +270,8 @@ block content
         -
           const headers =
           [
-            {"theme": "", "jsClasses": "js-header"},
-            {"theme": "logged", "jsClasses": "js-header"},
+            {},
+            {"theme": "logged"},
           ]
         each header in headers
           .headers-footers__group

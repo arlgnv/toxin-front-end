@@ -8,8 +8,8 @@ class RangeSlider {
   }
 
   findDomElements() {
-    this.$sliderField = this.$slider.find('.range-slider__field');
-    this.$sliderPrice = this.$slider.find('.range-slider__price');
+    this.$sliderField = this.$slider.find('.js-range-slider__field');
+    this.$sliderPrice = this.$slider.find('.js-range-slider__price');
   }
 
   init() {

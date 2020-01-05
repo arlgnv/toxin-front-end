@@ -4,14 +4,13 @@ mixin calendar()
       span.calendar__item
         label.calendar__label(for="field-date-from") Прибытие
         span.calendar__field-wrapper
-          input.calendar__field(id="field-date-from" type="text" name="from" data-field-type="from" placeholder="дд.мм.гггг" readonly)
+          input.calendar__field.calendar__field_type_from.js-calendar__field_type_from(id="field-date-from" type="text" name="from" placeholder="дд.мм.гггг" readonly)
       span.calendar__item
         label.calendar__label(for="field-date-to") Выезд
         span.calendar__field-wrapper
-          input.calendar__field(id="field-date-to" name="to" data-field-type="to" placeholder="дд.мм.гггг" readonly)
-    .calendar__container.calendar__container_hidden
-      input.calendar__field(data-field-type="init")
+          input.calendar__field.calendar__field_type_to.js-calendar__field_type_to(id="field-date-to" name="to" placeholder="дд.мм.гггг" readonly)
+    .calendar__container.js-calendar__container.calendar__container_hidden
+      input.calendar__field.calendar__field_type_init.js-calendar__field_type_init
       p.calendar__buttons
-        button.calendar__button(type="button" data-button-type="clear") Очистить
-        button.calendar__button.calendar__button_theme_purple(type="button" data-button-type="apply") Применить
-    
+        button.calendar__button.calendar__button_type_clear.js-calendar__button_type_clear(type="button") Очистить
+        button.calendar__button.calendar__button_theme_purple.calendar__button_type_apply.js-calendar__button_type_apply(type="button") Применить
