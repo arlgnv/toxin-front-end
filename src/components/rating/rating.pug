@@ -1,7 +1,7 @@
-mixin rating(stars)
+mixin rating({currentRating = 1, maxRating = 5 } = {})
   span.rating
-    - for (let i = 1; i <= 5; i += 1)
-    if (i <= stars)
+    - for (let i = 1; i <= maxRating; i += 1)
+    if (i <= currentRating)
       span.rating__star.rating__star_selected
     else
       span.rating__star

@@ -23,7 +23,7 @@ mixin room({image = "", alt = "", number = "", lux = "", price = "", rating = ""
           span.room__price= `${price} `
           | в сутки
       p.room__user-experience
-        +rating(rating)
+        +rating({currentRating: rating})
         span.room__testimonials
           span.room__testimonials-amount= `${testimonials} `
           | Отзывов
