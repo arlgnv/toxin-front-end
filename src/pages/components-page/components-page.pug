@@ -107,7 +107,7 @@ block content
                     {"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)", "checked": true}
                   ]
                 each checkbox in checkboxesPoor
-                  .checkbox-poor
+                  .buttons__checkbox-poor
                     +checkbox-input(checkbox)
               .buttons__subgroup
                 b.buttons__title radio buttons
@@ -118,7 +118,7 @@ block content
                     {"id": "field-13", "title": "Женщина", "name": "gender"}
                   ]
                 each radioInputs in radioInputss
-                  span.radio
+                  span.buttons__radio
                     +radio-input(radioInputs)
               .buttons__subgroup
                 b.buttons__title toggle
@@ -129,7 +129,7 @@ block content
                     {"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"}
                   ]
                 each checkbox in checkboxesToggle
-                  .checkbox-toggle
+                  .buttons__checkbox-toggle
                     +checkbox-input(checkbox)
               .buttons__subgroup
                 b.buttons__title like button
@@ -139,28 +139,28 @@ block content
                   +button-like({"likes": 12, "theme": "liked"})
               .buttons__subgroup
                 b.buttons__title rate button
-                span.rating-item
+                span.buttons__rating-item
                   +rating({currentRating: 4})
-                span.rating-item
+                span.buttons__rating-item
                   +rating({currentRating: 5})
             .buttons__group
                 .buttons__subgroup
                   +range-slider({"id": "field-16", "title": "range slider", "description": ""})
                 .buttons__subgroup
                   b.buttons__title buttons
-                  span.button-registration
+                  span.buttons__button-registration
                     +link({"text": "click me", "theme": "registration"})
-                  span.button-registration
+                  span.buttons__button-registration
                     +link({"text": "click me", "theme": "registration"})
                 .buttons__subgroup
-                  span.button-account-action
+                  span.buttons__button-account-action
                     +link({"text": "click me", "theme": "account-action"})
-                  span.button-account-action
+                  span.buttons__button-account-action
                     +link({"text": "click me", "theme": "account-action"})
                 .buttons__subgroup
-                  span.button-link
+                  span.buttons__button-link
                     +link({"text": "click me", "theme": "bold"})
-                  span.button-link
+                  span.buttons__button-link
                     +link({"text": "click me", "theme": "bold"})
                 .buttons__subgroup
                   +link({"text": "перейти к оплате", "theme": "submit"})
@@ -195,10 +195,10 @@ block content
                 label.dropdowns__title(for="field-20") dropdown
                 +dropdown({"state": "expanded", "type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-20", "value": "3 гостя"})
         .form-elements__group
-          .exapndable-checkbox
-            .exapndable-checkbox__item
+          .expandable-checkbox
+            .expandable-checkbox__item
               +checkbox-expandable({"title": "expandable checkbox list"})
-            .exapndable-checkbox__item
+            .expandable-checkbox__item
               -
                 const checkboxesExpandable =
                 [

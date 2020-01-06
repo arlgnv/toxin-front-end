@@ -518,61 +518,61 @@
         }
       }
     }
+  }
 
-    .checkbox-poor + .checkbox-poor {
-      margin-top: 0.4286rem;
+  &__checkbox-poor + #{$root}__checkbox-poor {
+    margin-top: 0.4286rem;
+  }
+
+  &__radio {
+    display: inline-block;
+
+    + #{$root}__radio {
+      margin-left: 1.6429rem;
     }
+  }
 
-    .radio {
-      display: inline-block;
+  &__checkbox-toggle + #{$root}__checkbox-toggle {
+    margin-top: 0.5714rem;
+  }
 
-      + .radio {
-        margin-left: 1.6429rem;
-      }
+  &__group-like {
+    display: inline-block;
+
+    + #{$root}__group-like {
+      margin-left: 0.8571rem;
     }
+  }
 
-    .checkbox-toggle + .checkbox-toggle {
-      margin-top: 0.5714rem;
+  &__rating-item {
+    display: inline-block;
+
+    + #{$root}__rating-item {
+      margin-left: 1.3571rem;
     }
+  }
 
-    .buttons__group-like {
-      display: inline-block;
+  &__button-registration {
+    display: inline-block;
 
-      + .buttons__group-like {
-        margin-left: 0.8571rem;
-      }
+    + #{$root}__button-registration {
+      margin-left: 1.2857rem;
     }
+  }
 
-    .rating-item {
-      display: inline-block;
+  &__button-account-action {
+    display: inline-block;
 
-      + .rating-item {
-        margin-left: 1.3571rem;
-      }
+    + #{$root}__button-account-action {
+      margin-left: 1.1429rem;
     }
+  }
 
-    .button-registration {
-      display: inline-block;
+  &__button-link {
+    display: inline-block;
 
-      + .button-registration {
-        margin-left: 1.2857rem;
-      }
-    }
-
-    .button-account-action {
-      display: inline-block;
-
-      + .button-account-action {
-        margin-left: 1.1429rem;
-      }
-    }
-
-    .button-link {
-      display: inline-block;
-
-      + .button-link {
-        margin-left: 1.5714rem;
-      }
+    + #{$root}__button-link {
+      margin-left: 1.5714rem;
     }
   }
 }
@@ -680,7 +680,7 @@
   }
 }
 
-.exapndable-checkbox {
+.expandable-checkbox {
   $root: &;
 
   width: 19rem;
