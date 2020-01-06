@@ -11,14 +11,12 @@ class Donut {
     this.findDomElements();
 
     const that = this;
-    const data = [];
-    this.$items.each((i, el) => {
-      data.push({
-        color: $(el).attr('data-color'),
-        amount: Number($(el).attr('data-amount')),
-        unit: that.getWordForm(Number($(el).attr('data-amount'))),
-      });
-    });
+    const data = this.$items.map((i, el) => ({
+      color: $(el).attr('data-color'),
+      amount: Number($(el).attr('data-amount')),
+      unit: that.getWordForm(Number($(el).attr('data-amount'))),
+    }));
+
 
     this.$donut.rotapie({ slices: data });
   }
