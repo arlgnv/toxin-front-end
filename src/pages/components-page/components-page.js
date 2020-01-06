@@ -12,6 +12,4 @@ const buttonsLike = document.querySelectorAll('.js-button-like');
 buttonsLike.forEach((button) => new ButtonLike(button));
 
 const $sliders = $('.js-range-slider');
-$sliders.each(function () {
-  new RangeSlider($(this));
-});
+$sliders.each((i, el) => new RangeSlider($(el)));

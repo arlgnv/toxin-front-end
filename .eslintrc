@@ -5,12 +5,7 @@
     "jquery": true
   },
   "rules": {
-    "no-return-assign": 0,
-    "no-param-reassign": 0,
-    "func-names": 0,
     "no-new": 0,
-    "class-methods-use-this": 0,
-    "no-useless-constructor": 0,
-    "max-len": 0
+    "class-methods-use-this": 0
   }
 }

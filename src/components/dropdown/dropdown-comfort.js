@@ -3,6 +3,9 @@ import Dropdown from './dropdown';
 class DropdownComfort extends Dropdown {
   constructor(dropdown) {
     super(dropdown);
+
+    this.findDomElements();
+    this.addEventListeners();
   }
 
   handleDecreaseButtonClick(evt) {
@@ -28,7 +31,7 @@ class DropdownComfort extends Dropdown {
     ];
 
     this.input.value = this.groups.map((group, index) => {
-      const value = group.querySelector('.dropdown__counter-value').textContent;
+      const value = group.querySelector('.js-dropdown__counter-value').textContent;
 
       return counters
         .map((counter) => Number(Object.keys(counter)[0]))

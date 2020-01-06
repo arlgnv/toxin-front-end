@@ -12,11 +12,11 @@ class Donut {
 
     const that = this;
     const data = [];
-    this.$items.each(function () {
+    this.$items.each((i, el) => {
       data.push({
-        color: $(this).attr('data-color'),
-        amount: Number($(this).attr('data-amount')),
-        unit: that.getWordForm(Number($(this).attr('data-amount'))),
+        color: $(el).attr('data-color'),
+        amount: Number($(el).attr('data-amount')),
+        unit: that.getWordForm(Number($(el).attr('data-amount'))),
       });
     });
 

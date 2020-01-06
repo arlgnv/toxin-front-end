@@ -11,6 +11,4 @@ const buttonsLike = document.querySelectorAll('.js-button-like');
 buttonsLike.forEach((button) => new ButtonLike(button));
 
 const $donuts = $('.js-donut');
-$donuts.each(function () {
-  new Donut($(this));
-});
+$donuts.each((i, el) => new Donut($(el)));

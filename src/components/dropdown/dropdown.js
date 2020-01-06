@@ -1,9 +1,6 @@
 class Dropdown {
   constructor(dropdown) {
     this.dropdown = dropdown;
-
-    this.findDomElements();
-    this.addEventListeners();
   }
 
   findDomElements() {

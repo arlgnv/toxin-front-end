@@ -16,9 +16,7 @@ const checkboxes = document.querySelectorAll('.js-checkbox-expandable');
 checkboxes.forEach((checkbox) => new CheckboxExpandable(checkbox));
 
 const $sliders = $('.js-range-slider');
-$sliders.each(function () {
-  new RangeSlider($(this));
-});
+$sliders.each((i, el) => new RangeSlider($(el)));
 
 const filters = document.querySelectorAll('.js-filter');
 filters.forEach((filter) => new RoomsFilter(filter));

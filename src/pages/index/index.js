@@ -11,6 +11,4 @@ const dropdownsGuests = document.querySelectorAll('.js-dropdown_type_guests');
 dropdownsGuests.forEach((dropdown) => new DropdownGuests(dropdown));
 
 const $calendars = $('.js-calendar');
-$calendars.each(function (i) {
-  new Calendar($(this), i);
-});
+$calendars.each((i, el) => new Calendar($(el), i));

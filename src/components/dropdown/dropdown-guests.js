@@ -3,6 +3,9 @@ import Dropdown from './dropdown';
 class DropdownGuests extends Dropdown {
   constructor(dropdown) {
     super(dropdown);
+
+    this.findDomElements();
+    this.addEventListeners();
   }
 
   findDomElements() {
@@ -23,7 +26,8 @@ class DropdownGuests extends Dropdown {
     super.handleDecreaseButtonClick(evt);
 
     const counterField = evt.currentTarget.nextElementSibling;
-    const isNeedToHideButtonClear = Number(counterField.textContent) === 0 && this.isCounterFieldsEmpty();
+    const isNeedToHideButtonClear = Number(counterField.textContent) === 0
+      && this.isCounterFieldsEmpty();
     if (isNeedToHideButtonClear) {
       this.buttonClear.classList.add('dropdown__button_hidden');
     }
@@ -41,7 +45,10 @@ class DropdownGuests extends Dropdown {
     evt.currentTarget.classList.add('dropdown__button_hidden');
     this.input.value = '';
     this.buttonsDecrease.forEach((button) => button.classList.add('dropdown__control-button_disabled'));
-    this.counterFields.forEach((counterField) => (counterField.textContent = 0));
+    this.counterFields.forEach((counterField) => {
+      const field = counterField;
+      field.textContent = 0;
+    });
   }
 
   handleButtonApplyClick() {
