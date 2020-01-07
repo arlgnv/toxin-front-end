@@ -12,8 +12,7 @@ class ButtonLike {
     const amountLikes = parseInt(this.button.getAttribute('data-amount-likes'), 10);
     this.count = Number.isNaN(amountLikes) ? 0 : amountLikes;
 
-    this.button.setAttribute('data-amount-likes', this.count);
-    this.buttonText.textContent = this.count;
+    this.updateButton();
   }
 
   findDomElements() {
@@ -29,6 +28,11 @@ class ButtonLike {
 
     this.button.classList.toggle('button-like_theme_liked');
     this.count += this.button.classList.contains('button-like_theme_liked') ? 1 : -1;
+
+    this.updateButton();
+  }
+
+  updateButton() {
     this.button.setAttribute('data-amount-likes', this.count);
     this.buttonText.textContent = this.count;
   }
