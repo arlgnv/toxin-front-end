@@ -22,8 +22,8 @@ class Dropdown {
   }
 
   handleDecreaseButtonClick(evt) {
-    const counterField = evt.currentTarget.nextElementSibling;
     const buttonDecrease = evt.currentTarget;
+    const counterField = buttonDecrease.nextElementSibling;
 
     if (counterField.textContent > 0) {
       counterField.textContent -= 1;

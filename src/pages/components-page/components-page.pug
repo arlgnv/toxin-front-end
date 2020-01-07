@@ -195,49 +195,54 @@ block content
                 label.dropdowns__title(for="field-20") dropdown
                 +dropdown({"state": "expanded", "type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-20", "value": "3 гостя"})
         .form-elements__group
-          .expandable-checkbox
-            .expandable-checkbox__item
-              +checkbox-expandable({"title": "expandable checkbox list"})
-            .expandable-checkbox__item
+          .form-elements__subgroup
+            .expandable-checkbox
+              .expandable-checkbox__item
+                +checkbox-expandable({"title": "expandable checkbox list"})
+              .expandable-checkbox__item
+                -
+                  const checkboxesExpandable =
+                  [
+                    {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                    {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                    {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                    {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                    {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                    {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
+                  ]
+                +checkbox-expandable({"title": "expandable checkbox list", "state": "expanded", "items": checkboxesExpandable})
+          .form-elements__subgroup
+            .checkbox-rich
+              b.checkbox-rich__title rich checkbox buttons
               -
-                const checkboxesExpandable =
+                const checkboxesRich =
                 [
-                  {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
-                  {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
-                  {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
-                  {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
-                  {"id": "field-tv", "title": "Телевизор", "name": "tv"},
-                  {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
+                  {"id": "field-21", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
+                  {"id": "field-22","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
                 ]
-              +checkbox-expandable({"title": "expandable checkbox list", "state": "expanded", "items": checkboxesExpandable})
-          .checkbox-rich
-            b.checkbox-rich__title rich checkbox buttons
-            -
-              const checkboxesRich =
-              [
-                {"id": "field-21", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
-                {"id": "field-22","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
-              ]
-            each checkbox in checkboxesRich
-              .checkbox-rich__group
-                +checkbox-input(checkbox)
-          .bullet
-            b.bullet__title bullet list
-            .bullet__list
-              +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+              each checkbox in checkboxesRich
+                .checkbox-rich__group
+                  +checkbox-input(checkbox)
+          .form-elements__subgroup
+            .bullet
+              b.bullet__title bullet list
+              .bullet__list
+                +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
         .form-elements__group
-          .advantages
-            -
-              const advantages =
-              [
-                {"theme": "comfort","title": "Комфорт","description": "Шумопоглощающие стены"},
-                {"theme": "convenience","title": "Удобство","description": "Окно в каждой из спален"}
-              ]
-            each advantage in advantages
-              .advantages__group
-                +advantage(advantage)
-          .testimonials
-            +testimonial({"image": "../../components/testimonial/images/testimonial-1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": 12})
+          .form-elements__subgroup
+            .advantages
+              -
+                const advantages =
+                [
+                  {"theme": "comfort","title": "Комфорт","description": "Шумопоглощающие стены"},
+                  {"theme": "convenience","title": "Удобство","description": "Окно в каждой из спален"}
+                ]
+              each advantage in advantages
+                .advantages__group
+                  +advantage(advantage)
+          .form-elements__subgroup
+            .testimonials
+              +testimonial({"image": "../../components/testimonial/images/testimonial-1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": 12})
     article.ui-kit.ui-kit_theme_light
       h2.ui-kit__title Карточки
       .cards

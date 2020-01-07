@@ -279,6 +279,8 @@
 }
 
 .form-elements {
+  $root: &;
+
   &__group {
     display: flex;
     justify-content: space-between;
@@ -304,6 +306,42 @@
       @media screen and (max-width: 1000px) {
         display: block;
       }
+
+      #{$root}__subgroup {
+        &:nth-child(2) {
+          margin-left: 12.7857rem;
+
+          @media screen and (max-width: 1460px) {
+            margin-left: 0;
+          }
+
+          @media screen and (max-width: 1000px) {
+            margin-top: 3.5714rem;
+          }
+        }
+
+        &:nth-child(3) {
+          margin-left: 9.4286rem;
+
+          @media screen and (max-width: 1460px) {
+            margin-left: 0;
+          }
+
+          @media screen and (max-width: 1000px) {
+            margin-top: 3.5714rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      #{$root}__subgroup {
+        &:nth-child(2) {
+          @media screen and (max-width: 1050px) {
+            margin-top: 3.5714rem;
+          }
+        }
+      }
     }
   }
 }
@@ -312,7 +350,6 @@
   $root: &;
 
   width: 22.8571rem;
-  margin-right: 1.4286rem;
 
   @media screen and (max-width: 1353px) {
     width: 100%;
@@ -694,15 +731,6 @@
   $root: &;
 
   width: 18.5714rem;
-  margin-left: 12.7857rem;
-
-  @media screen and (max-width: 1460px) {
-    margin-left: 0;
-  }
-
-  @media screen and (max-width: 1000px) {
-    margin-top: 3.5714rem;
-  }
 
   &__title {
     display: block;
@@ -723,15 +751,6 @@
 
 .bullet {
   width: 18.5714rem;
-  margin-left: 9.4286rem;
-
-  @media screen and (max-width: 1460px) {
-    margin-left: 0;
-  }
-
-  @media screen and (max-width: 1000px) {
-    margin-top: 3.5714rem;
-  }
 
   &__title {
     display: block;
@@ -763,10 +782,6 @@
 .testimonials {
   width: 50.7857rem;
   padding-top: 0.7143rem;
-
-  @media screen and (max-width: 1400px) {
-    margin-top: 3.5714rem;
-  }
 
   @media screen and (max-width: 1050px) {
     width: 100%;
