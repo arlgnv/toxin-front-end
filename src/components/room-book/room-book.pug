@@ -1,15 +1,15 @@
 include ../dropdown/dropdown
 include ../button/button
 
-mixin room-book
+mixin room-book({title = "Подтверждение параметров номера", number = 888, type = "Люкс", price = "9 990₽", days = 4, pretotal = "39 960₽", discount = "2 179₽", extra = "300₽", total = "38 081₽"} = {})
   article.room-book
-    h2.room-book__title.room-book__title_hidden Подтверждение параметров номера
+    h2.room-book__title.room-book__title_hidden= title
     .room-book__room-info
       p.room-book__room №
-        span.room-book__number  888
-        span.room-book__type  Люкс
+        span.room-book__number= ` ${number} `
+        span.room-book__type= type
       p.room-book__day-price
-        span.room-book__price 9 990₽
+        span.room-book__price= price
         |  в сутки
     form.room-book__form(action="https://echo.htmlacademy.ru" method="post")
       .room-book__group
@@ -24,17 +24,17 @@ mixin room-book
         +dropdown({"id": "field-guests", "value": "3 гостя", "name": "guests"})
       .room-book__book-info
         .room-book__group
-          span.room-book__info 9 990₽ х 4 суток
-          span.room-book__price 39 960₽
+          span.room-book__info #{price} х #{days} суток
+          span.room-book__price= pretotal
         .room-book__group
-          span.room-book__info.room-book__info_theme_has-tip Сбор за услуги: скидка 2 179₽
+          span.room-book__info.room-book__info_theme_has-tip Сбор за услуги: скидка #{discount}
           span.room-book__price 0₽
         .room-book__group
           span.room-book__info.room-book__info_theme_has-tip Сбор за дополнительные услуги
-          span.room-book__price 300₽
+          span.room-book__price= extra
       .room-book__group
         span.room-book__total Итого
         span.room-book__spacer
-        span.room-book__total-price 38 081₽
+        span.room-book__total-price= total
       .room-book__group
         +button({"text": "забронировать", "theme": "submit", "type": "submit"})

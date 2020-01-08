@@ -24,20 +24,20 @@ block content
   +header
   main.room-page
     h1.room-page__title.room-page__title_hidden Люксовый номер №888
-    section.photos
-      h2.photos__title.photos__title_hidden Фотографии номера
-      .photos__group
-        img.photos__img(src="./images/big-picture.jpg" alt="Главная спальня")
-      .photos__group
-        img.photos__img(src="./images/small-picture-1.jpg" alt="Вторая спальня")
-        img.photos__img(src="./images/small-picture-2.jpg" alt="Комната для работы")
+    section.room-page__photos
+      h2.room-page__subtitle.room-page__subtitle_hidden Фотографии номера
+      .room-page__photos-group
+        img.room-page__photos-img(src="./images/big-picture.jpg" alt="Главная спальня")
+      .room-page__photos-group
+        img.room-page__photos-img(src="./images/small-picture-1.jpg" alt="Вторая спальня")
+        img.room-page__photos-img(src="./images/small-picture-2.jpg" alt="Комната для работы")
     .room-page__container
-      section.info
-        h2.info__title.info__title_hidden Информация о номере
-        .info__group
-          section.advantages
-            h3.advantages__title Сведения о номере
-            ul.advantages__list
+      section.room-page__info
+        h2.room-page__subtitle.room-page__subtitle_hidden Информация о номере
+        .room-page__group
+          section.room-page__advantages
+            h3.room-page__advantages-title Сведения о номере
+            ul.room-page__advantages-list
               -
                 const advantages =
                 [
@@ -46,16 +46,16 @@ block content
                   {"theme": "cozy","title": "Уют","description": "Номер оснащен камином"}
                 ]
               each item in advantages
-                li.advantages__item
+                li.room-page__advantages-item
                   +advantage(item)
-          section.impression
-            h3.impression__title Впечатления от номера
+          section.room-page__impression
+            h3.room-page__impression-title Впечатления от номера
             +donut({"great": 520, "good": 260, "satisfactory": 260})
-        .info__group
-          section.testimonials
-            h3.testimonials__title Отзывы посетителей номера
-            span.testimonials__amount 2 отзыва
-            ul.testimonials__list
+        .room-page__group
+          section.room-page__testimonials
+            h3.room-page__testimonials-title Отзывы посетителей номера
+            span.room-page__testimonials-amount 2 отзыва
+            ul.room-page__testimonials-list
               -
                 const testimonials =
                 [
@@ -63,19 +63,18 @@ block content
                   {"image": "../../components/testimonial/images/testimonial-2.jpg", "author": "Патрисия Стёклышкова", "date": "Неделю назад", "text": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", "likes": 2}
                 ]
               each item in testimonials
-                li.testimonials__item
+                li.room-page__testimonials-item
                   +testimonial(item)
-        .info__group
-          section.rules
-            h3.rules__title Правила
+        .room-page__group
+          section.room-page__rules
+            h3.room-page__rules-title Правила
             +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-          section.cancel
-            h3.cancel__title Отмена
-            p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-      section.form
-        h2.form__title.form__title_hidden Форма бронирования номера
-        .form__room-book
-          +room-book
+          section.room-page__cancel
+            h3.room-page__cancel-title Отмена
+            p.room-page__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      section.room-page__form
+        h2.room-page__subtitle.room-page__subtitle_hidden Форма бронирования номера
+        +room-book
   +footer
 
   script(src="./room-page.js")

@@ -2,9 +2,9 @@ include ../text-input/text-input
 include ../button/button
 include ../link/link
 
-mixin sign-in
+mixin sign-in({title = "Войти"} = {})
   article.sign-in
-    h2.sign-in__title Войти
+    h2.sign-in__title= title
     form.sign-in__form(action="https://echo.htmlacademy.ru" method="post")
       p.sign-in__group
         label.sign-in__label.sign-in__label_hidden(for="field-email") Введите email

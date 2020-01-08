@@ -2,9 +2,9 @@ include ../calendar/calendar
 include ../dropdown/dropdown
 include ../link/link
 
-mixin room-search
+mixin room-search({title = "Найдём номера под ваши пожелания"} = {})
   article.room-search
-    h2.room-search__title Найдём номера под ваши пожелания
+    h2.room-search__title= title
     form.room-search__form(action="https://echo.htmlacademy.ru" method="post")
       .room-search__group
         +calendar

@@ -4,9 +4,9 @@ include ../checkbox-input/checkbox-input
 include ../button/button
 include ../link/link
 
-mixin sign-up
+mixin sign-up({title = "Регистрация аккаунта"} = {})
   article.sign-up
-    h2.sign-up__title Регистрация аккаунта
+    h2.sign-up__title= title
     form.sign-up__form(action="https://echo.htmlacademy.ru" method="post")
       fieldset.sign-up__group
         p.sign-up__item
