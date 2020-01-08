@@ -8,6 +8,8 @@
 @import '../../components/footer/footer';
 
 .rooms-page {
+  $root: &;
+
   flex-grow: 1;
   padding: 2.1429rem 0 5rem;
 
@@ -21,7 +23,8 @@
     padding: 0 0.7143rem;
   }
 
-  &__title {
+  &__title,
+  &__subtitle {
     &_hidden {
       position: absolute;
       width: 0.0714rem;
@@ -34,30 +37,14 @@
       overflow: hidden;
     }
   }
-}
 
-.filter {
-  $root: &;
+  &__filter {
+    width: 19rem;
+    margin-right: 1.4286rem;
 
-  width: 19rem;
-  margin-right: 1.4286rem;
-
-  @media screen and (max-width: 1159px) {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  &__title {
-    &_hidden {
-      position: absolute;
-      width: 0.0714rem;
-      height: 0.0714rem;
-      margin: -0.0714rem;
-      border: 0;
-      padding: 0;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
+    @media screen and (max-width: 1159px) {
+      width: 100%;
+      margin-right: 0;
     }
   }
 
@@ -82,7 +69,7 @@
     }
   }
 
-  &__show-button {
+  &__filter-show-button {
     box-sizing: border-box;
     display: none;
     width: 100%;
@@ -102,7 +89,7 @@
     }
   }
 
-  &__close-button {
+  &__filter-close-button {
     display: inline-block;
     position: fixed;
     z-index: 9;
@@ -165,6 +152,10 @@
 
       #{$root}__list {
         width: 17.1429rem;
+
+        #{$root}__item + #{$root}__item {
+          margin-top: 0.4714rem;
+        }
       }
     }
 
@@ -197,6 +188,12 @@
     }
   }
 
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
   &__group-title {
     padding: 0;
     font-weight: bold;
@@ -215,76 +212,48 @@
     text-transform: uppercase;
   }
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  &__rooms {
+    width: 59.6429rem;
 
-    #{$root}__item + #{$root}__item {
-      margin-top: 0.4714rem;
-    }
-  }
-}
-
-.rooms {
-  width: 59.6429rem;
-
-  @media screen and (max-width: 1159px) {
-    width: 100%;
-  }
-
-  &__title {
-    margin: 0 0 1.4286rem;
-    font-weight: bold;
-    font-size: 1.7143rem;
-    line-height: 2.1429rem;
-    color: $primary-color-100;
-    letter-spacing: -0.0357rem;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 -0.7143rem 1.3571rem 0;
-    padding: 0;
-    list-style-type: none;
-
-    @media screen and (max-width: 591px) {
-      margin-right: 0;
-    }
-  }
-
-  &__item {
-    margin: 0 0.7143rem 1.2857rem 0;
-
-    @media screen and (max-width: 1159px) {
-      width: 32%;
-    }
-
-    @media screen and (max-width: 900px) {
-      width: 48%;
-    }
-
-    @media screen and (max-width: 591px) {
-      width: 100%;
-      margin-right: 0;
-    }
-
-    &-link {
-      text-decoration: none;
-    }
-  }
-
-  .room {
     @media screen and (max-width: 1159px) {
       width: 100%;
     }
 
-    &__img {
+    #{$root}__subtitle {
+      margin: 0 0 1.4286rem;
+      font-weight: bold;
+      font-size: 1.7143rem;
+      line-height: 2.1429rem;
+      color: $primary-color-100;
+      letter-spacing: -0.0357rem;
+    }
+
+    #{$root}__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 -0.7143rem 1.3571rem 0;
+
+      @media screen and (max-width: 591px) {
+        margin-right: 0;
+      }
+    }
+
+    #{$root}__item {
+      width: 19.2857rem;
+      margin: 0 0.7143rem 1.2857rem 0;
+
       @media screen and (max-width: 1159px) {
+        width: 32%;
+      }
+
+      @media screen and (max-width: 900px) {
+        width: 48%;
+      }
+
+      @media screen and (max-width: 591px) {
         width: 100%;
-        height: auto;
+        margin-right: 0;
       }
     }
   }
@@ -296,5 +265,9 @@
       width: 17.2143rem;
       margin: 0 auto;
     }
+  }
+
+  &__link {
+    text-decoration: none;
   }
 }

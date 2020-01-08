@@ -25,22 +25,22 @@ block content
   main.rooms-page
     h1.rooms-page__title.rooms-page__title_hidden Поиск номеров
     .rooms-page__container
-      section.filter.js-filter
-        h2.filter__title.filter__title_hidden Фильтр номеров
-        button.filter__show-button.js-filter__show-button(type="button") Показать фильтр
-        button.filter__close-button.js-filter__close-button.filter__close-button_hidden(type="button" aria-label="Закрыть фильтр")
-        form.filter__form.js-filter__form(action="https://echo.htmlacademy/ru" method="post")
-          p.filter__group
-            label.filter__label(for="field-date") Даты пребывания в отеле
+      section.rooms-page__filter.js-rooms-page__filter
+        h2.rooms-page__subtitle.rooms-page__subtitle_hidden Фильтр номеров
+        button.rooms-page__filter-show-button.js-rooms-page__filter-show-button(type="button") Показать фильтр
+        button.rooms-page__filter-close-button.js-rooms-page__filter-close-button.rooms-page__filter-close-button_hidden(type="button" aria-label="Закрыть фильтр")
+        form.rooms-page__form.js-rooms-page__form(action="https://echo.htmlacademy/ru" method="post")
+          p.rooms-page__group
+            label.rooms-page__label(for="field-date") Даты пребывания в отеле
             +dropdown({"id": "field-date", "name": "date", "value": "19 авг - 23 авг"})
-          p.filter__group
-            label.filter__label(for="field-guests") Гости
+          p.rooms-page__group
+            label.rooms-page__label(for="field-guests") Гости
             +dropdown({"id": "field-guests", "name": "guests", "value": "3 гостя, 1 младенец"})
-          p.filter__group
+          p.rooms-page__group
             +range-slider({"id": "field-price", "title": "Диапазон цены", "description": "Стоимость за сутки пребывания в номере"})(name="price")
-          fieldset.filter__group
-            legend.filter__group-title Дополнительные возможности
-            ul.filter__list
+          fieldset.rooms-page__group
+            legend.rooms-page__group-title Дополнительные возможности
+            ul.rooms-page__list
               -
                 const checkboxesPoor =
                 [
@@ -49,11 +49,11 @@ block content
                   {"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)", "name": "allow-guests", "checked": true}
                 ]
               each checkbox in checkboxesPoor
-                li.filter__item
+                li.rooms-page__item
                   +checkbox-input(checkbox)
-          fieldset.filter__group
-            legend.filter__group-title Доступность
-            ul.filter__list
+          fieldset.rooms-page__group
+            legend.rooms-page__group-title Доступность
+            ul.rooms-page__list
               -
                 const checkboxesRich =
                 [
@@ -61,12 +61,12 @@ block content
                   {"id": "field-hepler","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
                 ]
               each checkbox in checkboxesRich
-                li.filter__item
+                li.rooms-page__item
                   +checkbox-input(checkbox)
-          p.filter__group
-            label.filter__label(for="field-comfort") Удобства номера
+          p.rooms-page__group
+            label.rooms-page__label(for="field-comfort") Удобства номера
             +dropdown({"type": "comfort", "items": ["Спальни", "Кровати", "Ванные комнаты"], "id": "field-comfort", "name": "comfort", "placeholder": "Выберите удобства"})
-          fieldset.filter__group
+          fieldset.rooms-page__group
             -
               const checkboxesExpandable =
               [
@@ -79,9 +79,9 @@ block content
               ]
             +checkbox-expandable({"title": "Дополнительные удобства", "items": checkboxesExpandable})
 
-      section.rooms
-        h2.rooms__title Номера, которые мы для вас подобрали
-        ul.rooms__list
+      section.rooms-page__rooms
+        h2.rooms-page__subtitle Номера, которые мы для вас подобрали
+        ul.rooms-page__list
           -
             const rooms =
             [
@@ -100,11 +100,11 @@ block content
             ]
           each room, index in rooms
             if index === 0
-              li.rooms__item
-                a.rooms__item-link(href="../room-page/room-page.pug")
+              li.rooms-page__item
+                a.rooms-page__link(href="../room-page/room-page.pug")
                   +room(room)
             else
-              li.rooms__item
+              li.rooms-page__item
                   +room(room)
         -
           const pages =
@@ -116,7 +116,7 @@ block content
             {"number": "15", "link": "mock-adress/change-me"},
             {"number": "", "theme": "next-page", "link": "mock-adress/change-me"}
           ]
-        .rooms__pagination
+        .rooms-page__pagination
           +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
   +footer
 

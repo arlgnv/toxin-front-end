@@ -7,9 +7,9 @@ class RoomsFilter {
   }
 
   findDomElements() {
-    this.filterForm = this.filter.querySelector('.js-filter__form');
-    this.filterShow = this.filter.querySelector('.js-filter__show-button');
-    this.filterClose = this.filter.querySelector('.js-filter__close-button');
+    this.filterForm = this.filter.querySelector('.js-rooms-page__form');
+    this.filterShow = this.filter.querySelector('.js-rooms-page__filter-show-button');
+    this.filterClose = this.filter.querySelector('.js-rooms-page__filter-close-button');
   }
 
   addEventListeners() {
@@ -20,8 +20,8 @@ class RoomsFilter {
   handleShowButtonClick(evt) {
     evt.preventDefault();
 
-    this.filterForm.classList.add('filter__form_showed');
-    this.filterClose.classList.remove('filter__close-button_hidden');
+    this.filterForm.classList.add('rooms-page__form_showed');
+    this.filterClose.classList.remove('rooms-page__filter-close-button_hidden');
     this.filterClose.style.left = `${document.documentElement.clientWidth - this.filterClose.offsetWidth}px`;
 
     document.body.classList.add('scroll-none');
@@ -30,8 +30,8 @@ class RoomsFilter {
   handleCloseButtonClick(evt) {
     evt.preventDefault();
 
-    this.filterForm.classList.remove('filter__form_showed');
-    this.filterClose.classList.add('filter__close-button_hidden');
+    this.filterForm.classList.remove('rooms-page__form_showed');
+    this.filterClose.classList.add('rooms-page__filter-close-button_hidden');
 
     document.body.classList.remove('scroll-none');
   }
