@@ -1,6 +1,6 @@
 include ../calendar/calendar
 include ../dropdown/dropdown
-include ../link/link
+include ../button/button
 
 mixin room-search({title = "Найдём номера под ваши пожелания"} = {})
   article.room-search
@@ -12,4 +12,4 @@ mixin room-search({title = "Найдём номера под ваши пожел
         label.room-search__label(for="field-amount-guests") Гости
         +dropdown({"type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-amount-guests", "name": "guests", "placeholder": "Сколько гостей"})
       p.room-search__group
-        +link({"text": "подобрать номер", "theme": "submit"})(href="../../pages/rooms-page/rooms-page.pug")
+        +button({"text": "подобрать номер", "theme": "submit", "isLink": true, "href": "../../pages/rooms-page/rooms-page.pug"})

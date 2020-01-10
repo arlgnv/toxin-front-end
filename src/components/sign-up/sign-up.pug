@@ -2,7 +2,6 @@ include ../text-input/text-input
 include ../radio-input/radio-input
 include ../checkbox-input/checkbox-input
 include ../button/button
-include ../link/link
 
 mixin sign-up({title = "Регистрация аккаунта"} = {})
   article.sign-up
@@ -43,4 +42,4 @@ mixin sign-up({title = "Регистрация аккаунта"} = {})
     .sign-up__login
       span.sign-up__text Уже есть аккаунт на Toxin?
       span.sign-up__login-button
-        +link({"text": "войти", "theme": "account-action"})(href="../../pages/login-page/login-page.pug")
+        +button({"text": "войти", "theme": "account-action", "isLink": true, "href": "../../pages/login-page/login-page.pug"})

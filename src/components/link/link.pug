@@ -1,7 +1,0 @@
-mixin link({text = "", theme = "", jsClasses = ""} = {})
-  -
-    let className = theme === "" ? "" : `button_theme_${theme}`
-    className = `${className} ${jsClasses}`.trim()
-    
-  a.button(class= className)&attributes(attributes)
-    span.button__text= text

@@ -1,7 +1,7 @@
-mixin button({text = "", theme = "", type = "button", jsClasses = ""} = {})
-  -
-    let className = theme === "" ? "" : `button_theme_${theme}`
-    className = `${className} ${jsClasses}`.trim()
+mixin button({text = "", theme = "", size = "", type = "button", href = "mock-address/change-me", isLink = false} = {})
+  - const themeClass = theme ? `button_theme_${theme}` : ""
+  - const sizeClass = size ? `button_size_${size}` : ""
+  - const tagName = isLink ? "a" : "button"
 
-  button.button(class= className type= type)&attributes(attributes)
+  #{tagName}.button(class= [themeClass, sizeClass] type= tagName === "button" ? type : false href= tagName === "a" ? href : false)&attributes(attributes)
     span.button__text= text

@@ -1,4 +1,4 @@
-include ../link/link
+include ../button/button
 
 mixin header({theme = ""} = {})
   - const themeClass = theme ? `header_theme_${theme}` : ""
@@ -26,9 +26,9 @@ mixin header({theme = ""} = {})
               a.header__link(href= item.link)= item.title
         ul.header__user-navigation
           li.header__item
-            +link({"text": "войти", "theme": "account-action"})(href="../login-page/login-page.pug" class="button_size_small")
+            +button({"text": "войти", "theme": "account-action", "size": "small", "isLink": true, "href": "../login-page/login-page.pug"})
           li.header__item
-            +link({"text": "зарегистрироваться", "theme": "registration"})(href="../registration-page/registration-page.pug" class="button_size_small")
+            +button({"text": "зарегистрироваться", "theme": "registration", "size": "small", "isLink": true, "href": "../registration-page/registration-page.pug"})
         ul.header__user-menu
           li.header__item
             a.header__link(href="/mock-address/change-me") Артём Лагунов
