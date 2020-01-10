@@ -1,8 +1,9 @@
-mixin pagination({pages = [{"number": "0", "theme": "", "link": "mock-adress/change-me"}], description = ""} = {})
+mixin pagination({pages = [{}], description = ""} = {})
   .pagination
     ul.pagination__list
       each page in pages
-        - const className = "theme" in page ? `pagination__item_theme_${page.theme}` : ""
+        - const { number = 0, theme = "", link = "mock-address/change-me" } = page
+        - const className = theme ? `pagination__item_theme_${theme}` : ""
         li.pagination__item(class= className)
-          a.pagination__link(href= page.link)= page.number
+          a.pagination__link(href= link)= number
     p.pagination__description= description
