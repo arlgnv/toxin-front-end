@@ -1,5 +1,9 @@
 extends ../../templates/template-base
 
+include ../../components/header/header
+include ../../components/sign-in/sign-in
+include ../../components/footer/footer
+
 block description
   meta(name="description" content="Войдите на сайт, чтобы забронировать номер.")
 
@@ -13,10 +17,6 @@ block styles
   link(rel="stylesheet" href="./login-page.scss")
 
 block content
-  include ../../components/header/header
-  include ../../components/sign-in/sign-in
-  include ../../components/footer/footer
-
   +header
   main.login-page
     h1.login-page__title.login-page__title_hidden Вход в систему

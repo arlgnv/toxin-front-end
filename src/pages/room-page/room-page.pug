@@ -1,5 +1,13 @@
 extends ../../templates/template-base
 
+include ../../components/header/header
+include ../../components/advantage/advantage
+include ../../components/donut/donut
+include ../../components/testimonial/testimonial
+include ../../components/bullet-list/bullet-list
+include ../../components/room-book/room-book
+include ../../components/footer/footer
+
 block description
   meta(name="description" content="Люксовый номер для райского наслаждения и комфортного отдыха по недорогой цене в отеле Toxin")
 
@@ -13,14 +21,6 @@ block styles
   link(rel="stylesheet" href="./room-page.scss")
 
 block content
-  include ../../components/header/header
-  include ../../components/advantage/advantage
-  include ../../components/donut/donut
-  include ../../components/testimonial/testimonial
-  include ../../components/bullet-list/bullet-list
-  include ../../components/room-book/room-book
-  include ../../components/footer/footer
-
   +header
   main.room-page
     h1.room-page__title.room-page__title_hidden Люксовый номер №888

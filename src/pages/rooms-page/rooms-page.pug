@@ -1,5 +1,13 @@
 extends ../../templates/template-base
 
+include ../../components/header/header
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox-expandable/checkbox-expandable
+include ../../components/room/room
+include ../../components/pagination/pagination
+include ../../components/footer/footer
+
 block description
   meta(name="description" content="Мы подобрали для вас самые подходящие номера под ваши требования, вам осталось лишь выбрать.")
 
@@ -13,14 +21,6 @@ block styles
   link(rel="stylesheet" href="./rooms-page.scss")
 
 block content
-  include ../../components/header/header
-  include ../../components/dropdown/dropdown
-  include ../../components/range-slider/range-slider
-  include ../../components/checkbox-expandable/checkbox-expandable
-  include ../../components/room/room
-  include ../../components/pagination/pagination
-  include ../../components/footer/footer
-
   +header
   main.rooms-page
     h1.rooms-page__title.rooms-page__title_hidden Поиск номеров

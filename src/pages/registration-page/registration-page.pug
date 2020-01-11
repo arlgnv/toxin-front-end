@@ -1,5 +1,9 @@
 extends ../../templates/template-base
 
+include ../../components/header/header
+include ../../components/sign-up/sign-up
+include ../../components/footer/footer
+
 block description
   meta(name="description" content="Зарегистрируйтесь на сайте, чтобы иметь возможность бронировать номера, оставлять отзывы об отелях.")
 
@@ -13,10 +17,6 @@ block styles
   link(rel="stylesheet" href="./registration-page.scss")
 
 block content
-  include ../../components/header/header
-  include ../../components/sign-up/sign-up
-  include ../../components/footer/footer
-
   +header
   main.registration-page
     h1.registration-page__title.registration-page__title_hidden Зарегистрировать аккаунт

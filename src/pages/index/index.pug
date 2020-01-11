@@ -1,5 +1,9 @@
 extends ../../templates/template-base
 
+include ../../components/header/header
+include ../../components/room-search/room-search
+include ../../components/footer/footer
+
 block description
   meta(name="description" content="Наш отель является лучшим отелем 2019 года по версии независимой организации. Вы можете найти у нас номера от бюджетных до люксовых. Вам определенно понравится у нас")
 
@@ -13,10 +17,6 @@ block styles
   link(rel="stylesheet" href="./index.scss")
 
 block content
-  include ../../components/header/header
-  include ../../components/room-search/room-search
-  include ../../components/footer/footer
-
   +header
   main.main-page
     h1.main-page__title.main-page__title_hidden Отель Toxin

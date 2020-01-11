@@ -3,7 +3,7 @@ include ../button-like/button-like
 mixin testimonial({image = "", author = "", date = "", text = "", likes = 0} = {})
   p.testimonial
     span.testimonial__author
-      img.testimonial__img(src=image alt=author)
+      img.testimonial__img(src= image alt= author)
       span.testimonial__author-info
         b.testimonial__name= author
         span.testimonial__date= date
