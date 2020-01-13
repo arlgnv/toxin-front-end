@@ -5,7 +5,8 @@
   "main": "src/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/"
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/",
+    "lint": "eslint src/**/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,7 @@
     "postcss-modules": "^1.4.1",
     "pug": "^2.0.4",
     "rimraf": "^2.7.1",
-    "sass": "^1.24.0",
-    "rotapie": "file:src/utilities/jquery.rotapie"
+    "sass": "^1.24.0"
   },
   "browserslist": "> 0.25%, last 4 versions",
   "bugs": {
