@@ -42,9 +42,11 @@
     box-sizing: border-box;
     width: 0.6429rem;
     height: 0.6429rem;
+    padding: 0;
     border: 0.1429rem solid $primary-color-50;
     border-top: 0;
     border-left: 0;
+    background-color: transparent;
     transform: translateY(-50%) rotate(45deg);
 
     &:hover {
@@ -61,6 +63,8 @@
     border: 0.0714rem solid $primary-color-25;
     border-radius: 0.2857rem;
     text-transform: uppercase;
+    cursor: default;
+    outline: none;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       min-height: 3.2857rem;

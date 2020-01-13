@@ -3,7 +3,7 @@ mixin dropdown({state =  "", type = "", items = [], id = "", name = "", value = 
   - const typeClass = type ? `dropdown_type_${type} js-dropdown_type_${type}` : ""
     
   span.dropdown.js-dropdown(class= [stateClass, typeClass])
-    span.dropdown__tick.js-dropdown__tick
+    button.dropdown__tick.js-dropdown__tick(type="button")
     input.dropdown__input.js-dropdown__input(type="text" id= id name= name value= value placeholder= placeholder readonly)&attributes(attributes)
     if type
       span.dropdown__container
