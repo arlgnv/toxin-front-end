@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
     "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/",
-    "lint": "eslint src/**/**/*.js"
+    "lint": "eslint -c .eslintrc --ignore-path .eslintignore src/"
   },
   "repository": {
     "type": "git",
