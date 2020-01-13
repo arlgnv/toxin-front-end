@@ -9,6 +9,7 @@ class Calendar {
 
   init(index) {
     this.findDomElements();
+    this.addEventListeners(index);
 
     this.$fieldInit.datepicker({
       prevHtml:
@@ -27,12 +28,11 @@ class Calendar {
     });
 
     this.$calendarData = this.$fieldInit.data('datepicker');
-
-    this.addEventListeners(index);
   }
 
   findDomElements() {
     this.$container = this.$calendar.find('.js-calendar__container');
+    this.$tick = this.$calendar.find('.js-calendar__tick');
     this.$fieldInit = this.$calendar.find('.js-calendar__field_type_init');
     this.$fieldFrom = this.$calendar.find('.js-calendar__field_type_from');
     this.$fieldTo = this.$calendar.find('.js-calendar__field_type_to');
@@ -43,12 +43,12 @@ class Calendar {
   addEventListeners(index) {
     const namespace = `calendar.calendar-${index}`;
 
-    this.$fieldFrom.on(`click.${namespace}`, this.handleFieldFromClick.bind(this));
+    this.$tick.on(`click.${namespace}`, this.handleTickClick.bind(this));
     this.$applyButton.on(`click.${namespace}`, this.handleApplyButtonClick.bind(this));
     this.$clearButton.on(`click.${namespace}`, this.handleClearButtonClick.bind(this));
   }
 
-  handleFieldFromClick() {
+  handleTickClick() {
     this.toggleCalendar();
   }
 

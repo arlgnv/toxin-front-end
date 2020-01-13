@@ -5,6 +5,7 @@ class Dropdown {
 
   findDomElements() {
     this.input = this.dropdown.querySelector('.js-dropdown__input');
+    this.tick = this.dropdown.querySelector('.js-dropdown__tick');
     this.counterFields = this.dropdown.querySelectorAll('.js-dropdown__counter-value');
     this.groups = this.dropdown.querySelectorAll('.js-dropdown__group');
     this.buttonsDecrease = this.dropdown.querySelectorAll('.js-dropdown__control-button_type_decrease');
@@ -12,12 +13,12 @@ class Dropdown {
   }
 
   addEventListeners() {
-    this.input.addEventListener('click', this.handleInputClick.bind(this));
+    this.tick.addEventListener('click', this.handleTickClick.bind(this));
     this.buttonsDecrease.forEach((button) => button.addEventListener('click', this.handleDecreaseButtonClick.bind(this)));
     this.buttonsIncrease.forEach((button) => button.addEventListener('click', this.handleIncreaseButtonClick.bind(this)));
   }
 
-  handleInputClick() {
+  handleTickClick() {
     this.dropdown.classList.toggle('dropdown_expanded');
   }
 

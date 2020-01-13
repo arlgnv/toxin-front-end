@@ -4,10 +4,12 @@ mixin calendar
       span.calendar__item
         label.calendar__label(for="field-date-from") Прибытие
         span.calendar__field-wrapper
+          span.calendar__tick.js-calendar__tick
           input.calendar__field.calendar__field_type_from.js-calendar__field_type_from(id="field-date-from" type="text" name="from" placeholder="дд.мм.гггг" readonly)
       span.calendar__item
         label.calendar__label(for="field-date-to") Выезд
         span.calendar__field-wrapper
+          span.calendar__tick.js-calendar__tick
           input.calendar__field.calendar__field_type_to.js-calendar__field_type_to(id="field-date-to" name="to" placeholder="дд.мм.гггг" readonly)
     .calendar__container.js-calendar__container.calendar__container_hidden
       input.calendar__field.calendar__field_type_init.js-calendar__field_type_init

@@ -30,20 +30,25 @@
 
   &__field-wrapper {
     position: relative;
-    display: block;
+    display: inline-block;
+    width: 100%;
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 1.4286rem;
-      right: 1.1857rem;
-      box-sizing: border-box;
-      width: 0.6429rem;
-      height: 0.6429rem;
-      border: 0.1429rem solid $primary-color-50;
-      border-top: 0;
-      border-left: 0;
-      transform: translateY(-50%) rotate(45deg);
+  &__tick {
+    content: '';
+    position: absolute;
+    top: 1.4286rem;
+    right: 1.1857rem;
+    box-sizing: border-box;
+    width: 0.6429rem;
+    height: 0.6429rem;
+    border: 0.1429rem solid $primary-color-50;
+    border-top: 0;
+    border-left: 0;
+    transform: translateY(-50%) rotate(45deg);
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -59,10 +64,6 @@
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       min-height: 3.2857rem;
-    }
-
-    &:hover {
-      cursor: pointer;
     }
 
     &_type_init {
