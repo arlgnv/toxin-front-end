@@ -61,6 +61,10 @@
       min-height: 3.2857rem;
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &_type_init {
       display: none;
     }

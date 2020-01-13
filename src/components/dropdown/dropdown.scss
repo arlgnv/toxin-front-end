@@ -37,6 +37,10 @@
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       min-height: 3.2857rem;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__container {
