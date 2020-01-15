@@ -20,13 +20,13 @@ mixin footer({theme = ""} = {})
             ];
           each itemMenu in itemsMenu
             .footer__item
-              b.footer__title= itemMenu.title
+              span.footer__title= itemMenu.title
               ul.footer__list
                 each subItem in itemMenu.subItems
                   li.footer__item
                     a.footer__link(href="/mock-address/change-me")= subItem
         .footer__newsletter
-          b.footer__title Подписка
+          span.footer__title Подписка
           p.footer__text Получайте специальные предложения и новости сервиса
           form.footer__form(action="https://echo.htmlacademy.ru" method="post")
             label.footer__label.footer__label_hidden(for="field-subscription") Введите email

@@ -9,7 +9,7 @@ mixin dropdown({state =  "", type = "", items = [], id = "", name = "", value = 
       span.dropdown__container
         each item in items
           span.dropdown__group.js-dropdown__group
-            b.dropdown__title= item
+            span.dropdown__title= item
             span.dropdown__counter
               button.dropdown__control-button.dropdown__control-button_disabled.dropdown__control-button_type_decrease.js-dropdown__control-button_type_decrease(type="button") -
               span.dropdown__counter-value.js-dropdown__counter-value 0

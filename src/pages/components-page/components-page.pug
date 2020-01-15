@@ -96,7 +96,7 @@ block content
             +text-input({"theme": "newsletter", "type": "email"})(id="field-8" placeholder="Email")
         ul.ui-kit__list
           li.ui-kit__checkbox-poor-item
-            b.ui-kit__subtitle checkbox buttons
+            span.ui-kit__subtitle checkbox buttons
             -
               const checkboxesPoor =
               [
@@ -108,7 +108,7 @@ block content
               p.ui-kit__checkbox-poor-subitem
                 +checkbox-input(checkbox)
           li.ui-kit__radio-item
-            b.ui-kit__subtitle radio buttons
+            span.ui-kit__subtitle radio buttons
             -
               const radioInputs =
               [
@@ -119,7 +119,7 @@ block content
               span.ui-kit__radio-subitem
                 +radio-input(radioInput)
           li.ui-kit__toggle-item
-            b.ui-kit__subtitle toggle
+            span.ui-kit__subtitle toggle
             -
               const checkboxesToggle =
               [
@@ -130,13 +130,13 @@ block content
               p.ui-kit__toggle-subitem
                 +checkbox-input(checkbox)
           li.ui-kit__button-like-item
-            b.ui-kit__subtitle like button
+            span.ui-kit__subtitle like button
             span.ui-kit__button-like-subitem
               +button-like({"likes": 2})
             span.ui-kit__button-like-subitem
               +button-like({"likes": 12, "theme": "liked"})
           li.ui-kit__rating-item
-            b.ui-kit__subtitle rate button
+            span.ui-kit__subtitle rate button
             span.ui-kit__rating-subitem
               +rating({currentRating: 4})
             span.ui-kit__rating-subitem
@@ -145,7 +145,7 @@ block content
           li.ui-kit__range-slider-item
             +range-slider({"id": "field-16", "title": "range slider", "description": ""})
           li.ui-kit__button-registration-item
-            b.ui-kit__subtitle buttons
+            span.ui-kit__subtitle buttons
             span.ui-kit__button-registration-subitem
               +button({"text": "click me", "theme": "registration", "isLink": true})
             span.ui-kit__button-registration-subitem
@@ -163,7 +163,7 @@ block content
           li.ui-kit__button-submit-item
             +button({"text": "перейти к оплате", "theme": "submit", "isLink": true})
           li.ui-kit__pagination-item
-            b.ui-kit__subtitle pagination
+            span.ui-kit__subtitle pagination
             -
               const pages =
               [
@@ -206,7 +206,7 @@ block content
               ];
             +checkbox-expandable({"title": "expandable checkbox list", "state": "expanded", "items": checkboxesExpandable})
         p.ui-kit__checkbox-rich-item
-          b.ui-kit__subtitle rich checkbox buttons
+          span.ui-kit__subtitle rich checkbox buttons
           -
             const checkboxesRich =
             [
@@ -217,7 +217,7 @@ block content
             span.ui-kit__checkbox-rich-subitem
               +checkbox-input(checkbox)
         .ui-kit__bullet-list-item
-          b.ui-kit__subtitle bullet list
+          span.ui-kit__subtitle bullet list
           +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
       .ui-kit__group
         ul.ui-kit__list
