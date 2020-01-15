@@ -1,7 +1,8 @@
 include ../text-input/text-input
 
 mixin footer({theme = ""} = {})
-  - const className = theme ? `footer_theme_${theme}` : ""
+  - const className = theme ? `footer_theme_${theme}` : "";
+
   footer.footer(class= className)
     .footer__main-info
       .footer__container
@@ -16,7 +17,7 @@ mixin footer({theme = ""} = {})
               {"title": "Навигация", "subItems": ["О нас", "Новости", "Служба поддержки", "Услуги"]},
               {"title": "О нас", "subItems": ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
               {"title": "Служба поддержки", "subItems": ["Соглашения", "Сообщества", "Связь с нами"]}
-            ]
+            ];
           each itemMenu in itemsMenu
             .footer__item
               b.footer__title= itemMenu.title
@@ -40,8 +41,9 @@ mixin footer({theme = ""} = {})
               {"theme": "twitter", "description": "Твиттер", "link": "/mock-address/change-me"},
               {"theme": "facebook", "description": "Фейсбук", "link": "/mock-address/change-me"},
               {"theme": "instagram", "description": "Инстаграм", "link": "/mock-address/change-me"}
-            ]
+            ];
           each item in items
-            - const { theme, link, description } = item
+            - const { theme, link, description } = item;
+            
             li.footer__item
               a.footer__link(class=`footer__link_theme_${theme}` href= link aria-label= description target="_blank" rel="noopener noreferrer")

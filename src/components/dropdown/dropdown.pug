@@ -1,6 +1,6 @@
 mixin dropdown({state =  "", type = "", items = [], id = "", name = "", value = "", placeholder = ""} = {})
-  - const stateClass = state ? `dropdown_${state}` : ""
-  - const typeClass = type ? `dropdown_type_${type} js-dropdown_type_${type}` : ""
+  - const stateClass = state ? `dropdown_${state}` : "";
+  - const typeClass = type ? `dropdown_type_${type} js-dropdown_type_${type}` : "";
     
   span.dropdown.js-dropdown(class= [stateClass, typeClass])
     button.dropdown__tick.js-dropdown__tick(type="button")

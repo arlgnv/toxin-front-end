@@ -1,5 +1,5 @@
-mixin text-input({theme = "", type = "text", jsClasses = ""} = {})
-  - const className = theme === "" ? "" : `text-input_theme_${theme}`
+mixin text-input({theme = "", type = "text"} = {})
+  - const className = theme ? `text-input_theme_${theme}` : "";
 
   span.text-input(class= className)
     input.text-input__field(type= type)&attributes(attributes)

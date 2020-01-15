@@ -44,7 +44,7 @@ block content
               {"name": "Dark shade 5%", "hex" : "#1f2041", "theme" : "5-transparency"},
               {"name": "Purple", "hex" : "#bc9cff", "theme" : "purple"},
               {"name": "Green", "hex" : "#6fcf97", "theme" : "green"}
-            ]
+            ];
           each color in colors
             - const className = "theme" in color ? `ui-kit__color-item_theme_${color.theme}` : ""
             li.ui-kit__color-item(class= className)
@@ -59,7 +59,7 @@ block content
               {"name": "h2", "text": "Next one is the item title inside widgets", "theme": "h2"},
               {"name": "h3", "text": "This is a label or CTA text", "theme": "h3"},
               {"name": "body", "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
-            ]
+            ];
           each font in fonts
             - const className = "theme" in font ? `ui-kit__font-item_theme_${font.theme}` : ""
             li.ui-kit__font-item(class= className)
@@ -103,7 +103,7 @@ block content
                 {"id": "field-9", "title": "Можно курить"},
                 {"id": "field-10", "title": "Можно с питомцами", "checked": true},
                 {"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)", "checked": true}
-              ]
+              ];
             each checkbox in checkboxesPoor
               p.ui-kit__checkbox-poor-subitem
                 +checkbox-input(checkbox)
@@ -114,7 +114,7 @@ block content
               [
                 {"id": "field-12", "title": "Мужчина", "name": "gender", "checked": true},
                 {"id": "field-13", "title": "Женщина", "name": "gender"}
-              ]
+              ];
             each radioInput in radioInputs
               span.ui-kit__radio-subitem
                 +radio-input(radioInput)
@@ -125,7 +125,7 @@ block content
               [
                 {"id": "field-14", "title": "Получать спецпредложения", "theme": "toggle", "checked": true},
                 {"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"}
-              ]
+              ];
             each checkbox in checkboxesToggle
               p.ui-kit__toggle-subitem
                 +checkbox-input(checkbox)
@@ -173,7 +173,7 @@ block content
                 {"number": "..."},
                 {"number": "15"},
                 {"number": "", "theme": "next-page"}
-              ]
+              ];
             +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
       .ui-kit__group
         ul.ui-kit__list
@@ -203,7 +203,7 @@ block content
                 {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
                 {"id": "field-tv", "title": "Телевизор", "name": "tv"},
                 {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
-              ]
+              ];
             +checkbox-expandable({"title": "expandable checkbox list", "state": "expanded", "items": checkboxesExpandable})
         p.ui-kit__checkbox-rich-item
           b.ui-kit__subtitle rich checkbox buttons
@@ -212,7 +212,7 @@ block content
             [
               {"id": "field-21", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
               {"id": "field-22","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
-            ]
+            ];
           each checkbox in checkboxesRich
             span.ui-kit__checkbox-rich-subitem
               +checkbox-input(checkbox)
@@ -226,7 +226,7 @@ block content
             [
               {"theme": "comfort","title": "Комфорт","description": "Шумопоглощающие стены"},
               {"theme": "convenience","title": "Удобство","description": "Окно в каждой из спален"}
-            ]
+            ];
           each advantage in advantages
             li.ui-kit__advantage-item
               +advantage(advantage)
@@ -254,7 +254,7 @@ block content
               [
                 {"image": "../rooms-page/images/room-1.jpg","alt": "Роскошный номер на одного с большой кроватью","number": 888,"lux": true,"price": "9 990₽","rating": 5,"testimonials": 145},
                 {"image": "../rooms-page/images//room-2.jpg","alt": "Просторный номер на троих с тремя кроватями","number": 840,"lux": false,"price": "9 990₽","rating": 4,"testimonials": 65}
-              ]
+              ];
             each room in rooms
               .ui-kit__room-subitem
                 +room(room)
@@ -265,7 +265,7 @@ block content
         [
           {},
           {"theme": "logged"},
-        ]
+        ];
       each header in headers
         .ui-kit__headers-footers-item
           +header(header)
@@ -274,7 +274,7 @@ block content
         [
           {"theme": ""},
           {"theme": "poor"},
-        ]
+        ];
       each footer in footers
         .ui-kit__headers-footers-item
           +footer(footer)

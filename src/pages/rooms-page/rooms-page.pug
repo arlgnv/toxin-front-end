@@ -47,7 +47,7 @@ block content
                   {"id": "field-smoke", "title": "Можно курить", "name": "smoke"},
                   {"id": "field-pets", "title": "Можно с питомцами", "name": "pets", "checked": true},
                   {"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)", "name": "allow-guests", "checked": true}
-                ]
+                ];
               each checkbox in checkboxesPoor
                 li.rooms-page__item
                   +checkbox-input(checkbox)
@@ -59,7 +59,7 @@ block content
                 [
                   {"id": "field-wide-aisle", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
                   {"id": "field-hepler","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
-                ]
+                ];
               each checkbox in checkboxesRich
                 li.rooms-page__item
                   +checkbox-input(checkbox)
@@ -76,7 +76,7 @@ block content
                 {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
                 {"id": "field-tv", "title": "Телевизор", "name": "tv"},
                 {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
-              ]
+              ];
             +checkbox-expandable({"title": "Дополнительные удобства", "items": checkboxesExpandable})
 
       section.rooms-page__rooms
@@ -97,7 +97,7 @@ block content
               {"image": "./images/room-10.jpg","alt": "Роскошный номер с двумя кроватями и шкафом","number": 666,"lux": false,"price": "5 000₽","rating": 5,"testimonials": 25},
               {"image": "./images/room-11.jpg","alt": "Роскошный номер с двумя кроватями","number": 444,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 15},
               {"image": "./images/room-12.jpg","alt": "Роскошный номер с большой кроватью","number": 352,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 55}
-            ]
+            ];
           each room, index in rooms
             if index === 0
               li.rooms-page__item
@@ -115,7 +115,7 @@ block content
             {"number": "..."},
             {"number": "15"},
             {"number": "", "theme": "next-page"}
-          ]
+          ];
         .rooms-page__pagination
           +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
   +footer

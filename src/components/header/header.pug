@@ -1,9 +1,9 @@
 include ../button/button
 
 mixin header({theme = ""} = {})
-  - const themeClass = theme ? `header_theme_${theme}` : ""
+  - const className = theme ? `header_theme_${theme}` : "";
 
-  header.header.js-header(class= [themeClass])
+  header.header.js-header(class= className)
     .header__container
       a.header__logo(href="../index/index.pug")
         img.header__logo-image(src="../../images/logo.svg" alt="Отель Toxin")
@@ -19,9 +19,10 @@ mixin header({theme = ""} = {})
               {"title": "Вакансии", "link": "/mock-address/change-me"},
               {"title": "Новости", "link": "/mock-address/change-me"},
               {"title": "Соглашения", "theme": "has-submenu", "link": "/mock-address/change-me"}
-            ]
+            ];
           each item in items
-            - const className = "theme" in item ? `header__item_theme_${item.theme}` : ""
+            - const className = "theme" in item ? `header__item_theme_${item.theme}` : "";
+
             li.header__item(class= className)
               a.header__link(href= item.link)= item.title
         ul.header__user-navigation
