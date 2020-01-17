@@ -1,3 +1,5 @@
+import COUNTER_NUMBER_MIN from './constants';
+
 class Dropdown {
   constructor(dropdown) {
     this.dropdown = dropdown;
@@ -29,10 +31,10 @@ class Dropdown {
     const buttonDecrease = evt.currentTarget;
     const counterField = buttonDecrease.nextElementSibling;
 
-    if (counterField.textContent > 0) {
+    if (counterField.textContent > COUNTER_NUMBER_MIN) {
       counterField.textContent -= 1;
 
-      if (Number(counterField.textContent) === 0) {
+      if (Number(counterField.textContent) === COUNTER_NUMBER_MIN) {
         buttonDecrease.classList.add('dropdown__control-button_disabled');
       }
     }

@@ -1,4 +1,5 @@
 import 'ion-rangeslider';
+import DEFAULT_RANGE_SLIDER_PARAMETERS from './constants';
 
 class RangeSlider {
   constructor($slider) {
@@ -16,14 +17,7 @@ class RangeSlider {
     this.findDomElements();
 
     this.$sliderField.ionRangeSlider({
-      skin: 'custom',
-      type: 'double',
-      min: 0,
-      max: 15000,
-      hide_min_max: true,
-      from: 5000,
-      to: 10000,
-      hide_from_to: true,
+      ...DEFAULT_RANGE_SLIDER_PARAMETERS,
       onStart: this.handleSliderStart.bind(this),
       onChange: this.handleRunnerDrag.bind(this),
     });

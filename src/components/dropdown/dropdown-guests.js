@@ -1,4 +1,5 @@
 import Dropdown from './dropdown';
+import COUNTER_NUMBER_MIN from './constants';
 
 class DropdownGuests extends Dropdown {
   findDomElements() {
@@ -18,9 +19,8 @@ class DropdownGuests extends Dropdown {
   handleDecreaseButtonClick(evt) {
     super.handleDecreaseButtonClick(evt);
 
-    const counterField = evt.currentTarget.nextElementSibling;
-    const isNeedToHideButtonClear = Number(counterField.textContent) === 0
-      && this.isCounterFieldsEmpty();
+    const isNeedToHideButtonClear = this.isCounterFieldsEmpty();
+
     if (isNeedToHideButtonClear) {
       this.buttonClear.classList.add('dropdown__button_hidden');
     }
@@ -40,7 +40,7 @@ class DropdownGuests extends Dropdown {
     this.buttonsDecrease.forEach((button) => button.classList.add('dropdown__control-button_disabled'));
     this.counterFields.forEach((counterField) => {
       const field = counterField;
-      field.textContent = 0;
+      field.textContent = COUNTER_NUMBER_MIN;
     });
   }
 
@@ -69,7 +69,7 @@ class DropdownGuests extends Dropdown {
   }
 
   isCounterFieldsEmpty() {
-    return this.counterFields.every((field) => field.textContent <= 0);
+    return this.counterFields.every((field) => Number(field.textContent) === COUNTER_NUMBER_MIN);
   }
 }
 

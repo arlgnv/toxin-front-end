@@ -1,3 +1,5 @@
+import DEFAULT_NUMBER_LIKES from './constants';
+
 class ButtonLike {
   constructor(button) {
     this.button = button;
@@ -9,8 +11,8 @@ class ButtonLike {
     this.findDomElements();
     this.addEventListeners();
 
-    const amountLikes = parseInt(this.button.getAttribute('data-amount-likes'), 10);
-    this.count = Number.isNaN(amountLikes) ? 0 : amountLikes;
+    const numberLikes = Number(this.button.getAttribute('data-amount-likes'));
+    this.count = Number.isNaN(numberLikes) ? DEFAULT_NUMBER_LIKES : numberLikes;
 
     this.updateButton();
   }
