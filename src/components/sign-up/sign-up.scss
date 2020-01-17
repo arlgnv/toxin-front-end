@@ -28,7 +28,6 @@
   }
 
   &__group {
-    margin: 0;
     padding: 0;
     border: none;
 
@@ -82,16 +81,12 @@
   }
 
   &__group-title {
-    margin: 0 0 0.3571rem;
+    margin-bottom: 0.3571rem;
     font-weight: bold;
     font-size: 0.8571rem;
     line-height: 1.0714rem;
     color: $primary-color-100;
     text-transform: uppercase;
-  }
-
-  &__item {
-    margin: 0;
   }
 
   &__field {
@@ -101,7 +96,6 @@
 
   &__list {
     display: flex;
-    margin: 0;
     padding: 0;
     list-style-type: none;
 

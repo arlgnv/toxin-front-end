@@ -6,7 +6,7 @@
   &__title {
     position: relative;
     display: block;
-    margin: 0 0 1.1429rem 0;
+    margin-bottom: 1.1429rem;
     font-weight: bold;
     font-size: 0.8571rem;
     line-height: 1.0714rem;
@@ -34,7 +34,6 @@
   &__list {
     display: none;
     padding: 0;
-    margin: 0;
     list-style-type: none;
   }
 

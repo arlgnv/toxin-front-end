@@ -34,7 +34,6 @@
   }
 
   &__room {
-    margin: 0;
     font-weight: bold;
     font-size: 0.9286rem;
     line-height: 1.2143rem;
@@ -57,7 +56,6 @@
   }
 
   &__day-price {
-    margin: 0;
     font-size: 0.9286rem;
     line-height: 1.5714rem;
     color: $primary-color-50;
@@ -67,7 +65,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0;
     padding: 0;
 
     &:nth-child(1) {
@@ -89,7 +86,6 @@
 
   &__item {
     width: 10.7143rem;
-    margin: 0;
 
     @media screen and (max-width: 390px) {
       width: 100%;

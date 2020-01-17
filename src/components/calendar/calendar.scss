@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 0 0.4143rem;
+    margin-bottom: 0.4143rem;
   }
 
   &__item {
@@ -135,7 +135,7 @@
 
   &--nav {
     align-items: center;
-    margin: 0 0 1.8429rem;
+    margin-bottom: 1.8429rem;
     padding: 0;
     border-bottom: none;
 
@@ -161,11 +161,10 @@
 
   &--content {
     padding: 0;
-    margin: 0 0 0.9286rem;
+    margin-bottom: 0.9286rem;
   }
 
   &--days-names {
-    margin: 0;
     padding: 0.9rem 0;
   }
 

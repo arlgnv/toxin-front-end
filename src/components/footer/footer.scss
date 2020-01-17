@@ -38,7 +38,6 @@
     }
 
     #{$root}__other-info {
-      margin: 0;
       padding: 0;
       border-top: none;
     }
@@ -79,10 +78,10 @@
   }
 
   &__text {
-    margin: 0 0 1.4286rem;
+    margin-bottom: 1.4286rem;
 
     @media screen and (max-width: 858px) {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -115,7 +114,6 @@
   }
 
   &__list {
-    margin: 0;
     padding: 0;
     list-style-type: none;
 
@@ -167,7 +165,7 @@
     border-top: 0.0714rem solid $gray-color-100;
 
     @media screen and (max-width: 858px) {
-      margin: 0;
+      margin-top: 0;
       padding: 0;
       border: none;
     }
@@ -185,7 +183,6 @@
     }
 
     #{$root}__item {
-      margin: 0;
       line-height: 0;
 
       + #{$root}__item {
@@ -216,7 +213,6 @@
   }
 
   &__copyright {
-    margin: 0;
     line-height: 1.2143rem;
 
     @media screen and (max-width: 858px) {

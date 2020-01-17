@@ -1,13 +1,10 @@
 @import '../button-like/button-like';
 
 .testimonial {
-  margin: 0;
-  padding: 0;
-
   &__author {
     display: flex;
     align-items: flex-start;
-    margin: 0 0 0.6429rem;
+    margin-bottom: 0.6429rem;
   }
 
   &__img {
@@ -24,7 +21,7 @@
   &__content {
     display: flex;
     align-items: flex-start;
-    margin: 0;
+
   }
 
   &__button {

@@ -14,7 +14,7 @@
   box-shadow: 0rem 0rem 1.7857rem $black-color-20;
 
   &__title {
-    margin: 0 0 1.1714rem;
+    margin-bottom: 1.1714rem;
     font-weight: bold;
     font-size: 1.7143rem;
     line-height: 2.1429rem;
@@ -23,8 +23,6 @@
   }
 
   &__group {
-    margin: 0;
-
     &:nth-child(1) {
       position: relative;
       margin-bottom: 1.1rem;

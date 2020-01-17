@@ -1,6 +1,5 @@
 .advantage {
   display: flex;
-  margin: 0;
   padding-bottom: 1.4286rem;
   border-bottom: 0.0714rem solid $primary-color-10;
 
@@ -26,7 +25,6 @@
   }
 
   &__text {
-    margin: 0;
     color: $primary-color-75;
   }
 
