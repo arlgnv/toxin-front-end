@@ -1,0 +1,8 @@
+include ../sign-in/sign-in
+
+mixin login-page
+  main.login-page
+    h1.login-page__title.login-page__title_hidden Вход в систему
+    .login-page__container
+      .login-page__form
+        +sign-in

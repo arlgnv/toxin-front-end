@@ -1,13 +1,6 @@
 import Dropdown from './dropdown';
 
 class DropdownGuests extends Dropdown {
-  constructor(dropdown) {
-    super(dropdown);
-
-    this.findDomElements();
-    this.addEventListeners();
-  }
-
   findDomElements() {
     super.findDomElements();
 

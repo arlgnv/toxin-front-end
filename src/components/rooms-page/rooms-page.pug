@@ -1,0 +1,103 @@
+include ../range-slider/range-slider
+include ../dropdown/dropdown
+include ../checkbox-expandable/checkbox-expandable
+include ../room/room
+include ../pagination/pagination
+
+mixin rooms-page
+  main.rooms-page
+    h1.rooms-page__title.rooms-page__title_hidden Поиск номеров
+    .rooms-page__container
+      section.rooms-page__filter.js-rooms-page__filter
+        h2.rooms-page__subtitle.rooms-page__subtitle_hidden Фильтр номеров
+        button.rooms-page__filter-show-button.js-rooms-page__filter-show-button(type="button") Показать фильтр
+        button.rooms-page__filter-close-button.js-rooms-page__filter-close-button.rooms-page__filter-close-button_hidden(type="button" aria-label="Закрыть фильтр")
+        form.rooms-page__form.js-rooms-page__form(action="https://echo.htmlacademy/ru" method="post")
+          p.rooms-page__group
+            label.rooms-page__label(for="field-date") Даты пребывания в отеле
+            +dropdown({"id": "field-date", "name": "date", "value": "19 авг - 23 авг"})
+          p.rooms-page__group
+            label.rooms-page__label(for="field-guests") Гости
+            +dropdown({"id": "field-guests", "name": "guests", "value": "3 гостя, 1 младенец"})
+          p.rooms-page__group
+            +range-slider({"id": "field-price", "title": "Диапазон цены", "description": "Стоимость за сутки пребывания в номере"})(name="price")
+          fieldset.rooms-page__group
+            legend.rooms-page__group-title Дополнительные возможности
+            ul.rooms-page__list
+              -
+                const checkboxesPoor =
+                [
+                  {"id": "field-smoke", "title": "Можно курить", "name": "smoke"},
+                  {"id": "field-pets", "title": "Можно с питомцами", "name": "pets", "checked": true},
+                  {"id": "field-allow-guests", "title": "Можно пригласить гостей (до 10 человек)", "name": "allow-guests", "checked": true}
+                ];
+              each checkbox in checkboxesPoor
+                li.rooms-page__item
+                  +checkbox-input(checkbox)
+          fieldset.rooms-page__group
+            legend.rooms-page__group-title Доступность
+            ul.rooms-page__list
+              -
+                const checkboxesRich =
+                [
+                  {"id": "field-wide-aisle", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
+                  {"id": "field-hepler","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
+                ];
+              each checkbox in checkboxesRich
+                li.rooms-page__item
+                  +checkbox-input(checkbox)
+          p.rooms-page__group
+            label.rooms-page__label(for="field-comfort") Удобства номера
+            +dropdown({"type": "comfort", "items": ["Спальни", "Кровати", "Ванные комнаты"], "id": "field-comfort", "name": "comfort", "placeholder": "Выберите удобства"})
+          fieldset.rooms-page__group
+            -
+              const checkboxesExpandable =
+              [
+                {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
+              ];
+            +checkbox-expandable({"title": "Дополнительные удобства", "items": checkboxesExpandable})
+
+      section.rooms-page__rooms
+        h2.rooms-page__subtitle Номера, которые мы для вас подобрали
+        ul.rooms-page__list
+          -
+            const rooms =
+            [
+              {"image": "./images/room-1.jpg","alt": "Роскошный номер на одного с большой кроватью","number": 888,"lux": true,"price": "9 990₽","rating": 5,"testimonials": 145},
+              {"image": "./images/room-2.jpg","alt": "Просторный номер на троих с тремя кроватями","number": 840,"lux": false,"price": "9 990₽","rating": 4,"testimonials": 65},
+              {"image": "./images/room-3.jpg","alt": "Светлый номер на одного","number": 980,"lux": true,"price": "8 500₽","rating": 3,"testimonials": 35},
+              {"image": "./images/room-4.jpg","alt": "Светло-голубой номер на одного","number": 856,"lux": false,"price": "7 300₽","rating": 5,"testimonials": 19},
+              {"image": "./images/room-5.jpg","alt": "Роскошный номер на одного","number": 740,"lux": false,"price": "6 600₽","rating": 4,"testimonials": 44},
+              {"image": "./images/room-6.jpg","alt": "Роскошный номер на одного","number": 982,"lux": false,"price": "5 800₽","rating": 3,"testimonials": 56},
+              {"image": "./images/room-7.jpg","alt": "Большой номер с телевизором","number": 678,"lux": false,"price": "5 500₽","rating": 5,"testimonials": 45},
+              {"image": "./images/room-8.jpg","alt": "Роскошный номер с большой кроватью","number": 450,"lux": false,"price": "5 300₽","rating": 4,"testimonials": 39},
+              {"image": "./images/room-9.jpg","alt": "Роскошный номер с большой кроватью","number": 350,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 77},
+              {"image": "./images/room-10.jpg","alt": "Роскошный номер с двумя кроватями и шкафом","number": 666,"lux": false,"price": "5 000₽","rating": 5,"testimonials": 25},
+              {"image": "./images/room-11.jpg","alt": "Роскошный номер с двумя кроватями","number": 444,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 15},
+              {"image": "./images/room-12.jpg","alt": "Роскошный номер с большой кроватью","number": 352,"lux": false,"price": "5 000₽","rating": 3,"testimonials": 55}
+            ];
+          each room, index in rooms
+            if index === 0
+              li.rooms-page__item
+                a.rooms-page__link(href="../room-page/room-page.pug")
+                  +room(room)
+            else
+              li.rooms-page__item
+                  +room(room)
+        -
+          const pages =
+          [
+            {"number": "1", "theme": "current"},
+            {"number": "2"},
+            {"number": "3"},
+            {"number": "..."},
+            {"number": "15"},
+            {"number": "", "theme": "next-page"}
+          ];
+        .rooms-page__pagination
+          +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})

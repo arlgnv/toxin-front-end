@@ -1,7 +1,7 @@
 extends ../../templates/template-base
 
 include ../../components/header/header
-include ../../components/sign-in/sign-in
+include ../../components/login-page/login-page
 include ../../components/footer/footer
 
 block description
@@ -18,11 +18,7 @@ block styles
 
 block content
   +header
-  main.login-page
-    h1.login-page__title.login-page__title_hidden Вход в систему
-    .login-page__container
-      .login-page__form
-        +sign-in
+  +login-page
   +footer
 
   script(src="./login-page.js")

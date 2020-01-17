@@ -1,0 +1,266 @@
+include ../header/header
+include ../footer/footer
+include ../room-search/room-search
+include ../room-book/room-book
+include ../sign-in/sign-in
+include ../sign-up/sign-up
+include ../room/room
+include ../testimonial/testimonial
+include ../range-slider/range-slider
+include ../pagination/pagination
+include ../checkbox-expandable/checkbox-expandable
+include ../bullet-list/bullet-list
+include ../advantage/advantage
+include ../calendar/calendar
+
+mixin components-page
+  main.components-page
+    h1.components-page__title.components-page__title_hidden Компоненты проекта
+    article.components-page__wrapper
+      h2.components-page__heading Цвета и шрифты
+      .components-page__group
+        ul.components-page__list
+          -
+            const colors =
+            [
+              {"name": "Dark shade 100%", "hex" : "#1f2041"},
+              {"name": "Dark shade 75%", "hex" : "#1f2041", "theme" : "75-transparency"},
+              {"name": "Dark shade 50%", "hex" : "#1f2041", "theme" : "50-transparency"},
+              {"name": "Dark shade 25%", "hex" : "#1f2041", "theme" : "25-transparency"},
+              {"name": "Dark shade 5%", "hex" : "#1f2041", "theme" : "5-transparency"},
+              {"name": "Purple", "hex" : "#bc9cff", "theme" : "purple"},
+              {"name": "Green", "hex" : "#6fcf97", "theme" : "green"}
+            ];
+          each color in colors
+            - const className = "theme" in color ? `components-page__color-item_theme_${color.theme}` : ""
+            li.components-page__color-item(class= className)
+              span.components-page__color-item-image
+              span.components-page__color-item-name= color.name
+                span.components-page__color-item-hex= color.hex
+        ul.components-page__list
+          -
+            const fonts =
+            [
+              {"name": "h1", "text": "This one is the sub-section or widget title", "theme": "h1"},
+              {"name": "h2", "text": "Next one is the item title inside widgets", "theme": "h2"},
+              {"name": "h3", "text": "This is a label or CTA text", "theme": "h3"},
+              {"name": "body", "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+            ];
+          each font in fonts
+            - const className = "theme" in font ? `components-page__font-item_theme_${font.theme}` : ""
+            li.components-page__font-item(class= className)
+              span.components-page__font-item-type= font.name
+              span.components-page__font-item-example= font.text
+    article.components-page__wrapper
+      h2.components-page__heading Элементы формы
+      .components-page__group
+        ul.components-page__list
+          li.components-page__text-field-item.components-page__text-field-item_theme_with-tip(data-tip="default")
+            label.components-page__subheading(for="field-1") text field
+            +text-input(id="field-1" placeholder="Email")
+          li.components-page__text-field-item.components-page__text-field-item_theme_with-tip(data-tip="hover / focus")
+            label.components-page__subheading(for="field-2") text field
+            +text-input(id="field-2" value="This is pretty awesome")
+          li.components-page__text-field-item.components-page__text-field-item_theme_with-tip(data-tip="default")
+            label.components-page__subheading(for="field-3") dropdown
+            +dropdown({"id": "field-3", "placeholder": "Сколько гостей"})
+          li.components-page__text-field-item.components-page__text-field-item_theme_with-tip(data-tip="default")
+            label.components-page__subheading(for="field-4") masked text field
+            +text-input({"theme": "masked"})(id="field-4" placeholder="дд.мм.гггг")
+          li.components-page__text-field-item
+            span.components-page__text-field-subitem
+              label.components-page__subheading(for="field-5") date dropdown
+              +dropdown({"id": "field-5", "placeholder": "ДД.ММ.ГГГГ"})
+            span.components-page__text-field-subitem
+              label.components-page__subheading(for="field-6") date dropdown
+              +dropdown({"id": "field-6", "placeholder": "19.08.2019"})
+          li.components-page__text-field-item
+            label.components-page__subheading(for="field-7") filter date dropdown
+            +dropdown({"id": "field-7", "value": "19 авг - 23 авг"})
+          li.components-page__text-field-item
+            label.components-page__subheading(for="field-8") subscription text field
+            +text-input({"theme": "newsletter", "type": "email"})(id="field-8" placeholder="Email")
+        ul.components-page__list
+          li.components-page__checkbox-poor-item
+            span.components-page__subheading checkbox buttons
+            -
+              const checkboxesPoor =
+              [
+                {"id": "field-9", "title": "Можно курить"},
+                {"id": "field-10", "title": "Можно с питомцами", "checked": true},
+                {"id": "field-11", "title": "Можно пригласить гостей (до 10 человек)", "checked": true}
+              ];
+            each checkbox in checkboxesPoor
+              p.components-page__checkbox-poor-subitem
+                +checkbox-input(checkbox)
+          li.components-page__radio-item
+            span.components-page__subheading radio buttons
+            -
+              const radioInputs =
+              [
+                {"id": "field-12", "title": "Мужчина", "name": "gender", "checked": true},
+                {"id": "field-13", "title": "Женщина", "name": "gender"}
+              ];
+            each radioInput in radioInputs
+              span.components-page__radio-subitem
+                +radio-input(radioInput)
+          li.components-page__toggle-item
+            span.components-page__subheading toggle
+            -
+              const checkboxesToggle =
+              [
+                {"id": "field-14", "title": "Получать спецпредложения", "theme": "toggle", "checked": true},
+                {"id": "field-15", "title": "Получать спецпредложения", "theme": "toggle"}
+              ];
+            each checkbox in checkboxesToggle
+              p.components-page__toggle-subitem
+                +checkbox-input(checkbox)
+          li.components-page__button-like-item
+            span.components-page__subheading like button
+            span.components-page__button-like-subitem
+              +button-like({"likes": 2})
+            span.components-page__button-like-subitem
+              +button-like({"likes": 12, "theme": "liked"})
+          li.components-page__rating-item
+            span.components-page__subheading rate button
+            span.components-page__rating-subitem
+              +rating({currentRating: 4})
+            span.components-page__rating-subitem
+              +rating({currentRating: 5})
+        ul.components-page__list
+          li.components-page__range-slider-item
+            +range-slider({"id": "field-16", "title": "range slider", "description": ""})
+          li.components-page__button-registration-item
+            span.components-page__subheading buttons
+            span.components-page__button-registration-subitem
+              +button({"text": "click me", "theme": "registration", "isLink": true})
+            span.components-page__button-registration-subitem
+              +button({"text": "click me", "theme": "registration", "isLink": true})
+          li.components-page__button-account-action-item
+            span.components-page__button-account-action-subitem
+              +button({"text": "click me", "theme": "account-action", "isLink": true})
+            span.components-page__button-account-action-subitem
+              +button({"text": "click me", "theme": "account-action", "isLink": true})
+          li.components-page__button-link-item
+            span.components-page__button-link-subitem
+              +button({"text": "click me", "theme": "bold", "isLink": true})
+            span.components-page__button-link-subitem
+              +button({"text": "click me", "theme": "bold", "isLink": true})
+          li.components-page__button-submit-item
+            +button({"text": "перейти к оплате", "theme": "submit", "isLink": true})
+          li.components-page__pagination-item
+            span.components-page__subheading pagination
+            -
+              const pages =
+              [
+                {"number": "1", "theme": "current"},
+                {"number": "2"},
+                {"number": "3"},
+                {"number": "..."},
+                {"number": "15"},
+                {"number": "", "theme": "next-page"}
+              ];
+            +pagination({pages, "description": "1 – 12 из 100+ вариантов аренды"})
+      .components-page__group
+        ul.components-page__list
+          li.components-page__dropdown-item.components-page__dropdown-item_theme_with-tip(data-tip="default")
+            label.components-page__subheading(for="field-17") dropdown
+            +dropdown({"id": "field-17", "value": "2 спальни, 2 кровати..."})
+          li.components-page__dropdown-item.components-page__dropdown-item_theme_with-tip(data-tip="expanded")
+            label.components-page__subheading(for="field-18") dropdown
+            +dropdown({"state": "expanded", "type": "comfort", "items": ["Спальни", "Кровати", "Ванные комнаты"], "id": "field-18", "value": "2 спальни, 2 кровати..."})
+        p.components-page__dropdown-item-alone
+          label.components-page__subheading(for="field-19") dropdown
+          +dropdown({"state": "expanded", "type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-19", "placeholder": "Сколько гостей"})
+        p.components-page__dropdown-item-alone
+          label.components-page__subheading(for="field-20") dropdown
+          +dropdown({"state": "expanded", "type": "guests", "items": ["Взрослые", "Дети", "Младенцы"], "id": "field-20", "value": "3 гостя"})
+      .components-page__group
+        ul.components-page__list
+          li.components-page__expandable-checkbox-item
+            +checkbox-expandable({"title": "expandable checkbox list"})
+          li.components-page__expandable-checkbox-item
+            -
+              const checkboxesExpandable =
+              [
+                {"id": "field-breakfast", "title": "Завтрак", "name": "breakfast"},
+                {"id": "field-desk", "title": "Письменный стол", "name": "desk", "checked": true},
+                {"id": "field-chair", "title": "Стул для кормления", "name": "chair", "checked": true},
+                {"id": "field-bed", "title": "Кроватка", "name": "bed", "checked": true},
+                {"id": "field-tv", "title": "Телевизор", "name": "tv"},
+                {"id": "field-shampoo", "title": "Шампунь", "name": "shampoo"}
+              ];
+            +checkbox-expandable({"title": "expandable checkbox list", "state": "expanded", "items": checkboxesExpandable})
+        p.components-page__checkbox-rich-item
+          span.components-page__subheading rich checkbox buttons
+          -
+            const checkboxesRich =
+            [
+              {"id": "field-21", "theme": "rich", "title": "Широкий коридор", "description": "Ширина коридоров в номере не менее 91 см.", "name": "wide-aisle"},
+              {"id": "field-22","theme": "rich","title": "Помощник для инвалидов","description": "На 1 этаже вас встретит специалист  и проводит до номера.", "name": "helper"}
+            ];
+          each checkbox in checkboxesRich
+            span.components-page__checkbox-rich-subitem
+              +checkbox-input(checkbox)
+        .components-page__bullet-list-item
+          span.components-page__subheading bullet list
+          +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+      .components-page__group
+        ul.components-page__list
+          -
+            const advantages =
+            [
+              {"theme": "comfort","title": "Комфорт","description": "Шумопоглощающие стены"},
+              {"theme": "convenience","title": "Удобство","description": "Окно в каждой из спален"}
+            ];
+          each advantage in advantages
+            li.components-page__advantage-item
+              +advantage(advantage)
+        .components-page__testimonial-item
+          +testimonial({"image": "../../components/testimonial/images/testimonial-1.jpg","author": "Мурад Сарафанов","date": "5 дней назад","text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей","likes": 12})
+    article.components-page__wrapper.components-page_theme_light
+      h2.components-page__heading Карточки
+      .components-page__cards-wrapper
+        .components-page__cards-group
+          .components-page__room-search-item
+            +room-search
+          .components-page__sign-up-item
+            +sign-up
+        .components-page__cards-group
+          .components-page__room-book-item
+            +room-book
+          .components-page__sign-in-item
+            +sign-in
+        .components-page__cards-group
+          .components-page__calendar-item
+            .datepicker-here
+          .components-page__room-item
+            -
+              const rooms =
+              [
+                {"image": "../rooms-page/images/room-1.jpg","alt": "Роскошный номер на одного с большой кроватью","number": 888,"lux": true,"price": "9 990₽","rating": 5,"testimonials": 145},
+                {"image": "../rooms-page/images//room-2.jpg","alt": "Просторный номер на троих с тремя кроватями","number": 840,"lux": false,"price": "9 990₽","rating": 4,"testimonials": 65}
+              ];
+            each room in rooms
+              .components-page__room-subitem
+                +room(room)
+    article.components-page__wrapper.components-page_theme_light
+      h2.components-page__heading Хедеры и футеры
+      -
+        const headers =
+        [
+          {},
+          {"theme": "logged"},
+        ];
+      each header in headers
+        .components-page__headers-footers-item
+          +header(header)
+      -
+        const footers =
+        [
+          {"theme": ""},
+          {"theme": "poor"},
+        ];
+      each footer in footers
+        .components-page__headers-footers-item
+          +footer(footer)

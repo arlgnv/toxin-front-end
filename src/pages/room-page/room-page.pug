@@ -1,11 +1,7 @@
 extends ../../templates/template-base
 
 include ../../components/header/header
-include ../../components/advantage/advantage
-include ../../components/donut/donut
-include ../../components/testimonial/testimonial
-include ../../components/bullet-list/bullet-list
-include ../../components/room-book/room-book
+include ../../components/room-page/room-page
 include ../../components/footer/footer
 
 block description
@@ -22,59 +18,7 @@ block styles
 
 block content
   +header
-  main.room-page
-    h1.room-page__title.room-page__title_hidden Люксовый номер №888
-    section.room-page__photos
-      h2.room-page__subtitle.room-page__subtitle_hidden Фотографии номера
-      .room-page__photos-group
-        img.room-page__photos-img(src="./images/big-picture.jpg" alt="Главная спальня")
-      .room-page__photos-group
-        img.room-page__photos-img(src="./images/small-picture-1.jpg" alt="Вторая спальня")
-        img.room-page__photos-img(src="./images/small-picture-2.jpg" alt="Комната для работы")
-    .room-page__container
-      section.room-page__info
-        h2.room-page__subtitle.room-page__subtitle_hidden Информация о номере
-        .room-page__group
-          section.room-page__advantages
-            h3.room-page__advantages-title Сведения о номере
-            ul.room-page__advantages-list
-              -
-                const advantages =
-                [
-                  {"theme": "comfort","title": "Комфорт","description": "Шумопоглощающие стены"},
-                  {"theme": "convenience","title": "Удобство","description": "Окно в каждой из спален"},
-                  {"theme": "cozy","title": "Уют","description": "Номер оснащен камином"}
-                ];
-              each item in advantages
-                li.room-page__advantages-item
-                  +advantage(item)
-          section.room-page__impression
-            h3.room-page__impression-title Впечатления от номера
-            +donut({"great": 520, "good": 260, "satisfactory": 260})
-        .room-page__group
-          section.room-page__testimonials
-            h3.room-page__testimonials-title Отзывы посетителей номера
-            span.room-page__testimonials-amount 2 отзыва
-            ul.room-page__testimonials-list
-              -
-                const testimonials =
-                [
-                  {"image": "../../components/testimonial/images/testimonial-1.jpg", "author": "Мурад Сарафанов", "date": "5 дней назад", "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей", "likes": 12},
-                  {"image": "../../components/testimonial/images/testimonial-2.jpg", "author": "Патрисия Стёклышкова", "date": "Неделю назад", "text": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", "likes": 2}
-                ];
-              each item in testimonials
-                li.room-page__testimonials-item
-                  +testimonial(item)
-        .room-page__group
-          section.room-page__rules
-            h3.room-page__rules-title Правила
-            +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-          section.room-page__cancel
-            h3.room-page__cancel-title Отмена
-            p.room-page__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-      section.room-page__form
-        h2.room-page__subtitle.room-page__subtitle_hidden Форма бронирования номера
-        +room-book
+  +room-page
   +footer
 
   script(src="./room-page.js")

@@ -1,7 +1,7 @@
 extends ../../templates/template-base
 
 include ../../components/header/header
-include ../../components/sign-up/sign-up
+include ../../components/registration-page/registration-page
 include ../../components/footer/footer
 
 block description
@@ -18,11 +18,7 @@ block styles
 
 block content
   +header
-  main.registration-page
-    h1.registration-page__title.registration-page__title_hidden Зарегистрировать аккаунт
-    .registration-page__container
-      .registration-page__form
-        +sign-up
+  +registration-page
   +footer
 
   script(src="./registration-page.js")

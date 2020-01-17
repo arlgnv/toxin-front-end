@@ -1,40 +1,4 @@
 @import '../../utilities/init';
 @import '../../components/header/header';
-@import '../../components/sign-up/sign-up';
+@import '../../components/registration-page/registration-page';
 @import '../../components/footer/footer';
-
-.registration-page {
-  flex-grow: 1;
-  padding: 2.1429rem 0 1.8571rem;
-  background: url('../../images/background-1.jpg') no-repeat center / cover;
-
-  &__container {
-    box-sizing: border-box;
-    max-width: 84.2857rem;
-    margin: 0 auto;
-    padding: 0 0.7143rem;
-  }
-
-  &__title {
-    &_hidden {
-      position: absolute;
-      width: 0.0714rem;
-      height: 0.0714rem;
-      margin: -0.0714rem;
-      border: 0;
-      padding: 0;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-    }
-  }
-
-  &__form {
-    width: 27.1429rem;
-    margin: 0 auto;
-
-    @media screen and (max-width: 400px) {
-      width: 100%;
-    }
-  }
-}

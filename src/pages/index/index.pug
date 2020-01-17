@@ -1,7 +1,7 @@
 extends ../../templates/template-base
 
 include ../../components/header/header
-include ../../components/room-search/room-search
+include ../../components/main-page/main-page
 include ../../components/footer/footer
 
 block description
@@ -18,12 +18,7 @@ block styles
 
 block content
   +header
-  main.main-page
-    h1.main-page__title.main-page__title_hidden Отель Toxin
-    .main-page__container
-      .main-page__form
-        +room-search
-      p.main-page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
+  +main-page
   +footer
 
   script(src="./index.js")

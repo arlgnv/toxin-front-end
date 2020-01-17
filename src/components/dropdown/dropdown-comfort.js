@@ -1,13 +1,6 @@
 import Dropdown from './dropdown';
 
 class DropdownComfort extends Dropdown {
-  constructor(dropdown) {
-    super(dropdown);
-
-    this.findDomElements();
-    this.addEventListeners();
-  }
-
   handleDecreaseButtonClick(evt) {
     super.handleDecreaseButtonClick(evt);
 
