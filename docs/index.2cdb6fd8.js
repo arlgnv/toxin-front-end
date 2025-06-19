@@ -35,4 +35,4 @@ require("./datepicker"),require("./body"),require("./navigation"),require("./tim
 },{"./dropdown":"LdiQ","./constants":"Vk3k"}],"Focm":[function(require,module,exports) {
 "use strict";require("../../utilities/jquery-global"),require("../../utilities/polyfills");var e=t(require("../../components/header/header")),r=t(require("../../components/calendar/calendar")),n=t(require("../../components/dropdown/dropdown-guests"));function t(e){return e&&e.__esModule?e:{default:e}}var u=document.querySelectorAll(".js-header");u.forEach(function(r){return new e.default(r)});var o=document.querySelectorAll(".js-dropdown_type_guests");o.forEach(function(e){return new n.default(e)});var a=$(".js-calendar");a.each(function(e,n){return new r.default($(n),e)});
 },{"../../utilities/jquery-global":"hUZf","../../utilities/polyfills":"a3tX","../../components/header/header":"FJCF","../../components/calendar/calendar":"FYhM","../../components/dropdown/dropdown-guests":"OdzZ"}]},{},["Focm"], null)
-//# sourceMappingURL=/toxin-front-end/index.2cdb6fd8.js.map
+//# sourceMappingURL=/toxin/index.2cdb6fd8.js.map

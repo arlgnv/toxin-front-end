@@ -40,4 +40,4 @@ var t;!function(i){"undefined"!=typeof jQuery&&jQuery||"function"!=typeof t||!t.
 },{}],"EREI":[function(require,module,exports) {
 "use strict";require("../../utilities/jquery-global"),require("../../utilities/polyfills"),require("../../components/calendar/calendar");var e=t(require("../../components/range-slider/range-slider")),r=t(require("../../components/button-like/button-like")),n=t(require("../../components/header/header"));function t(e){return e&&e.__esModule?e:{default:e}}var u=document.querySelectorAll(".js-header");u.forEach(function(e){return new n.default(e)});var l=document.querySelectorAll(".js-button-like");l.forEach(function(e){return new r.default(e)});var i=$(".js-range-slider");i.each(function(r,n){return new e.default($(n))});
 },{"../../utilities/jquery-global":"hUZf","../../utilities/polyfills":"a3tX","../../components/calendar/calendar":"FYhM","../../components/range-slider/range-slider":"rG6w","../../components/button-like/button-like":"ZXcX","../../components/header/header":"FJCF"}]},{},["EREI"], null)
-//# sourceMappingURL=/toxin-front-end/components-page.c3894b9f.js.map
+//# sourceMappingURL=/toxin/components-page.c3894b9f.js.map

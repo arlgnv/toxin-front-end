@@ -15,4 +15,4 @@ window.NodeList&&(NodeList.prototype.forEach||(NodeList.prototype.forEach=Array.
 },{}],"mK7E":[function(require,module,exports) {
 "use strict";require("../../utilities/jquery-global"),require("../../utilities/polyfills");var e=r(require("../../components/header/header"));function r(e){return e&&e.__esModule?e:{default:e}}var u=document.querySelectorAll(".js-header");u.forEach(function(r){return new e.default(r)});
 },{"../../utilities/jquery-global":"hUZf","../../utilities/polyfills":"a3tX","../../components/header/header":"FJCF"}]},{},["mK7E"], null)
-//# sourceMappingURL=/toxin-front-end/registration-page.ad80cded.js.map
+//# sourceMappingURL=/toxin/registration-page.ad80cded.js.map
