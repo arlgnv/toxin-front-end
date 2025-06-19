@@ -5,12 +5,12 @@
   "main": "src/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel src/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin/",
+    "build": "rimraf dist docs && parcel build src/pages/index/index.pug -d docs --no-cache --public-url /toxin-front-end",
     "lint": "eslint -c .eslintrc --ignore-path .eslintignore src/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madnessJs/toxin.git"
+    "url": "git+https://github.com/alagunoff/toxin-front-end.git"
   },
   "keywords": [],
   "author": "Artem Lagunov",
@@ -34,7 +34,7 @@
   },
   "browserslist": "> 0.25%, last 4 versions",
   "bugs": {
-    "url": "https://github.com/madnessJs/toxin/issues"
+    "url": "https://github.com/alagunoff/toxin-front-end/issues"
   },
-  "homepage": "https://github.com/madnessJs/toxin"
+  "homepage": "https://github.com/alagunoff/toxin-front-end"
 }
