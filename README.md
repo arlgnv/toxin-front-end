@@ -1,8 +1,8 @@
 # Toxin
 
 ## Клонирование репозитория
-* ssh ```git@github.com:alagunoff/toxin.git```
-* https ```https://github.com/alagunoff/toxin.git```
+* ssh ```git@github.com:alagunoff/toxin-front-end.git```
+* https ```https://github.com/alagunoff/toxin-front-end.git```
 
 ## Сборка dev
 ```npm run start```
