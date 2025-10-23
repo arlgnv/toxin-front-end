@@ -1,5 +1,5 @@
 # Front end for «Toxin»
-Toxin is an imaginary hotel. The project is the front end part for the hotel's website
+Toxin is an imaginary hotel
 
 ## Клонирование репозитория
 * ssh ```git@github.com:arlgnv/toxin-front-end.git```
@@ -10,4 +10,5 @@ Toxin is an imaginary hotel. The project is the front end part for the hotel's w
 
 ## Сборка prod
 ``` npm run build```
+
 
