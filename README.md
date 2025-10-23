@@ -1,5 +1,4 @@
 # Front end for «Toxin»
-«Toxin» is an imaginary hotel
 
 ## Клонирование репозитория
 * ssh ```git@github.com:arlgnv/toxin-front-end.git```
@@ -10,6 +9,7 @@
 
 ## Сборка prod
 ``` npm run build```
+
 
 
 
